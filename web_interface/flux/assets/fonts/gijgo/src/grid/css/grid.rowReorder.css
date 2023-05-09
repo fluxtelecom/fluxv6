@@ -1,0 +1,13 @@
+﻿.gj-grid-md tbody tr.gj-grid-top-border td {
+  border-top: 2px solid #777;
+}
+.gj-grid-md tbody tr.gj-grid-bottom-border td {
+  border-bottom: 2px solid #777;
+}
+
+.gj-grid-bootstrap tbody tr.gj-grid-top-border td {
+  border-top: 2px solid #777;
+}
+.gj-grid-bootstrap tbody tr.gj-grid-bottom-border td {
+  border-bottom: 2px solid #777;
+}

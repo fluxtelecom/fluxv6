@@ -1,0 +1,7 @@
+﻿/*
+ * Gijgo Editor v1.9.14
+ * http://gijgo.com/editor
+ *
+ * Copyright 2014, 2022 gijgo.com
+ * Released under the MIT license
+ */

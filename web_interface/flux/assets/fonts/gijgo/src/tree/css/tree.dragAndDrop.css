@@ -1,0 +1,64 @@
+﻿.gj-tree-drop-above {    
+    border-top: 1px solid #000;
+}
+
+.gj-tree-drop-below {
+    border-bottom: 1px solid #000;
+}
+
+.gj-tree-bootstrap-3 ul.gj-list-bootstrap li [data-role="wrapper"].drop-above {
+    border-top: 2px solid #000;
+}
+
+.gj-tree-bootstrap-3 ul.gj-list-bootstrap li [data-role="wrapper"].drop-below {
+    border-bottom: 2px solid #000;
+}
+
+.gj-tree-bootstrap-4 ul.gj-list-bootstrap li [data-role="wrapper"].drop-above {
+    border-top: 2px solid #000;
+}
+
+.gj-tree-bootstrap-4 ul.gj-list-bootstrap li [data-role="wrapper"].drop-below {
+    border-bottom: 2px solid #000;
+}
+
+.gj-tree-drag-el {
+    padding: 0px;
+    margin: 0px;
+    z-index: 1203;
+}
+
+.gj-tree-drag-el li {
+    padding: 0px;
+    margin: 0px;
+}
+
+.gj-tree-drag-el [data-role="wrapper"] {
+    cursor: move;
+    display: table;
+}
+
+.gj-tree-drag-el [data-role="indicator"] {
+    width: 14px;
+    padding: 0px 3px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.gj-tree-bootstrap-drag-el li.list-group-item {
+    border: 0px;
+    background: unset;
+}
+
+.gj-tree-bootstrap-drag-el [data-role="indicator"] {
+    width: 24px;
+    height: 24px;
+    padding: 0px;
+}
+
+.gj-tree-md-drag-el [data-role="indicator"] {
+    width: 24px;
+    height: 24px;
+    padding: 0px;
+}

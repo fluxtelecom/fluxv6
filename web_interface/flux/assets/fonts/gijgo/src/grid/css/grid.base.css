@@ -1,0 +1,191 @@
+﻿DIV.gj-grid-wrapper {
+    margin: auto;
+    position: relative;
+    clear:both;
+    z-index: 1;
+}
+
+TABLE.gj-grid {
+    margin: auto;    
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+TABLE.gj-grid THEAD TH [data-role="selectAll"] {
+    margin: auto;
+}
+
+TABLE.gj-grid THEAD TH [data-role="title"] {
+    display: inline-block;
+}
+
+TABLE.gj-grid THEAD TH [data-role="sorticon"] {
+    display: inline-block;
+}
+
+TABLE.gj-grid THEAD TH {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+TABLE.gj-grid.autogrow-header-row THEAD TH {
+    overflow: auto;
+    text-overflow: initial;
+    white-space: pre-wrap;
+    -ms-word-break: break-word;
+    word-break: break-word;
+}
+
+TABLE.gj-grid > tbody > tr > td {
+    overflow: hidden;
+    position: relative;
+}
+
+table.gj-grid tbody div[data-role="display"] {
+    vertical-align: middle;
+    text-indent: 0;
+    white-space: pre-wrap;
+    -ms-word-break: break-word;
+    word-break: break-word;
+}
+
+table.gj-grid.fixed-body-rows tbody div[data-role="display"] {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -ms-word-break: initial;
+    word-break: initial;
+}
+
+table.gj-grid tfoot DIV[data-role="display"] {
+    vertical-align: middle;
+    text-indent: 0;
+    display: flex;
+}
+
+TABLE.gj-grid .fa {
+    padding: 2px;
+}
+
+TABLE.gj-grid > tbody > tr > td > div {
+    padding: 2px;
+    overflow: hidden;
+}
+
+DIV.gj-grid-wrapper DIV.gj-grid-loading-cover
+{
+    background: #BBBBBB;
+    opacity: 0.5;
+    position: absolute;
+    vertical-align: middle;
+}
+
+DIV.gj-grid-wrapper DIV.gj-grid-loading-text
+{
+    position: absolute;
+    font-weight: bold;
+}
+
+/* Bootstrap Theme */
+table.gj-grid-bootstrap thead th {
+    background-color: #f5f5f5;
+    vertical-align:middle;
+}
+
+table.gj-grid-bootstrap thead th [data-role="sorticon"] {
+    margin-left: 5px;
+}
+
+table.gj-grid-bootstrap thead th [data-role="sorticon"] i.gj-icon,
+table.gj-grid-bootstrap thead th [data-role="sorticon"] i.material-icons {
+    position: absolute;
+    font-size: 20px;
+    top: 15px;
+}
+
+table.gj-grid-bootstrap tbody tr td div[data-role="display"] {
+    padding: 0px;
+}
+
+.gj-grid-bootstrap-4 .gj-checkbox-bootstrap {
+    display: inline-block;
+    padding-top: 2px;
+}
+
+.gj-grid-bootstrap-4 tbody tr.active {
+    background-color: rgba(0,0,0,.075);
+}
+
+/* Material Design Theme */
+.gj-grid-md {
+    position: relative;
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    white-space: nowrap;
+    font-size: 13px;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    background-color: #fff;
+}
+
+.gj-grid-md td:first-of-type, .gj-grid-md th:first-of-type {
+    padding-left: 24px;
+}
+
+.gj-grid-md th {
+    position: relative;
+    vertical-align: bottom;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0;
+    height: 56px;
+    font-size: 12px;
+    color: rgba(0,0,0,.54);
+    padding-bottom: 8px;
+    box-sizing: border-box;
+    padding: 12px 18px;
+    text-align: right;
+}
+
+.gj-grid-md td {
+    position: relative;
+    height: 48px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 12px 18px;
+    box-sizing: border-box;
+    text-align: left;
+    color: rgba(0,0,0,.87);
+}
+
+.gj-grid-md tbody tr {
+    position: relative;
+    height: 48px;
+    transition-duration: .28s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-property: background-color;
+}
+
+.gj-grid-md tbody tr:hover {
+    background-color: #EEEEEE; /* Gray 200 */
+}
+
+.gj-grid-md tbody tr.gj-grid-md-select {
+    background-color: #F5F5F5; /* Grey 100 */
+}
+
+
+table.gj-grid-md thead th [data-role="sorticon"] {
+    margin-left: 5px;
+}
+
+table.gj-grid-md thead th [data-role="sorticon"] i.gj-icon,
+table.gj-grid-md thead th [data-role="sorticon"] i.material-icons {
+    position: absolute;
+    font-size: 16px;
+    top: 19px;
+}
+
+table.gj-grid-md thead th.gj-grid-select-all {
+    padding-bottom: 3px;
+}

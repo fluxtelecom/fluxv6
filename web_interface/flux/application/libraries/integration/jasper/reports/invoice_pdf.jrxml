@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="invoice_pdf" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="36558fab-b8ee-461f-bbae-09e7ab2cb8ec">
+	<property name="ireport.zoom" value="1.7715610000000088"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="147"/>
+	<style name="stylePadraoTabela">
+		<box>
+			<bottomPen lineWidth="3.0" lineStyle="Solid" lineColor="#333333"/>
+		</box>
+	</style>
+	<style name="stylePadraoTabela_cabecalho" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.0" lineColor="#000000"/>
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="3.0" lineColor="#333333"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="stylePadraoTabela_coluna" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<topPen lineWidth="0.0" lineStyle="Solid"/>
+			<leftPen lineWidth="0.0" lineStyle="Solid"/>
+			<bottomPen lineWidth="3.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+			<rightPen lineWidth="0.0" lineStyle="Solid"/>
+		</box>
+	</style>
+	<style name="stylePadraoTabela_nomeColuna">
+		<box>
+			<bottomPen lineWidth="4.0" lineColor="#CCCCCC"/>
+		</box>
+	</style>
+	<style name="stylePadraoTabela_cabecalhoSemNomeColuna" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.0" lineColor="#000000"/>
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="7.0" lineColor="#333333"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="styleTituloSecao">
+		<box>
+			<bottomPen lineWidth="4.0" lineColor="#333333"/>
+		</box>
+	</style>
+	<style name="styleCustomer">
+		<box topPadding="10" bottomPadding="10" rightPadding="7">
+			<rightPen lineWidth="3.0" lineColor="#B2B2B2"/>
+		</box>
+	</style>
+	<subDataset name="plans" uuid="5838895d-5856-4c58-ac82-7c45374b5416">
+		<queryString language="SQL">
+			<![CDATA[]]>
+		</queryString>
+		<field name="name" class="java.lang.String"/>
+		<field name="value" class="java.lang.Double"/>
+	</subDataset>
+	<subDataset name="packages" uuid="1247c334-bda3-4991-a399-0596c5229663">
+		<field name="name" class="java.lang.String"/>
+		<field name="minutes" class="java.lang.Integer"/>
+		<field name="usedMinutes" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="summary" uuid="6b1327cd-d288-44bc-837f-fd50716cfdf1">
+		<parameter name="TOTAL" class="java.lang.Double"/>
+		<field name="label" class="java.lang.String"/>
+		<field name="value" class="java.lang.Double"/>
+		<field name="description" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="LOGO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SUBREPORT_CALLS" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="IS_SHOW_EXPIRATION_DATE" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[false]]></defaultValueExpression>
+	</parameter>
+	<field name="total" class="java.lang.Double"/>
+	<field name="expirationDate" class="java.lang.String"/>
+	<field name="fines" class="java.lang.String"/>
+	<field name="range.beginDate" class="java.lang.String"/>
+	<field name="range.endDate" class="java.lang.String"/>
+	<field name="customer.accountNumber" class="java.lang.String"/>
+	<field name="customer.name" class="java.lang.String"/>
+	<field name="customer.address" class="java.lang.String"/>
+	<field name="customer.city" class="java.lang.String"/>
+	<field name="customer.province" class="java.lang.String"/>
+	<field name="customer.cityProvince" class="java.lang.String"/>
+	<field name="customer.postalCode" class="java.lang.String"/>
+	<field name="totalCallsValue" class="java.lang.Double"/>
+	<field name="totalCallsDurantion" class="java.lang.Double"/>
+	<field name="totalCallsDurationFormatted" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="70" splitType="Stretch">
+			<rectangle>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="-21" y="-22" width="596" height="92" backcolor="#EEEEEE" uuid="e3aaeb96-c859-4901-abe7-e423523bb2e6"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<image hAlign="Left" vAlign="Middle" onErrorType="Blank">
+				<reportElement x="19" y="-2" width="161" height="57" uuid="688da4e6-b5b1-4a7f-93ca-91b2a27ad0b9"/>
+				<imageExpression><![CDATA[new java.io.File($P{LOGO})]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement isPrintRepeatedValues="false" x="337" y="-2" width="209" height="15" forecolor="#333333" uuid="cc820271-1d60-45f9-a97f-3dbca15de644"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{range.beginDate} + " a " + $F{range.endDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="337" y="26" width="209" height="14" forecolor="#333333" uuid="12d95522-51c0-4048-9c35-5d26402b20a7">
+					<printWhenExpression><![CDATA[$P{IS_SHOW_EXPIRATION_DATE}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Vencimento: " + $F{expirationDate}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement x="337" y="40" width="209" height="15" forecolor="#333333" uuid="76fec328-ee21-4335-abcf-d888ab85a3bb"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Total: " + new java.text.DecimalFormat("R\$ #,##0.00").format($F{total})]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="553" y="-7" width="1" height="69" uuid="4d0081fb-0511-486c-9d58-ac1243055340"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineColor="#B2B2B2"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="106" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement style="styleCustomer" x="284" y="47" width="269" height="59" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="5f4d757f-87d8-4a74-84c3-89643a8e3f81"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer.address} + "\n" +
+$F{customer.cityProvince} + "\n" +
+$F{customer.postalCode}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement key="table 5" style="stylePadraoTabela" x="0" y="13" width="270" height="62" uuid="74d9a42f-f86f-4548-a644-11a10b0e9088"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="summary" uuid="16b891a4-a0fe-47e0-985b-5dfd5818bae5">
+						<datasetParameter name="TOTAL">
+							<datasetParameterExpression><![CDATA[$F{total}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[$P{REPORT_DATA_SOURCE}.subDataSource("summary")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="270" uuid="790f7f74-d46b-4918-8d6c-f1443dfd6fe8">
+						<jr:tableHeader style="stylePadraoTabela_cabecalhoSemNomeColuna" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="270" height="30" forecolor="#333333" uuid="404952cf-ed58-4a40-b401-e0033e4c622f"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="16" isBold="false"/>
+								</textElement>
+								<text><![CDATA[Resumo]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="181" height="30" uuid="acd667e1-7ee0-4ae7-bfbe-c2211eb634ea"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[Total]]></text>
+							</staticText>
+							<textField pattern="R$ #,##0.00" isBlankWhenNull="true">
+								<reportElement x="181" y="0" width="89" height="30" forecolor="#333333" uuid="7ceaa172-73fb-4322-b40e-c67258d4f0de"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{TOTAL}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:detailCell style="stylePadraoTabela_coluna" height="32" rowSpan="1">
+							<textField pattern="R$ #,##0.00" isBlankWhenNull="true">
+								<reportElement x="181" y="0" width="89" height="30" forecolor="#333333" uuid="36f7c068-c4e3-461e-9886-60fbf9d878b1"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+							</textField>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement x="0" y="20" width="181" height="10" isRemoveLineWhenBlank="true" forecolor="#999999" uuid="60e79d5f-1d6a-40a7-8b15-e2b8bea993d2"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="0" width="181" height="20" forecolor="#333333" uuid="04f5b4dc-ce14-449b-aa15-2a82ec045108"/>
+								<textElement verticalAlignment="Bottom">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{label}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="styleCustomer" x="284" y="13" width="269" height="34" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="ef13b64c-1685-4f17-85fc-213097fbd594"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="SansSerif" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer.name}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="61">
+			<componentElement>
+				<reportElement key="table 3" mode="Transparent" x="0" y="12" width="270" height="40" uuid="4ff1a6d9-aea8-4399-a8e7-526c9c38aba7"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="plans" uuid="9dbdc9d8-dfe4-4e47-bbe5-51e0d786d5f4">
+						<dataSourceExpression><![CDATA[$P{REPORT_DATA_SOURCE}.subDataSource("plans")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="270" uuid="eb6faa61-a8e9-4d44-87f7-c6d02a4e851a">
+						<jr:tableHeader style="stylePadraoTabela_cabecalhoSemNomeColuna" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="270" height="30" forecolor="#333333" uuid="1bf5dc7f-d8b1-4f95-afce-6bee3813a49f"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="16" isBold="false"/>
+								</textElement>
+								<text><![CDATA[Plano]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="stylePadraoTabela_coluna" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="181" height="30" forecolor="#333333" uuid="e0d801c9-aab7-4bcc-868e-310d8f2b8d6a"/>
+								<textElement verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+							</textField>
+							<textField pattern="R$ #,##0.00">
+								<reportElement x="181" y="0" width="89" height="30" forecolor="#333333" uuid="635b8225-ff2c-4628-85e9-0dc705a5ef14"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table 4" x="285" y="12" width="270" height="40" uuid="e9c9c9c5-6e4f-481a-9f3e-db93eeeea114"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="packages" uuid="3aae1d5b-9f23-45ba-9ae2-31269a1bb57b">
+						<dataSourceExpression><![CDATA[$P{REPORT_DATA_SOURCE}.subDataSource("packages")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="270" uuid="f97280ce-8b2d-4f01-8834-f27ad15e6ad8">
+						<jr:tableHeader style="stylePadraoTabela_cabecalho" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="270" height="30" forecolor="#333333" uuid="66641f0b-9164-4bbd-9195-0eabd4c645b0"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="16" isBold="false"/>
+								</textElement>
+								<text><![CDATA[Pacotes]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader style="stylePadraoTabela_nomeColuna" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="140" height="30" forecolor="#666666" uuid="ab198f70-0f74-46f7-891f-aca54429186f"/>
+								<textElement verticalAlignment="Middle">
+									<font isBold="false"/>
+								</textElement>
+								<text><![CDATA[Nome]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="140" y="0" width="130" height="30" forecolor="#666666" uuid="14b37eca-22b0-45a7-8414-2785adfdc5ba"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font isBold="false"/>
+								</textElement>
+								<text><![CDATA[Minutos Utilizados]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="stylePadraoTabela_coluna" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement x="0" y="0" width="140" height="30" forecolor="#333333" uuid="f5474e00-ec36-4022-b867-689b83c71793"/>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="140" y="0" width="130" height="30" forecolor="#333333" uuid="8aefaec5-e8ee-4db4-92ee-9044824c9a51"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{usedMinutes}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="67">
+			<subreport>
+				<reportElement positionType="Float" x="0" y="35" width="555" height="30" isRemoveLineWhenBlank="true" uuid="af253a84-34c0-4969-a047-76cc29fe39ff"/>
+				<subreportParameter name="TOTAL_CALLS_VALUE">
+					<subreportParameterExpression><![CDATA[$F{totalCallsValue}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TOTAL_CALLS_DURATION_FORMATTED">
+					<subreportParameterExpression><![CDATA[$F{totalCallsDurationFormatted}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{REPORT_DATA_SOURCE}.subDataSource("numbers")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[new java.io.File($P{SUBREPORT_CALLS})]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement style="styleTituloSecao" x="0" y="4" width="555" height="30" forecolor="#333333" uuid="e34575db-9552-4eb8-9460-074937024a4f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Detalhamento de Chamadas]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="453" y="6" width="73" height="15" uuid="4f3dee33-e870-4b47-8c0f-d3a5d5d40add"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" evaluationTime="Report">
+				<reportElement x="526" y="6" width="28" height="15" uuid="b507c8de-94b8-4311-90b7-a76e9a7456bf"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

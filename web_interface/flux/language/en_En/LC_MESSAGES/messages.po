@@ -1,0 +1,7002 @@
+msgid "Access Number"
+msgstr "Access Number"
+
+msgid "Access Numbers"
+msgstr "Access Numbers"
+
+msgid "Account"
+msgstr "Account"
+
+msgid "Account Type"
+msgstr "Account Type"
+
+msgid "Account Valid Days"
+msgstr "Account Valid Days"
+
+msgid "Account Verification By"
+msgstr "Account Verification By"
+
+msgid "Accounts"
+msgstr "Accounts"
+
+msgid "Accounts Report"
+msgstr "Accounts Report"
+
+msgid "ACD"
+msgstr "ACD"
+
+msgid "Action"
+msgstr "Action"
+
+msgid "Action Type"
+msgstr "Action Type"
+
+msgid "Add"
+msgstr "Add"
+
+msgid "Add Country"
+msgstr "Add Country"
+
+msgid "Add Currency"
+msgstr "Add Currency"
+
+msgid "Add Destination"
+msgstr "Add Destination"
+
+msgid "Add Ratedeck"
+msgstr "Add Ratedeck"
+
+msgid "Address1"
+msgstr "Address1"
+
+msgid "Administrator"
+msgstr "Administrator"
+
+msgid "Administrator Admin"
+msgstr "Administrator Admin"
+
+msgid "Admins"
+msgstr "Admins"
+
+msgid "After Balance"
+msgstr "After Balance"
+
+msgid "Alarm"
+msgstr "Alarm"
+
+msgid "Alert Status"
+msgstr "Alert Status"
+
+msgid "Allow integration with Fraud detection"
+msgstr "Allow integration with Fraud detection"
+
+msgid "Allow IP Management"
+msgstr "Allow IP Management"
+
+msgid "Allow Local Call"
+msgstr "Allow Local Call"
+
+msgid "Allow Local Calls"
+msgstr "Allow Local Calls"
+
+msgid "Allow Loss Less Routing"
+msgstr "Allow Loss Less Routing"
+
+msgid "Allow Max Retries"
+msgstr "Allow Max Retries"
+
+msgid "Allow Recording"
+msgstr "Allow Recording"
+
+msgid "Amount"
+msgstr "Amount"
+
+msgid "Amount INR"
+msgstr "Amount INR"
+
+msgid "Answered Calls"
+msgstr "Answered Calls"
+
+msgid "Applicable For"
+msgstr "Applicable For"
+
+msgid "Apply on existing accounts"
+msgstr "Apply on existing accounts"
+
+msgid "Archive"
+msgstr "Archive"
+
+msgid "ASR"
+msgstr "ASR"
+
+msgid "Attachement"
+msgstr "Attachement"
+
+msgid "Attempted Calls"
+msgstr "Attempted Calls"
+
+msgid "Audit"
+msgstr "Audit"
+
+msgid "Audit Log"
+msgstr "Audit Log"
+
+msgid "Audit Logs Older Than Days"
+msgstr "Audit Logs Older Than Days"
+
+msgid "Authorize.net"
+msgstr "Authorize.net"
+
+msgid "Automatically"
+msgstr "Automatically"
+
+msgid "Balance"
+msgstr "Balance"
+
+msgid "Balance Announcement"
+msgstr "Balance Announcement"
+
+msgid "Balance Below"
+msgstr "Balance Below"
+
+msgid "Base Currency"
+msgstr "Base Currency"
+
+msgid "Basic"
+msgstr "Basic"
+
+msgid "Basic Information"
+msgstr "Basic Information"
+
+msgid "Batch Update"
+msgstr "Batch Update"
+
+msgid "Before Balance INR"
+msgstr "Before Balance INR"
+
+msgid "Begins With"
+msgstr "Begins With"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "Billable"
+msgstr "Billable"
+
+msgid "Billing"
+msgstr "Billing"
+
+msgid "Billing Cycle"
+msgstr "Billing Cycle"
+
+msgid "Billing Days"
+msgstr "Billing Days"
+
+msgid "Billing Information"
+msgstr "Billing Information"
+
+msgid "Billing Type"
+msgstr "Billing Type"
+
+msgid "Body"
+msgstr "Body"
+
+msgid "Buy Cost"
+msgstr "Buy Cost"
+
+msgid "Call Barring"
+msgstr "Call Barring"
+
+msgid "Call Date"
+msgstr "Call Date"
+
+msgid "Call Detail Reports"
+msgstr "Call Detail Reports"
+
+msgid "Call Max Length"
+msgstr "Call Max Length"
+
+msgid "Call State"
+msgstr "Call State"
+
+msgid "Call Summary Reports"
+msgstr "Call Summary Reports"
+
+msgid "Call Timeout"
+msgstr "Call Timeout"
+
+msgid "Call Type"
+msgstr "Call Type"
+
+msgid "Call Types"
+msgstr "Call Types"
+
+msgid "Called Number"
+msgstr "Called Number"
+
+msgid "Caller ID"
+msgstr "Caller ID"
+
+msgid "Caller IDs"
+msgstr "Caller IDs"
+
+msgid "Caller IP"
+msgstr "Caller IP"
+
+msgid "Caller Name"
+msgstr "Caller Name"
+
+msgid "Caller Number"
+msgstr "Caller Number"
+
+msgid "Caller-Id-In-From"
+msgstr "Caller-Id-In-From"
+
+msgid "Calling Card"
+msgstr "Calling Card"
+
+msgid "Calls"
+msgstr "Calls"
+
+msgid "Calls Breakdown"
+msgstr "Calls Breakdown"
+
+msgid "Calltype Information"
+msgstr "Calltype Information"
+
+msgid "Can be purchased?"
+msgstr "Can be purchased?"
+
+msgid "Capital"
+msgstr "Capital"
+
+msgid "Capture Server"
+msgstr "Capture Server"
+
+msgid "Card Input Timeout"
+msgstr "Card Input Timeout"
+
+msgid "Card Length"
+msgstr "Card Length"
+
+msgid "Card Retries"
+msgstr "Card Retries"
+
+msgid "Carriers"
+msgstr "Carriers"
+
+msgid "Category"
+msgstr "Category"
+
+msgid "CC"
+msgstr "CC"
+
+msgid "CDRs Older Than Days"
+msgstr "CDRs Older Than Days"
+
+msgid "Charge Type"
+msgstr "Charge Type"
+
+msgid "Charges Breakdown"
+msgstr "Charges Breakdown"
+
+msgid "Charges History"
+msgstr "Charges History"
+
+msgid "CID"
+msgstr "CID"
+
+msgid "City"
+msgstr "City"
+
+msgid "Clear"
+msgstr "Clear"
+
+msgid "Client IP"
+msgstr "Client IP"
+
+msgid "Client User Agent"
+msgstr "Client User Agent"
+
+msgid "Code"
+msgstr "Code"
+
+msgid "Codecs"
+msgstr "Codecs"
+
+msgid "Commission"
+msgstr "Commission"
+
+msgid "Commission Rate"
+msgstr "Commission Rate"
+
+msgid "Commission Reports"
+msgstr "Commission Reports"
+
+msgid "Company"
+msgstr "Company"
+
+msgid "Company Profiles"
+msgstr "Company Profiles"
+
+msgid "Company Tax number"
+msgstr "Company Tax number"
+
+msgid "Completed Calls"
+msgstr "Completed Calls"
+
+msgid "Concurrent Calls"
+msgstr "Concurrent Calls"
+
+msgid "Configuration"
+msgstr "Configuration"
+
+msgid "Confirmed"
+msgstr "Confirmed"
+
+msgid "Connection Cost"
+msgstr "Connection Cost"
+
+msgid "Contains"
+msgstr "Contains"
+
+msgid "Cost"
+msgstr "Cost"
+
+msgid "Cost/Min"
+msgstr "Cost/Min"
+
+msgid "Countries"
+msgstr "Countries"
+
+msgid "Country"
+msgstr "Country"
+
+msgid "Country Code"
+msgstr "Country Code"
+
+msgid "Country List"
+msgstr "Country List"
+
+msgid "Country Reports"
+msgstr "Country Reports"
+
+msgid "Coupon Information"
+msgstr "Coupon Information"
+
+msgid "Coupon Number"
+msgstr "Coupon Number"
+
+msgid "CPS"
+msgstr "CPS"
+
+msgid "Create"
+msgstr "Create"
+
+msgid "Create Admin"
+msgstr "Create Admin"
+
+msgid "Create calltype"
+msgstr "Create calltype"
+
+msgid "Create Company Profile"
+msgstr "Create Company Profile"
+
+msgid "Create Customer"
+msgstr "Create Customer"
+
+msgid "Create Origination Rate"
+msgstr "Create Origination Rate"
+
+msgid "Create Product"
+msgstr "Create Product"
+
+msgid "Create Provider"
+msgstr "Create Provider"
+
+msgid "Create Rate Group"
+msgstr "Create Rate Group"
+
+msgid "Create Refill Coupon"
+msgstr "Create Refill Coupon"
+
+msgid "Create SIP Device"
+msgstr "Create SIP Device"
+
+msgid "Create Tax"
+msgstr "Create Tax"
+
+msgid "Created Date"
+msgstr "Created Date"
+
+msgid "Creation Date"
+msgstr "Creation Date"
+
+msgid "Credit"
+msgstr "Credit"
+
+msgid "Credit Limit"
+msgstr "Credit Limit"
+
+msgid "Crons"
+msgstr "Crons"
+
+msgid "Currency"
+msgstr "Currency"
+
+msgid "Currency Conversion Loss Percentage"
+msgstr "Currency Conversion Loss Percentage"
+
+msgid "Currency List"
+msgstr "Currency List"
+
+msgid "Customer"
+msgstr "Customer"
+
+msgid "Customer CDRs Report"
+msgstr "Customer CDRs Report"
+
+msgid "Customer Summary"
+msgstr "Customer Summary"
+
+msgid "Customer Summary Report"
+msgstr "Customer Summary Report"
+
+msgid "Customers"
+msgstr "Customers"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Database"
+msgstr "Database"
+
+msgid "Date"
+msgstr "Date"
+
+msgid "Debit"
+msgstr "Debit"
+
+msgid "Debug"
+msgstr "Debug"
+
+msgid "Decimal Points"
+msgstr "Decimal Points"
+
+msgid "Default Increment"
+msgstr "Default Increment"
+
+msgid "Default Invoice Mode"
+msgstr "Default Invoice Mode"
+
+msgid "Default Tax"
+msgstr "Default Tax"
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "Deleted Accounts After Days"
+msgstr "Deleted Accounts After Days"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Destination"
+msgstr "Destination"
+
+msgid "Dial Input Timeout"
+msgstr "Dial Input Timeout"
+
+msgid "DID"
+msgstr "DID"
+
+msgid "DIDs"
+msgstr "DIDs"
+
+msgid "Direction"
+msgstr "Direction"
+
+msgid "Disable"
+msgstr "Disable"
+
+msgid "Display records in"
+msgstr "Display records in"
+
+msgid "Disposition"
+msgstr "Disposition"
+
+msgid "Documentation"
+msgstr "Documentation"
+
+msgid "Doesnt Contain"
+msgstr "Doesnt Contain"
+
+msgid "Domain"
+msgstr "Domain"
+
+msgid "Draft"
+msgstr "Draft"
+
+msgid "Due Date"
+msgstr "Due Date"
+
+msgid "Duplicate"
+msgstr "Duplicate"
+
+msgid "Duration"
+msgstr "Duration"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Email Alerts ?"
+msgstr "Email Alerts ?"
+
+msgid "Email History"
+msgstr "Email History"
+
+msgid "Email History List"
+msgstr "Email History List"
+
+msgid "Email Notification"
+msgstr "Email Notification"
+
+msgid "Email Notifications"
+msgstr "Email Notifications"
+
+msgid "Email Status"
+msgstr "Email Status"
+
+msgid "Email Template"
+msgstr "Email Template"
+
+msgid "Emails Older Than Days"
+msgstr "Emails Older Than Days"
+
+msgid "En"
+msgstr "En"
+
+msgid "Enable"
+msgstr "Enable"
+
+msgid "Enable Signup"
+msgstr "Enable Signup"
+
+msgid "Ends With"
+msgstr "Ends With"
+
+msgid "Enterprise"
+msgstr "Enterprise"
+
+msgid "Entity Type"
+msgstr "Entity Type"
+
+msgid "Environment"
+msgstr "Environment"
+
+msgid "Ewallet Payment Gateway"
+msgstr "Ewallet Payment Gateway"
+
+msgid "Expired Accounts After Days"
+msgstr "Expired Accounts After Days"
+
+msgid "Expiry Date"
+msgstr "Expiry Date"
+
+msgid "Export"
+msgstr "Export"
+
+msgid "Failover  GW Name #1"
+msgstr "Failover  GW Name #1"
+
+msgid "Failover GW Name #2"
+msgstr "Failover GW Name #2"
+
+msgid "Favicon"
+msgstr "Favicon"
+
+msgid "Fax"
+msgstr "Fax"
+
+msgid "Fee"
+msgstr "Fee"
+
+msgid "File Path"
+msgstr "File Path"
+
+msgid "Filter"
+msgstr "Filter"
+
+msgid "First Name"
+msgstr "First Name"
+
+msgid "First Used"
+msgstr "First Used"
+
+msgid "Fixer Key"
+msgstr "Fixer Key"
+
+msgid "FMAddon"
+msgstr "FMAddon"
+
+msgid "Footer"
+msgstr "Footer"
+
+msgid "Fraud Detection"
+msgstr "Fraud Detection"
+
+msgid "Free Minutes"
+msgstr "Free Minutes"
+
+msgid "FreeSwitch Servers"
+msgstr "FreeSwitch Servers"
+
+msgid "From"
+msgstr "From"
+
+msgid "From Date"
+msgstr "From Date"
+
+msgid "From Timestamp"
+msgstr "From Timestamp"
+
+msgid "Gateway Name"
+msgstr "Gateway Name"
+
+msgid "Gateways"
+msgstr "Gateways"
+
+msgid "General"
+msgstr "General"
+
+msgid "General Input Timeout"
+msgstr "General Input Timeout"
+
+msgid "Generate Invoice"
+msgstr "Generate Invoice"
+
+msgid "Generate Pin"
+msgstr "Generate Pin"
+
+msgid "Generates Alarm From System"
+msgstr "Generates Alarm From System"
+
+msgid "Generates Local Number system"
+msgstr "Generates Local Number system"
+
+msgid "Generates ticket of issues from system"
+msgstr "Generates ticket of issues from system"
+
+msgid "Generates Various Alarms From System"
+msgstr "Generates Various Alarms From System"
+
+msgid "Generates Various Country Reports From System"
+msgstr "Generates Various Country Reports From System"
+
+msgid "Generates various reports from system"
+msgstr "Generates various reports from system"
+
+msgid "Get Addons"
+msgstr "Get Addons"
+
+msgid "Get App"
+msgstr "Get App"
+
+msgid "Global"
+msgstr "Global"
+
+msgid "Grace Time"
+msgstr "Grace Time"
+
+msgid "Grand Total"
+msgstr "Grand Total"
+
+msgid "Group By"
+msgstr "Group By"
+
+msgid "Group By #1"
+msgstr "Group By #1"
+
+msgid "Group By #2"
+msgstr "Group By #2"
+
+msgid "Group By #3"
+msgstr "Group By #3"
+
+msgid "Group By #Time"
+msgstr "Group By #Time"
+
+msgid "Header"
+msgstr "Header"
+
+msgid "Homer"
+msgstr "Homer"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Import"
+msgstr "Import"
+
+msgid "Import Customers"
+msgstr "Import Customers"
+
+msgid "Import with field map"
+msgstr "Import with field map"
+
+msgid "Inbound"
+msgstr "Inbound"
+
+msgid "Inbound Fax"
+msgstr "Inbound Fax"
+
+msgid "Included Seconds"
+msgstr "Included Seconds"
+
+msgid "Increment"
+msgstr "Increment"
+
+msgid "Initial Balance"
+msgstr "Initial Balance"
+
+msgid "Initial Increment"
+msgstr "Initial Increment"
+
+msgid "Inovices Older Than Days"
+msgstr "Inovices Older Than Days"
+
+msgid "Install"
+msgstr "Install"
+
+msgid "Installed"
+msgstr "Installed"
+
+msgid "Interval"
+msgstr "Interval"
+
+msgid "Interval Type"
+msgstr "Interval Type"
+
+msgid "Invoice Configuration"
+msgstr "Invoice Configuration"
+
+msgid "Invoice Date"
+msgstr "Invoice Date"
+
+msgid "Invoice Due Days"
+msgstr "Invoice Due Days"
+
+msgid "Invoice Due Notification"
+msgstr "Invoice Due Notification"
+
+msgid "Invoice Notification"
+msgstr "Invoice Notification"
+
+msgid "Invoice Number"
+msgstr "Invoice Number"
+
+msgid "Invoice Prefix"
+msgstr "Invoice Prefix"
+
+msgid "Invoice Start Form"
+msgstr "Invoice Start Form"
+
+msgid "Invoices"
+msgstr "Invoices"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "IP Settings"
+msgstr "IP Settings"
+
+msgid "Is Equal To"
+msgstr "Is Equal To"
+
+msgid "Is Not Equal To"
+msgstr "Is Not Equal To"
+
+msgid "Is Purchased?"
+msgstr "Is Purchased?"
+
+msgid "Iso"
+msgstr "Iso"
+
+msgid "Iso3"
+msgstr "Iso3"
+
+msgid "IVR Count"
+msgstr "IVR Count"
+
+msgid "Languages"
+msgstr "Languages"
+
+msgid "Last Execution Date"
+msgstr "Last Execution Date"
+
+msgid "Last Modified Date"
+msgstr "Last Modified Date"
+
+msgid "Last Name"
+msgstr "Last Name"
+
+msgid "Last Paid Date"
+msgstr "Last Paid Date"
+
+msgid "Latest Orders"
+msgstr "Latest Orders"
+
+msgid "LC Charge / Min"
+msgstr "LC Charge / Min"
+
+msgid "LC Charge/Min"
+msgstr "LC Charge/Min"
+
+msgid "Live"
+msgstr "Live"
+
+msgid "Live Call Report"
+msgstr "Live Call Report"
+
+msgid "Live Id"
+msgstr "Live Id"
+
+msgid "Live Key"
+msgstr "Live Key"
+
+msgid "Live Url"
+msgstr "Live Url"
+
+msgid "Local Call Timeout"
+msgstr "Local Call Timeout"
+
+msgid "Local Number"
+msgstr "Local Number"
+
+msgid "Local Numbers"
+msgstr "Local Numbers"
+
+msgid "Locale code"
+msgstr "Locale code"
+
+msgid "Localization"
+msgstr "Localization"
+
+msgid "Localization Type"
+msgstr "Localization Type"
+
+msgid "Localizations"
+msgstr "Localizations"
+
+msgid "Log out"
+msgstr "Log out"
+
+msgid "Log Path"
+msgstr "Log Path"
+
+msgid "Logo"
+msgstr "Logo"
+
+msgid "Low balance Alert?"
+msgstr "Low balance Alert?"
+
+msgid "Mail Log"
+msgstr "Mail Log"
+
+msgid "Manually"
+msgstr "Manually"
+
+msgid "Markup"
+msgstr "Markup"
+
+msgid "Mass Create"
+msgstr "Mass Create"
+
+msgid "Mass Email"
+msgstr "Mass Email"
+
+msgid "Max Free Length"
+msgstr "Max Free Length"
+
+msgid "MCD"
+msgstr "MCD"
+
+msgid "Minimum Fund Transfer"
+msgstr "Minimum Fund Transfer"
+
+msgid "Minutes"
+msgstr "Minutes"
+
+msgid "Minutes Announcement"
+msgstr "Minutes Announcement"
+
+msgid "Minutes Breakdown"
+msgstr "Minutes Breakdown"
+
+msgid "Moderate"
+msgstr "Moderate"
+
+msgid "Modified Date"
+msgstr "Modified Date"
+
+msgid "Module"
+msgstr "Module"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "New Accounts"
+msgstr "New Accounts"
+
+msgid "Nexmo API Key"
+msgstr "Nexmo API Key"
+
+msgid "Nexmo Secret Key"
+msgstr "Nexmo Secret Key"
+
+msgid "Next Execution Date"
+msgstr "Next Execution Date"
+
+msgid "Nickname"
+msgstr "Nickname"
+
+msgid "No"
+msgstr "No"
+
+msgid "No Records Found"
+msgstr "No Records Found"
+
+msgid "Notes"
+msgstr "Notes"
+
+msgid "Notifications"
+msgstr "Notifications"
+
+msgid "Notify before due days"
+msgstr "Notify before due days"
+
+msgid "Number"
+msgstr "Number"
+
+msgid "Number Type"
+msgstr "Number Type"
+
+msgid " of "
+msgstr " of "
+
+msgid "Opensips"
+msgstr "Opensips"
+
+msgid "Opensips DB Engine"
+msgstr "Opensips DB Engine"
+
+msgid "Opensips DB Host"
+msgstr "Opensips DB Host"
+
+msgid "Opensips DB Name"
+msgstr "Opensips DB Name"
+
+msgid "Opensips DB Pass"
+msgstr "Opensips DB Pass"
+
+msgid "Opensips DB User"
+msgstr "Opensips DB User"
+
+msgid "Opensips Domain"
+msgstr "Opensips Domain"
+
+msgid "Opensource"
+msgstr "Opensource"
+
+msgid "Order"
+msgstr "Order"
+
+msgid "Order Amount"
+msgstr "Order Amount"
+
+msgid "Order Date"
+msgstr "Order Date"
+
+msgid "Order ID"
+msgstr "Order ID"
+
+msgid "Order Now"
+msgstr "Order Now"
+
+msgid "Orders"
+msgstr "Orders"
+
+msgid "Org. Cost"
+msgstr "Org. Cost"
+
+msgid "Org. Destination"
+msgstr "Org. Destination"
+
+msgid "Org. Pefix"
+msgstr "Org. Pefix"
+
+msgid "Origination Rates"
+msgstr "Origination Rates"
+
+msgid "Outbound Fax"
+msgstr "Outbound Fax"
+
+msgid "Outstanding Amount INR"
+msgstr "Outstanding Amount INR"
+
+msgid "Page "
+msgstr "Page "
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Password Strength"
+msgstr "Password Strength"
+
+msgid "Payment Method"
+msgstr "Payment Method"
+
+msgid "Payment Methods"
+msgstr "Payment Methods"
+
+msgid "Payment Status"
+msgstr "Payment Status"
+
+msgid "Paypal"
+msgstr "Paypal"
+
+msgid "Per Minute Cost"
+msgstr "Per Minute Cost"
+
+msgid "Phone"
+msgstr "Phone"
+
+msgid "Pin Input Timeout"
+msgstr "Pin Input Timeout"
+
+msgid "Pin Length"
+msgstr "Pin Length"
+
+msgid "Pin retries"
+msgstr "Pin retries"
+
+msgid "Pinless Authentication"
+msgstr "Pinless Authentication"
+
+msgid "Place Order"
+msgstr "Place Order"
+
+msgid "Playback Audio Notifications"
+msgstr "Playback Audio Notifications"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Portal personalization"
+msgstr "Portal personalization"
+
+msgid "Powered by FLUX"
+msgstr "Powered by FLUX"
+
+msgid "Prefix"
+msgstr "Prefix"
+
+msgid "Prepend"
+msgstr "Prepend"
+
+msgid "Preserve"
+msgstr "Preserve"
+
+msgid "Price"
+msgstr "Price"
+
+msgid "Priority"
+msgstr "Priority"
+
+msgid "Product Category"
+msgstr "Product Category"
+
+msgid "Product Details"
+msgstr "Product Details"
+
+msgid "Product Name"
+msgstr "Product Name"
+
+msgid "Products"
+msgstr "Products"
+
+msgid "Profile Action"
+msgstr "Profile Action"
+
+msgid "Profit"
+msgstr "Profit"
+
+msgid "Provider"
+msgstr "Provider"
+
+msgid "Provider CDRs Report"
+msgstr "Provider CDRs Report"
+
+msgid "Provider Outbound"
+msgstr "Provider Outbound"
+
+msgid "Provider Outbound Report"
+msgstr "Provider Outbound Report"
+
+msgid "Provider Summary Report"
+msgstr "Provider Summary Report"
+
+msgid "Province"
+msgstr "Province"
+
+msgid "Province/State"
+msgstr "Province/State"
+
+msgid "Proxy"
+msgstr "Proxy"
+
+msgid "Purge"
+msgstr "Purge"
+
+msgid "Push Notifications"
+msgstr "Push Notifications"
+
+msgid "Quantity"
+msgstr "Quantity"
+
+msgid "Rate"
+msgstr "Rate"
+
+msgid "Rate Announcement"
+msgstr "Rate Announcement"
+
+msgid "Rate Count"
+msgstr "Rate Count"
+
+msgid "Rate Group"
+msgstr "Rate Group"
+
+msgid "Rate Groups"
+msgstr "Rate Groups"
+
+msgid "Rate Information"
+msgstr "Rate Information"
+
+msgid "Ratedeck"
+msgstr "Ratedeck"
+
+msgid "Ratedeck Information"
+msgstr "Ratedeck Information"
+
+msgid "Rates Count"
+msgstr "Rates Count"
+
+msgid "Realtime Billing"
+msgstr "Realtime Billing"
+
+msgid "Receiver Email"
+msgstr "Receiver Email"
+
+msgid "Recording Files Older Than Days"
+msgstr "Recording Files Older Than Days"
+
+msgid " Records"
+msgstr " Records"
+
+msgid "Referer Page"
+msgstr "Referer Page"
+
+msgid "Refill By"
+msgstr "Refill By"
+
+msgid "Refill Coupon Length"
+msgstr "Refill Coupon Length"
+
+msgid "Refill Coupons"
+msgstr "Refill Coupons"
+
+msgid "Refill Report"
+msgstr "Refill Report"
+
+msgid "Refills"
+msgstr "Refills"
+
+msgid "Register"
+msgstr "Register"
+
+msgid "Release if no balance"
+msgstr "Release if no balance"
+
+msgid "Report a Bug"
+msgstr "Report a Bug"
+
+msgid "Reports"
+msgstr "Reports"
+
+msgid "Request URI"
+msgstr "Request URI"
+
+msgid "Reseller"
+msgstr "Reseller"
+
+msgid "Reseller can resell"
+msgstr "Reseller can resell"
+
+msgid "Reseller Summary"
+msgstr "Reseller Summary"
+
+msgid "Reseller Summary Report"
+msgstr "Reseller Summary Report"
+
+msgid "Resellers"
+msgstr "Resellers"
+
+msgid "Resellers CDRs Report"
+msgstr "Resellers CDRs Report"
+
+msgid "Resend Mail"
+msgstr "Resend Mail"
+
+msgid "Role"
+msgstr "Role"
+
+msgid "Roles & Permission"
+msgstr "Roles & Permission"
+
+msgid "Roles & Permissions"
+msgstr "Roles & Permissions"
+
+msgid "Routing Prefix"
+msgstr "Routing Prefix"
+
+msgid "Routing Type"
+msgstr "Routing Type"
+
+msgid "Sandbox"
+msgstr "Sandbox"
+
+msgid "Sandbox Id"
+msgstr "Sandbox Id"
+
+msgid "Sandbox Key"
+msgstr "Sandbox Key"
+
+msgid "Sandbox Name"
+msgstr "Sandbox Name"
+
+msgid "Sandbox Url"
+msgstr "Sandbox Url"
+
+msgid "Save"
+msgstr "Save"
+
+msgid "Schedule Reports"
+msgstr "Schedule Reports"
+
+msgid "Search"
+msgstr "Search"
+
+msgid "Select File"
+msgstr "Select File"
+
+msgid "Select Year"
+msgstr "Select Year"
+
+msgid "Services"
+msgstr "Services"
+
+msgid "Set Maximum Add card limit"
+msgstr "Set Maximum Add card limit"
+
+msgid "Settings"
+msgstr "Settings"
+
+msgid "Setup Fee"
+msgstr "Setup Fee"
+
+msgid "Signup"
+msgstr "Signup"
+
+msgid "SIP Devices"
+msgstr "SIP Devices"
+
+msgid "SIP IP"
+msgstr "SIP IP"
+
+msgid "SIP Port"
+msgstr "SIP Port"
+
+msgid "SIP Profile"
+msgstr "SIP Profile"
+
+msgid "SIP Profiles"
+msgstr "SIP Profiles"
+
+msgid "SMS"
+msgstr "SMS"
+
+msgid "SMS Body"
+msgstr "SMS Body"
+
+msgid "SMS Notifications"
+msgstr "SMS Notifications"
+
+msgid "SMS Status"
+msgstr "SMS Status"
+
+msgid "SMTP"
+msgstr "SMTP"
+
+msgid "SMTP Host"
+msgstr "SMTP Host"
+
+msgid "SMTP Pass"
+msgstr "SMTP Pass"
+
+msgid "SMTP Port"
+msgstr "SMTP Port"
+
+msgid "SMTP User"
+msgstr "SMTP User"
+
+msgid "Start prefix"
+msgstr "Start prefix"
+
+msgid "Starting Digit"
+msgstr "Starting Digit"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Strip"
+msgstr "Strip"
+
+msgid "Strong"
+msgstr "Strong"
+
+msgid "Subject"
+msgstr "Subject"
+
+msgid "Subscription"
+msgstr "Subscription"
+
+msgid "Supportticket"
+msgstr "Supportticket"
+
+msgid "Switch"
+msgstr "Switch"
+
+msgid "Tariff"
+msgstr "Tariff"
+
+msgid "Tax"
+msgstr "Tax"
+
+msgid "Tax Information"
+msgstr "Tax Information"
+
+msgid "Telephone"
+msgstr "Telephone"
+
+msgid "Telephone as account number"
+msgstr "Telephone as account number"
+
+msgid "Templates"
+msgstr "Templates"
+
+msgid "Term. Cost"
+msgstr "Term. Cost"
+
+msgid "Term. Destination"
+msgstr "Term. Destination"
+
+msgid "Term. Prefix"
+msgstr "Term. Prefix"
+
+msgid "Term. Trunk"
+msgstr "Term. Trunk"
+
+msgid "Termination Rates"
+msgstr "Termination Rates"
+
+msgid "Third Party"
+msgstr "Third Party"
+
+msgid "This Month"
+msgstr "This Month"
+
+msgid "This Week"
+msgstr "This Week"
+
+msgid "Timelimit Announcement"
+msgstr "Timelimit Announcement"
+
+msgid "Timestamp"
+msgstr "Timestamp"
+
+msgid "Timezone"
+msgstr "Timezone"
+
+msgid "To"
+msgstr "To"
+
+msgid "To Number"
+msgstr "To Number"
+
+msgid "To Timestamp"
+msgstr "To Timestamp"
+
+msgid "Today"
+msgstr "Today"
+
+msgid "Top 10 Accounts"
+msgstr "Top 10 Accounts"
+
+msgid "Top 10 Destinations"
+msgstr "Top 10 Destinations"
+
+msgid "Total Calls"
+msgstr "Total Calls"
+
+msgid "Total Charges"
+msgstr "Total Charges"
+
+msgid "Total Minutes"
+msgstr "Total Minutes"
+
+msgid "Transaction ID"
+msgstr "Transaction ID"
+
+msgid "Translations"
+msgstr "Translations"
+
+msgid "Translations Language"
+msgstr "Translations Language"
+
+msgid "Trunk"
+msgstr "Trunk"
+
+msgid "Trunks"
+msgstr "Trunks"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Unpaid"
+msgstr "Unpaid"
+
+msgid "Update"
+msgstr "Update"
+
+msgid "Used"
+msgstr "Used"
+
+msgid "Used Date"
+msgstr "Used Date"
+
+msgid "Username"
+msgstr "Username"
+
+msgid "Version"
+msgstr "Version"
+
+msgid "Version 4.0 Beta"
+msgstr "Version 4.0 Beta"
+
+msgid "View All"
+msgstr "View All"
+
+msgid "Voicemail"
+msgstr "Voicemail"
+
+msgid "Panel Access"
+msgstr "Panel Access"
+
+msgid "Profile"
+msgstr "Profile"
+
+msgid "Billing Settings"
+msgstr "Billing Settings"
+
+msgid "Pin"
+msgstr "Pin"
+
+msgid "Account Settings"
+msgstr "Account Settings"
+
+msgid "Notification Email"
+msgstr "Notification Email"
+
+msgid "Address"
+msgstr "Address"
+
+msgid "NON-CLI Rate Group"
+msgstr "NON-CLI Rate Group"
+
+msgid "Billing Schedule"
+msgstr "Billing Schedule"
+
+msgid "Billing Day"
+msgstr "Billing Day"
+
+msgid "Tax Number"
+msgstr "Tax Number"
+
+msgid "Invoice Note"
+msgstr "Invoice Note"
+
+msgid "Reference"
+msgstr "Reference"
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "Device Information"
+msgstr "Device Information"
+
+msgid "Voicemail Options"
+msgstr "Voicemail Options"
+
+msgid "Mail To"
+msgstr "Mail To"
+
+msgid "Attach File"
+msgstr "Attach File"
+
+msgid "Local After Email"
+msgstr "Local After Email"
+
+msgid "Send all Message"
+msgstr "Send all Message"
+
+msgid "Close"
+msgstr "Close"
+
+msgid "IP map"
+msgstr "IP map"
+
+msgid "Identificador de llamadas"
+msgstr "Identificador de llamadas"
+
+msgid "Add Caller ID"
+msgstr "Add Caller ID"
+
+msgid "Create Reseller"
+msgstr "Create Reseller"
+
+msgid "Role Name"
+msgstr "Role Name"
+
+msgid "Outstanding Amount"
+msgstr "Outstanding Amount"
+
+msgid "To Date"
+msgstr "To Date"
+
+msgid "Before Balance"
+msgstr "Before Balance"
+
+msgid "Commission Report"
+msgstr "Commission Report"
+
+msgid "MonthlyFee"
+msgstr "MonthlyFee"
+
+msgid "Grace Time (Sec.)"
+msgstr "Grace Time (Sec.)"
+
+msgid "Import DIDs"
+msgstr "Import DIDs"
+
+msgid "File must be in the following format"
+msgstr "File must be in the following format"
+
+msgid "DID Import Process"
+msgstr "DID Import Process"
+
+msgid "Get Sample file"
+msgstr "Get Sample file"
+
+msgid "Check Header"
+msgstr "Check Header"
+
+msgid "Select the file"
+msgstr "Select the file"
+
+msgid "Account Count"
+msgstr "Account Count"
+
+msgid "Acc. Number Length"
+msgstr "Acc. Number Length"
+
+msgid "Valid Days"
+msgstr "Valid Days"
+
+msgid "Create Access Number"
+msgstr "Create Access Number"
+
+msgid "Information"
+msgstr "Information"
+
+msgid "Import Access Numbers"
+msgstr "Import Access Numbers"
+
+msgid "Access Numbers Import Process"
+msgstr "Access Numbers Import Process"
+
+msgid "DIDs Bulk Assign"
+msgstr "DIDs Bulk Assign"
+
+msgid "Bulk DID Purchase"
+msgstr "Bulk DID Purchase"
+
+msgid "Provience"
+msgstr "Provience"
+
+msgid "Assign Number"
+msgstr "Assign Number"
+
+msgid "DID Destination"
+msgstr "DID Destination"
+
+msgid "DID Forward"
+msgstr "DID Forward"
+
+msgid "Always"
+msgstr "Always"
+
+msgid "If Busy"
+msgstr "If Busy"
+
+msgid "If SIP Not Registered"
+msgstr "If SIP Not Registered"
+
+msgid "If No Answer"
+msgstr "If No Answer"
+
+msgid "New Rate Group Name"
+msgstr "New Rate Group Name"
+
+msgid "Duplicate Rate Group Information"
+msgstr "Duplicate Rate Group Information"
+
+msgid "Import Origination Rates"
+msgstr "Import Origination Rates"
+
+msgid "Force Trunk"
+msgstr "Force Trunk"
+
+msgid "Please select atleast one record to dele"
+msgstr "Please select atleast one record to dele"
+
+msgid "Import Ratedeck"
+msgstr "Import Ratedeck"
+
+msgid "Optional Information"
+msgstr "Optional Information"
+
+msgid "From- Domain"
+msgstr "From- Domain"
+
+msgid "From User"
+msgstr "From User"
+
+msgid "Extension"
+msgstr "Extension"
+
+msgid "Extension-In-Contact"
+msgstr "Extension-In-Contact"
+
+msgid "Ping"
+msgstr "Ping"
+
+msgid "Contact Params"
+msgstr "Contact Params"
+
+msgid "Retry-Seconds"
+msgstr "Retry-Seconds"
+
+msgid "Register-Proxy"
+msgstr "Register-Proxy"
+
+msgid "Channel"
+msgstr "Channel"
+
+msgid "Failover GW Name"
+msgstr "Failover GW Name"
+
+msgid "Create Trunk"
+msgstr "Create Trunk"
+
+msgid "Import Termination Rates"
+msgstr "Import Termination Rates"
+
+msgid "Call Timeout (Sec.)"
+msgstr "Call Timeout (Sec.)"
+
+msgid "Trunk List"
+msgstr "Trunk List"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid "Create SIP Profile"
+msgstr "Create SIP Profile"
+
+msgid "Create Freeswitch Server"
+msgstr "Create Freeswitch Server"
+
+msgid "Live Calls"
+msgstr "Live Calls"
+
+msgid "Term Cost"
+msgstr "Term Cost"
+
+msgid "Term Destination"
+msgstr "Term Destination"
+
+msgid "Term Prefix"
+msgstr "Term Prefix"
+
+msgid "Localizaciones"
+msgstr "Localizaciones"
+
+msgid "Create Localization"
+msgstr "Create Localization"
+
+msgid "Origination"
+msgstr "Origination"
+
+msgid "Termination"
+msgstr "Termination"
+
+msgid "Inbound Callerid Translation"
+msgstr "Inbound Callerid Translation"
+
+msgid "Destination Number Translation"
+msgstr "Destination Number Translation"
+
+msgid "Outbound Callerid Translation"
+msgstr "Outbound Callerid Translation"
+
+msgid "Create Call Barring"
+msgstr "Create Call Barring"
+
+msgid "Callbarring Settings"
+msgstr "Callbarring Settings"
+
+msgid "Product Summary Report"
+msgstr "Product Summary Report"
+
+msgid "SIP User"
+msgstr "SIP User"
+
+msgid "Product"
+msgstr "Product"
+
+msgid "Taxes"
+msgstr "Taxes"
+
+msgid "Update Currencies"
+msgstr "Update Currencies"
+
+msgid "File Name"
+msgstr "File Name"
+
+msgid "Database Information"
+msgstr "Database Information"
+
+msgid "Database Backup"
+msgstr "Database Backup"
+
+msgid "Command"
+msgstr "Command"
+
+msgid "Cron Settings"
+msgstr "Cron Settings"
+
+msgid "Create Cron Settings"
+msgstr "Create Cron Settings"
+
+msgid "Stripe"
+msgstr "Stripe"
+
+msgid "Live Secret key"
+msgstr "Live Secret key"
+
+msgid "Live Publishable key"
+msgstr "Live Publishable key"
+
+msgid "Set Percentage Charges"
+msgstr "Set Percentage Charges"
+
+msgid "Set Fix Charges"
+msgstr "Set Fix Charges"
+
+msgid "Stripe Mode"
+msgstr "Stripe Mode"
+
+msgid "Sandbox secret key"
+msgstr "Sandbox secret key"
+
+msgid "Sandbox publishable key"
+msgstr "Sandbox publishable key"
+
+msgid "Version 4.0 Enterprise"
+msgstr "Version 4.0 Enterprise"
+
+msgid "Powered by"
+msgstr "Powered by"
+
+msgid "Import Customer Using Field Mapper"
+msgstr "Import Customer Using Field Mapper"
+
+msgid "You must either select a field from your"
+msgstr "You must either select a field from your"
+
+msgid "Records with duplicate account number an"
+msgstr "Records with duplicate account number an"
+
+msgid "Account Import Error"
+msgstr "Account Import Error"
+
+msgid "Back to Customer List"
+msgstr "Back to Customer List"
+
+msgid "Duplicate accounts with account number /"
+msgstr "Duplicate accounts with account number /"
+
+msgid "Records imported successfully"
+msgstr "Records imported successfully"
+
+msgid "Records not imported"
+msgstr "Records not imported"
+
+msgid "Error In CSV File"
+msgstr "Error In CSV File"
+
+msgid "Invoice Summary"
+msgstr "Invoice Summary"
+
+msgid "Customer Details"
+msgstr "Customer Details"
+
+msgid "Invoice Details"
+msgstr "Invoice Details"
+
+msgid "Account Number"
+msgstr "Account Number"
+
+msgid "Invoice Amount"
+msgstr "Invoice Amount"
+
+msgid "Invoice Item"
+msgstr "Invoice Item"
+
+msgid "Sub Total"
+msgstr "Sub Total"
+
+msgid "Total Due"
+msgstr "Total Due"
+
+msgid "Once you confirm the invoice you will no longer able to update it again."
+msgstr "Once you confirm the invoice you will no longer able to update it again."
+
+msgid "Note"
+msgstr "Note"
+
+msgid "Add Setting"
+msgstr "Add Setting"
+
+msgid "Edit SIP Profile"
+msgstr "Edit SIP Profile"
+
+msgid "New"
+msgstr "New"
+
+msgid "Used?"
+msgstr "Used?"
+
+msgid "View Email"
+msgstr "View Email"
+
+msgid "Active"
+msgstr "Active"
+
+msgid "Inactive"
+msgstr "Inactive"
+
+msgid "Black List"
+msgstr "Black List"
+
+msgid "White List"
+msgstr "White List"
+
+msgid "Freeswitch Server Information"
+msgstr "Freeswitch Server Information"
+
+msgid "Currencies"
+msgstr "Currencies"
+
+msgid "Edit Currency"
+msgstr "Edit Currency"
+
+msgid "Is Distributor"
+msgstr "Is Distributor"
+
+msgid "Package created successfully!"
+msgstr "Package created successfully!"
+
+msgid "DID Removed Successfully."
+msgstr "DID Removed Successfully."
+
+msgid "DID not found."
+msgstr "DID not found."
+
+msgid "Password changed Sucessfully....!!!"
+msgstr "Password changed Sucessfully....!!!"
+
+msgid "New Password & Conformpassword not match"
+msgstr "New Password & Conformpassword not match"
+
+msgid "Invalid old passwword."
+msgstr "Invalid old passwword."
+
+msgid "Permission Denied!"
+msgstr "Permission Denied!"
+
+msgid "Refill Coupon amount is added successful"
+msgstr "Refill Coupon amount is added successful"
+
+msgid "PLease upload maximum file"
+msgstr "PLease upload maximum file"
+
+msgid "files added successfully!"
+msgstr "files added successfully!"
+
+msgid "File Uploading Fail Please Try Again"
+msgstr "File Uploading Fail Please Try Again"
+
+msgid "Please upload only image!"
+msgstr "Please upload only image!"
+
+msgid "Invoice config updated successfully!"
+msgstr "Invoice config updated successfully!"
+
+msgid "Your Profile Updated Successfully!"
+msgstr "Your Profile Updated Successfully!"
+
+msgid "Something wrong.Please contact to admini"
+msgstr "Something wrong.Please contact to admini"
+
+msgid "DID Released Successfully!"
+msgstr "DID Released Successfully!"
+
+msgid "IP already exist in system."
+msgstr "IP already exist in system."
+
+msgid "IP Added Sucessfully."
+msgstr "IP Added Sucessfully."
+
+msgid "IP Removed Sucessfully."
+msgstr "IP Removed Sucessfully."
+
+msgid "SIP Device Updated Successfully!"
+msgstr "SIP Device Updated Successfully!"
+
+msgid "SIP Device Added Successfully!"
+msgstr "SIP Device Added Successfully!"
+
+msgid "SIP Device Removed Sucessfully!"
+msgstr "SIP Device Removed Sucessfully!"
+
+msgid "Caller ID Added Sucessfully!"
+msgstr "Caller ID Added Sucessfully!"
+
+msgid "Please Enter Caller ID value."
+msgstr "Please Enter Caller ID value."
+
+msgid "Caller ID already Exists."
+msgstr "Caller ID already Exists."
+
+msgid "Caller ID removed sucessfully!"
+msgstr "Caller ID removed sucessfully!"
+
+msgid "Alert Threshold Updated Successfully!"
+msgstr "Alert Threshold Updated Successfully!"
+
+msgid "Can not trnasfer fund to postpaid custom"
+msgstr "Can not trnasfer fund to postpaid custom"
+
+msgid "Access Denied! unable transfer fund to t"
+msgstr "Access Denied! unable transfer fund to t"
+
+msgid "You can not transfer fund in same accoun"
+msgstr "You can not transfer fund in same account"
+
+msgid "You can only transfer fund in same level"
+msgstr "You can only transfer fund in same level"
+
+msgid "Please enter To account number."
+msgstr "Please enter To account number."
+
+msgid "Please enter valid amount."
+msgstr "Please enter valid amount."
+
+msgid "You have insufficient balance."
+msgstr "You have insufficient balance."
+
+msgid "Please enter valid account number."
+msgstr "Please enter valid account number."
+
+msgid "Please enter amount greater then 0."
+msgstr "Please enter amount greater then 0."
+
+msgid "You need to enter minimum for fund trans"
+msgstr "You need to enter minimum for fund trans"
+
+msgid "Please enter valid account number!"
+msgstr "Please enter valid account number!"
+
+msgid "Insuffiecient amount !"
+msgstr "Insuffiecient amount !"
+
+msgid "Transfer successfully!"
+msgstr "Transfer successfully!"
+
+msgid "Account number not found."
+msgstr "Account number not found."
+
+msgid "OpenSips updated successfully!"
+msgstr "OpenSips updated successfully!"
+
+msgid "Duplicate Username Found.Username Must b"
+msgstr "Duplicate Username Found.Username Must b"
+
+msgid "User name is required field."
+msgstr "User name is required field."
+
+msgid "Opensips Device Removed Successfully!."
+msgstr "Opensips Device Removed Successfully!."
+
+msgid "Speed-dial Number Added Successfully!"
+msgstr "Speed-dial Number Added Successfully!"
+
+msgid "Can not delete blank speeddial number"
+msgstr "Can not delete blank speeddial number"
+
+msgid "Speed-dial Number Removed Successfully!"
+msgstr "Speed-dial Number Removed Successfully!"
+
+msgid "Pin Updated Successfully!"
+msgstr "Pin Updated Successfully!"
+
+msgid "DID Updated Successfully!"
+msgstr "DID Updated Successfully!"
+
+msgid "for fund transfer."
+msgstr "for fund transfer."
+
+msgid "You need to enter minimum"
+msgstr "You need to enter minimum"
+
+msgid "please enter recharge value"
+msgstr "please enter recharge value"
+
+msgid "New Password"
+msgstr "New Password"
+
+msgid "Old Password"
+msgstr "Old Password"
+
+msgid "Conform Password"
+msgstr "Conform Password"
+
+msgid "Letters only please"
+msgstr "Letters only please"
+
+msgid "IP Mapping"
+msgstr "IP Mapping"
+
+msgid "The Coupon Number field must contain onl"
+msgstr "The Coupon Number field must contain onl"
+
+msgid "The Coupon Number field have inactive re"
+msgstr "The Coupon Number field have inactive re"
+
+msgid "This Coupon Number is already in use."
+msgstr "This Coupon Number is already in use."
+
+msgid "This Coupon Number is not found."
+msgstr "This Coupon Number is not found."
+
+msgid "The Coupon Number field is required."
+msgstr "The Coupon Number field is required."
+
+msgid "REFILL COUPON RECHARGE"
+msgstr "REFILL COUPON RECHARGE"
+
+msgid "You just recharged"
+msgstr "You just recharged"
+
+msgid "account with The new balance will be"
+msgstr "account with The new balance will be"
+
+msgid "My Profile"
+msgstr "My Profile"
+
+msgid "My Account"
+msgstr "My Account"
+
+msgid "Alert Threshold"
+msgstr "Alert Threshold"
+
+msgid "The Caller ID field is required."
+msgstr "The Caller ID field is required."
+
+msgid "Change Password"
+msgstr "Change Password"
+
+msgid "Bill Type"
+msgstr "Bill Type"
+
+msgid "Bill Days"
+msgstr "Bill Days"
+
+msgid "New Products"
+msgstr "New Products"
+
+msgid "Active Products"
+msgstr "Active Products"
+
+msgid "Outstanding"
+msgstr "Outstanding"
+
+msgid "Todays Calls"
+msgstr "Todays Calls"
+
+msgid "Recent Calls"
+msgstr "Recent Calls"
+
+msgid "The Available DIDs field is required."
+msgstr "The Available DIDs field is required."
+
+msgid "Please enter your password"
+msgstr "Please enter your password"
+
+msgid "Please enter your first name"
+msgstr "Please enter your first name"
+
+msgid "Please enter your email"
+msgstr "Please enter your email"
+
+msgid "Please enter valid email"
+msgstr "Please enter valid email"
+
+msgid "This field is required."
+msgstr "This field is required."
+
+msgid "Email Setting"
+msgstr "Email Setting"
+
+msgid "SMTP Password"
+msgstr "SMTP Password"
+
+msgid "Are you sure want to remove logo?"
+msgstr "Are you sure want to remove logo?"
+
+msgid "The IP field must contain a unique value"
+msgstr "The IP field must contain a unique value"
+
+msgid "The IP field have not valid IP."
+msgstr "The IP field have not valid IP."
+
+msgid "The IP field is required."
+msgstr "The IP field is required."
+
+msgid "The Name field is required."
+msgstr "The Name field is required."
+
+msgid "Please enter only alpha-numeric value"
+msgstr "Please enter only alpha-numeric value"
+
+msgid "Are you sure want to delete speed dial r"
+msgstr "Are you sure want to delete speed dial r"
+
+msgid "Generated Date"
+msgstr "Generated Date"
+
+msgid "My Products"
+msgstr "My Products"
+
+msgid "Pinless CLI"
+msgstr "Pinless CLI"
+
+msgid "Refill Coupon"
+msgstr "Refill Coupon"
+
+msgid "TopUp"
+msgstr "TopUp"
+
+msgid "Pay with Paypal"
+msgstr "Pay with Paypal"
+
+msgid "Pay with Card"
+msgstr "Pay with Card"
+
+msgid "Assign"
+msgstr "Assign"
+
+msgid "Send Credit"
+msgstr "Send Credit"
+
+msgid "To Account"
+msgstr "To Account"
+
+msgid "From Account"
+msgstr "From Account"
+
+msgid "Transfer"
+msgstr "Transfer"
+
+msgid "Telephone 1"
+msgstr "Telephone 1"
+
+msgid "Telephone 2"
+msgstr "Telephone 2"
+
+msgid "Address 2"
+msgstr "Address 2"
+
+msgid "Zip/Postal Code"
+msgstr "Zip/Postal Code"
+
+msgid "User Profile"
+msgstr "User Profile"
+
+msgid "Low Balance Alert Level"
+msgstr "Low Balance Alert Level"
+
+msgid "Enable Email Alerts ?"
+msgstr "Enable Email Alerts ?"
+
+msgid "Low Balance Alert Email"
+msgstr "Low Balance Alert Email"
+
+msgid "User name"
+msgstr "User name"
+
+msgid "Something went to wrong !"
+msgstr "Something went to wrong !"
+
+msgid "Product Purchased successfully !"
+msgstr "Product Purchased successfully !"
+
+msgid "Insufficent Balance to purchase product"
+msgstr "Insufficent Balance to purchase product"
+
+msgid "Product assigned successfully!"
+msgstr "Product assigned successfully!"
+
+msgid "Something went wrong !"
+msgstr "Something went wrong !"
+
+msgid "Product Not Found"
+msgstr "Product Not Found"
+
+msgid "Transaction has been failed"
+msgstr "Transaction has been failed"
+
+msgid "not inserted. Transaction has been faile"
+msgstr "not inserted. Transaction has been faile"
+
+msgid "Select Customer."
+msgstr "Select Customer."
+
+msgid "Product Information"
+msgstr "Product Information"
+
+msgid "Price+SetUp Fee"
+msgstr "Price+SetUp Fee"
+
+msgid "Use Voucher"
+msgstr "Use Voucher"
+
+msgid "Amount Without Tax"
+msgstr "Amount Without Tax"
+
+msgid "Total Tax"
+msgstr "Total Tax"
+
+msgid "Amount With Tax"
+msgstr "Amount With Tax"
+
+msgid "Parent Products"
+msgstr "Parent Products"
+
+msgid "Edit Product"
+msgstr "Edit Product"
+
+msgid "Product updated successfully!"
+msgstr "Product updated successfully!"
+
+msgid "Product added successfully!"
+msgstr "Product added successfully!"
+
+msgid "Product removed successfully!"
+msgstr "Product removed successfully!"
+
+msgid "Product optin successfully!"
+msgstr "Product optin successfully!"
+
+msgid "Edit Info"
+msgstr "Edit Info"
+
+msgid "Product assign successfully"
+msgstr "Product assign successfully"
+
+msgid "Insufficient balance to assign product!"
+msgstr "Insufficient balance to assign product!"
+
+msgid "Terminated Updated Successfully!"
+msgstr "Terminated Updated Successfully!"
+
+msgid "Terminated"
+msgstr "Terminated"
+
+msgid "Setup Cost"
+msgstr "Setup Cost"
+
+msgid "Order New"
+msgstr "Order New"
+
+msgid "Caller ID updated successfully!"
+msgstr "Caller ID updated successfully!"
+
+msgid "Caller ID added successfully!"
+msgstr "Caller ID added successfully!"
+
+msgid "Caller ID removed successfully!"
+msgstr "Caller ID removed successfully!"
+
+msgid "Name is not contain any space"
+msgstr "Name is not contain any space"
+
+msgid "Name already exist in system."
+msgstr "Name already exist in system."
+
+msgid "Callbarring Settings Updated Successfull"
+msgstr "Callbarring Settings Updated Successfull"
+
+msgid "allbarring Settings Added Successfully!"
+msgstr "allbarring Settings Added Successfully!"
+
+msgid "Call Barring Removed Successfully!"
+msgstr "Call Barring Removed Successfully!"
+
+msgid "Calltype already exist in system."
+msgstr "Calltype already exist in system."
+
+msgid "Calltype Updated Successfully!"
+msgstr "Calltype Updated Successfully!"
+
+msgid "Calltype Added Successfully!"
+msgstr "Calltype Added Successfully!"
+
+msgid "calltype removed successfully!"
+msgstr "calltype removed successfully!"
+
+msgid "File must be in the following format(.cs"
+msgstr "File must be in the following format(.cs"
+
+msgid "Import Package Codes:"
+msgstr "Import Package Codes:"
+
+msgid "Code, Destination."
+msgstr "Code, Destination."
+
+msgid "Records Imported Successfully:"
+msgstr "Records Imported Successfully:"
+
+msgid "Records Not Imported :"
+msgstr "Records Not Imported :"
+
+msgid "Download Errors"
+msgstr "Download Errors"
+
+msgid "Back to Package Patterns List"
+msgstr "Back to Package Patterns List"
+
+msgid "Add To List"
+msgstr "Add To List"
+
+msgid "Routing Prefix already exist in system."
+msgstr "Routing Prefix already exist in system."
+
+msgid "Rate Group Updated Successfully!"
+msgstr "Rate Group Updated Successfully!"
+
+msgid "Rate Group Added Successfully!"
+msgstr "Rate Group Added Successfully!"
+
+msgid "Duplicate Rate Group Added Successfully!"
+msgstr "Duplicate Rate Group Added Successfully!"
+
+msgid "Routing Prefix (Enterprise)"
+msgstr "Routing Prefix (Enterprise)"
+
+msgid "Priority (Enterprise)"
+msgstr "Priority (Enterprise)"
+
+msgid "Percentage (WIP) (Enterprise)"
+msgstr "Percentage (WIP) (Enterprise)"
+
+msgid "LCR"
+msgstr "LCR"
+
+msgid "Percentage"
+msgstr "Percentage"
+
+msgid "Tax removed successfully!"
+msgstr "Tax removed successfully!"
+
+msgid "Tax added successfully!"
+msgstr "Tax added successfully!"
+
+msgid "Tax updated successfully!"
+msgstr "Tax updated successfully!"
+
+msgid "Charges List"
+msgstr "Charges List"
+
+msgid "Trunk Updated Successfully!"
+msgstr "Trunk Updated Successfully!"
+
+msgid "Trunk Added Successfully!"
+msgstr "Trunk Added Successfully!"
+
+msgid "Trunk removed successfully!"
+msgstr "Trunk removed successfully!"
+
+msgid "setting updated successfully!"
+msgstr "setting updated successfully!"
+
+msgid "Template Updated Successfully!"
+msgstr "Template Updated Successfully!"
+
+msgid "Template Added Successfully!"
+msgstr "Template Added Successfully!"
+
+msgid "Country Updated successfully!"
+msgstr "Country Updated successfully!"
+
+msgid "Country Added successfully!"
+msgstr "Country Added successfully!"
+
+msgid "Country removed successfully!"
+msgstr "Country removed successfully!"
+
+msgid "Currency Updated Successfully!"
+msgstr "Currency Updated Successfully!"
+
+msgid "My Rates"
+msgstr "My Rates"
+
+msgid "Cost / Min"
+msgstr "Cost / Min"
+
+msgid "Purchase"
+msgstr "Purchase"
+
+msgid "Available DIDs"
+msgstr "Available DIDs"
+
+msgid "New IP"
+msgstr "New IP"
+
+msgid "Digits"
+msgstr "Digits"
+
+msgid "Email Address"
+msgstr "Email Address"
+
+msgid "Call Forward"
+msgstr "Call Forward"
+
+msgid "If Busy:"
+msgstr "If Busy:"
+
+msgid "If SIP Not Registered:"
+msgstr "If SIP Not Registered:"
+
+msgid "If No Answer:"
+msgstr "If No Answer:"
+
+msgid "Pay Now"
+msgstr "Pay Now"
+
+msgid "Pay with Account"
+msgstr "Pay with Account"
+
+msgid "Please wait, your order is being processed and you will be redirected to the paypal website."
+msgstr "Please wait, your order is being processed and you will be redirected to the paypal website."
+
+msgid "Coupon Number:"
+msgstr "Coupon Number:"
+
+msgid "Add Voucher"
+msgstr "Add Voucher"
+
+msgid "Selected Plan"
+msgstr "Selected Plan"
+
+msgid "My Product"
+msgstr "My Product"
+
+msgid "Parent Product"
+msgstr "Parent Product"
+
+msgid "Edit Email Template"
+msgstr "Edit Email Template"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "KEY"
+msgstr "KEY"
+
+msgid "VALUE"
+msgstr "VALUE"
+
+msgid "Records with duplicate account number and email will be ignored."
+msgstr "Records with duplicate account number and email will be ignored."
+
+msgid "Account Details"
+msgstr "Account Details"
+
+msgid "Mass Customer"
+msgstr "Mass Customer"
+
+msgid "Daily"
+msgstr "Daily"
+
+msgid "Monthly"
+msgstr "Monthly"
+
+msgid "Prepaid"
+msgstr "Prepaid"
+
+msgid "Postpaid"
+msgstr "Postpaid"
+
+msgid "Force Caller ID"
+msgstr "Force Caller ID"
+
+msgid "Customer Profile"
+msgstr "Customer Profile"
+
+msgid "Caller Id Name"
+msgstr "Caller Id Name"
+
+msgid "Caller Id Number"
+msgstr "Caller Id Number"
+
+msgid "Blocked Codes"
+msgstr "Blocked Codes"
+
+msgid "Page will display only receipts and confirmed invoices."
+msgstr "Page will display only receipts and confirmed invoices."
+
+msgid "Accessnumber Updated Successfully!"
+msgstr "Accessnumber Updated Successfully!"
+
+msgid "Accessnumber Removed Successfully!"
+msgstr "Accessnumber Removed Successfully!"
+
+msgid "Invalid file format : Only CSV file allows to import records(Can't import empty file)"
+msgstr "Invalid file format : Only CSV file allows to import records(Can't import empty file)"
+
+msgid "Access Number,Country"
+msgstr "Access Number,Country"
+
+msgid "Please Select File."
+msgstr "Please Select File."
+
+msgid "are required"
+msgstr "are required"
+
+msgid "is Required"
+msgstr "is Required"
+
+msgid "is not Valid"
+msgstr "is not Valid"
+
+msgid "Duplicate accessnumber found from database"
+msgstr "Duplicate accessnumber found from database"
+
+msgid "Duplicate accessnumber found from import file."
+msgstr "Duplicate accessnumber found from import file."
+
+msgid "Total"
+msgstr "Total"
+
+msgid "AccessNumber Imported Successfully!"
+msgstr "AccessNumber Imported Successfully!"
+
+msgid "Records Not Imported:"
+msgstr "Records Not Imported:"
+
+msgid "Back to AccessNumber List"
+msgstr "Back to AccessNumber List"
+
+msgid "Speed Dial Number Updated Successfully"
+msgstr "Speed Dial Number Updated Successfully"
+
+msgid "Please insert only numeric value!"
+msgstr "Please insert only numeric value!"
+
+msgid "Speed Dial Number Removed Successfully"
+msgstr "Speed Dial Number Removed Successfully"
+
+msgid "Speed Dial Number is Empty"
+msgstr "Speed Dial Number is Empty"
+
+msgid "Sip Device removed successfully!"
+msgstr "Sip Device removed successfully!"
+
+msgid "Sip updated successfully!"
+msgstr "Sip updated successfully!"
+
+msgid "Block Code Removed Sucessfully!"
+msgstr "Block Code Removed Sucessfully!"
+
+msgid "Your Account Limit has been reached.Please Change Your Prefix."
+msgstr "Your Account Limit has been reached.Please Change Your Prefix."
+
+msgid "Please Enter Proper Account Length."
+msgstr "Please Enter Proper Account Length."
+
+msgid "Bulk customer generate successfully!"
+msgstr "Bulk customer generate successfully!"
+
+msgid "Recharge successfully!"
+msgstr "Recharge successfully!"
+
+msgid "Post charge applied successfully."
+msgstr "Post charge applied successfully."
+
+msgid "Account callerID updated successfully!"
+msgstr "Account callerID updated successfully!"
+
+msgid "Account callerID added successfully!"
+msgstr "Account callerID added successfully!"
+
+msgid "Reseller updated successfully!"
+msgstr "Reseller updated successfully!"
+
+msgid "Reseller added successfully!"
+msgstr "Reseller added successfully!"
+
+msgid "Updated successfully!"
+msgstr "Updated successfully!"
+
+msgid "Added Successfully!"
+msgstr "Added Successfully!"
+
+msgid "Customer batch updated successfully!"
+msgstr "Customer batch updated successfully!"
+
+msgid "Reseller batch updated successfully!"
+msgstr "Reseller batch updated successfully!"
+
+msgid "Customer Removed Successfully!"
+msgstr "Customer Removed Successfully!"
+
+msgid "Reseller Removed Successfully!"
+msgstr "Reseller Removed Successfully!"
+
+msgid "Provider Removed Successfully!"
+msgstr "Provider Removed Successfully!"
+
+msgid "Admin Removed Successfully!"
+msgstr "Admin Removed Successfully!"
+
+msgid "Sub Admin Removed Successfully!"
+msgstr "Sub Admin Removed Successfully!"
+
+msgid "DID Added Successfully."
+msgstr "DID Added Successfully."
+
+msgid "DID Already Removed Before."
+msgstr "DID Already Removed Before."
+
+msgid "Account Tax Added Successfully!"
+msgstr "Account Tax Added Successfully!"
+
+msgid "Account Tax Removed Successfully!"
+msgstr "Account Tax Removed Successfully!"
+
+msgid "Product Removed Sucessfully."
+msgstr "Product Removed Sucessfully."
+
+msgid "Email Resend Successfully!"
+msgstr "Email Resend Successfully!"
+
+msgid "Email List Updated Successfully!"
+msgstr "Email List Updated Successfully!"
+
+msgid "Email List Added Successfully!"
+msgstr "Email List Added Successfully!"
+
+msgid "Email Removed Successfully!"
+msgstr "Email Removed Successfully!"
+
+msgid "Please Try Again!"
+msgstr "Please Try Again!"
+
+msgid "Email BroadCast Successfully!"
+msgstr "Email BroadCast Successfully!"
+
+msgid "No Record Found!"
+msgstr "No Record Found!"
+
+msgid "Email Address Not Found!"
+msgstr "Email Address Not Found!"
+
+msgid "Edit Freeswitch SIP Devices"
+msgstr "Edit Freeswitch SIP Devices"
+
+msgid "Create Freeswitch SIP Devices"
+msgstr "Create Freeswitch SIP Devices"
+
+msgid "Gateway Updated Successfully!"
+msgstr "Gateway Updated Successfully!"
+
+msgid "Gateways already exist in system."
+msgstr "Gateways already exist in system."
+
+msgid "Gateway name must not have any space."
+msgstr "Gateway name must not have any space."
+
+msgid "Gateway Added Successfully!"
+msgstr "Gateway Added Successfully!"
+
+msgid "Gateway Removed Successfully!"
+msgstr "Gateway Removed Successfully!"
+
+msgid "Please enter All profile value!"
+msgstr "Please enter All profile value!"
+
+msgid "SIP Profile name must not have any space!"
+msgstr "SIP Profile name must not have any space!"
+
+msgid "Duplicate SIP IP OR Port found it must be unique!"
+msgstr "Duplicate SIP IP OR Port found it must be unique!"
+
+msgid "SIP Profile Added Successfully!"
+msgstr "SIP Profile Added Successfully!"
+
+msgid "Name must be unique!"
+msgstr "Name must be unique!"
+
+msgid "SIP Profile Updated Successfully!"
+msgstr "SIP Profile Updated Successfully!"
+
+msgid "SIP Setting Added Successfully!"
+msgstr "SIP Setting Added Successfully!"
+
+msgid "SIP Setting Updated Successfully!"
+msgstr "SIP Setting Updated Successfully!"
+
+msgid "SIP Setting Removed Successfully!"
+msgstr "SIP Setting Removed Successfully!"
+
+msgid "SIP Profile Removed Successfully!"
+msgstr "SIP Profile Removed Successfully!"
+
+msgid "Host Already Exist in System."
+msgstr "Host Already Exist in System."
+
+msgid "Freeswitch Server Updated Successfully!"
+msgstr "Freeswitch Server Updated Successfully!"
+
+msgid "Freeswitch Server Added Successfully!"
+msgstr "Freeswitch Server Added Successfully!"
+
+msgid "Freeswitch Server Removed Successfully!"
+msgstr "Freeswitch Server Removed Successfully!"
+
+msgid "Invoice updated successfully!"
+msgstr "Invoice updated successfully!"
+
+msgid "Invoice payment done successfully!"
+msgstr "Invoice payment done successfully!"
+
+msgid "Account Not Found."
+msgstr "Account Not Found."
+
+msgid "Invoice payment amount should be higher then the invoice amount."
+msgstr "Invoice payment amount should be higher then the invoice amount."
+
+msgid "The Favicon file size shoud not exceed 1MB!"
+msgstr "The Favicon file size shoud not exceed 1MB!"
+
+msgid "Please upload 250 * 60 size file"
+msgstr "Please upload 250 * 60 size file"
+
+msgid "Logo only allows file types of JPG and JPEG."
+msgstr "Logo only allows file types of JPG and JPEG."
+
+msgid "Favicon only allows file types of ICO, PNG, JPG and JPEG."
+msgstr "Favicon only allows file types of ICO, PNG, JPG and JPEG."
+
+msgid "Please upload 16 * 16 size of favicon."
+msgstr "Please upload 16 * 16 size of favicon."
+
+msgid "Company profile updated sucessfully!"
+msgstr "Company profile updated sucessfully!"
+
+msgid "Company profile added sucessfully!"
+msgstr "Company profile added sucessfully!"
+
+msgid "Permission Denied."
+msgstr "Permission Denied."
+
+msgid "is Deleted Sucessfully!"
+msgstr "is Deleted Sucessfully!"
+
+msgid "To date should not be greater than current date."
+msgstr "To date should not be greater than current date."
+
+msgid "Invoice generation completed."
+msgstr "Invoice generation completed."
+
+msgid "No data found"
+msgstr "No data found"
+
+msgid "Invoices removed successfully"
+msgstr "Invoices removed successfully"
+
+msgid "The Prefix field must contain a unique value."
+msgstr "The Prefix field must contain a unique value."
+
+msgid "The IP field must contain a unique value."
+msgstr "The IP field must contain a unique value."
+
+msgid "IP Map added successfully!"
+msgstr "IP Map added successfully!"
+
+msgid "IP Map removed successfully!"
+msgstr "IP Map removed successfully!"
+
+msgid "Localization Added Successfully!"
+msgstr "Localization Added Successfully!"
+
+msgid "Localization Updated Successfully!"
+msgstr "Localization Updated Successfully!"
+
+msgid "Localization Removed Successfully!"
+msgstr "Localization Removed Successfully!"
+
+msgid "Globalization is already exist in this system"
+msgstr "Globalization is already exist in this system"
+
+msgid "Dispatcher Updated Successfully!"
+msgstr "Dispatcher Updated Successfully!"
+
+msgid "Dispatcher Added Successfully!"
+msgstr "Dispatcher Added Successfully!"
+
+msgid "Dispatcher Removed Successfully!"
+msgstr "Dispatcher Removed Successfully!"
+
+msgid "Code is already in system"
+msgstr "Code is already in system"
+
+msgid "Country is already in system"
+msgstr "Country is already in system"
+
+msgid "Ratedeck updated successfully!"
+msgstr "Ratedeck updated successfully!"
+
+msgid "Ratedeck added successfully!"
+msgstr "Ratedeck added successfully!"
+
+msgid "Ratedeck removed successfully!"
+msgstr "Ratedeck removed successfully!"
+
+msgid "Code,Destination,Province/State,City,Status"
+msgstr "Code,Destination,Province/State,City,Status"
+
+msgid "Duplicate Ratedeck Number found from import file."
+msgstr "Duplicate Ratedeck Number found from import file."
+
+msgid "Ratedeck Imported Successfully!"
+msgstr "Ratedeck Imported Successfully!"
+
+msgid "Ratedeck Import Error"
+msgstr "Ratedeck Import Error"
+
+msgid "Back to Ratedeck List"
+msgstr "Back to Ratedeck List"
+
+msgid "Origination Rate Imported Successfully!"
+msgstr "Origination Rate Imported Successfully!"
+
+msgid "Origination Rate Updated Successfully!"
+msgstr "Origination Rate Updated Successfully!"
+
+msgid "Origination Rate Added Successfully!"
+msgstr "Origination Rate Added Successfully!"
+
+msgid "Termination Rates Batch Updated Successfully!"
+msgstr "Termination Rates Batch Updated Successfully!"
+
+msgid "Map CSV to Termination Rates"
+msgstr "Map CSV to Termination Rates"
+
+msgid "Data Example"
+msgstr "Data Example"
+
+msgid "Map to Field"
+msgstr "Map to Field"
+
+msgid "PREFIX/DEFAULT VALUE"
+msgstr "PREFIX/DEFAULT VALUE"
+
+msgid "FLUX Field"
+msgstr "FLUX Field"
+
+msgid "Created"
+msgstr "Created"
+
+msgid "Modified"
+msgstr "Modified"
+
+msgid "You can not create"
+msgstr "You can not create"
+
+msgid "Refill coupon with"
+msgstr "Refill coupon with"
+
+msgid "You can create maximum"
+msgstr "You can create maximum"
+
+msgid "Refill coupon created successfully!"
+msgstr "Refill coupon created successfully!"
+
+msgid "Currency Added Successfully!"
+msgstr "Currency Added Successfully!"
+
+msgid "Currency Removed Successfully!"
+msgstr "Currency Removed Successfully!"
+
+msgid "Backup Exported Successfully!"
+msgstr "Backup Exported Successfully!"
+
+msgid "An error occur when the system tried to backup of the database. Please check yours system settings for the backup section"
+msgstr "An error occur when the system tried to backup of the database. Please check yours system settings for the backup section"
+
+msgid "Database Restore successfully."
+msgstr "Database Restore successfully."
+
+msgid "File not exists!"
+msgstr "File not exists!"
+
+msgid "There is a some issue or invalid file format."
+msgstr "There is a some issue or invalid file format."
+
+msgid "Database backup deleted successfully."
+msgstr "Database backup deleted successfully."
+
+msgid "Languages updated successfully!"
+msgstr "Languages updated successfully!"
+
+msgid "Languages removed successfully!"
+msgstr "Languages removed successfully!"
+
+msgid "Languages added successfully!"
+msgstr "Languages added successfully!"
+
+msgid "Translation updated successfully!"
+msgstr "Translation updated successfully!"
+
+msgid "Translation added successfully!"
+msgstr "Translation added successfully!"
+
+msgid "Update Languages"
+msgstr "Update Languages"
+
+msgid "Speed Dial"
+msgstr "Speed Dial"
+
+msgid "Payment"
+msgstr "Payment"
+
+msgid "Method"
+msgstr "Method"
+
+msgid "Once you confirm the invoice, you will no longer able to update it again."
+msgstr "Once you confirm the invoice, you will no longer able to update it again."
+
+msgid "Payment Gateway Permission"
+msgstr "Payment Gateway Permission"
+
+msgid "Zip Code"
+msgstr "Zip Code"
+
+msgid "Yes"
+msgstr "Yes"
+
+msgid "Back"
+msgstr "Back"
+
+msgid "Edit Reseller"
+msgstr "Edit Reseller"
+
+msgid "Asignar DID a granel"
+msgstr "Asignar DID a granel"
+
+msgid "DIDs Search"
+msgstr "DIDs Search"
+
+msgid "By Month"
+msgstr "By Month"
+
+msgid "Create Gateway"
+msgstr "Create Gateway"
+
+msgid "Calling Card Language"
+msgstr "Calling Card Language"
+
+msgid "Last"
+msgstr "Last"
+
+msgid "Pay Date"
+msgstr "Pay Date"
+
+msgid "Purchase DID"
+msgstr "Purchase DID"
+
+msgid "Caller-ID-A-Form"
+msgstr "Caller-ID-A-Form"
+
+msgid "Expire Seconds"
+msgstr "Expire Seconds"
+
+msgid "Termination Date"
+msgstr "Termination Date"
+
+msgid "Registration Date"
+msgstr "Registration Date"
+
+msgid "Payment By"
+msgstr "Payment By"
+
+msgid "Product Status"
+msgstr "Product Status"
+
+msgid "Minute"
+msgstr "Minute"
+
+msgid "Hour"
+msgstr "Hour"
+
+msgid "Day"
+msgstr "Day"
+
+msgid "Month"
+msgstr "Month"
+
+msgid "Year"
+msgstr "Year"
+
+msgid "List"
+msgstr "List"
+
+msgid "Edit"
+msgstr "Edit"
+
+msgid "Not Avaialable any Subscription."
+msgstr "Not Avaialable any Subscription."
+
+msgid "Not Avaialable any Package for this Country."
+msgstr "Not Avaialable any Package for this Country."
+
+msgid "You can only transfer fund in same level account."
+msgstr "You can only transfer fund in same level account."
+
+msgid "You can not transfer fund in same account."
+msgstr "You can not transfer fund in same account."
+
+msgid "Monthly Fee"
+msgstr "Monthly Fee"
+
+msgid "Bulk DID Assign"
+msgstr "Bulk DID Assign"
+
+msgid "Invoice Start From"
+msgstr "Invoice Start From"
+
+msgid "Edit Gateway"
+msgstr "Edit Gateway"
+
+msgid "Number Of Default Rows"
+msgstr "Number Of Default Rows"
+
+msgid "Mobile Dialer"
+msgstr "Mobile Dialer"
+
+msgid "Trunk Count"
+msgstr "Trunk Count"
+
+msgid "Welcome File"
+msgstr "Welcome File"
+
+msgid "Local Call Timeout (Sec.)"
+msgstr "Local Call Timeout (Sec.)"
+
+msgid "Rate check for DID"
+msgstr "Rate check for DID"
+
+msgid "DID Localization"
+msgstr "DID Localization"
+
+msgid "Voicemail Number"
+msgstr "Voicemail Number"
+
+msgid "OTP Expire Time(min)"
+msgstr "OTP Expire Time(min)"
+
+msgid "Edit Provider"
+msgstr "Edit Provider"
+
+msgid "Product Summary Reports"
+msgstr "Product Summary Reports"
+
+msgid "Edit Origination Rate"
+msgstr "Edit Origination Rate"
+
+msgid "Dialplan Variable"
+msgstr "Dialplan Variable"
+
+msgid "Uninstall"
+msgstr "Uninstall"
+
+msgid "Call Stat"
+msgstr "Call Stat"
+
+msgid "Failed Calls"
+msgstr "Failed Calls"
+
+msgid "Top 10 Countries"
+msgstr "Top 10 Countries"
+
+msgid "By Minutes"
+msgstr "By Minutes"
+
+msgid "By Calls"
+msgstr "By Calls"
+
+msgid "Profit per day"
+msgstr "Profit per day"
+
+msgid "January"
+msgstr "January"
+
+msgid "February"
+msgstr "February"
+
+msgid "March"
+msgstr "March"
+
+msgid "April"
+msgstr "April"
+
+msgid "May"
+msgstr "May"
+
+msgid "June"
+msgstr "June"
+
+msgid "July"
+msgstr "July"
+
+msgid "August"
+msgstr "August"
+
+msgid "September"
+msgstr "September"
+
+msgid "October"
+msgstr "October"
+
+msgid "November"
+msgstr "November"
+
+msgid "December"
+msgstr "December"
+
+msgid "Doesn't Contain"
+msgstr "Doesn't Contain"
+
+msgid "Greater Than"
+msgstr "Greater Than"
+
+msgid "Less Than"
+msgstr "Less Than"
+
+msgid "Greater Or Equal Than"
+msgstr "Greater Or Equal Than"
+
+msgid "Less Or Equal Than"
+msgstr "Less Or Equal Than"
+
+msgid "Set To"
+msgstr "Set To"
+
+msgid "Increase By"
+msgstr "Increase By"
+
+msgid "Decrease By"
+msgstr "Decrease By"
+
+msgid "Community"
+msgstr "Community"
+
+msgid "You must either select a field from your file OR provide a default value for the following fields:"
+msgstr "You must either select a field from your file OR provide a default value for the following fields:"
+
+msgid "Account Number,Password,First Name,Last Name,Company,Phone,Mobile,Email,Address,city,Province/State,Zip/Postal Code,Number Translation,Out Callerid Translation,In Callerid Translation,Concurrent Calls,CPS,Balance,Credit Limit,SIP Username,SIP Password"
+msgstr "Account Number,Password,First Name,Last Name,Company,Phone,Mobile,Email,Address,city,Province/State,Zip/Postal Code,Number Translation,Out Callerid Translation,In Callerid Translation,Concurrent Calls,CPS,Balance,Credit Limit,SIP Username,SIP Password"
+
+msgid "Note : Records with duplicate account number and email will be ignored."
+msgstr "Note : Records with duplicate account number and email will be ignored."
+
+msgid "Map CSV to Customers"
+msgstr "Map CSV to Customers"
+
+msgid "Account Information"
+msgstr "Account Information"
+
+msgid "Select Account"
+msgstr "Select Account"
+
+msgid "DEFAULT VALUE"
+msgstr "DEFAULT VALUE"
+
+msgid "SIP Username"
+msgstr "SIP Username"
+
+msgid "sip_username"
+msgstr "sip_username"
+
+msgid "SIP Password"
+msgstr "SIP Password"
+
+msgid "Same as Password"
+msgstr "Same as Password"
+
+msgid "Same as Account Number"
+msgstr "Same as Account Number"
+
+msgid "Random"
+msgstr "Random"
+
+msgid "Import File Data."
+msgstr "Import File Data."
+
+msgid "Process Records"
+msgstr "Process Records"
+
+msgid "Note : Duplicate accounts with account number / email are ignored."
+msgstr "Note : Duplicate accounts with account number / email are ignored."
+
+msgid "Remove"
+msgstr "Remove"
+
+msgid "Number of Account"
+msgstr "Number of Account"
+
+msgid "Account Number Length"
+msgstr "Account Number Length"
+
+msgid "DID (CLI Match, If not matched then use random allocated DID)"
+msgstr "DID (CLI Match, If not matched then use random allocated DID)"
+
+msgid "Caller Id (CLI Match, If not matched then use random allocated Caller Id)"
+msgstr "Caller Id (CLI Match, If not matched then use random allocated Caller Id)"
+
+msgid "Use NON-CLI Rate Group (If CLI not match with DID)"
+msgstr "Use NON-CLI Rate Group (If CLI not match with DID)"
+
+msgid "Use NON-CLI Rate Group (If CLI not match with Caller ID)"
+msgstr "Use NON-CLI Rate Group (If CLI not match with Caller ID)"
+
+msgid "Use NON-CLI Rate Group (If CLI not match with DID & Caller id)"
+msgstr "Use NON-CLI Rate Group (If CLI not match with DID & Caller id)"
+
+msgid "Reject Call (If CLI not match with DID)"
+msgstr "Reject Call (If CLI not match with DID)"
+
+msgid "Reject Call (If CLI not match with Caller ID)"
+msgstr "Reject Call (If CLI not match with Caller ID)"
+
+msgid "Reject Call (If CLI not match with DID & Caller id)"
+msgstr "Reject Call (If CLI not match with DID & Caller id)"
+
+msgid "--Select--"
+msgstr "--Select--"
+
+msgid "Test Mail"
+msgstr "Test Mail"
+
+msgid "Reset Password"
+msgstr "Reset Password"
+
+msgid "country"
+msgstr "AFGHANISTAN"
+
+msgid "country"
+msgstr "ALBANIA"
+
+msgid "country"
+msgstr "ALGERIA"
+
+msgid "country"
+msgstr "AMERICAN SAMOA"
+
+msgid "country"
+msgstr "ANDORRA"
+
+msgid "country"
+msgstr "ANGOLA"
+
+msgid "country"
+msgstr "ANGUILLA"
+
+msgid "country"
+msgstr "ANTIGUA & BARBUDA"
+
+msgid "country"
+msgstr "ARGENTINA"
+
+msgid "country"
+msgstr "ARMENIA"
+
+msgid "country"
+msgstr "ARUBA"
+
+msgid "country"
+msgstr "AUSTRALIA"
+
+msgid "country"
+msgstr "AUSTRIA"
+
+msgid "country"
+msgstr "AZERBAIJAN"
+
+msgid "country"
+msgstr "BAHAMAS"
+
+msgid "country"
+msgstr "BAHRAIN"
+
+msgid "country"
+msgstr "BANGLADESH"
+
+msgid "country"
+msgstr "BARBADOS"
+
+msgid "country"
+msgstr "BELARUS"
+
+msgid "country"
+msgstr "BELGIUM"
+
+msgid "country"
+msgstr "BELIZE"
+
+msgid "country"
+msgstr "BENIN"
+
+msgid "country"
+msgstr "BERMUDA"
+
+msgid "country"
+msgstr "BHUTAN"
+
+msgid "country"
+msgstr "BOLIVIA"
+
+msgid "country"
+msgstr "BOSNIA AND HERZEGOVINA"
+
+msgid "country"
+msgstr "BOTSWANA"
+
+msgid "country"
+msgstr "BRAZIL"
+
+msgid "country"
+msgstr "BRITISH VIRGIN ISLANDS"
+
+msgid "country"
+msgstr "BRUNEI"
+
+msgid "country"
+msgstr "BULGARIA"
+
+msgid "country"
+msgstr "BURKINA FASO"
+
+msgid "country"
+msgstr "BURUNDI"
+
+msgid "country"
+msgstr "CAMBODIA"
+
+msgid "country"
+msgstr "CAMEROON"
+
+msgid "country"
+msgstr "CANADA"
+
+msgid "country"
+msgstr "CAPE VERDE"
+
+msgid "country"
+msgstr "CAYMAN ISLANDS"
+
+msgid "country"
+msgstr "CENTRAL AFRICAN REPUBLIC"
+
+msgid "country"
+msgstr "CHAD"
+
+msgid "country"
+msgstr "CHILE"
+
+msgid "country"
+msgstr "CHINA"
+
+msgid "country"
+msgstr "COLOMBIA"
+
+msgid "country"
+msgstr "COMOROS"
+
+msgid "country"
+msgstr "CONGO"
+
+msgid "country"
+msgstr "COSTA RICA"
+
+msgid "country"
+msgstr "CROATIA"
+
+msgid "country"
+msgstr "CUBA"
+
+msgid "country"
+msgstr "CYPRUS"
+
+msgid "country"
+msgstr "CZECH REPUBLIC"
+
+msgid "country"
+msgstr "DEMOCRATIC REPUBLIC"
+
+msgid "country"
+msgstr "DENMARK"
+
+msgid "country"
+msgstr "DJIBOUTI"
+
+msgid "country"
+msgstr "DOMINICA"
+
+msgid "country"
+msgstr "DOMINICAN REPUBLIC"
+
+msgid "country"
+msgstr "ECUADOR"
+
+msgid "country"
+msgstr "EGYPT"
+
+msgid "country"
+msgstr "EL SALVADOR"
+
+msgid "country"
+msgstr "EQUATORIAL GUINEA"
+
+msgid "country"
+msgstr "ERITREA"
+
+msgid "country"
+msgstr "ETHIOPIA"
+
+msgid "country"
+msgstr "FAEROE ISLANDS"
+
+msgid "country"
+msgstr "FIJI ISLANDS"
+
+msgid "country"
+msgstr "FINLAND"
+
+msgid "country"
+msgstr "FRANCE"
+
+msgid "country"
+msgstr "FRENCH GUIANA"
+
+msgid "country"
+msgstr "FRENCH POLYNESIA"
+
+msgid "country"
+msgstr "GABON"
+
+msgid "country"
+msgstr "GAMBIA"
+
+msgid "country"
+msgstr "GEORGIA"
+
+msgid "country"
+msgstr "GERMANY"
+
+msgid "country"
+msgstr "GHANA"
+
+msgid "country"
+msgstr "GIBRALTAR"
+
+msgid "country"
+msgstr "GREECE"
+
+msgid "country"
+msgstr "GRENADA"
+
+msgid "country"
+msgstr "GUADELOUPE"
+
+msgid "country"
+msgstr "GUAM"
+
+msgid "country"
+msgstr "GUATEMALA"
+
+msgid "country"
+msgstr "GUINEA"
+
+msgid "country"
+msgstr "GUINEA BISSAU"
+
+msgid "country"
+msgstr "GUYANA"
+
+msgid "country"
+msgstr "HAITI"
+
+msgid "country"
+msgstr "HONDURAS"
+
+msgid "country"
+msgstr "HONG KONG"
+
+msgid "country"
+msgstr "HUNGARY"
+
+msgid "country"
+msgstr "ICELAND"
+
+msgid "country"
+msgstr "INDIA"
+
+msgid "country"
+msgstr "INDONESIA"
+
+msgid "country"
+msgstr "IRAN"
+
+msgid "country"
+msgstr "IRAQ"
+
+msgid "country"
+msgstr "IRELAND"
+
+msgid "country"
+msgstr "ISRAEL"
+
+msgid "country"
+msgstr "ITALY"
+
+msgid "country"
+msgstr "IVORY COAST"
+
+msgid "country"
+msgstr "JAMAICA"
+
+msgid "country"
+msgstr "JAPAN"
+
+msgid "country"
+msgstr "JORDAN"
+
+msgid "country"
+msgstr "KAZAKHSTAN"
+
+msgid "country"
+msgstr "KENYA"
+
+msgid "country"
+msgstr "KOSOVO"
+
+msgid "country"
+msgstr "KUWAIT"
+
+msgid "country"
+msgstr "KYRGYZSTAN"
+
+msgid "country"
+msgstr "LAOS"
+
+msgid "country"
+msgstr "LATVIA"
+
+msgid "country"
+msgstr "LEBANON"
+
+msgid "country"
+msgstr "LESOTHO"
+
+msgid "country"
+msgstr "LIBERIA"
+
+msgid "country"
+msgstr "LIBYA"
+
+msgid "country"
+msgstr "LIECHTENSTEIN"
+
+msgid "country"
+msgstr "LITHUANIA"
+
+msgid "country"
+msgstr "LUXEMBOURG"
+
+msgid "country"
+msgstr "MACAU"
+
+msgid "country"
+msgstr "MACEDONIA"
+
+msgid "country"
+msgstr "MADAGASCAR"
+
+msgid "country"
+msgstr "MALAWI"
+
+msgid "country"
+msgstr "MALAYSIA"
+
+msgid "country"
+msgstr "MALI"
+
+msgid "country"
+msgstr "MALTA"
+
+msgid "country"
+msgstr "MARSHALL ISLANDS"
+
+msgid "country"
+msgstr "MARTINIQUE"
+
+msgid "country"
+msgstr "MAURITANIA"
+
+msgid "country"
+msgstr "MAURITIUS"
+
+msgid "country"
+msgstr "MEXICO"
+
+msgid "country"
+msgstr "MICRONESIA"
+
+msgid "country"
+msgstr "MOLDOVA"
+
+msgid "country"
+msgstr "MONACO"
+
+msgid "country"
+msgstr "MONGOLIA"
+
+msgid "country"
+msgstr "MONTENEGRO"
+
+msgid "country"
+msgstr "MONTSERRAT"
+
+msgid "country"
+msgstr "MOROCCO"
+
+msgid "country"
+msgstr "MOZAMBIQUE"
+
+msgid "country"
+msgstr "MYANMAR"
+
+msgid "country"
+msgstr "NAMIBIA"
+
+msgid "country"
+msgstr "NEPAL"
+
+msgid "country"
+msgstr "NETHERLANDS"
+
+msgid "country"
+msgstr "NEW CALEDONIA"
+
+msgid "country"
+msgstr "NEW ZEALAND"
+
+msgid "country"
+msgstr "NICARAGUA"
+
+msgid "country"
+msgstr "NIGER"
+
+msgid "country"
+msgstr "NIGERIA"
+
+msgid "country"
+msgstr "NO. MARIANA ISLANDS"
+
+msgid "country"
+msgstr "NORTH KOREA"
+
+msgid "country"
+msgstr "NORWAY"
+
+msgid "country"
+msgstr "OMAN"
+
+msgid "country"
+msgstr "PAKISTAN"
+
+msgid "country"
+msgstr "PALAU"
+
+msgid "country"
+msgstr "PANAMA"
+
+msgid "country"
+msgstr "PARAGUAY"
+
+msgid "country"
+msgstr "PERU"
+
+msgid "country"
+msgstr "PHILIPPINES"
+
+msgid "country"
+msgstr "POLAND"
+
+msgid "country"
+msgstr "PORTUGAL"
+
+msgid "country"
+msgstr "PUERTO RICO"
+
+msgid "country"
+msgstr "QATAR"
+
+msgid "country"
+msgstr "REUNION ISLAND"
+
+msgid "country"
+msgstr "ROMANIA"
+
+msgid "country"
+msgstr "RUSSIAN FEDERATION"
+
+msgid "country"
+msgstr "RWANDA"
+
+msgid "country"
+msgstr "SAN MARINO"
+
+msgid "country"
+msgstr "SAUDI ARABIA"
+
+msgid "country"
+msgstr "SENEGAL"
+
+msgid "country"
+msgstr "SERBIA"
+
+msgid "country"
+msgstr "SEYCHELLES ISLANDS"
+
+msgid "country"
+msgstr "SIERRA LEONE"
+
+msgid "country"
+msgstr "SINGAPORE"
+
+msgid "country"
+msgstr "SLOVAKIA"
+
+msgid "country"
+msgstr "SLOVENIA"
+
+msgid "country"
+msgstr "SOMALIA"
+
+msgid "country"
+msgstr "SOUTH AFRICA"
+
+msgid "country"
+msgstr "SOUTH KOREA"
+
+msgid "country"
+msgstr "SOUTH SUDAN"
+
+msgid "country"
+msgstr "SPAIN"
+
+msgid "country"
+msgstr "SRI LANKA"
+
+msgid "country"
+msgstr "ST. KITTS"
+
+msgid "country"
+msgstr "ST. LUCIA"
+
+msgid "country"
+msgstr "ST. MARTIN"
+
+msgid "country"
+msgstr "ST. PIERRE & MIQUELON"
+
+msgid "country"
+msgstr "ST. VINCENT"
+
+msgid "country"
+msgstr "SUDAN"
+
+msgid "country"
+msgstr "SURINAME"
+
+msgid "country"
+msgstr "SWAZILAND"
+
+msgid "country"
+msgstr "SWEDEN"
+
+msgid "country"
+msgstr "SWITZERLAND"
+
+msgid "country"
+msgstr "SYRIA"
+
+msgid "country"
+msgstr "TAIWAN"
+
+msgid "country"
+msgstr "TAJIKISTAN"
+
+msgid "country"
+msgstr "TANZANIA"
+
+msgid "country"
+msgstr "THAILAND"
+
+msgid "country"
+msgstr "TRINIDAD & TOBAGO"
+
+msgid "country"
+msgstr "TUNISIA"
+
+msgid "country"
+msgstr "TURKEY"
+
+msgid "country"
+msgstr "TURKMENISTAN"
+
+msgid "country"
+msgstr "TURKS & CAICOS ISLANDS"
+
+msgid "country"
+msgstr "UGANDA"
+
+msgid "country"
+msgstr "UKRAINE"
+
+msgid "country"
+msgstr "UNITED ARAB EMIRATES"
+
+msgid "country"
+msgstr "UNITED KINGDOM"
+
+msgid "country"
+msgstr "URUGUAY"
+
+msgid "country"
+msgstr "US VIRGIN ISLANDS"
+
+msgid "country"
+msgstr "United States"
+
+msgid "country"
+msgstr "UZBEKISTAN"
+
+msgid "country"
+msgstr "VENEZUELA"
+
+msgid "country"
+msgstr "VIETNAM"
+
+msgid "country"
+msgstr "YEMEN"
+
+msgid "country"
+msgstr "ZAMBIA"
+
+msgid "country"
+msgstr "ZIMBABWE"
+
+msgid "currency"
+msgstr "ASCENSION"
+
+msgid "currency"
+msgstr "COOK ISLANDS"
+
+msgid "currency"
+msgstr "EAST TIMOR"
+
+msgid "currency"
+msgstr "FALKLAND ISLANDS"
+
+msgid "currency"
+msgstr "GREENLAND"
+
+msgid "currency"
+msgstr "KIRIBATI"
+
+msgid "currency"
+msgstr "MALDIVES"
+
+msgid "currency"
+msgstr "NAURU"
+
+msgid "currency"
+msgstr "Albanian Lek"
+
+msgid "currency"
+msgstr "Algerian Dinar"
+
+msgid "currency"
+msgstr "Aluminium Ounces"
+
+msgid "currency"
+msgstr "Argentine Peso"
+
+msgid "currency"
+msgstr "Aruba Florin"
+
+msgid "currency"
+msgstr "Australian Dollar"
+
+msgid "currency"
+msgstr "Bahamian Dollar"
+
+msgid "currency"
+msgstr "Bahraini Dinar"
+
+msgid "currency"
+msgstr "Bangladesh Taka"
+
+msgid "currency"
+msgstr "Barbados Dollar"
+
+msgid "currency"
+msgstr "Belarus Ruble"
+
+msgid "currency"
+msgstr "Belize Dollar"
+
+msgid "currency"
+msgstr "Bermuda Dollar"
+
+msgid "currency"
+msgstr "Bhutan Ngultrum"
+
+msgid "currency"
+msgstr "Bolivian Boliviano"
+
+msgid "currency"
+msgstr "Brazilian Real"
+
+msgid "currency"
+msgstr "British Pound"
+
+msgid "currency"
+msgstr "Brunei Dollar"
+
+msgid "currency"
+msgstr "Bulgarian Lev"
+
+msgid "currency"
+msgstr "Burundi Franc"
+
+msgid "currency"
+msgstr "Cambodia Riel"
+
+msgid "currency"
+msgstr "Canadian Dollar"
+
+msgid "currency"
+msgstr "Cayman Islands Dollar"
+
+msgid "currency"
+msgstr "CFA Franc (BCEAO)"
+
+msgid "currency"
+msgstr "CFA Franc (BEAC)"
+
+msgid "currency"
+msgstr "Chilean Peso"
+
+msgid "currency"
+msgstr "Chinese Yuan"
+
+msgid "currency"
+msgstr "Colombian Peso"
+
+msgid "currency"
+msgstr "Comoros Franc"
+
+msgid "currency"
+msgstr "Copper Ounces"
+
+msgid "currency"
+msgstr "Costa Rica Colon"
+
+msgid "currency"
+msgstr "Croatian Kuna"
+
+msgid "currency"
+msgstr "Cuban Peso"
+
+msgid "currency"
+msgstr "Cyprus Pound"
+
+msgid "currency"
+msgstr "Czech Koruna"
+
+msgid "currency"
+msgstr "Danish Krone"
+
+msgid "currency"
+msgstr "Dijibouti Franc"
+
+msgid "currency"
+msgstr "Dominican Peso"
+
+msgid "currency"
+msgstr "East Caribbean Dollar"
+
+msgid "currency"
+msgstr "Ecuador Sucre"
+
+msgid "currency"
+msgstr "Egyptian Pound"
+
+msgid "currency"
+msgstr "El Salvador Colon"
+
+msgid "currency"
+msgstr "Eritrea Nakfa"
+
+msgid "currency"
+msgstr "Estonian Kroon"
+
+msgid "currency"
+msgstr "Ethiopian Birr"
+
+msgid "currency"
+msgstr "Euro"
+
+msgid "currency"
+msgstr "Falkland Islands Pound"
+
+msgid "currency"
+msgstr "Gambian Dalasi"
+
+msgid "currency"
+msgstr "Ghanian Cedi"
+
+msgid "currency"
+msgstr "Gibraltar Pound"
+
+msgid "currency"
+msgstr "Gold Ounces"
+
+msgid "currency"
+msgstr "Guatemala Quetzal"
+
+msgid "currency"
+msgstr "Guinea Franc"
+
+msgid "currency"
+msgstr "Haiti Gourde"
+
+msgid "currency"
+msgstr "Honduras Lempira"
+
+msgid "currency"
+msgstr "Hong Kong Dollar"
+
+msgid "currency"
+msgstr "Hungarian ForINT"
+
+msgid "currency"
+msgstr "Iceland Krona"
+
+msgid "currency"
+msgstr "Indian Rupee"
+
+msgid "currency"
+msgstr "Indonesian Rupiah"
+
+msgid "currency"
+msgstr "Iran Rial"
+
+msgid "currency"
+msgstr "Israeli Shekel"
+
+msgid "currency"
+msgstr "Jamaican Dollar"
+
+msgid "currency"
+msgstr "Japanese Yen"
+
+msgid "currency"
+msgstr "Jordanian Dinar"
+
+msgid "currency"
+msgstr "Kazakhstan Tenge"
+
+msgid "currency"
+msgstr "Kenyan Shilling"
+
+msgid "currency"
+msgstr "Korean Won"
+
+msgid "currency"
+msgstr "Kuwaiti Dinar"
+
+msgid "currency"
+msgstr "Lao Kip"
+
+msgid "currency"
+msgstr "Latvian Lat"
+
+msgid "currency"
+msgstr "Lebanese Pound"
+
+msgid "currency"
+msgstr "Lesotho Loti"
+
+msgid "currency"
+msgstr "Libyan Dinar"
+
+msgid "currency"
+msgstr "Lithuanian Lita"
+
+msgid "currency"
+msgstr "Macau Pataca"
+
+msgid "currency"
+msgstr "Macedonian Denar"
+
+msgid "currency"
+msgstr "Malagasy Franc"
+
+msgid "currency"
+msgstr "Malawi Kwacha"
+
+msgid "currency"
+msgstr "Malaysian Ringgit"
+
+msgid "currency"
+msgstr "Maldives Rufiyaa"
+
+msgid "currency"
+msgstr "Maltese Lira"
+
+msgid "currency"
+msgstr "Mauritania Ougulya"
+
+msgid "currency"
+msgstr "Mauritius Rupee"
+
+msgid "currency"
+msgstr "Mexican Peso"
+
+msgid "currency"
+msgstr "Moldovan Leu"
+
+msgid "currency"
+msgstr "Mongolian Tugrik"
+
+msgid "currency"
+msgstr "Moroccan Dirham"
+
+msgid "currency"
+msgstr "Mozambique Metical"
+
+msgid "currency"
+msgstr "Namibian Dollar"
+
+msgid "currency"
+msgstr "Nepalese Rupee"
+
+msgid "currency"
+msgstr "Neth Antilles Guilder"
+
+msgid "currency"
+msgstr "New Turkish Lira"
+
+msgid "currency"
+msgstr "New Zealand Dollar"
+
+msgid "currency"
+msgstr "Nicaragua Cordoba"
+
+msgid "currency"
+msgstr "Nigerian Naira"
+
+msgid "currency"
+msgstr "Norwegian Krone"
+
+msgid "currency"
+msgstr "Omani Rial"
+
+msgid "currency"
+msgstr "Pacific Franc"
+
+msgid "currency"
+msgstr "Pakistani Rupee"
+
+msgid "currency"
+msgstr "Palladium Ounces"
+
+msgid "currency"
+msgstr "Panama Balboa"
+
+msgid "currency"
+msgstr "Papua New Guinea Kina"
+
+msgid "currency"
+msgstr "Paraguayan Guarani"
+
+msgid "currency"
+msgstr "Peruvian Nuevo Sol"
+
+msgid "currency"
+msgstr "Philippine Peso"
+
+msgid "currency"
+msgstr "Platinum Ounces"
+
+msgid "currency"
+msgstr "Polish Zloty"
+
+msgid "currency"
+msgstr "Qatar Rial"
+
+msgid "currency"
+msgstr "Romanian Leu"
+
+msgid "currency"
+msgstr "Romanian New Leu"
+
+msgid "currency"
+msgstr "Russian Rouble"
+
+msgid "currency"
+msgstr "Rwanda Franc"
+
+msgid "currency"
+msgstr "Samoa Tala"
+
+msgid "currency"
+msgstr "Sao Tome Dobra"
+
+msgid "currency"
+msgstr "Saudi Arabian Riyal"
+
+msgid "currency"
+msgstr "Seychelles Rupee"
+
+msgid "currency"
+msgstr "Sierra Leone Leone"
+
+msgid "currency"
+msgstr "Silver Ounces"
+
+msgid "currency"
+msgstr "Singapore Dollar"
+
+msgid "currency"
+msgstr "Slovak Koruna"
+
+msgid "currency"
+msgstr "Slovenian Tolar"
+
+msgid "currency"
+msgstr "Somali Shilling"
+
+msgid "currency"
+msgstr "South African Rand"
+
+msgid "currency"
+msgstr "Sri Lanka Rupee"
+
+msgid "currency"
+msgstr "St Helena Pound"
+
+msgid "currency"
+msgstr "Sudanese Dinar"
+
+msgid "currency"
+msgstr "Surinam Guilder"
+
+msgid "currency"
+msgstr "Swaziland Lilageni"
+
+msgid "currency"
+msgstr "Swedish Krona"
+
+msgid "currency"
+msgstr "Swiss Franc"
+
+msgid "currency"
+msgstr "Syrian Pound"
+
+msgid "currency"
+msgstr "Taiwan Dollar"
+
+msgid "currency"
+msgstr "Tanzanian Shilling"
+
+msgid "currency"
+msgstr "Thai Baht"
+
+msgid "currency"
+msgstr "Tonga Paanga"
+
+msgid "currency"
+msgstr "Trinidad&Tobago Dollar"
+
+msgid "currency"
+msgstr "Tunisian Dinar"
+
+msgid "currency"
+msgstr "U.S. Dollar"
+
+msgid "currency"
+msgstr "UAE Dirham"
+
+msgid "currency"
+msgstr "Ugandan Shilling"
+
+msgid "currency"
+msgstr "Ukraine Hryvnia"
+
+msgid "currency"
+msgstr "Uruguayan New Peso"
+
+msgid "currency"
+msgstr "Vanuatu Vatu"
+
+msgid "currency"
+msgstr "Venezuelan Bolivar"
+
+msgid "currency"
+msgstr "Vietnam Dong"
+
+msgid "currency"
+msgstr "Yemen Riyal"
+
+msgid "currency"
+msgstr "Zambian Kwacha"
+
+msgid "currency"
+msgstr "Zimbabwe Dollar"
+
+msgid "currency"
+msgstr "Guyana Dollar"
+
+msgid "currency"
+msgstr "Aruban florin"
+
+msgid "currency"
+msgstr "Armenian dram"
+
+msgid "currency"
+msgstr "Azerbaijani manat"
+
+msgid "currency"
+msgstr "Barbadian dollar"
+
+msgid "currency"
+msgstr "Bosnian Convertible Marka"
+
+msgid "currency"
+msgstr "Botswana pula"
+
+msgid "currency"
+msgstr "Cape Verdean escudo"
+
+msgid "currency"
+msgstr "Congolese franc"
+
+msgid "currency"
+msgstr "Fijian Dollar"
+
+msgid "currency"
+msgstr "CFP franc"
+
+msgid "currency"
+msgstr "Georgian lari"
+
+msgid "currency"
+msgstr "Iraqi dinar"
+
+msgid "currency"
+msgstr "Kyrgyzstani som"
+
+msgid "currency"
+msgstr "Liberian dollar"
+
+msgid "currency"
+msgstr "Malagasy ariary"
+
+msgid "currency"
+msgstr "Burmese Kyat"
+
+msgid "currency"
+msgstr "North Korean won"
+
+msgid "currency"
+msgstr "nuevo sol"
+
+msgid "currency"
+msgstr "Serbian dinar"
+
+msgid "currency"
+msgstr "South Korean won"
+
+msgid "currency"
+msgstr "South Sudanese pound"
+
+msgid "currency"
+msgstr "Sudanese pound"
+
+msgid "currency"
+msgstr "Surinamese dollar"
+
+msgid "currency"
+msgstr "Tajikistani samani"
+
+msgid "currency"
+msgstr "Turkish lira"
+
+msgid "currency"
+msgstr "Turkmenistan manat"
+
+msgid "currency"
+msgstr "Pound sterling"
+
+msgid "currency"
+msgstr "Uzbekistani soʻm"
+
+msgid "currency"
+msgstr "Saint Helena pound"
+
+msgid "currency"
+msgstr "Indian Rupees"
+
+msgid "login and signup"
+msgstr "Telephone number is only numeric"
+
+msgid "login and signup"
+msgstr "Please enter valid Captcha code"
+
+msgid "login and signup"
+msgstr "Please contact to administrator"
+
+msgid "login and signup"
+msgstr "Requested email is already exist"
+
+msgid "login and signup"
+msgstr "Requested number is already exist"
+
+msgid "login and signup"
+msgstr "Please enter correct words!"
+
+msgid "login and signup"
+msgstr "THIS IS REQUIRED!"
+
+msgid "login and signup"
+msgstr "Your account has been deleted. Please contact administrator for more information."
+
+msgid "login and signup"
+msgstr "Your account is inactive. Please contact administrator for more information."
+
+msgid "login and signup"
+msgstr "Please enter proper Email."
+
+msgid "login and signup"
+msgstr "Please enter proper Username."
+
+msgid "login and signup"
+msgstr "This Username or Email is not valid."
+
+msgid "login and signup"
+msgstr "Flux SBC - Uniting people and businesses"
+
+msgid "login and signup"
+msgstr "Forgot Password"
+
+msgid "login and signup"
+msgstr "FLUX work best with JavaScript enabled"
+
+msgid "login and signup"
+msgstr "Enter Your Password"
+
+msgid "login and signup"
+msgstr "Confirm Password"
+
+msgid "login and signup"
+msgstr "The Email field is Required"
+
+msgid "login and signup"
+msgstr "The Account Number field is Required"
+
+msgid "login and signup"
+msgstr "Set Default Language"
+
+msgid "login and signup"
+msgstr "Please Re-login to get Impact of selected language."
+
+msgid "login and signup"
+msgstr "Default Language"
+
+msgid "login and signup"
+msgstr "Signup now!"
+
+msgid "login and signup"
+msgstr "Forgot Password?"
+
+msgid "login and signup"
+msgstr "Sign in"
+
+msgid "login and signup"
+msgstr "Username OR Email"
+
+msgid "login and signup"
+msgstr "Username is Required"
+
+msgid "login and signup"
+msgstr "Password is Required"
+
+msgid "login and signup"
+msgstr "Please Check Your account is deleted or inactive from admin side, please contact to your administrator"
+
+msgid "login and signup"
+msgstr "Please do not use default or less secure password for your account!! You must change password from"
+
+msgid "login and signup"
+msgstr "HERE"
+
+msgid "login and signup"
+msgstr "Login unsuccessful. Please make sure you entered the correct username and password, and that your account is active"
+
+msgid "login and signup"
+msgstr "Please enter Username/email and Password."
+
+msgid "login and signup"
+msgstr "Payment transaction invalid. Please contact Administrator."
+
+msgid "login and signup"
+msgstr "Log In"
+
+msgid "login and signup"
+msgstr "Please Enter Password"
+
+msgid "login and signup"
+msgstr "Password must be at least 8 characters and must contain at least one lower case letter, one upper case letter and one digit"
+
+msgid "login and signup"
+msgstr "Please Enter Confirm Password"
+
+msgid "login and signup"
+msgstr "Confirm Password is not match"
+
+msgid "login and signup"
+msgstr "We sent update password link."
+
+msgid "login and signup"
+msgstr "Please check your Email!"
+
+msgid "login and signup"
+msgstr "Login"
+
+msgid "login and signup"
+msgstr "OTP Verification"
+
+msgid "login and signup"
+msgstr "OTP Number is Required"
+
+msgid "login and signup"
+msgstr "Your account created successfully and account details sent to your registered email address"
+
+msgid "login and signup"
+msgstr "Your password change successfully and new password sent to your registered email address"
+
+msgid "login and signup"
+msgstr "OTP Number is Wrong Please try again Or OTP expire Please Resend"
+
+msgid "login and signup"
+msgstr "OTP has been sent on your email or Telephone number"
+
+msgid "login and signup"
+msgstr "OTP"
+
+msgid "login and signup"
+msgstr "Resend OTP"
+
+msgid "login and signup"
+msgstr "OTP Sent time Out"
+
+msgid "login and signup"
+msgstr "Not Get OTP ?"
+
+msgid "login and signup"
+msgstr "Note:"
+
+msgid "login and signup"
+msgstr "Please make sure do not refresh the page or don't go back"
+
+msgid "login and signup"
+msgstr "Login unsuccessful. Please make sure you entered the correct username and password, and that your account is active."
+
+msgid "login and signup"
+msgstr "Your account has been created successfully!"
+
+msgid "login and signup"
+msgstr "Here is your login information"
+
+msgid "login and signup"
+msgstr "Link is Expire Please Try Again"
+
+msgid "login and signup"
+msgstr "Sorry, we cannot process for singup at this time."
+
+msgid "login and signup"
+msgstr "Please contact administrator for more information"
+
+msgid "login and signup"
+msgstr "Successful!"
+
+msgid "login and signup"
+msgstr "Captcha is required"
+
+msgid "login and signup"
+msgstr "First Name is Required"
+
+msgid "login and signup"
+msgstr "Telephone is Required"
+
+msgid "login and signup"
+msgstr "Email is Required"
+
+msgid "login and signup"
+msgstr "Please enter a valid email address"
+
+msgid "login and signup"
+msgstr "Please make sure you entered the correct username and password, and that your account is active."
+
+msgid "login and signup"
+msgstr "Company Name"
+
+msgid "login and signup"
+msgstr "Enter above Captcha"
+
+msgid "login and signup"
+msgstr "Sign up"
+
+msgid "login and signup"
+msgstr "Already Registered !"
+
+msgid "CLI Pool"
+msgstr "CLI Pool"
+
+msgid "Download"
+msgstr "Download"
+
+msgid "True"
+msgstr "True"
+
+msgid "False"
+msgstr "False"
+
+msgid "--Select Type--"
+msgstr "--Select Type--"
+
+msgid "One Time"
+msgstr "One Time"
+
+msgid "Recurring"
+msgstr "Recurring"
+
+msgid "Recurring Monthly"
+msgstr "Recurring Monthly"
+
+msgid "Outbound"
+msgstr "Outbound"
+
+msgid "Default"
+msgstr "Default"
+
+msgid "Speed Dial Number Added Successfully"
+msgstr "Speed Dial Number Added Successfully"
+
+msgid "Are you sure want to confirm this invoice ? once you confirm it, can not able to edit invoice again."
+msgstr "Are you sure want to confirm this invoice? Once you confirm it can not able to edit invoice again."
+
+msgid "DIDs already purchased by someone."
+msgstr "DIDs already purchased by someone."
+
+msgid "DIDs Assigned sucessfully!"
+msgstr "DIDs Assigned sucessfully!"
+
+msgid "Something wrong.Please contact to administrator."
+msgstr "Something wrong.Please contact to administrator."
+
+msgid "Duplicate DID found from database"
+msgstr "Duplicate DID found from database"
+
+msgid "Account have not sufficient amount to purchase this DID."
+msgstr "Account have not sufficient amount to purchase this DID."
+
+msgid "Account not found or assign to invalid account"
+msgstr "Account not found or assign to invalid account"
+
+msgid "Duplicate DID found from import file."
+msgstr "Duplicate DID found from import file."
+
+msgid "DIDs Imported Successfully!"
+msgstr "DIDs Imported Successfully!"
+
+msgid "Insuffiecient fund to purchase this DID."
+msgstr "Insuffiecient fund to purchase this DID."
+
+msgid "Balance Below Notification"
+msgstr "Balance Below Notification"
+
+msgid "Edit SIP device"
+msgstr "Edit SIP device"
+
+msgid "Note : Page will display only receipts and confirmed invoices."
+msgstr "Note : Page will display only receipts and confirmed invoices."
+
+msgid "Termination Rate Updated Successfully!"
+msgstr "Termination Rate Updated Successfully!"
+
+msgid "Import Termination Rates Using Field Mapper"
+msgstr "Import Termination Rates Using Field Mapper"
+
+msgid "Edit Roles & Permissions"
+msgstr "Edit Roles & Permissions"
+
+msgid "Create Roles & Permissions"
+msgstr "Create Roles & Permissions"
+
+msgid "Edit Admin"
+msgstr "Edit Admin"
+
+msgid "Pin Updated Successfully!."
+msgstr "Pin Updated Successfully!."
+
+msgid "Create Termination Rate"
+msgstr "Create Termination Rate"
+
+msgid "Edit Company Profile"
+msgstr "Edit Company Profile"
+
+msgid "Website"
+msgstr "Website"
+
+msgid "Generate Invoice for no usage"
+msgstr "Generate Invoice for no usage"
+
+msgid "Commission Repots"
+msgstr "Commission Repots"
+
+msgid "Top Up"
+msgstr "Top Up"
+
+msgid "Purchase DIDs"
+msgstr "Purchase DIDs"
+
+msgid "Package"
+msgstr "Package"
+
+msgid "Setup"
+msgstr "Setup"
+
+msgid "DID Purchased Successfully."
+msgstr "DID Purchased Successfully."
+
+msgid "release"
+msgstr "release"
+
+msgid "DID Batch Updated Successfully!"
+msgstr "DID Batch Updated Successfully!"
+
+msgid "DID forwading set sucessfully!"
+msgstr "DID forwading set sucessfully!"
+
+msgid "Are you sure want to release DID?"
+msgstr "Are you sure want to release DID?"
+
+msgid "Please select atleast one record"
+msgstr "Please select atleast one record"
+
+msgid "Account Balance"
+msgstr "Account Balance"
+
+msgid "Next Bill Date"
+msgstr "Next Bill Date"
+
+msgid "TOTAL AMOUNT"
+msgstr "TOTAL AMOUNT"
+
+msgid "Invoice"
+msgstr "Invoice"
+
+msgid "IP Address"
+msgstr "IP Address"
+
+msgid "Terminate"
+msgstr "Terminate"
+
+msgid "Seconds"
+msgstr "Seconds"
+
+msgid "Recording"
+msgstr "Recording"
+
+msgid "Rates"
+msgstr "Rates"
+
+msgid "Paid"
+msgstr "Paid"
+
+msgid "No Records"
+msgstr "No Records"
+
+msgid "Please select from date"
+msgstr "Please select from date"
+
+msgid "Please select to date"
+msgstr "Please select to date"
+
+msgid "Please select to date bigger than from date"
+msgstr "Please select to date bigger than from date"
+
+msgid "Confirm"
+msgstr "Confirm"
+
+msgid "Edit Country"
+msgstr "Edit Country"
+
+msgid "Skip Header"
+msgstr "Skip Header"
+
+msgid "Origination_rate_error"
+msgstr "Origination_rate_error"
+
+msgid "Termination_rate_error"
+msgstr "Termination_rate_error"
+
+msgid "Termination_Rates"
+msgstr "Termination_Rates"
+
+msgid "Origination_Rates"
+msgstr "Origination_Rates"
+
+msgid "refill_coupon"
+msgstr "refill_coupon"
+
+msgid "Edit Calltype"
+msgstr "Edit Calltype"
+
+msgid "Invoice generation completed ."
+msgstr "Invoice generation completed ."
+
+msgid "No data found."
+msgstr "No data found."
+
+msgid "DID added successfully!"
+msgstr "DID added successfully!"
+
+msgid "File must be in the following format(.csv):"
+msgstr "File must be in the following format(.csv):"
+
+msgid "Process"
+msgstr "Process"
+
+msgid "DID Import Error"
+msgstr "DID Import Error"
+
+msgid "Back to DID List"
+msgstr "Back to DID List"
+
+msgid "Accessnumber Added Successfully!"
+msgstr "Accessnumber Added Successfully!"
+
+msgid "Accessnumber Import Error"
+msgstr "Accessnumber Import Error"
+
+msgid "Origination Rates Preview"
+msgstr "Origination Rates Preview"
+
+msgid "Origination Rates Import Error"
+msgstr "Origination Rates Import Error"
+
+msgid "Back to Origination Rates List"
+msgstr "Back to Origination Rates List"
+
+msgid "Origination Rates Batch Updated Successfully!"
+msgstr "Origination Rates Batch Updated Successfully!"
+
+msgid "Import Ratedeck Preview"
+msgstr "Import Ratedeck Preview"
+
+msgid "CALLTYPE"
+msgstr "CALLTYPE"
+
+msgid "Outbound-Proxy"
+msgstr "Outbound-Proxy"
+
+msgid "Edit Trunk"
+msgstr "Edit Trunk"
+
+msgid "Termination Rate Added Successfully!"
+msgstr "Termination Rate Added Successfully!"
+
+msgid "Edit Termination Rate"
+msgstr "Edit Termination Rate"
+
+msgid "Termination Rates Import Error"
+msgstr "Termination Rates Import Error"
+
+msgid "Termination Rates Imported Successfully!"
+msgstr "Termination Rates Imported Successfully!"
+
+msgid "Select"
+msgstr "Select"
+
+msgid "pattern"
+msgstr "pattern"
+
+msgid "comment"
+msgstr "comment"
+
+msgid "connectcost"
+msgstr "connectcost"
+
+msgid "includedseconds"
+msgstr "includedseconds"
+
+msgid "init_inc"
+msgstr "init_inc"
+
+msgid "inc"
+msgstr "inc"
+
+msgid "Country Name"
+msgstr "Country Name"
+
+msgid "PENDING"
+msgstr "PENDING"
+
+msgid "FAIL"
+msgstr "FAIL"
+
+msgid "Terminate Order"
+msgstr "Terminate Order"
+
+msgid "Compose Email"
+msgstr "Compose Email"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Send"
+msgstr "Send"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "SIP Port is Required."
+msgstr "SIP Port is Required."
+
+msgid "SIP IP is Required."
+msgstr "SIP IP is Required."
+
+msgid "Name is Required."
+msgstr "Name is Required."
+
+msgid "The SIP Port field is Required."
+msgstr "The SIP Port field is Required."
+
+msgid "The SIP Port field must contain only numbers."
+msgstr "The SIP Port field must contain only numbers."
+
+msgid "The SIP Port field can not exceed 5 characters in length."
+msgstr "The SIP Port field can not exceed 5 characters in length."
+
+msgid "Value is Required."
+msgstr "Value is Required."
+
+msgid "Update Setting"
+msgstr "Update Setting"
+
+msgid "Edit Freeswitch Server"
+msgstr "Edit Freeswitch Server"
+
+msgid "CUT"
+msgstr "CUT"
+
+msgid "Edit Localization"
+msgstr "Edit Localization"
+
+msgid "Callbarring Settings Added Successfully!"
+msgstr "Callbarring Settings Added Successfully!"
+
+msgid "Edit Call Barring"
+msgstr "Edit Call Barring"
+
+msgid "Callbarring Settings Updated Successfully!"
+msgstr "Callbarring Settings Updated Successfully!"
+
+msgid "Database import allows only gzfile types of file."
+msgstr "Database import allows only gzfile types of file."
+
+msgid "File must be in (.gz) format :"
+msgstr "File must be in (.gz) format :"
+
+msgid "The Coupon Number field must contain only numbers."
+msgstr "The Coupon Number field must contain only numbers."
+
+msgid "The Coupon Number field have inactive refill coupon."
+msgstr "The Coupon Number field have inactive refill coupon."
+
+msgid "Please enter proper email"
+msgstr "Please enter proper email"
+
+msgid "This field is require"
+msgstr "This field is require"
+
+msgid "Please Enter Valid Account Number"
+msgstr "Please Enter Valid Account Number"
+
+msgid "Main"
+msgstr "Main"
+
+msgid "--Select Disposition--"
+msgstr "--Select Disposition--"
+
+msgid "Active User"
+msgstr "Active User"
+
+msgid "Used Minutes"
+msgstr "Used Minutes"
+
+msgid "Available Minutes"
+msgstr "Available Minutes"
+
+msgid "Total Price"
+msgstr "Total Price"
+
+msgid "Total User"
+msgstr "Total User"
+
+msgid "Restore"
+msgstr "Restore"
+
+msgid "View Details"
+msgstr "View Details"
+
+msgid "Other"
+msgstr "Other"
+
+msgid "Edit Tax"
+msgstr "Edit Tax"
+
+msgid "Download Database"
+msgstr "Download Database"
+
+msgid "Import Database"
+msgstr "Import Database"
+
+msgid "File must be in (.gz) format"
+msgstr "File must be in (.gz) format"
+
+msgid "Please enter name and select file."
+msgstr "Please enter name and select file."
+
+msgid "Edit Cron Settings"
+msgstr "Edit Cron Settings"
+
+msgid "Global Settings updated sucessfully!"
+msgstr "Global Settings updated sucessfully!"
+
+msgid "Alert Notifications"
+msgstr "Alert Notifications"
+
+msgid "Fraud Configuration"
+msgstr "Fraud Configuration"
+
+msgid "Configuration add"
+msgstr "Configuration add"
+
+msgid "Alarm Configuration"
+msgstr "Alarm Configuration"
+
+msgid "Please select atleast one pattern."
+msgstr "Please select atleast one pattern."
+
+msgid "Problem In Add Patterns to account."
+msgstr "Problem In Add Patterns to account."
+
+msgid "Please Enter Switch command"
+msgstr "Please Enter Switch command"
+
+msgid "are you sure to delete?"
+msgstr "are you sure to delete?"
+
+msgid "Are you sure want to confirm this invoice ? once you confirm it"
+msgstr "Are you sure want to confirm this invoice? Once you confirm it can not able to edit invoice again"
+
+msgid "can not able to edit invoice again."
+msgstr "can not able to edit invoice again."
+
+msgid "Maximum Logo upload size is 1MB"
+msgstr "Maximum Logo upload size is 1MB"
+
+msgid "Please enter number"
+msgstr "Please enter number"
+
+msgid "Import Customer"
+msgstr "Import Customer"
+
+msgid "Processing"
+msgstr "Processing"
+
+msgid "please wait"
+msgstr "please wait"
+
+msgid "Asia/Dubai"
+msgstr "Asia/Dubai"
+
+msgid "Europe/Andorra"
+msgstr "Europe/Andorra"
+
+msgid "Asia/Kabul"
+msgstr "Asia/Kabul"
+
+msgid "America/Antigua"
+msgstr "America/Antigua"
+
+msgid "America/Anguilla"
+msgstr "America/Anguilla"
+
+msgid "Europe/Tirane"
+msgstr "Europe/Tirane"
+
+msgid "Asia/Yerevan"
+msgstr "Asia/Yerevan"
+
+msgid "Africa/Luanda"
+msgstr "Africa/Luanda"
+
+msgid "Antarctica/Casey"
+msgstr "Antarctica/Casey"
+
+msgid "Antarctica/Davis"
+msgstr "Antarctica/Davis"
+
+msgid "Antarctica/DumontDUrville"
+msgstr "Antarctica/DumontDUrville"
+
+msgid "Antarctica/Mawson"
+msgstr "Antarctica/Mawson"
+
+msgid "Antarctica/McMurdo"
+msgstr "Antarctica/McMurdo"
+
+msgid "Antarctica/Palmer"
+msgstr "Antarctica/Palmer"
+
+msgid "Antarctica/Rothera"
+msgstr "Antarctica/Rothera"
+
+msgid "Antarctica/Syowa"
+msgstr "Antarctica/Syowa"
+
+msgid "Antarctica/Troll"
+msgstr "Antarctica/Troll"
+
+msgid "Antarctica/Vostok"
+msgstr "Antarctica/Vostok"
+
+msgid "America/Argentina/Buenos_Aires"
+msgstr "America/Argentina/Buenos_Aires"
+
+msgid "America/Argentina/Catamarca"
+msgstr "America/Argentina/Catamarca"
+
+msgid "America/Argentina/Cordoba"
+msgstr "America/Argentina/Cordoba"
+
+msgid "America/Argentina/Jujuy"
+msgstr "America/Argentina/Jujuy"
+
+msgid "America/Argentina/La_Rioja"
+msgstr "America/Argentina/La_Rioja"
+
+msgid "America/Argentina/Mendoza"
+msgstr "America/Argentina/Mendoza"
+
+msgid "America/Argentina/Rio_Gallegos"
+msgstr "America/Argentina/Rio_Gallegos"
+
+msgid "America/Argentina/Salta"
+msgstr "America/Argentina/Salta"
+
+msgid "America/Argentina/San_Juan"
+msgstr "America/Argentina/San_Juan"
+
+msgid "America/Argentina/San_Luis"
+msgstr "America/Argentina/San_Luis"
+
+msgid "America/Argentina/Tucuman"
+msgstr "America/Argentina/Tucuman"
+
+msgid "America/Argentina/Ushuaia"
+msgstr "America/Argentina/Ushuaia"
+
+msgid "Pacific/Pago_Pago"
+msgstr "Pacific/Pago_Pago"
+
+msgid "Europe/Vienna"
+msgstr "Europe/Vienna"
+
+msgid "Antarctica/Macquarie"
+msgstr "Antarctica/Macquarie"
+
+msgid "Australia/Adelaide"
+msgstr "Australia/Adelaide"
+
+msgid "Australia/Brisbane"
+msgstr "Australia/Brisbane"
+
+msgid "Australia/Broken_Hill"
+msgstr "Australia/Broken_Hill"
+
+msgid "Australia/Currie"
+msgstr "Australia/Currie"
+
+msgid "Australia/Darwin"
+msgstr "Australia/Darwin"
+
+msgid "Australia/Eucla"
+msgstr "Australia/Eucla"
+
+msgid "Australia/Hobart"
+msgstr "Australia/Hobart"
+
+msgid "Australia/Lindeman"
+msgstr "Australia/Lindeman"
+
+msgid "Australia/Lord_Howe"
+msgstr "Australia/Lord_Howe"
+
+msgid "Australia/Melbourne"
+msgstr "Australia/Melbourne"
+
+msgid "Australia/Perth"
+msgstr "Australia/Perth"
+
+msgid "Australia/Sydney"
+msgstr "Australia/Sydney"
+
+msgid "America/Aruba"
+msgstr "America/Aruba"
+
+msgid "Europe/Mariehamn"
+msgstr "Europe/Mariehamn"
+
+msgid "Asia/Baku"
+msgstr "Asia/Baku"
+
+msgid "Europe/Sarajevo"
+msgstr "Europe/Sarajevo"
+
+msgid "America/Barbados"
+msgstr "America/Barbados"
+
+msgid "Asia/Dhaka"
+msgstr "Asia/Dhaka"
+
+msgid "Europe/Brussels"
+msgstr "Europe/Brussels"
+
+msgid "Africa/Ouagadougou"
+msgstr "Africa/Ouagadougou"
+
+msgid "Europe/Sofia"
+msgstr "Europe/Sofia"
+
+msgid "Asia/Bahrain"
+msgstr "Asia/Bahrain"
+
+msgid "Africa/Bujumbura"
+msgstr "Africa/Bujumbura"
+
+msgid "Africa/Porto-Novo"
+msgstr "Africa/Porto-Novo"
+
+msgid "America/St_Barthelemy"
+msgstr "America/St_Barthelemy"
+
+msgid "Atlantic/Bermuda"
+msgstr "Atlantic/Bermuda"
+
+msgid "Asia/Brunei"
+msgstr "Asia/Brunei"
+
+msgid "America/La_Paz"
+msgstr "America/La_Paz"
+
+msgid "America/Kralendijk"
+msgstr "America/Kralendijk"
+
+msgid "America/Araguaina"
+msgstr "America/Araguaina"
+
+msgid "America/Bahia"
+msgstr "America/Bahia"
+
+msgid "America/Belem"
+msgstr "America/Belem"
+
+msgid "America/Boa_Vista"
+msgstr "America/Boa_Vista"
+
+msgid "America/Campo_Grande"
+msgstr "America/Campo_Grande"
+
+msgid "America/Cuiaba"
+msgstr "America/Cuiaba"
+
+msgid "America/Eirunepe"
+msgstr "America/Eirunepe"
+
+msgid "America/Fortaleza"
+msgstr "America/Fortaleza"
+
+msgid "America/Maceio"
+msgstr "America/Maceio"
+
+msgid "America/Manaus"
+msgstr "America/Manaus"
+
+msgid "America/Noronha"
+msgstr "America/Noronha"
+
+msgid "America/Porto_Velho"
+msgstr "America/Porto_Velho"
+
+msgid "America/Recife"
+msgstr "America/Recife"
+
+msgid "America/Rio_Branco"
+msgstr "America/Rio_Branco"
+
+msgid "America/Santarem"
+msgstr "America/Santarem"
+
+msgid "America/Sao_Paulo"
+msgstr "America/Sao_Paulo"
+
+msgid "America/Nassau"
+msgstr "America/Nassau"
+
+msgid "Asia/Thimphu"
+msgstr "Asia/Thimphu"
+
+msgid "Africa/Gaborone"
+msgstr "Africa/Gaborone"
+
+msgid "Europe/Minsk"
+msgstr "Europe/Minsk"
+
+msgid "America/Belize"
+msgstr "America/Belize"
+
+msgid "America/Atikokan"
+msgstr "America/Atikokan"
+
+msgid "America/Blanc-Sablon"
+msgstr "America/Blanc-Sablon"
+
+msgid "America/Cambridge_Bay"
+msgstr "America/Cambridge_Bay"
+
+msgid "America/Creston"
+msgstr "America/Creston"
+
+msgid "America/Dawson"
+msgstr "America/Dawson"
+
+msgid "America/Dawson_Creek"
+msgstr "America/Dawson_Creek"
+
+msgid "America/Edmonton"
+msgstr "America/Edmonton"
+
+msgid "America/Fort_Nelson"
+msgstr "America/Fort_Nelson"
+
+msgid "America/Glace_Bay"
+msgstr "America/Glace_Bay"
+
+msgid "America/Goose_Bay"
+msgstr "America/Goose_Bay"
+
+msgid "America/Halifax"
+msgstr "America/Halifax"
+
+msgid "America/Inuvik"
+msgstr "America/Inuvik"
+
+msgid "America/Iqaluit"
+msgstr "America/Iqaluit"
+
+msgid "America/Moncton"
+msgstr "America/Moncton"
+
+msgid "America/Nipigon"
+msgstr "America/Nipigon"
+
+msgid "America/Pangnirtung"
+msgstr "America/Pangnirtung"
+
+msgid "America/Rainy_River"
+msgstr "America/Rainy_River"
+
+msgid "America/Rankin_Inlet"
+msgstr "America/Rankin_Inlet"
+
+msgid "America/Regina"
+msgstr "America/Regina"
+
+msgid "America/Resolute"
+msgstr "America/Resolute"
+
+msgid "America/St_Johns"
+msgstr "America/St_Johns"
+
+msgid "America/Swift_Current"
+msgstr "America/Swift_Current"
+
+msgid "America/Thunder_Bay"
+msgstr "America/Thunder_Bay"
+
+msgid "America/Toronto"
+msgstr "America/Toronto"
+
+msgid "America/Vancouver"
+msgstr "America/Vancouver"
+
+msgid "America/Whitehorse"
+msgstr "America/Whitehorse"
+
+msgid "America/Winnipeg"
+msgstr "America/Winnipeg"
+
+msgid "America/Yellowknife"
+msgstr "America/Yellowknife"
+
+msgid "Indian/Cocos"
+msgstr "Indian/Cocos"
+
+msgid "Africa/Kinshasa"
+msgstr "Africa/Kinshasa"
+
+msgid "Africa/Lubumbashi"
+msgstr "Africa/Lubumbashi"
+
+msgid "Africa/Bangui"
+msgstr "Africa/Bangui"
+
+msgid "Africa/Brazzaville"
+msgstr "Africa/Brazzaville"
+
+msgid "Europe/Zurich"
+msgstr "Europe/Zurich"
+
+msgid "Africa/Abidjan"
+msgstr "Africa/Abidjan"
+
+msgid "Pacific/Rarotonga"
+msgstr "Pacific/Rarotonga"
+
+msgid "America/Punta_Arenas"
+msgstr "America/Punta_Arenas"
+
+msgid "America/Santiago"
+msgstr "America/Santiago"
+
+msgid "Pacific/Easter"
+msgstr "Pacific/Easter"
+
+msgid "Africa/Douala"
+msgstr "Africa/Douala"
+
+msgid "Asia/Shanghai"
+msgstr "Asia/Shanghai"
+
+msgid "Asia/Urumqi"
+msgstr "Asia/Urumqi"
+
+msgid "America/Bogota"
+msgstr "America/Bogota"
+
+msgid "America/Costa_Rica"
+msgstr "America/Costa_Rica"
+
+msgid "America/Havana"
+msgstr "America/Havana"
+
+msgid "Atlantic/Cape_Verde"
+msgstr "Atlantic/Cape_Verde"
+
+msgid "America/Curacao"
+msgstr "America/Curacao"
+
+msgid "Indian/Christmas"
+msgstr "Indian/Christmas"
+
+msgid "Asia/Famagusta"
+msgstr "Asia/Famagusta"
+
+msgid "Asia/Nicosia"
+msgstr "Asia/Nicosia"
+
+msgid "Europe/Prague"
+msgstr "Europe/Prague"
+
+msgid "Europe/Berlin"
+msgstr "Europe/Berlin"
+
+msgid "Europe/Busingen"
+msgstr "Europe/Busingen"
+
+msgid "Africa/Djibouti"
+msgstr "Africa/Djibouti"
+
+msgid "Europe/Copenhagen"
+msgstr "Europe/Copenhagen"
+
+msgid "America/Dominica"
+msgstr "America/Dominica"
+
+msgid "America/Santo_Domingo"
+msgstr "America/Santo_Domingo"
+
+msgid "Africa/Algiers"
+msgstr "Africa/Algiers"
+
+msgid "America/Guayaquil"
+msgstr "America/Guayaquil"
+
+msgid "Pacific/Galapagos"
+msgstr "Pacific/Galapagos"
+
+msgid "Europe/Tallinn"
+msgstr "Europe/Tallinn"
+
+msgid "Africa/Cairo"
+msgstr "Africa/Cairo"
+
+msgid "Africa/El_Aaiun"
+msgstr "Africa/El_Aaiun"
+
+msgid "Africa/Asmara"
+msgstr "Africa/Asmara"
+
+msgid "Africa/Ceuta"
+msgstr "Africa/Ceuta"
+
+msgid "Atlantic/Canary"
+msgstr "Atlantic/Canary"
+
+msgid "Europe/Madrid"
+msgstr "Europe/Madrid"
+
+msgid "Africa/Addis_Ababa"
+msgstr "Africa/Addis_Ababa"
+
+msgid "Europe/Helsinki"
+msgstr "Europe/Helsinki"
+
+msgid "Pacific/Fiji"
+msgstr "Pacific/Fiji"
+
+msgid "Atlantic/Stanley"
+msgstr "Atlantic/Stanley"
+
+msgid "Pacific/Chuuk"
+msgstr "Pacific/Chuuk"
+
+msgid "Pacific/Kosrae"
+msgstr "Pacific/Kosrae"
+
+msgid "Pacific/Pohnpei"
+msgstr "Pacific/Pohnpei"
+
+msgid "Atlantic/Faroe"
+msgstr "Atlantic/Faroe"
+
+msgid "Europe/Paris"
+msgstr "Europe/Paris"
+
+msgid "Africa/Libreville"
+msgstr "Africa/Libreville"
+
+msgid "Europe/London"
+msgstr "Europe/London"
+
+msgid "America/Grenada"
+msgstr "America/Grenada"
+
+msgid "Asia/Tbilisi"
+msgstr "Asia/Tbilisi"
+
+msgid "America/Cayenne"
+msgstr "America/Cayenne"
+
+msgid "Europe/Guernsey"
+msgstr "Europe/Guernsey"
+
+msgid "Africa/Accra"
+msgstr "Africa/Accra"
+
+msgid "Europe/Gibraltar"
+msgstr "Europe/Gibraltar"
+
+msgid "America/Danmarkshavn"
+msgstr "America/Danmarkshavn"
+
+msgid "America/Nuuk"
+msgstr "America/Nuuk"
+
+msgid "America/Scoresbysund"
+msgstr "America/Scoresbysund"
+
+msgid "America/Thule"
+msgstr "America/Thule"
+
+msgid "Africa/Banjul"
+msgstr "Africa/Banjul"
+
+msgid "Africa/Conakry"
+msgstr "Africa/Conakry"
+
+msgid "America/Guadeloupe"
+msgstr "America/Guadeloupe"
+
+msgid "Africa/Malabo"
+msgstr "Africa/Malabo"
+
+msgid "Europe/Athens"
+msgstr "Europe/Athens"
+
+msgid "Atlantic/South_Georgia"
+msgstr "Atlantic/South_Georgia"
+
+msgid "America/Guatemala"
+msgstr "America/Guatemala"
+
+msgid "Pacific/Guam"
+msgstr "Pacific/Guam"
+
+msgid "Africa/Bissau"
+msgstr "Africa/Bissau"
+
+msgid "America/Guyana"
+msgstr "America/Guyana"
+
+msgid "Asia/Hong_Kong"
+msgstr "Asia/Hong_Kong"
+
+msgid "America/Tegucigalpa"
+msgstr "America/Tegucigalpa"
+
+msgid "Europe/Zagreb"
+msgstr "Europe/Zagreb"
+
+msgid "America/Port-au-Prince"
+msgstr "America/Port-au-Prince"
+
+msgid "Europe/Budapest"
+msgstr "Europe/Budapest"
+
+msgid "Asia/Jakarta"
+msgstr "Asia/Jakarta"
+
+msgid "Asia/Jayapura"
+msgstr "Asia/Jayapura"
+
+msgid "Asia/Makassar"
+msgstr "Asia/Makassar"
+
+msgid "Asia/Pontianak"
+msgstr "Asia/Pontianak"
+
+msgid "Europe/Dublin"
+msgstr "Europe/Dublin"
+
+msgid "Asia/Jerusalem"
+msgstr "Asia/Jerusalem"
+
+msgid "Europe/Isle_of_Man"
+msgstr "Europe/Isle_of_Man"
+
+msgid "Asia/Kolkata"
+msgstr "Asia/Kolkata"
+
+msgid "Indian/Chagos"
+msgstr "Indian/Chagos"
+
+msgid "Asia/Baghdad"
+msgstr "Asia/Baghdad"
+
+msgid "Asia/Tehran"
+msgstr "Asia/Tehran"
+
+msgid "Atlantic/Reykjavik"
+msgstr "Atlantic/Reykjavik"
+
+msgid "Europe/Rome"
+msgstr "Europe/Rome"
+
+msgid "Europe/Jersey"
+msgstr "Europe/Jersey"
+
+msgid "America/Jamaica"
+msgstr "America/Jamaica"
+
+msgid "Asia/Amman"
+msgstr "Asia/Amman"
+
+msgid "Asia/Tokyo"
+msgstr "Asia/Tokyo"
+
+msgid "Africa/Nairobi"
+msgstr "Africa/Nairobi"
+
+msgid "Asia/Bishkek"
+msgstr "Asia/Bishkek"
+
+msgid "Asia/Phnom_Penh"
+msgstr "Asia/Phnom_Penh"
+
+msgid "Pacific/Enderbury"
+msgstr "Pacific/Enderbury"
+
+msgid "Pacific/Kiritimati"
+msgstr "Pacific/Kiritimati"
+
+msgid "Pacific/Tarawa"
+msgstr "Pacific/Tarawa"
+
+msgid "Indian/Comoro"
+msgstr "Indian/Comoro"
+
+msgid "America/St_Kitts"
+msgstr "America/St_Kitts"
+
+msgid "Asia/Pyongyang"
+msgstr "Asia/Pyongyang"
+
+msgid "Asia/Seoul"
+msgstr "Asia/Seoul"
+
+msgid "Asia/Kuwait"
+msgstr "Asia/Kuwait"
+
+msgid "America/Cayman"
+msgstr "America/Cayman"
+
+msgid "Asia/Almaty"
+msgstr "Asia/Almaty"
+
+msgid "Asia/Aqtau"
+msgstr "Asia/Aqtau"
+
+msgid "Asia/Aqtobe"
+msgstr "Asia/Aqtobe"
+
+msgid "Asia/Atyrau"
+msgstr "Asia/Atyrau"
+
+msgid "Asia/Oral"
+msgstr "Asia/Oral"
+
+msgid "Asia/Qostanay"
+msgstr "Asia/Qostanay"
+
+msgid "Asia/Qyzylorda"
+msgstr "Asia/Qyzylorda"
+
+msgid "Asia/Vientiane"
+msgstr "Asia/Vientiane"
+
+msgid "Asia/Beirut"
+msgstr "Asia/Beirut"
+
+msgid "America/St_Lucia"
+msgstr "America/St_Lucia"
+
+msgid "Europe/Vaduz"
+msgstr "Europe/Vaduz"
+
+msgid "Asia/Colombo"
+msgstr "Asia/Colombo"
+
+msgid "Africa/Monrovia"
+msgstr "Africa/Monrovia"
+
+msgid "Africa/Maseru"
+msgstr "Africa/Maseru"
+
+msgid "Europe/Vilnius"
+msgstr "Europe/Vilnius"
+
+msgid "Europe/Luxembourg"
+msgstr "Europe/Luxembourg"
+
+msgid "Europe/Riga"
+msgstr "Europe/Riga"
+
+msgid "Africa/Tripoli"
+msgstr "Africa/Tripoli"
+
+msgid "Africa/Casablanca"
+msgstr "Africa/Casablanca"
+
+msgid "Europe/Monaco"
+msgstr "Europe/Monaco"
+
+msgid "Europe/Chisinau"
+msgstr "Europe/Chisinau"
+
+msgid "Europe/Podgorica"
+msgstr "Europe/Podgorica"
+
+msgid "America/Marigot"
+msgstr "America/Marigot"
+
+msgid "Indian/Antananarivo"
+msgstr "Indian/Antananarivo"
+
+msgid "Pacific/Kwajalein"
+msgstr "Pacific/Kwajalein"
+
+msgid "Pacific/Majuro"
+msgstr "Pacific/Majuro"
+
+msgid "Europe/Skopje"
+msgstr "Europe/Skopje"
+
+msgid "Africa/Bamako"
+msgstr "Africa/Bamako"
+
+msgid "Asia/Yangon"
+msgstr "Asia/Yangon"
+
+msgid "Asia/Choibalsan"
+msgstr "Asia/Choibalsan"
+
+msgid "Asia/Hovd"
+msgstr "Asia/Hovd"
+
+msgid "Asia/Ulaanbaatar"
+msgstr "Asia/Ulaanbaatar"
+
+msgid "Asia/Macau"
+msgstr "Asia/Macau"
+
+msgid "Pacific/Saipan"
+msgstr "Pacific/Saipan"
+
+msgid "America/Martinique"
+msgstr "America/Martinique"
+
+msgid "Africa/Nouakchott"
+msgstr "Africa/Nouakchott"
+
+msgid "America/Montserrat"
+msgstr "America/Montserrat"
+
+msgid "Europe/Malta"
+msgstr "Europe/Malta"
+
+msgid "Indian/Mauritius"
+msgstr "Indian/Mauritius"
+
+msgid "Indian/Maldives"
+msgstr "Indian/Maldives"
+
+msgid "Africa/Blantyre"
+msgstr "Africa/Blantyre"
+
+msgid "America/Bahia_Banderas"
+msgstr "America/Bahia_Banderas"
+
+msgid "America/Cancun"
+msgstr "America/Cancun"
+
+msgid "America/Chihuahua"
+msgstr "America/Chihuahua"
+
+msgid "America/Hermosillo"
+msgstr "America/Hermosillo"
+
+msgid "America/Matamoros"
+msgstr "America/Matamoros"
+
+msgid "America/Mazatlan"
+msgstr "America/Mazatlan"
+
+msgid "America/Merida"
+msgstr "America/Merida"
+
+msgid "America/Mexico_City"
+msgstr "America/Mexico_City"
+
+msgid "America/Monterrey"
+msgstr "America/Monterrey"
+
+msgid "America/Ojinaga"
+msgstr "America/Ojinaga"
+
+msgid "America/Tijuana"
+msgstr "America/Tijuana"
+
+msgid "Asia/Kuala_Lumpur"
+msgstr "Asia/Kuala_Lumpur"
+
+msgid "Asia/Kuching"
+msgstr "Asia/Kuching"
+
+msgid "Africa/Maputo"
+msgstr "Africa/Maputo"
+
+msgid "Africa/Windhoek"
+msgstr "Africa/Windhoek"
+
+msgid "Pacific/Noumea"
+msgstr "Pacific/Noumea"
+
+msgid "Africa/Niamey"
+msgstr "Africa/Niamey"
+
+msgid "Pacific/Norfolk"
+msgstr "Pacific/Norfolk"
+
+msgid "Africa/Lagos"
+msgstr "Africa/Lagos"
+
+msgid "America/Managua"
+msgstr "America/Managua"
+
+msgid "Europe/Amsterdam"
+msgstr "Europe/Amsterdam"
+
+msgid "Europe/Oslo"
+msgstr "Europe/Oslo"
+
+msgid "Asia/Kathmandu"
+msgstr "Asia/Kathmandu"
+
+msgid "Pacific/Nauru"
+msgstr "Pacific/Nauru"
+
+msgid "Pacific/Niue"
+msgstr "Pacific/Niue"
+
+msgid "Pacific/Auckland"
+msgstr "Pacific/Auckland"
+
+msgid "Pacific/Chatham"
+msgstr "Pacific/Chatham"
+
+msgid "Asia/Muscat"
+msgstr "Asia/Muscat"
+
+msgid "America/Panama"
+msgstr "America/Panama"
+
+msgid "America/Lima"
+msgstr "America/Lima"
+
+msgid "Pacific/Gambier"
+msgstr "Pacific/Gambier"
+
+msgid "Pacific/Marquesas"
+msgstr "Pacific/Marquesas"
+
+msgid "Pacific/Tahiti"
+msgstr "Pacific/Tahiti"
+
+msgid "Pacific/Bougainville"
+msgstr "Pacific/Bougainville"
+
+msgid "Pacific/Port_Moresby"
+msgstr "Pacific/Port_Moresby"
+
+msgid "Asia/Manila"
+msgstr "Asia/Manila"
+
+msgid "Asia/Karachi"
+msgstr "Asia/Karachi"
+
+msgid "Europe/Warsaw"
+msgstr "Europe/Warsaw"
+
+msgid "America/Miquelon"
+msgstr "America/Miquelon"
+
+msgid "Pacific/Pitcairn"
+msgstr "Pacific/Pitcairn"
+
+msgid "America/Puerto_Rico"
+msgstr "America/Puerto_Rico"
+
+msgid "Asia/Gaza"
+msgstr "Asia/Gaza"
+
+msgid "Asia/Hebron"
+msgstr "Asia/Hebron"
+
+msgid "Atlantic/Azores"
+msgstr "Atlantic/Azores"
+
+msgid "Atlantic/Madeira"
+msgstr "Atlantic/Madeira"
+
+msgid "Europe/Lisbon"
+msgstr "Europe/Lisbon"
+
+msgid "Pacific/Palau"
+msgstr "Pacific/Palau"
+
+msgid "America/Asuncion"
+msgstr "America/Asuncion"
+
+msgid "Asia/Qatar"
+msgstr "Asia/Qatar"
+
+msgid "Indian/Reunion"
+msgstr "Indian/Reunion"
+
+msgid "Europe/Bucharest"
+msgstr "Europe/Bucharest"
+
+msgid "Europe/Belgrade"
+msgstr "Europe/Belgrade"
+
+msgid "Asia/Anadyr"
+msgstr "Asia/Anadyr"
+
+msgid "Asia/Barnaul"
+msgstr "Asia/Barnaul"
+
+msgid "Asia/Chita"
+msgstr "Asia/Chita"
+
+msgid "Asia/Irkutsk"
+msgstr "Asia/Irkutsk"
+
+msgid "Asia/Kamchatka"
+msgstr "Asia/Kamchatka"
+
+msgid "Asia/Khandyga"
+msgstr "Asia/Khandyga"
+
+msgid "Asia/Krasnoyarsk"
+msgstr "Asia/Krasnoyarsk"
+
+msgid "Asia/Magadan"
+msgstr "Asia/Magadan"
+
+msgid "Asia/Novokuznetsk"
+msgstr "Asia/Novokuznetsk"
+
+msgid "Asia/Novosibirsk"
+msgstr "Asia/Novosibirsk"
+
+msgid "Asia/Omsk"
+msgstr "Asia/Omsk"
+
+msgid "Asia/Sakhalin"
+msgstr "Asia/Sakhalin"
+
+msgid "Asia/Srednekolymsk"
+msgstr "Asia/Srednekolymsk"
+
+msgid "Asia/Tomsk"
+msgstr "Asia/Tomsk"
+
+msgid "Asia/Ust-Nera"
+msgstr "Asia/Ust-Nera"
+
+msgid "Asia/Vladivostok"
+msgstr "Asia/Vladivostok"
+
+msgid "Asia/Yakutsk"
+msgstr "Asia/Yakutsk"
+
+msgid "Asia/Yekaterinburg"
+msgstr "Asia/Yekaterinburg"
+
+msgid "Europe/Astrakhan"
+msgstr "Europe/Astrakhan"
+
+msgid "Europe/Kaliningrad"
+msgstr "Europe/Kaliningrad"
+
+msgid "Europe/Kirov"
+msgstr "Europe/Kirov"
+
+msgid "Europe/Moscow"
+msgstr "Europe/Moscow"
+
+msgid "Europe/Samara"
+msgstr "Europe/Samara"
+
+msgid "Europe/Saratov"
+msgstr "Europe/Saratov"
+
+msgid "Europe/Ulyanovsk"
+msgstr "Europe/Ulyanovsk"
+
+msgid "Europe/Volgograd"
+msgstr "Europe/Volgograd"
+
+msgid "Africa/Kigali"
+msgstr "Africa/Kigali"
+
+msgid "Asia/Riyadh"
+msgstr "Asia/Riyadh"
+
+msgid "Pacific/Guadalcanal"
+msgstr "Pacific/Guadalcanal"
+
+msgid "Indian/Mahe"
+msgstr "Indian/Mahe"
+
+msgid "Africa/Khartoum"
+msgstr "Africa/Khartoum"
+
+msgid "Europe/Stockholm"
+msgstr "Europe/Stockholm"
+
+msgid "Asia/Singapore"
+msgstr "Asia/Singapore"
+
+msgid "Atlantic/St_Helena"
+msgstr "Atlantic/St_Helena"
+
+msgid "Europe/Ljubljana"
+msgstr "Europe/Ljubljana"
+
+msgid "Arctic/Longyearbyen"
+msgstr "Arctic/Longyearbyen"
+
+msgid "Europe/Bratislava"
+msgstr "Europe/Bratislava"
+
+msgid "Africa/Freetown"
+msgstr "Africa/Freetown"
+
+msgid "Europe/San_Marino"
+msgstr "Europe/San_Marino"
+
+msgid "Africa/Dakar"
+msgstr "Africa/Dakar"
+
+msgid "Africa/Mogadishu"
+msgstr "Africa/Mogadishu"
+
+msgid "America/Paramaribo"
+msgstr "America/Paramaribo"
+
+msgid "Africa/Juba"
+msgstr "Africa/Juba"
+
+msgid "Africa/Sao_Tome"
+msgstr "Africa/Sao_Tome"
+
+msgid "America/El_Salvador"
+msgstr "America/El_Salvador"
+
+msgid "America/Lower_Princes"
+msgstr "America/Lower_Princes"
+
+msgid "Asia/Damascus"
+msgstr "Asia/Damascus"
+
+msgid "Africa/Mbabane"
+msgstr "Africa/Mbabane"
+
+msgid "America/Grand_Turk"
+msgstr "America/Grand_Turk"
+
+msgid "Africa/Ndjamena"
+msgstr "Africa/Ndjamena"
+
+msgid "Indian/Kerguelen"
+msgstr "Indian/Kerguelen"
+
+msgid "Africa/Lome"
+msgstr "Africa/Lome"
+
+msgid "Asia/Bangkok"
+msgstr "Asia/Bangkok"
+
+msgid "Asia/Dushanbe"
+msgstr "Asia/Dushanbe"
+
+msgid "Pacific/Fakaofo"
+msgstr "Pacific/Fakaofo"
+
+msgid "Asia/Dili"
+msgstr "Asia/Dili"
+
+msgid "Asia/Ashgabat"
+msgstr "Asia/Ashgabat"
+
+msgid "Africa/Tunis"
+msgstr "Africa/Tunis"
+
+msgid "Pacific/Tongatapu"
+msgstr "Pacific/Tongatapu"
+
+msgid "Europe/Istanbul"
+msgstr "Europe/Istanbul"
+
+msgid "America/Port_of_Spain"
+msgstr "America/Port_of_Spain"
+
+msgid "Pacific/Funafuti"
+msgstr "Pacific/Funafuti"
+
+msgid "Asia/Taipei"
+msgstr "Asia/Taipei"
+
+msgid "Africa/Dar_es_Salaam"
+msgstr "Africa/Dar_es_Salaam"
+
+msgid "Europe/Kiev"
+msgstr "Europe/Kiev"
+
+msgid "Europe/Simferopol"
+msgstr "Europe/Simferopol"
+
+msgid "Europe/Uzhgorod"
+msgstr "Europe/Uzhgorod"
+
+msgid "Europe/Zaporozhye"
+msgstr "Europe/Zaporozhye"
+
+msgid "Africa/Kampala"
+msgstr "Africa/Kampala"
+
+msgid "Pacific/Midway"
+msgstr "Pacific/Midway"
+
+msgid "Pacific/Wake"
+msgstr "Pacific/Wake"
+
+msgid "America/Adak"
+msgstr "America/Adak"
+
+msgid "America/Anchorage"
+msgstr "America/Anchorage"
+
+msgid "America/Boise"
+msgstr "America/Boise"
+
+msgid "America/Chicago"
+msgstr "America/Chicago"
+
+msgid "America/Denver"
+msgstr "America/Denver"
+
+msgid "America/Detroit"
+msgstr "America/Detroit"
+
+msgid "America/Indiana/Indianapolis"
+msgstr "America/Indiana/Indianapolis"
+
+msgid "America/Indiana/Knox"
+msgstr "America/Indiana/Knox"
+
+msgid "America/Indiana/Marengo"
+msgstr "America/Indiana/Marengo"
+
+msgid "America/Indiana/Petersburg"
+msgstr "America/Indiana/Petersburg"
+
+msgid "America/Indiana/Tell_City"
+msgstr "America/Indiana/Tell_City"
+
+msgid "America/Indiana/Vevay"
+msgstr "America/Indiana/Vevay"
+
+msgid "America/Indiana/Vincennes"
+msgstr "America/Indiana/Vincennes"
+
+msgid "America/Indiana/Winamac"
+msgstr "America/Indiana/Winamac"
+
+msgid "America/Juneau"
+msgstr "America/Juneau"
+
+msgid "America/Kentucky/Louisville"
+msgstr "America/Kentucky/Louisville"
+
+msgid "America/Kentucky/Monticello"
+msgstr "America/Kentucky/Monticello"
+
+msgid "America/Los_Angeles"
+msgstr "America/Los_Angeles"
+
+msgid "America/Menominee"
+msgstr "America/Menominee"
+
+msgid "America/Metlakatla"
+msgstr "America/Metlakatla"
+
+msgid "America/New_York"
+msgstr "America/New_York"
+
+msgid "America/Nome"
+msgstr "America/Nome"
+
+msgid "America/North_Dakota/Beulah"
+msgstr "America/North_Dakota/Beulah"
+
+msgid "America/North_Dakota/Center"
+msgstr "America/North_Dakota/Center"
+
+msgid "America/North_Dakota/New_Salem"
+msgstr "America/North_Dakota/New_Salem"
+
+msgid "America/Phoenix"
+msgstr "America/Phoenix"
+
+msgid "America/Sitka"
+msgstr "America/Sitka"
+
+msgid "America/Yakutat"
+msgstr "America/Yakutat"
+
+msgid "Pacific/Honolulu"
+msgstr "Pacific/Honolulu"
+
+msgid "America/Montevideo"
+msgstr "America/Montevideo"
+
+msgid "Asia/Samarkand"
+msgstr "Asia/Samarkand"
+
+msgid "Asia/Tashkent"
+msgstr "Asia/Tashkent"
+
+msgid "Europe/Vatican"
+msgstr "Europe/Vatican"
+
+msgid "America/St_Vincent"
+msgstr "America/St_Vincent"
+
+msgid "America/Caracas"
+msgstr "America/Caracas"
+
+msgid "America/Tortola"
+msgstr "America/Tortola"
+
+msgid "America/St_Thomas"
+msgstr "America/St_Thomas"
+
+msgid "Asia/Ho_Chi_Minh"
+msgstr "Asia/Ho_Chi_Minh"
+
+msgid "Pacific/Efate"
+msgstr "Pacific/Efate"
+
+msgid "Pacific/Wallis"
+msgstr "Pacific/Wallis"
+
+msgid "Pacific/Apia"
+msgstr "Pacific/Apia"
+
+msgid "Asia/Aden"
+msgstr "Asia/Aden"
+
+msgid "Indian/Mayotte"
+msgstr "Indian/Mayotte"
+
+msgid "Africa/Johannesburg"
+msgstr "Africa/Johannesburg"
+
+msgid "Africa/Lusaka"
+msgstr "Africa/Lusaka"
+
+msgid "Africa/Harare"
+msgstr "Africa/Harare"
+
+msgid "Low Balance"
+msgstr "Low Balance"
+
+msgid "Trunk Statistics"
+msgstr "Trunk Statistics"
+
+msgid "Current Balance"
+msgstr "Current Balance"
+
+msgid "Emails"
+msgstr "Emails"
+
+msgid "Add IP Settings"
+msgstr "Add IP Settings"
+
+msgid "Edit IP Settings"
+msgstr "Edit IP Settings"
+
+msgid "Edit Caller ID"
+msgstr "Edit Caller ID"
+
+msgid "Invoice Date Interval"
+msgstr "Invoice Date Interval"
+
+msgid "Use same credential for Invoice Config"
+msgstr "Use same credential for Invoice Config"
+
+msgid "Registration URL"
+msgstr "Registration URL"
+
+msgid "Account Status"
+msgstr "Account Status"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "Sub Admin"
+msgstr "Sub Admin"
+
+msgid "Edit Accessnumber"
+msgstr "Edit Accessnumber"
+
+msgid "Edit Rate Group"
+msgstr "Edit Rate Group"
+
+msgid "Percentage (Enterprise)"
+msgstr "Percentage (Enterprise)"
+
+msgid "Edit Ratedeck"
+msgstr "Edit Ratedeck"
+
+msgid "Realm"
+msgstr "Realm"
+
+msgid "Reg-Transport"
+msgstr "Reg-Transport"
+
+msgid "Failover"
+msgstr "Failover"
+
+msgid "GW Name #1"
+msgstr "GW Name #1"
+
+msgid "GW Name #2"
+msgstr "GW Name #2"
+
+msgid "Gateway"
+msgstr "Gateway"
+
+msgid "Count"
+msgstr "Count"
+
+msgid "Both"
+msgstr "Both"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Reload"
+msgstr "Reload"
+
+msgid "Rescan"
+msgstr "Rescan"
+
+msgid "Org."
+msgstr "Org."
+
+msgid "Read"
+msgstr "Read"
+
+msgid "Write"
+msgstr "Write"
+
+msgid "STANDARD"
+msgstr "STANDARD"
+
+msgid "CALLINGCARD"
+msgstr "CALLINGCARD"
+
+msgid "FREE"
+msgstr "FREE"
+
+msgid "LOCAL"
+msgstr "LOCAL"
+
+msgid "ACCOUNT_INACTIVE_DELETED"
+msgstr "ACCOUNT_INACTIVE_DELETED"
+
+msgid "ACCOUNT_EXPIRE"
+msgstr "ACCOUNT_EXPIRE"
+
+msgid "ALLOTTED_TIMEOUT"
+msgstr "ALLOTTED_TIMEOUT"
+
+msgid "AUTHENTICATION_FAIL"
+msgstr "AUTHENTICATION_FAIL"
+
+msgid "BEARERCAPABILITY_NOTAUTH"
+msgstr "BEARERCAPABILITY_NOTAUTH"
+
+msgid "BEARERCAPABILITY_NOTAVAIL"
+msgstr "BEARERCAPABILITY_NOTAVAIL"
+
+msgid "BEARERCAPABILITY_NOTIMPL"
+msgstr "BEARERCAPABILITY_NOTIMPL"
+
+msgid "CALL_REJECTED"
+msgstr "CALL_REJECTED"
+
+msgid "CHAN_NOT_IMPLEMENTED"
+msgstr "CHAN_NOT_IMPLEMENTED"
+
+msgid "CHANNEL_UNACCEPTABLE"
+msgstr "CHANNEL_UNACCEPTABLE"
+
+msgid "DESTINATION_OUT_OF_ORDER"
+msgstr "DESTINATION_OUT_OF_ORDER"
+
+msgid "DESTINATION_BLOCKED"
+msgstr "DESTINATION_BLOCKED"
+
+msgid "DID_DESTINATION_NOT_FOUND"
+msgstr "DID_DESTINATION_NOT_FOUND"
+
+msgid "FACILITY_REJECTED"
+msgstr "FACILITY_REJECTED"
+
+msgid "FACILITY_NOT_SUBSCRIBED"
+msgstr "FACILITY_NOT_SUBSCRIBED"
+
+msgid "FACILITY_NOT_IMPLEMENTED"
+msgstr "FACILITY_NOT_IMPLEMENTED"
+
+msgid "FRAUD_CALL_PER_ACCOUNT"
+msgstr "FRAUD_CALL_PER_ACCOUNT"
+
+msgid "FRAUD_CALL_PER_DESTINATION"
+msgstr "FRAUD_CALL_PER_DESTINATION"
+
+msgid "FRAUD_COST_PER_ACCOUNT"
+msgstr "FRAUD_COST_PER_ACCOUNT"
+
+msgid "FRAUD_COST_PER_DESTINATION"
+msgstr "FRAUD_COST_PER_DESTINATION"
+
+msgid "INVALID_NUMBER_FORMAT"
+msgstr "INVALID_NUMBER_FORMAT"
+
+msgid "INCOMPATIBLE_DESTINATION"
+msgstr "INCOMPATIBLE_DESTINATION"
+
+msgid "MANAGER_REQUEST"
+msgstr "MANAGER_REQUEST"
+
+msgid "MEDIA_TIMEOUT"
+msgstr "MEDIA_TIMEOUT"
+
+msgid "NO_ROUTE_DESTINATION"
+msgstr "NO_ROUTE_DESTINATION"
+
+msgid "NORMAL_CLEARING"
+msgstr "NORMAL_CLEARING"
+
+msgid "NETWORK_OUT_OF_ORDER"
+msgstr "NETWORK_OUT_OF_ORDER"
+
+msgid "NORMAL_UNSPECIFIED"
+msgstr "NORMAL_UNSPECIFIED"
+
+msgid "NORMAL_CIRCUIT_CONGESTION"
+msgstr "NORMAL_CIRCUIT_CONGESTION"
+
+msgid "NORMAL_TEMPORARY_FAILURE"
+msgstr "NORMAL_TEMPORARY_FAILURE"
+
+msgid "NO_SUFFICIENT_FUND"
+msgstr "NO_SUFFICIENT_FUND"
+
+msgid "NO_USER_RESPONSE"
+msgstr "NO_USER_RESPONSE"
+
+msgid "NO_ANSWER"
+msgstr "NO_ANSWER"
+
+msgid "NUMBER_CHANGED"
+msgstr "NUMBER_CHANGED"
+
+msgid "ORIGINATOR_CANCEL"
+msgstr "ORIGINATOR_CANCEL"
+
+msgid "ORIGNATION_RATE_NOT_FOUND"
+msgstr "ORIGNATION_RATE_NOT_FOUND"
+
+msgid "OUTGOING_CALL_BARRED"
+msgstr "OUTGOING_CALL_BARRED"
+
+msgid "PROGRESS_TIMEOUT"
+msgstr "PROGRESS_TIMEOUT"
+
+msgid "RECOVERY_ON_TIMER_EXPIRE"
+msgstr "RECOVERY_ON_TIMER_EXPIRE"
+
+msgid "RESELLER_COST_CHEAP"
+msgstr "RESELLER_COST_CHEAP"
+
+msgid "SERVICE_NOT_IMPLEMENTED"
+msgstr "SERVICE_NOT_IMPLEMENTED"
+
+msgid "SERVICE_UNAVAILABLE"
+msgstr "SERVICE_UNAVAILABLE"
+
+msgid "SUCCESS"
+msgstr "SUCCESS"
+
+msgid "SWITCH_CONGESTION"
+msgstr "SWITCH_CONGESTION"
+
+msgid "TERMINATION_RATE_NOT_FOUND"
+msgstr "TERMINATION_RATE_NOT_FOUND"
+
+msgid "UNSPECIFIED"
+msgstr "UNSPECIFIED"
+
+msgid "UNALLOCATED_NUMBER"
+msgstr "UNALLOCATED_NUMBER"
+
+msgid "USER_BUSY"
+msgstr "USER_BUSY"
+
+msgid "USER_NOT_REGISTERED"
+msgstr "USER_NOT_REGISTERED"
+
+msgid "REQUESTED_CHAN_UNAVAIL"
+msgstr "REQUESTED_CHAN_UNAVAIL"
+
+msgid "Resend Email"
+msgstr "Resend Email"
+
+msgid "Resent Email"
+msgstr "Resent Email"
+
+msgid "Sent"
+msgstr "Sent"
+
+msgid "Account Number Editable"
+msgstr "Account Number Editable"
+
+msgid "Play Audio Notifications"
+msgstr "Play Audio Notifications"
+
+msgid "Invoices Older Than Days"
+msgstr "Invoices Older Than Days"
+
+msgid "Half Year"
+msgstr "Half Year"
+
+msgid "Last Pay Date"
+msgstr "Last Pay Date"
+
+msgid "Buy DIDs"
+msgstr "Buy DIDs"
+
+msgid "Purchased DID"
+msgstr "Purchased DID"
+
+msgid "DID Information"
+msgstr "DID Information"
+
+msgid "Sell Cost"
+msgstr "Sell Cost"
+
+msgid "Admin Rate Group"
+msgstr "Admin Rate Group"
+
+msgid "Search My Rates"
+msgstr "Search My Rates"
+
+msgid "Optin"
+msgstr "Optin"
+
+msgid "Bal"
+msgstr "Bal"
+
+msgid "Managed & Maintained by"
+msgstr "Managed & Maintained by"
+
+msgid "Flux Telecom"
+msgstr "Flux Telecom"
+
+msgid "All Rights Reserved."
+msgstr "All Rights Reserved."
+
+msgid "module_name"
+msgstr "module_name"
+
+msgid "English"
+msgstr "English"
+
+msgid "Chinese"
+msgstr "Chinese"
+
+msgid "French"
+msgstr "French"
+
+msgid "German"
+msgstr "German"
+
+msgid "Greek"
+msgstr "Greek"
+
+msgid "Italian"
+msgstr "Italian"
+
+msgid "Spanish"
+msgstr "Spanish"
+
+msgid "Russian"
+msgstr "Russian"
+
+msgid "Japanese"
+msgstr "Japanese"
+
+msgid "Portuguese"
+msgstr "Portuguese"
+
+msgid "Romanian"
+msgstr "Romanian"
+
+msgid "Create Translation Languages"
+msgstr "Create Translation Languages"
+
+msgid "Module Name"
+msgstr "Module Name"
+
+msgid "Edit Translation Language"
+msgstr "Edit Translation Language"
+
+msgid "Distributor"
+msgstr "Distributor"
+
+msgid "Commission Based"
+msgstr "Commission Based"
+
+msgid "Reseller Type"
+msgstr "Reseller Type"
+
+msgid "Callerid"
+msgstr "Callerid"
+
+msgid "Opensips Dispatcher"
+msgstr "Opensips Dispatcher"
+
+msgid "Generate"
+msgstr "Generate"
+
+msgid "Forward"
+msgstr "Forward"
+
+msgid "Add White List"
+msgstr "Add White List"
+
+msgid "Report"
+msgstr "Report"
+
+msgid "Profiles"
+msgstr "Profiles"
+
+msgid "Create Duplicate Rate Group"
+msgstr "Create Duplicate Rate Group"
+
+msgid "Add Timezone"
+msgstr "Add Timezone"
+
+msgid "Timezone List"
+msgstr "Timezone List"
+
+msgid "GMT Offset"
+msgstr "GMT Offset"
+
+msgid "Edit Timezone"
+msgstr "Edit Timezone"
+
+msgid "Account Notification"
+msgstr "Account Notification"
+
+msgid "Both (Email & SMS)"
+msgstr "Both (Email & SMS)"
+
+msgid "Terms & Condition"
+msgstr "Terms & Condition"
+
+msgid "Term And Condition"
+msgstr "Term And Condition"
+
+msgid "Url"
+msgstr "Url"
+
+msgid "Text"
+msgstr "Text"
+
+msgid "Custom Rates"
+msgstr "Custom Rates"
+
+msgid "(Price+SetUp Fee)"
+msgstr "(Price+SetUp Fee)"
+
+msgid "supportticket"
+msgstr "Create Support Ticket"
+
+msgid "supportticket"
+msgstr "Open New Ticket"
+
+msgid "supportticket"
+msgstr "Support ticket removed successfully!"
+
+msgid "supportticket"
+msgstr "Support ticket generated successfully!"
+
+msgid "supportticket"
+msgstr "Ticket Number"
+
+msgid "supportticket"
+msgstr "Last Reply"
+
+msgid "supportticket"
+msgstr "High"
+
+msgid "supportticket"
+msgstr "Normal"
+
+msgid "supportticket"
+msgstr "Low"
+
+msgid "supportticket"
+msgstr "Open"
+
+msgid "supportticket"
+msgstr "Answerd"
+
+msgid "supportticket"
+msgstr "Customer-Reply"
+
+msgid "supportticket"
+msgstr "On-hold"
+
+msgid "supportticket"
+msgstr "Attach more files"
+
+msgid "supportticket"
+msgstr "Reply"
+
+msgid "supportticket"
+msgstr "Edit Ticket"
+
+msgid "supportticket"
+msgstr "Close Support Ticket"
+
+msgid "supportticket"
+msgstr "Department"
+
+msgid "supportticket"
+msgstr "Add Department"
+
+msgid "supportticket"
+msgstr "Create Department"
+
+msgid "supportticket"
+msgstr "Department added successfully!"
+
+msgid "supportticket"
+msgstr "Department removed successfully!"
+
+msgid "supportticket"
+msgstr "SMTP Details"
+
+msgid "supportticket"
+msgstr "Department User"
+
+msgid "supportticket"
+msgstr "Department Additional Email Address"
+
+msgid "supportticket"
+msgstr "Department List"
+
+msgid "supportticket"
+msgstr "Import Area Code"
+
+msgid "supportticket"
+msgstr "Back to Area Code List"
+
+msgid "supportticket"
+msgstr "Support Tickets"
+
+msgid "supportticket"
+msgstr "Support Ticket"
+
+msgid "Ring Group"
+msgstr "Ring Group"
+
+msgid "siprouting"
+msgstr "Advance Sip Routing"
+
+msgid "ringgroup"
+msgstr "RingGroup"
+

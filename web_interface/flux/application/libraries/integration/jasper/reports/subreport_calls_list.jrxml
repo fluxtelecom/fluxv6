@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subreport_calls_list" language="groovy" pageWidth="572" pageHeight="752" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c3455228-1ad4-4e89-8773-5216c0338a37">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="stylePadraoTabela">
+		<box>
+			<bottomPen lineWidth="3.0" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="stylePadraoTabela_cabecalho" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.0" lineColor="#000000"/>
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="3.0" lineColor="#000000"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="stylePadraoTabela_coluna" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<topPen lineWidth="0.0" lineStyle="Solid"/>
+			<leftPen lineWidth="0.0" lineStyle="Solid"/>
+			<bottomPen lineWidth="3.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+			<rightPen lineWidth="0.0" lineStyle="Solid"/>
+		</box>
+	</style>
+	<style name="stylePadraoTabela_nomeColuna">
+		<box>
+			<topPen lineWidth="4.0" lineColor="#666666"/>
+			<bottomPen lineWidth="4.0" lineColor="#CCCCCC"/>
+		</box>
+	</style>
+	<style name="stylePadraoTabela_cabecalhoSemNomeColuna" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.0" lineColor="#000000"/>
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="7.0" lineColor="#000000"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="styleTotais">
+		<box>
+			<bottomPen lineWidth="4.0" lineColor="#333333"/>
+		</box>
+	</style>
+	<subDataset name="numbers" uuid="6adec14f-7dc9-4892-b857-5dec42be4a65">
+		<parameter name="TOTAL_CALLS_DURATION" class="java.lang.String"/>
+		<parameter name="TOTAL_CALLS_VALUE" class="java.lang.Double"/>
+		<parameter name="LINE_NUMBER" class="java.lang.String"/>
+		<field name="destinationPhone" class="java.lang.String"/>
+		<field name="destinationType" class="java.lang.String"/>
+		<field name="date" class="java.lang.String"/>
+		<field name="duration" class="java.lang.Double"/>
+		<field name="durationFormatted" class="java.lang.String"/>
+		<field name="value" class="java.lang.Double"/>
+	</subDataset>
+	<parameter name="TOTAL_CALLS_VALUE" class="java.lang.Double"/>
+	<parameter name="TOTAL_CALLS_DURATION_FORMATTED" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="number" class="java.lang.String"/>
+	<field name="callsDuration" class="java.lang.Double"/>
+	<field name="callsValue" class="java.lang.Double"/>
+	<field name="callsDurationFormatted" class="java.lang.String"/>
+	<field name="lineNumber" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="63" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 1" x="0" y="42" width="555" height="21" forecolor="#333333" uuid="0da186c9-f887-415b-a13b-1935ac2b4546"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="numbers" uuid="e6ceae01-590b-441d-be1a-e749051ce0da">
+						<datasetParameter name="TOTAL_CALLS_DURATION">
+							<datasetParameterExpression><![CDATA[$F{callsDurationFormatted}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="TOTAL_CALLS_VALUE">
+							<datasetParameterExpression><![CDATA[$F{callsValue}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="LINE_NUMBER">
+							<datasetParameterExpression><![CDATA[$F{lineNumber}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[$P{REPORT_DATA_SOURCE}.subDataSource("calls")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="111" uuid="3e342a54-18f0-411d-9adb-54f3e9448861">
+						<jr:columnHeader style="stylePadraoTabela_nomeColuna" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="111" height="30" forecolor="#666666" uuid="a4a1358a-94f2-4136-bd72-b241272dd095"/>
+								<textElement verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[Destino]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="stylePadraoTabela_coluna" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="111" height="30" forecolor="#333333" uuid="28618efc-cdfd-4010-b479-0f17f0d1033b"/>
+								<textElement verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{destinationPhone}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="111" uuid="7a7dd20a-7026-4280-994f-925a5841b0ea">
+						<jr:columnHeader style="stylePadraoTabela_nomeColuna" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="111" height="30" forecolor="#666666" uuid="f08f391e-38e7-4fc1-946f-f6d79b703897"/>
+								<textElement verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[Descrição]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="stylePadraoTabela_coluna" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="111" height="30" forecolor="#333333" uuid="c9da9d8f-fa14-477c-b1e6-c87a41a994e0"/>
+								<textElement verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{destinationType}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="133" uuid="af29863d-f7bd-4a4e-9da0-b8db6c5f0d9f">
+						<jr:columnHeader style="stylePadraoTabela_nomeColuna" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="133" height="30" forecolor="#666666" uuid="f78bc1b8-7848-4d6d-9b52-d0c17d73d062"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[Data]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter height="30" rowSpan="1">
+							<box>
+								<bottomPen lineWidth="3.0" lineColor="#666666"/>
+							</box>
+							<textField>
+								<reportElement x="0" y="0" width="133" height="30" forecolor="#333333" uuid="77824d04-fa86-4890-b298-607b6e92096c"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA["Total Linha " + $P{LINE_NUMBER}]]></textFieldExpression>
+							</textField>
+						</jr:columnFooter>
+						<jr:detailCell style="stylePadraoTabela_coluna" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="133" height="30" forecolor="#333333" uuid="980e8bfd-20e1-448a-8e4e-e629e52eedba"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="60a4be9e-d3c4-413a-88a8-eb49d3fa242b">
+						<jr:columnHeader style="stylePadraoTabela_nomeColuna" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" forecolor="#666666" uuid="726c855c-6284-4dc8-8175-80888e930245"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[Duração]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter height="30" rowSpan="1">
+							<box>
+								<bottomPen lineWidth="3.0" lineColor="#666666"/>
+							</box>
+							<textField>
+								<reportElement x="0" y="0" width="99" height="30" forecolor="#333333" uuid="d89ac025-9e69-47ee-a611-9a738363b276"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{TOTAL_CALLS_DURATION}]]></textFieldExpression>
+							</textField>
+						</jr:columnFooter>
+						<jr:detailCell style="stylePadraoTabela_coluna" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="30" forecolor="#333333" uuid="5e6b6fab-b52e-4ccc-96b7-83e88540df58"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{durationFormatted}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="95f6f60a-ad04-4f45-9524-3fd15e456f9f">
+						<jr:columnHeader style="stylePadraoTabela_nomeColuna" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" forecolor="#666666" uuid="8c0dd499-15f9-44d8-8e55-ffc921a04896"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[Valor]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter height="30" rowSpan="1">
+							<box>
+								<bottomPen lineWidth="3.0" lineColor="#666666"/>
+							</box>
+							<textField pattern="R$ #,##0.00">
+								<reportElement x="0" y="0" width="100" height="30" forecolor="#333333" uuid="83659a9f-ba81-4381-81d3-c726b1f605da"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{TOTAL_CALLS_VALUE}]]></textFieldExpression>
+							</textField>
+						</jr:columnFooter>
+						<jr:detailCell style="stylePadraoTabela_coluna" height="30" rowSpan="1">
+							<textField pattern="R$ #,##0.00">
+								<reportElement x="0" y="0" width="100" height="30" forecolor="#333333" uuid="5851722a-f136-4c03-a491-fac4d4565196"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField>
+				<reportElement x="0" y="12" width="555" height="30" forecolor="#666666" uuid="8ca1225b-bb27-4a08-a179-939e1238e86e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Linha " + $F{lineNumber} + " - " + $F{number}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="22">
+			<staticText>
+				<reportElement style="styleTotais" x="222" y="0" width="133" height="20" uuid="a21916d1-ac34-4a74-b8ad-fa3162a57b8d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="R$ #,##0.00">
+				<reportElement style="styleTotais" x="454" y="0" width="101" height="20" uuid="4bf19b4b-422d-4d91-a84f-a35680cedafd"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TOTAL_CALLS_VALUE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="styleTotais" x="355" y="0" width="99" height="20" uuid="7c8e2a5c-2738-490d-82ff-15d786e0d98a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TOTAL_CALLS_DURATION_FORMATTED}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+</jasperReport>

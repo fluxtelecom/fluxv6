@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon>
+	<tech_name>supportticket</tech_name>
+	<name>Tickets de Suporte</name>
+	<description>Ajude seus clientes configurando o Help Desk para criar tickets em diferentes departamentos</description>		
+	<icon>static/images/supportticket_icon.png</icon>
+	<version>2.0.0</version>
+	<license>AGPL-3</license>	
+	<author>Flux Telecom</author>
+	<status>production</status>
+</addon>

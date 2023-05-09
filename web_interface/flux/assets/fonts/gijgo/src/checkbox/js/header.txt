@@ -1,0 +1,7 @@
+﻿/*
+ * Gijgo Checkbox v1.9.14
+ * http://gijgo.com/checkbox
+ *
+ * Copyright 2014, 2022 gijgo.com
+ * Released under the MIT license
+ */
