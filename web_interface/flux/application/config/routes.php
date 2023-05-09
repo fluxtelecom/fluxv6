@@ -1,7 +1,7 @@
 <?php
 
-if (! defined ( 'BASEPATH' )) {
-	exit ( 'No direct script access allowed' );
+if (!defined('BASEPATH')) {
+	exit('No direct script access allowed');
 }
 /*
  * | -------------------------------------------------------------------------
@@ -42,63 +42,54 @@ if (! defined ( 'BASEPATH' )) {
  * |
  */
 
-$route ['default_controller'] = "login";
-$route ['404_override'] = '';
-$route ['getbalance/(:any)'] = "getbalance/index/$1";
+$route['default_controller'] = "login";
+$route['404_override']       = '';
+$route['getbalance/(:any)']  = "getbalance/index/$1";
 
-$route ['settings/configuration'] = "systems/configuration/";
-$route ['settings/configuration_json'] = "systems/configuration_json/";
+$route['settings/configuration']      = "systems/configuration/";
+$route['settings/configuration_json'] = "systems/configuration_json/";
 
-$route ['get_status/(:any)'] = "getstatus/customer_list_status/$1";
+$route['get_status/(:any)'] = "getstatus/customer_list_status/$1";
 
-$route ['email_status/(:any)'] = "getstatus/get_email_status/$1";
-$route ['sms_status/(:any)'] = "getstatus/get_sms_status/$1";
-$route ['alert_status/(:any)'] = "getstatus/get_alert_status/$1";
+$route['email_status/(:any)'] = "getstatus/get_email_status/$1";
+$route['sms_status/(:any)']   = "getstatus/get_sms_status/$1";
+$route['alert_status/(:any)'] = "getstatus/get_alert_status/$1";
 
-$route ['forgotpassword'] = "signup/forgotpassword";
-$route ['confirmpassword'] = "signup/confirmpassword";
-$route ['confirm_pass'] = "signup/confirm_pass";
-$route ['confirmpass'] = "signup/confirmpass";
+$route['forgotpassword']  = "signup/forgotpassword";
+$route['confirmpassword'] = "signup/confirmpassword";
+$route['confirm_pass']    = "signup/confirm_pass";
+$route['confirmpass']     = "signup/confirmpass";
 
-$route ['feedback'] = "feedback/index";
+$route['feedback'] = "feedback/index";
 
-$route ['signup'] = "signup/index";
-$route ['otp_verification'] = "signup/otp_verification/";
-$route ['signup/(:any)'] = "signup/index/$1";
+$route['signup']           = "signup/index";
+$route['otp_verification'] = "signup/otp_verification/";
+$route['signup/(:any)']    = "signup/index/$1";
 
-$route ['ixc/api/(:any)'] = "api/$1";
-$route ['ixc/admin/(:any)'] = "admin/$1";
-$route ['ixc/(:any)'] = "admin/$1";
-//$route ['ixc/customer'] = "admin/customer";
+$route['signup/signup_save']     = "signup/signup_save";
+$route['signup/signup_success']  = "signup/signup_success";
+$route['signup/signup_confirm']  = "signup/signup_confirm";
+$route['signup/signup_inactive'] = "signup/signup_inactive";
+$route['logout']                 = "login/logout/";
 
-$route ['signup/signup_save'] = "signup/signup_save";
-$route ['signup/signup_success'] = "signup/signup_success";
-$route ['signup/signup_confirm'] = "signup/signup_confirm";
-$route ['signup/signup_inactive'] = "signup/signup_inactive";
-$route ['logout'] = "login/logout/";
+$route['signup/send_otp']   = "signup/send_otp";
+$route['signup/check_otp']  = "signup/check_otp";
+$route['signup/resend_otp'] = "signup/resend_otp";
 
-
-
-$route ['signup/send_otp'] = "signup/send_otp";
-$route ['signup/check_otp'] = "signup/check_otp";
-$route ['signup/resend_otp'] = "signup/resend_otp";
-
-$route ['relogin/(:any)/(:any)'] = "login/relogin/$1/$2";
+$route['relogin/(:any)/(:any)'] = "login/relogin/$1/$2";
 //Make menu dynamic
-$dir=getcwd()."/application/config/addons";
-$a = scandir($dir);
+$dir = getcwd()."/application/config/addons";
+$a   = scandir($dir);
 
-foreach($a as $key=>$val){
+foreach ($a as $key => $val) {
 
-	if($val!=='.' || $val!='..'){
-		$function=str_replace(".php","",$val);
-		if(file_exists($dir."/".$val."/routes.php")){
-			include_once($dir."/".$val."/routes.php");
+	if ($val !== '.' || $val != '..') {
+		$function = str_replace(".php", "", $val);
+		if (file_exists($dir."/".$val."/routes.php")) {
+			include_once $dir."/".$val."/routes.php";
 		}
 	}
 }
-
-
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

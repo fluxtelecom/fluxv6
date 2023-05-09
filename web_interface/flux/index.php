@@ -17,9 +17,9 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-ini_set('display_errors','on');
-ini_set ( "date.timezone", "America/Sao_Paulo" );
-define ( 'ENVIRONMENT', 'production');
+ini_set('display_errors', 'on');
+ini_set("date.timezone", "America/Sao_Paulo");
+define('ENVIRONMENT', 'production');
 /*
  * ---------------------------------------------------------------
  * ERROR REPORTING
@@ -29,19 +29,19 @@ define ( 'ENVIRONMENT', 'production');
  * By default development will show errors but testing and live will hide them.
  */
 
-if (defined ( 'ENVIRONMENT' )) {
+if (defined('ENVIRONMENT')) {
 	switch (ENVIRONMENT) {
-		case 'development' :
-			error_reporting ( E_ALL );
+		case 'development':
+			error_reporting(E_ALL);
 			break;
-		
-		case 'testing' :
-		case 'production' :
-			error_reporting ( 0 );
+
+		case 'testing':
+		case 'production':
+			error_reporting(0);
 			break;
-		
-		default :
-			exit ( 'The application environment is not set correctly.' );
+
+		default:
+			exit('The application environment is not set correctly.');
 	}
 }
 
@@ -141,35 +141,36 @@ $application_folder = 'application';
  */
 
 // Set the current directory correctly for CLI requests
-if (defined ( 'STDIN' )) {
-	chdir ( dirname ( __FILE__ ) );
+if (defined('STDIN')) {
+	chdir(dirname(__FILE__));
 }
 
-if (realpath ( $system_path ) !== FALSE) {
-	$system_path = realpath ( $system_path ) . '/';
+if (realpath($system_path) !== FALSE) {
+	$system_path = realpath($system_path).'/';
 }
 
 // ensure there's a trailing slash
-$system_path = rtrim ( $system_path, '/' ) . '/';
+$system_path = rtrim($system_path, '/').'/';
 
 // Is the system path correct?
-if (! is_dir ( $system_path )) {
-	exit ( "Your system folder path does not appear to be set correctly. Please open the following file and correct this: " . pathinfo ( __FILE__, PATHINFO_BASENAME ) );
+if (!is_dir($system_path)) {
+	exit("Your system folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
 }
 
-if((substr($_SERVER['REQUEST_URI'], 0, strlen('//')) === '//')){
-    $_SERVER['REQUEST_URI'] = substr($_SERVER['REQUEST_URI'],1);
+if ((substr($_SERVER['REQUEST_URI'], 0, strlen('//')) === '//')) {
+	$_SERVER['REQUEST_URI'] = substr($_SERVER['REQUEST_URI'], 1);
 }
-$folder_name = explode('/',$_SERVER['REQUEST_URI']) ;
-if($folder_name['1'] == 'api' || $folder_name['1'] == 'admin' || $folder_name['1'] == 'ixc'){
-        if (! is_dir ($application_folder . '/controllers/'.$folder_name['1'])) {
-        $array = array (
-            'status'  => false,
-            'error'   => 'API Addon is not installed, Please contact administrator',
-            'response_code' => 400
-        );
-        echo json_encode($array); die;
-    }
+$folder_name = explode('/', $_SERVER['REQUEST_URI']);
+if ($folder_name['1'] == 'api' || $folder_name['1'] == 'admin') {
+	if (!is_dir($application_folder.'/controllers/'.$folder_name['1'])) {
+		$array = array(
+			'status'        => false,
+			'error'         => 'API Addon is not installed, Please contact administrator',
+			'response_code' => 400,
+		);
+		echo json_encode($array);
+		die;
+	}
 }
 
 /*
@@ -178,33 +179,33 @@ if($folder_name['1'] == 'api' || $folder_name['1'] == 'admin' || $folder_name['1
  * -------------------------------------------------------------------
  */
 // The name of THIS file
-define ( 'SELF', pathinfo ( __FILE__, PATHINFO_BASENAME ) );
+define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 
 // The PHP file extension
 // this global constant is deprecated.
-define ( 'EXT', '.php' );
+define('EXT', '.php');
 
 // Path to the system folder
-define ( 'BASEPATH', str_replace ( "\\", "/", $system_path ) );
+define('BASEPATH', str_replace("\\", "/", $system_path));
 
 // Path to the front controller (this file)
-define ( 'FCPATH', str_replace ( SELF, '', __FILE__ ) );
+define('FCPATH', str_replace(SELF, '', __FILE__));
 
 // Name of the "system folder"
-define ( 'SYSDIR', trim ( strrchr ( trim ( BASEPATH, '/' ), '/' ), '/' ) );
+define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
 
 // Name of the "assets folder'
-define ( 'ASSETSDIR', realpath ( $assets_path ) . '/' );
+define('ASSETSDIR', realpath($assets_path).'/');
 
 // The path to the "application" folder
-if (is_dir ( $application_folder )) {
-	define ( 'APPPATH', $application_folder . '/' );
+if (is_dir($application_folder)) {
+	define('APPPATH', $application_folder.'/');
 } else {
-	if (! is_dir ( BASEPATH . $application_folder . '/' )) {
-		exit ( "Your application folder path does not appear to be set correctly. Please open the following file and correct this: " . SELF );
+	if (!is_dir(BASEPATH.$application_folder.'/')) {
+		exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
 	}
-	
-	define ( 'APPPATH', BASEPATH . $application_folder . '/' );
+
+	define('APPPATH', BASEPATH.$application_folder.'/');
 }
 
 /*
@@ -215,7 +216,7 @@ if (is_dir ( $application_folder )) {
  * And away we go...
  *
  */
-require_once BASEPATH . 'core/CodeIgniter.php';
+require_once BASEPATH.'core/CodeIgniter.php';
 
 /* End of file index.php */
 /* Location: ./index.php */

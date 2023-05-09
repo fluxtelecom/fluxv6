@@ -1,8 +1,9 @@
 <?php
-if (! defined ( 'BASEPATH' ))
-	exit ( 'No direct script access allowed' );
+if (!defined('BASEPATH')) {
+	exit('No direct script access allowed');
+}
 
-	/*
+/*
  * |--------------------------------------------------------------------------
  * | Base Site URL
  * |--------------------------------------------------------------------------
@@ -17,8 +18,8 @@ if (! defined ( 'BASEPATH' ))
  * |
  */
 
-$flux_config = parse_ini_file ( "/var/lib/flux/flux-config.conf" );
-$config ['base_url'] = $flux_config ['base_url'];
+$flux_config        = parse_ini_file("/var/lib/flux/flux-config.conf");
+$config['base_url'] = $flux_config['base_url'];
 
 // $config['perl_url'] = $flux_config['base_url']."cgi-bin/flux-admin/";
 /*
@@ -32,7 +33,7 @@ $config ['base_url'] = $flux_config ['base_url'];
  * |
  */
 // $config['index_page'] = 'index.php';
-$config ['index_page'] = '';
+$config['index_page'] = '';
 
 /*
  * |--------------------------------------------------------------------------
@@ -50,7 +51,7 @@ $config ['index_page'] = '';
  * | 'ORIG_PATH_INFO' Uses the ORIG_PATH_INFO
  * |
  */
-$config ['uri_protocol'] = 'AUTO';
+$config['uri_protocol'] = 'AUTO';
 // $config['uri_protocol'] = 'ORIG_PATH_INFO';
 
 /*
@@ -64,7 +65,7 @@ $config ['uri_protocol'] = 'AUTO';
  * | http://codeigniter.com/user_guide/general/urls.html
  */
 
-$config ['url_suffix'] = '';
+$config['url_suffix'] = '';
 
 /*
  * |--------------------------------------------------------------------------
@@ -76,7 +77,7 @@ $config ['url_suffix'] = '';
  * | than english.
  * |
  */
-$config ['language'] = 'English';
+$config['language'] = 'English';
 
 /*
  * |--------------------------------------------------------------------------
@@ -87,7 +88,7 @@ $config ['language'] = 'English';
  * | that require a character set to be provided.
  * |
  */
-$config ['charset'] = 'UTF-8';
+$config['charset'] = 'UTF-8';
 
 /*
  * |--------------------------------------------------------------------------
@@ -98,7 +99,7 @@ $config ['charset'] = 'UTF-8';
  * | setting this variable to TRUE (boolean). See the user guide for details.
  * |
  */
-$config ['enable_hooks'] = TRUE;
+$config['enable_hooks'] = TRUE;
 
 /*
  * |--------------------------------------------------------------------------
@@ -112,7 +113,7 @@ $config ['enable_hooks'] = TRUE;
  * | http://codeigniter.com/user_guide/general/creating_libraries.html
  * |
  */
-$config ['subclass_prefix'] = 'MY_';
+$config['subclass_prefix'] = 'MY_';
 
 /*
  * |--------------------------------------------------------------------------
@@ -131,7 +132,7 @@ $config ['subclass_prefix'] = 'MY_';
  * | DO NOT CHANGE THIS UNLESS YOU FULLY UNDERSTAND THE REPERCUSSIONS!!
  * |
  */
-$config ['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
+$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 
 /*
  * |--------------------------------------------------------------------------
@@ -158,11 +159,11 @@ $config ['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
  * | use segment based URLs.
  * |
  */
-$config ['allow_get_array'] = TRUE;
-$config ['enable_query_strings'] = FALSE;
-$config ['controller_trigger'] = 'c';
-$config ['function_trigger'] = 'm';
-$config ['directory_trigger'] = 'd'; // experimental not currently in use
+$config['allow_get_array']      = TRUE;
+$config['enable_query_strings'] = FALSE;
+$config['controller_trigger']   = 'c';
+$config['function_trigger']     = 'm';
+$config['directory_trigger']    = 'd';// experimental not currently in use
 
 /*
  * |--------------------------------------------------------------------------
@@ -184,7 +185,7 @@ $config ['directory_trigger'] = 'd'; // experimental not currently in use
  * | your log files will fill up very fast.
  * |
  */
-$config ['log_threshold'] = 4;
+$config['log_threshold'] = 1;
 
 /*
  * |--------------------------------------------------------------------------
@@ -195,7 +196,7 @@ $config ['log_threshold'] = 4;
  * | application/logs/ folder. Use a full server path with trailing slash.
  * |
  */
-$config ['log_path'] = '/var/log/flux/';
+$config['log_path'] = '/var/log/flux/';
 
 /*
  * |--------------------------------------------------------------------------
@@ -206,7 +207,7 @@ $config ['log_path'] = '/var/log/flux/';
  * | codes to set your own date formatting
  * |
  */
-$config ['log_date_format'] = 'Y-m-d H:i:s';
+$config['log_date_format'] = 'Y-m-d H:i:s';
 
 /*
  * |--------------------------------------------------------------------------
@@ -217,7 +218,7 @@ $config ['log_date_format'] = 'Y-m-d H:i:s';
  * | system/cache/ folder. Use a full server path with trailing slash.
  * |
  */
-$config ['cache_path'] = '';
+$config['cache_path'] = '';
 /*
  * |--------------------------------------------------------------------------
  * | Private Key
@@ -227,7 +228,7 @@ $config ['cache_path'] = '';
  * | MUST set private key with 32 characters.
  * |
  */
-$config ['private_key'] = $flux_config ['PRIVATE_KEY'];
+$config['private_key'] = $flux_config['PRIVATE_KEY'];
 /*
  * |--------------------------------------------------------------------------
  * | Encryption Key
@@ -237,9 +238,9 @@ $config ['private_key'] = $flux_config ['PRIVATE_KEY'];
  * | MUST set an encryption key. See the user guide for info.
  * |
  */
-$config ['encryption_key'] = $flux_config ['ENCRYPTION_KEY'];
+$config['encryption_key'] = $flux_config['ENCRYPTION_KEY'];
 
-$config['data']="aHR0cHM6Ly9kY29sbC5pbmV4dHJpeC5jb20=";
+$config['data']        = "aHR0cHM6Ly9kY29sbC5pbmV4dHJpeC5jb20=";
 $config['enable_data'] = 0;
 
 /*
@@ -260,15 +261,15 @@ $config['enable_data'] = 0;
  * | 'sess_time_to_update' = how many seconds between CI refreshing Session Information
  * |
  */
-$config ['sess_cookie_name'] = 'ci_session';
-$config ['sess_expiration'] = 7200;
-$config ['sess_expire_on_close'] = FALSE;
-$config ['sess_encrypt_cookie'] = TRUE;
-$config ['sess_use_database'] = TRUE;
-$config ['sess_table_name'] = 'ci_sessions';
-$config ['sess_match_ip'] = FALSE;
-$config ['sess_match_useragent'] = TRUE;
-$config ['sess_time_to_update'] = 300;
+$config['sess_cookie_name']     = 'ci_session';
+$config['sess_expiration']      = 7200;
+$config['sess_expire_on_close'] = FALSE;
+$config['sess_encrypt_cookie']  = TRUE;
+$config['sess_use_database']    = TRUE;
+$config['sess_table_name']      = 'ci_sessions';
+$config['sess_match_ip']        = FALSE;
+$config['sess_match_useragent'] = TRUE;
+$config['sess_time_to_update']  = 300;
 
 /*
  * |--------------------------------------------------------------------------
@@ -281,10 +282,10 @@ $config ['sess_time_to_update'] = 300;
  * | 'cookie_secure' = Cookies will only be set if a secure HTTPS connection exists.
  * |
  */
-$config ['cookie_prefix'] = "ITPLATP";
-$config ['cookie_domain'] = "";
-$config ['cookie_path'] = "/";
-$config ['cookie_secure'] = FALSE;
+$config['cookie_prefix'] = "ITPLATP";
+$config['cookie_domain'] = "";
+$config['cookie_path']   = "/";
+$config['cookie_secure'] = FALSE;
 
 /*
  * |--------------------------------------------------------------------------
@@ -295,7 +296,7 @@ $config ['cookie_secure'] = FALSE;
  * | COOKIE data is encountered
  * |
  */
-$config ['global_xss_filtering'] = TRUE;
+$config['global_xss_filtering'] = TRUE;
 
 /*
  * |--------------------------------------------------------------------------
@@ -309,11 +310,10 @@ $config ['global_xss_filtering'] = TRUE;
  * | 'csrf_cookie_name' = The cookie name
  * | 'csrf_expire' = The number in seconds the token should expire.
  */
-$config ['csrf_protection'] = FALSE;
-$config ['csrf_token_name'] = 'csrf_test_name';
-$config ['csrf_cookie_name'] = 'csrf_cookie_name';
-$config ['csrf_expire'] = 7200;
-
+$config['csrf_protection']  = FALSE;
+$config['csrf_token_name']  = 'csrf_test_name';
+$config['csrf_cookie_name'] = 'csrf_cookie_name';
+$config['csrf_expire']      = 7200;
 
 /*
  * |--------------------------------------------------------------------------
@@ -332,7 +332,7 @@ $config ['csrf_expire'] = 7200;
  * | by the output class. Do not 'echo' any values with compression enabled.
  * |
  */
-$config ['compress_output'] = FALSE;
+$config['compress_output'] = FALSE;
 
 /*
  * |--------------------------------------------------------------------------
@@ -345,7 +345,7 @@ $config ['compress_output'] = FALSE;
  * | regarding date handling.
  * |
  */
-$config ['time_reference'] = 'local';
+$config['time_reference'] = 'local';
 
 /*
  * |--------------------------------------------------------------------------
@@ -357,7 +357,7 @@ $config ['time_reference'] = 'local';
  * | in your view files. Options are TRUE or FALSE (boolean)
  * |
  */
-$config ['rewrite_short_tags'] = TRUE;
+$config['rewrite_short_tags'] = TRUE;
 
 /*
  * |--------------------------------------------------------------------------
@@ -370,85 +370,82 @@ $config ['rewrite_short_tags'] = TRUE;
  * | Comma-delimited, e.g. '10.0.1.200,10.0.1.201'
  * |
  */
-$config ['proxy_ips'] = '';
-$config ['Origination-rates-field'] = array (
-		'code' => 'pattern',
-		'destination' => 'comment',
-		'connection cost (CURRENCY)' => 'connectcost',
-		'grace time' => 'includedseconds',
-		'cost / min (CURRENCY)' => 'cost',
-		'initial increment' => 'init_inc',
-		'increment' => 'inc'
+$config['proxy_ips']               = '';
+$config['Origination-rates-field'] = array(
+	'code'                       => 'pattern',
+	'destination'                => 'comment',
+	'connection cost (CURRENCY)' => 'connectcost',
+	'grace time'                 => 'includedseconds',
+	'cost / min (CURRENCY)'      => 'cost',
+	'initial increment'          => 'init_inc',
+	'increment'                  => 'inc',
 );
-$config ['Termination-rates-field'] = array (
-		'code' => 'pattern',
-		'destination' => 'comment',
-		'connection cost (CURRENCY)' => 'connectcost',
-		'grace time' => 'includedseconds',
-		'cost / min (CURRENCY)' => 'cost',
-		'initial increment' => 'init_inc',
-		'increment' => 'inc',
-		'strip' => "strip",
-		'prepend' => 'prepend'
+$config['Termination-rates-field'] = array(
+	'code'                       => 'pattern',
+	'destination'                => 'comment',
+	'connection cost (CURRENCY)' => 'connectcost',
+	'grace time'                 => 'includedseconds',
+	'cost / min (CURRENCY)'      => 'cost',
+	'initial increment'          => 'init_inc',
+	'increment'                  => 'inc',
+	'strip'                      => "strip",
+	'prepend'                    => 'prepend',
 );
-$config ['DID-rates-field'] = array (
-		'DID' => 'number',
-		'Country' => 'country_id',
-		'City'=>'city',
-		'Province'=>'province',
-		'Account' => 'accountid',
-		'Per Minute Cost(CURRENCY)' => 'cost',
-		"Initial Increment" => "init_inc",
-		'Increment' => 'inc',
-		'Setup Fee(CURRENCY)' => 'setup',
-		'Monthly Fee(CURRENCY)' => 'monthlycost',
-		'Call Type' => 'call_type',
-		'Destination' => 'extensions'
+$config['DID-rates-field'] = array(
+	'DID'                       => 'number',
+	'Country'                   => 'country_id',
+	'City'                      => 'city',
+	'Province'                  => 'province',
+	'Account'                   => 'accountid',
+	'Per Minute Cost(CURRENCY)' => 'cost',
+	"Initial Increment"         => "init_inc",
+	'Increment'                 => 'inc',
+	'Setup Fee(CURRENCY)'       => 'setup',
+	'Monthly Fee(CURRENCY)'     => 'monthlycost',
+	'Call Type'                 => 'call_type',
+	'Destination'               => 'extensions',
 );
-$config ['invoices_path'] = FCPATH . "invoices/";
-$config ['invoice_screen'] = FCPATH . APPPATH . "controllers/";
-$config ['rates-file-path'] = ASSETSDIR . "Rates_File/uploaded_files/";
-$config ['db_upload-file-path'] = "/tmp/";
-$config ['Origin-rates-field'] = array (
-		'code' => 'pattern',
-		'prepend' => 'prepend',
-		'destination' => 'comment',
-		'connect cost' => 'connectcost',
-		'included seconds' => 'includedseconds',
-		'per minute cost' => 'cost',
-		'increment' => 'inc',
-		'precedence' => 'precedence',
-		'strip' => "strip"
+$config['invoices_path']       = FCPATH."invoices/";
+$config['invoice_screen']      = FCPATH.APPPATH."controllers/";
+$config['rates-file-path']     = ASSETSDIR."Rates_File/uploaded_files/";
+$config['db_upload-file-path'] = "/tmp/";
+$config['Origin-rates-field']  = array(
+	'code'             => 'pattern',
+	'prepend'          => 'prepend',
+	'destination'      => 'comment',
+	'connect cost'     => 'connectcost',
+	'included seconds' => 'includedseconds',
+	'per minute cost'  => 'cost',
+	'increment'        => 'inc',
+	'precedence'       => 'precedence',
+	'strip'            => "strip",
 );
-$config ['package-code-field'] = array (
-		'code' => 'patterns',
-		'destination' => 'destination'
+$config['package-code-field'] = array(
+	'code'        => 'patterns',
+	'destination' => 'destination',
 );
-$config ['invoices_path'] = FCPATH . "invoices/";
-$config ['invoice_template'] = APPPATH . "views/";
-$config ['invoice_screen'] = APPPATH . "controllers/";
-$config ['gzip-path'] = "/bin/gzip";
-$config ['gunzip-path'] = "/bin/gunzip";
-$config['allow_menu_url'] = array('invoice_conf_list','resellersrates_list');
-$config['allow_module'] = array('tariff','configuration','did');
+$config['invoices_path']    = FCPATH."invoices/";
+$config['invoice_template'] = APPPATH."views/";
+$config['invoice_screen']   = APPPATH."controllers/";
+$config['gzip-path']        = "/bin/gzip";
+$config['gunzip-path']      = "/bin/gunzip";
+$config['allow_menu_url']   = array('invoice_conf_list', 'resellersrates_list');
+$config['allow_module']     = array('tariff', 'configuration', 'did');
 
 /*Access Number*/
-$config ['Accessnumber-rates-field'] = array (
-		'Access number' => 'access_number',
-		'Country' => 'country_id'
+$config['Accessnumber-rates-field'] = array(
+	'Access number' => 'access_number',
+	'Country'       => 'country_id',
 );
 /*Access Number*/
-
 
 /*local number */
-$config ['local_number-rates-field'] = array (
-		'Number' => 'number',
-		'Country' => 'country_id',
-		'Province/State' => 'province',
-		'City' => 'city',
-		"Status" => 'status'
+$config['local_number-rates-field'] = array(
+	'Number'         => 'number',
+	'Country'        => 'country_id',
+	'Province/State' => 'province',
+	'City'           => 'city',
+	"Status"         => 'status',
 );
 
-
 $config['recordings_path'] = FCPATH."playlist/example/recordings/";
-
