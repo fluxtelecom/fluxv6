@@ -283,6 +283,25 @@ class Accounts_form extends common {
 				),
 				'multi',
 			);
+			/*
+			$domains1_array = array(
+			gettext('Domain'),
+			"domain_id",
+			'SELECT',
+			'',
+			'',
+			'tOOL TIP',
+			'Please Enter account number',
+			'id',
+			'domain',
+			'domains',
+			'build_dropdown',
+			'where_arr',
+			array(
+			'status' => 0
+			),
+			'multi'
+			 */
 			$account = array(
 				gettext('Account'),
 				'INPUT',
@@ -2686,7 +2705,7 @@ class Accounts_form extends common {
 				),
 			);
 		} else {
-			$accountinfo = $this->CI->session->userdata('accountinfo');
+			//$accountinfo = $this->CI->session->userdata('accountinfo');
 
 			$permission = array(
 				'',
@@ -2703,7 +2722,7 @@ class Accounts_form extends common {
 		}
 		$type          = $accountinfo['permission_id'];
 		$form['forms'] = array(
-			base_url().'accounts/'.$type.'_save/',
+			base_url().'accounts/'.$entity_type.'_save/',
 			array(
 				"id"   => "admin_form",
 				"name" => "admin_form",

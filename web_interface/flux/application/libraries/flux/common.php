@@ -450,7 +450,7 @@ class common {
 			}
 		}
 		if ($select != 0 && $select != 1) {
-			for($i = 1; $i < 31; $i ++) {
+			for($i = 1; $i < 30; $i ++) {
 				$mon_arr [$i] = $i;
 			}
 			if (isset ( $uri_segment [3] ) && $uri_segment [3] > 0 && empty ( $edit_value )) {
@@ -720,12 +720,12 @@ class common {
 	}
 	function get_entity_type($select = "", $table = "", $entity_type) {
 		$entity_array = array (
-				'-1' => 'Administrator',
+				'-1' => "Administrator",
 				'0' => 'Customer',
 				'1' => 'Reseller',
 				'2' => 'Admin',
 				'3' => 'Provider',
-				'4' => 'Sub Admin',
+				'4' => 'Subadmin',
 				'5' => 'SuperAdmin',
 				'6' => 'API'
 		);
@@ -746,7 +746,7 @@ class common {
 		$entity_array = array (
 				'' => gettext ( "--Select--" ),
 				'0' => gettext ('Customer'),
-				'3' => gettext ('Provider')
+				'3' => gettext ( "Provider" )
 		);
 		return $entity_array;
 	}
@@ -2502,7 +2502,6 @@ $cc_email_ids = strtolower($this->CI->common->get_field_name("notification_email
 		}
 		return $login_type_arr;
 	}
-
 	function outbound_fax() {
 		$status_array = array (
 				'0' => gettext ( 'Enable' ),
@@ -3126,7 +3125,7 @@ $cc_email_ids = strtolower($this->CI->common->get_field_name("notification_email
     }
   function get_did_destination($select = "", $table = "", $id){ 
 		$name='';
-		if($this->CI->db->table_exists('pbx_ringgroup') && $this->CI->db->table_exists('pbx_conference_specification') && $this->CI->db->table_exists('pbx_ivr_specification')) {
+		if($this->CI->db->table_exists('pbx_ringgroup') && $this->CI->db->table_exists('tbl_conference_specification') && $this->CI->db->table_exists('tbl_ivr_specification')) {
 			$accountinfo = $this->CI->session->userdata ( 'accountinfo' );
 			$did_arr = array();
 			$this->CI->db->select ( '*' );
@@ -3142,11 +3141,11 @@ $cc_email_ids = strtolower($this->CI->common->get_field_name("notification_email
 						"id" => $extension 
 				) );
 			}elseif($call_type == '7'){
-					$name = $this->get_field_name ("name", "pbx_conference_specification", array (
+					$name = $this->get_field_name ("name", "tbl_conference_specification", array (
 						"id" => $extension 
 			        ));
 			}elseif($call_type == '8'){
-					$name = $this->get_field_name ("name", "pbx_ivr_specification", array (
+					$name = $this->get_field_name ("name", "tbl_ivr_specification", array (
 						"id" => $extension 
 			        ));
 			}
