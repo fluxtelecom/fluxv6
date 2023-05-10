@@ -2,7 +2,7 @@
 <addon>
 	<tech_name>fm_addon</tech_name>
 	<name>Monitoramento Gateway SIP Flux SBC</name>
-	<description>Monitorar Gateway SIP em Tempo Real e executar comandos via console</description>		
+	<description>Monitoramento Softswitch</description>		
 	<icon>static/images/alarm_icon.png</icon>
 	<version>4.0.1</version>
 	<license>AGPL-3</license>	

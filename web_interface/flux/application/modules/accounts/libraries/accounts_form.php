@@ -2430,7 +2430,8 @@ class Accounts_form extends common {
 					'',
 					'set_status',
 				);
-			} else {
+			} 
+			else {
 				$account_status = null;
 				$company        = array(
 					gettext('Company'),
@@ -2681,9 +2682,10 @@ class Accounts_form extends common {
 			$Currency       = null;
 		}
 		$permission = array();
+		$login_type = $this->CI->session->userdata('userlevel_logintype');
 		if ($this->CI->session->userdata('userlevel_logintype') == -1) {
 			$permission = array(
-				gettext('Role'),
+				gettext(''),
 				'permission_id',
 				'SELECT',
 				'',
@@ -2754,7 +2756,7 @@ class Accounts_form extends common {
 			$account,
 			$password,
 			array(
-				gettext('Email'),
+				gettext(''.$login_type.''),
 				'INPUT',
 				array(
 					'name'  => 'email',
