@@ -1751,7 +1751,7 @@ class Accounts extends MX_Controller {
 		echo $this->common->find_uniq_rendno_customer($numberlength, 'number', 'accounts');
 	}
 
-	function admin_add($type = 2) {
+	function admin_add($type = '') {
 		$accountinfo         = $this->session->userdata('accountinfo');
 		$entity_type         = strtolower($this->common->default_signup_login_type('', '', $type));
 		$entitytype          = str_replace(' ', '', $entity_type);

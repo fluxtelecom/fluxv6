@@ -2724,7 +2724,7 @@ class Accounts_form extends common {
 		}
 		$type          = $accountinfo['permission_id'];
 		$form['forms'] = array(
-			base_url().'accounts/'.$entity_type.'_save/',
+			base_url().'accounts/'.$type.'_save/',
 			array(
 				"id"   => "admin_form",
 				"name" => "admin_form",
@@ -2756,7 +2756,7 @@ class Accounts_form extends common {
 			$account,
 			$password,
 			array(
-				gettext(''.$login_type.''),
+				 gettext('Email'),
 				'INPUT',
 				array(
 					'name'  => 'email',
