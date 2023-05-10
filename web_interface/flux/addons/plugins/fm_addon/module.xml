@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon>
 	<tech_name>fm_addon</tech_name>
-	<name>Monitoramento Gateway SIP Flux SBC</name>
+	<name>Monitoramento FluxSBC</name>
 	<description>Monitoramento Softswitch</description>		
 	<icon>static/images/alarm_icon.png</icon>
 	<version>4.0.1</version>
