@@ -615,6 +615,7 @@ install_database ()
         mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e "GRANT ALL PRIVILEGES ON \`${FLUX_DATABASE_NAME}\` . * TO 'fluxuser'@'127.0.0.1' WITH GRANT OPTION;FLUSH PRIVILEGES;"
         mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/database/flux-6.4.sql
         mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/database/flux-6.4.1.sql
+        mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/database/flux-tables.sql
         mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/database/flux-views.sql
 }
 

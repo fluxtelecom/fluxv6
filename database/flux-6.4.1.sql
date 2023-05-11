@@ -14,7 +14,6 @@ CREATE TABLE `login_activity_report` (
 INSERT INTO `login_activity_report` VALUES (1,1,'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','','::1','2021-05-12 07:46:07');
 
 DROP TABLE IF EXISTS `activity_reports`;
-
 CREATE TABLE `activity_reports` (
   `id` int NOT NULL AUTO_INCREMENT,
   `accountid` int NOT NULL,
@@ -35,7 +34,7 @@ INSERT INTO `roles_and_permission` (`id`, `login_type`, `permission_type`, `menu
 UPDATE userlevels SET module_permissions = concat( module_permissions, ',', (  SELECT max( id ) FROM menu_modules WHERE module_url = 'activity_report/activityReport/' ) ) WHERE userlevelid = -1;
 
 DELIMITER ;;
-/*!50003 CREATE*/ /*!50017 DEFINER=`fluxuser`@`localhost`*/ /*!50003 TRIGGER `activity_reports` AFTER INSERT ON `cdrs` FOR EACH ROW BEGIN
+/*!50003 CREATE*/ /*!50017 DEFINER=`fluxuser`@`127.0.0.1`*/ /*!50003 TRIGGER `activity_reports` AFTER INSERT ON `cdrs` FOR EACH ROW BEGIN
 IF (NEW.calltype = 'DID' AND NEW.call_direction = 'outbound') THEN
   INSERT INTO `activity_reports` (accountid,reseller_id,last_did_call_time,balance,credit_limit) VALUES (NEW.accountid, NEW.reseller_id, NEW.callstart,(SELECT balance from accounts where id=NEW.accountid),(SELECT credit_limit from accounts where id=NEW.accountid)) ON DUPLICATE KEY UPDATE `last_did_call_time`=NEW.callstart,`balance`=VALUES(balance),`credit_limit`=VALUES(credit_limit);
 ELSEIF (NEW.calltype = 'STANDARD') THEN
@@ -55,7 +54,7 @@ ALTER TABLE `trunks` ADD COLUMN `sip_cid_type` VARCHAR(50) NOT NULL COMMENT 'non
 -- End
 
 -- Flux UPDATE-942
-update `system` set value='6.0' where name='version';
+update `system` set value='6.4' where name='version';
 -- End
 
 -- Flux UPDATE-975
@@ -65,6 +64,7 @@ UPDATE `system` SET `sub_group`='Alert Notifications' WHERE `name` = 'alert_noti
 
 
 -- Flux UPDATE-978
+DROP TABLE IF EXISTS `automated_report_log`;
 CREATE TABLE `automated_report_log` ( 
   `id` int(11) AUTO_INCREMENT primary key NOT NULL, 
   `filename` varchar(100) NULL , 

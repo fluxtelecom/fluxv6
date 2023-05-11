@@ -880,6 +880,10 @@ CREATE TABLE `dids` (
   `user_not_registered_vm_flag` tinyint(1) NOT NULL DEFAULT '1' COMMENT '0 enable 1 for disable',
   `no_answer_vm_flag` tinyint(1) NOT NULL DEFAULT '1' COMMENT '0 enable 1 for disable',
   `call_type_vm_flag` tinyint(1) NOT NULL DEFAULT '1' COMMENT '0 enable 1 for disable',
+  `hg_type` tinyint(1) NOT NULL DEFAULT '0',
+  `reverse_rate` TINYINT ( 1 ) NOT NULL DEFAULT '1',
+	`rate_group` INT DEFAULT NULL,
+	`area_code` VARCHAR ( 2 ) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL DEFAULT '51',
   `last_modified_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   KEY `account` (`accountid`),
@@ -2441,7 +2445,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8mb4 */;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50013 DEFINER=`fluxuser`@`127.0.0.1` SQL SECURITY DEFINER */
 /*!50001 VIEW `packages_view` AS select `O`.`order_id` AS `id`,`P`.`id` AS `product_id`,`P`.`name` AS `package_name`,`O`.`free_minutes` AS `free_minutes`,`P`.`applicable_for` AS `applicable_for`,`O`.`accountid` AS `accountid` from (`products` `P` join `order_items` `O`) where ((`P`.`id` = `O`.`product_id`) and (`P`.`product_category` = 1) and (`P`.`status` = 0) and ((`O`.`termination_date` >= utc_timestamp()) or (`O`.`termination_date` = '0000-00-00 00:00:00'))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
@@ -2459,7 +2463,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8mb4 */;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50013 DEFINER=`fluxuser`@`127.0.0.1` SQL SECURITY DEFINER */
 /*!50001 VIEW `view_dids` AS select `dids`.`id` AS `id`,`dids`.`number` AS `number`,`reseller_products`.`id` AS `reseller_product_id`,`reseller_products`.`account_id` AS `account_id`,`reseller_products`.`reseller_id` AS `reseller_id`,if((`dids`.`parent_id` <> `reseller_products`.`account_id`),(select `subrpro`.`account_id` from `reseller_products` `subrpro` where (`subrpro`.`id` > `reseller_products`.`id`) order by `subrpro`.`id` limit 1),`dids`.`accountid`) AS `buyer_accountid`,`dids`.`country_id` AS `country_id`,`dids`.`cost` AS `cost`,`dids`.`call_type` AS `call_type`,`dids`.`city` AS `city`,`dids`.`province` AS `province`,`dids`.`leg_timeout` AS `leg_timeout`,`dids`.`maxchannels` AS `maxchannels`,`dids`.`extensions` AS `extensions`,`reseller_products`.`buy_cost` AS `buy_cost`,`reseller_products`.`setup_fee` AS `setup_fee`,`reseller_products`.`price` AS `price`,`reseller_products`.`billing_type` AS `billing_type`,`reseller_products`.`billing_days` AS `billing_days`,`reseller_products`.`product_id` AS `product_id`,`reseller_products`.`modified_date` AS `modified_date` from (`reseller_products` join `dids` on((`dids`.`product_id` = `reseller_products`.`product_id`))) where (`reseller_products`.`is_optin` = 0) order by `reseller_products`.`account_id` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
@@ -2477,7 +2481,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8mb4 */;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50013 DEFINER=`fluxuser`@`127.0.0.1` SQL SECURITY DEFINER */
 /*!50001 VIEW `view_invoices` AS select `invoices`.`id` AS `id`,concat(`invoices`.`prefix`,`invoices`.`number`) AS `number`,`invoices`.`accountid` AS `accountid`,`invoices`.`reseller_id` AS `reseller_id`,`invoices`.`from_date` AS `from_date`,`invoices`.`to_date` AS `to_date`,`invoices`.`due_date` AS `due_date`,`invoices`.`status` AS `status`,if(((select `accounts`.`posttoexternal` from `accounts` where (`accounts`.`id` = `invoices`.`accountid`)) = 0),0,if(((sum(`invoice_details`.`debit`) - sum(`invoice_details`.`credit`)) = 0),0,1)) AS `is_paid`,`invoices`.`generate_date` AS `generate_date`,`invoices`.`type` AS `type`,`invoices`.`payment_id` AS `payment_id`,`invoices`.`generate_type` AS `generate_type`,`invoices`.`confirm` AS `confirm`,`invoices`.`notes` AS `notes`,`invoices`.`is_deleted` AS `is_deleted`,sum(`invoice_details`.`debit`) AS `debit`,sum((`invoice_details`.`debit` * `invoice_details`.`exchange_rate`)) AS `debit_exchange_rate`,sum(`invoice_details`.`credit`) AS `credit`,sum((`invoice_details`.`credit` * `invoice_details`.`exchange_rate`)) AS `credit_exchange_rate` from (`invoices` join `invoice_details` on((`invoices`.`id` = `invoice_details`.`invoiceid`))) group by `invoice_details`.`invoiceid` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
@@ -2507,12 +2511,14 @@ DELIMITER $$
 --
 -- Procedures
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `get_cdr_records` (IN `last_execution_time` DATETIME, IN `end_date` DATETIME)  BEGIN
+DROP PROCEDURE IF EXISTS `get_cdr_records`;
+CREATE DEFINER=`fluxuser`@`127.0.0.1` PROCEDURE `get_cdr_records` (IN `last_execution_time` DATETIME, IN `end_date` DATETIME)  BEGIN
 INSERT INTO `cdrs_day_by_summary` (`account_id`, `reseller_id`, `type`, `country_id`, `billseconds`, `mcd`, `total_calls`, `debit`, `cost`, `total_answered_call`, `total_fail_call`, `unique_date`, `calldate`) (SELECT `accountid`, `reseller_id`, `type`, `country_id`, SUM(`billseconds`) AS `billseconds`, MAX(`billseconds`) AS `mcd`, COUNT(*) AS `total_calls`, SUM(`debit`) AS `debit`, SUM(`cost`) AS `cost`, COUNT(CASE WHEN `billseconds` > 0 THEN 1 END) AS `total_answered_call`, COUNT(CASE WHEN `billseconds`=0 THEN 1 END) AS `total_fail_call`, DATE_FORMAT(`callstart`, "%Y%m%d") AS `unique_date`, DATE_FORMAT(`callstart`, "%Y-%m-%d") AS `calldate` FROM `cdrs_staging` WHERE `end_stamp`>=`last_execution_time` AND `end_stamp` < `end_date` GROUP BY `accountid`, `country_id`, `reseller_id`, `unique_date`) ON DUPLICATE KEY UPDATE `billseconds`=(`billseconds` + VALUES(`billseconds`)), `debit`=(`debit` + VALUES(`debit`)), `cost`=(`cost` + VALUES(`cost`)), `total_answered_call`=(`total_answered_call` + VALUES(`total_answered_call`)), `total_fail_call`=(`total_fail_call` + VALUES(`total_fail_call`)), `calldate`=`calldate`, `mcd`=GREATEST(VALUES(`mcd`), `mcd`), `total_calls`=(`total_calls` + VALUES(`total_calls`));
 UPDATE `reports_process_list` SET `last_execution_date`=`end_date` WHERE `name`='get_cdr_records';
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `master_pro` ()  NO SQL
+DROP PROCEDURE IF EXISTS `master_pro`;
+CREATE DEFINER=`fluxuser`@`127.0.0.1` PROCEDURE `master_pro` ()  NO SQL
 BEGIN
 DECLARE done INT DEFAULT FALSE;
 DECLARE rpl_id INT;
@@ -2544,8 +2550,10 @@ DELIMITER $$
 --
 -- Events
 --
-CREATE DEFINER=`root`@`localhost` EVENT `remove_cdrs_records` ON SCHEDULE EVERY 1 HOUR STARTS '2019-05-24 19:03:57' ON COMPLETION NOT PRESERVE ENABLE DO DELETE FROM cdrs_staging where end_stamp <= (NOW()- INTERVAL 120 MINUTE)$$
+DROP EVENT IF EXISTS `remove_cdrs_records`;
+CREATE DEFINER=`fluxuser`@`127.0.0.1` EVENT `remove_cdrs_records` ON SCHEDULE EVERY 1 HOUR STARTS '2019-05-24 19:03:57' ON COMPLETION NOT PRESERVE ENABLE DO DELETE FROM cdrs_staging where end_stamp <= (NOW()- INTERVAL 120 MINUTE)$$
 
-CREATE DEFINER=`root`@`localhost` EVENT `staging_cdrs` ON SCHEDULE EVERY 1 MINUTE STARTS '2019-05-24 19:03:55' ON COMPLETION NOT PRESERVE ENABLE DO CALL master_pro()$$
+DROP EVENT IF EXISTS `staging_cdrs`;
+CREATE DEFINER=`fluxuser`@`127.0.0.1` EVENT `staging_cdrs` ON SCHEDULE EVERY 1 MINUTE STARTS '2019-05-24 19:03:55' ON COMPLETION NOT PRESERVE ENABLE DO CALL master_pro()$$
 
 DELIMITER ;
