@@ -2490,7 +2490,7 @@ $cc_email_ids = strtolower($this->CI->common->get_field_name("notification_email
 		}
 		return $pricelist_arr;
 	}
-	function default_signup_login_type() {
+/*	function default_signup_login_type() {
 		$this->CI->db->select ( "id,name,login_type" );
 		$this->CI->db->where ( "reseller_id", 0 );
 		$login_type_result = $this->CI->db->get ( "permissions" )->result_array ();
@@ -2502,6 +2502,21 @@ $cc_email_ids = strtolower($this->CI->common->get_field_name("notification_email
 		}
 		return $login_type_arr;
 	}
+	
+	*/
+		function default_signup_login_type(){
+		$this->CI->db->select ( "id,name" );
+		$this->CI->db->where ( "reseller_id", 0 );
+		$login_type_result = $this->CI->db->get ( "permissions" )->result_array ();
+		$login_type_dropdown = array ();
+		$login_type_dropdown [0] = gettext("--Select--");
+		foreach ( $login_type_result as $result ) {
+			$login_type_dropdown [$result ['id']] = $result ['name'];
+		}
+		return $login_type_dropdown;
+	}
+	
+	
 	function outbound_fax() {
 		$status_array = array (
 				'0' => gettext ( 'Enable' ),

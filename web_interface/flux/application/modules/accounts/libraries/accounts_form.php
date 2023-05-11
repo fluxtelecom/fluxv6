@@ -2,7 +2,7 @@
 // ##############################################################################
 // Flux Telecom - Unindo pessoas e negócios
 //
-// Copyright (C) 2021 Flux Telecom
+// Copyright (C) 2023 Flux Telecom
 // Daniel Paixao <daniel@flux.net.br>
 // FluxSBC Version 4.2 and above
 // License https://www.gnu.org/licenses/agpl-3.0.html
@@ -2685,7 +2685,7 @@ class Accounts_form extends common {
 		$login_type = $this->CI->session->userdata('userlevel_logintype');
 		if ($this->CI->session->userdata('userlevel_logintype') == -1) {
 			$permission = array(
-				gettext(''),
+				gettext('Role'),
 				'permission_id',
 				'SELECT',
 				'',
@@ -2707,7 +2707,7 @@ class Accounts_form extends common {
 				),
 			);
 		} else {
-			//$accountinfo = $this->CI->session->userdata('accountinfo');
+			$accountinfo = $this->CI->session->userdata('accountinfo');
 
 			$permission = array(
 				'',
@@ -2722,9 +2722,10 @@ class Accounts_form extends common {
 				'',
 			);
 		}
-		$type          = $accountinfo['permission_id'];
+//		$type          = $accountinfo['permission_id'];
+		$type = $entity_type == 'admin' ? 2 : 4;
 		$form['forms'] = array(
-			base_url().'accounts/'.$type.'_save/',
+			base_url().'accounts/'.$entity_type.'_save/',
 			array(
 				"id"   => "admin_form",
 				"name" => "admin_form",

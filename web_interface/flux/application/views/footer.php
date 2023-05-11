@@ -28,7 +28,6 @@
 <script>
 	$(document).ready(function() {
 
-  //FLUXENT-1172 Start
   if($('body .sidebar').length > 0)
   {
     $('body').addClass('with-sidebar');
