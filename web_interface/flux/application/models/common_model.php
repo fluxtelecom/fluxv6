@@ -188,7 +188,7 @@ class Common_model extends CI_Model {
 				"product_category" => "1",
 				"status" => "0" 
 				));
-		$date['end_stamp >='] = gmdate('Y-m-d 00:00:00',strtotime("-1 days"));
+		/*$date['end_stamp >='] = gmdate('Y-m-d 00:00:00',strtotime("-1 days"));
 		$date['end_stamp <='] = gmdate('Y-m-d 23:59:59',strtotime("-1 days"));
 		$data_array['no_of_calls'] = $this->db_model->getSelect('COALESCE((ROUND(sum(billseconds) / 60.0, 0) * 60),0) as total_seconds ,count(*) as total_calls', 'cdrs', $date)->row_array();
 		$data['total_seconds'] =$data_array['no_of_calls']['total_seconds'];
@@ -233,7 +233,7 @@ class Common_model extends CI_Model {
 			array_push($fs_detail_array,$fs_status);
 		}
 		$data['freeswitch_status'] = json_encode($fs_detail_array);
-		$data['account_details'] = json_encode($accounts_detail_array);
+		$data['account_details'] = json_encode($accounts_detail_array);*/
 		// FLUXENT-2761 Ashish End
 		return $data;
 	}
