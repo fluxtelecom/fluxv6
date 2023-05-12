@@ -160,10 +160,10 @@ if (isset($this->session->userdata['user_logo']) && $this->session->userdata['us
 
 if ($this->session->userdata('userlevel_logintype') != '0') {
 	?>
-                      <img class="mb-4 img-fluid" id="logo" alt="login"
+                      <img class="mb-4 img-fluid" style="max-width: 150px;max-height: 150px;" id="logo" alt="login"
 						src="<?php echo base_url(); ?>upload/<?php echo $logo; ?>">
               <?} else {?>
-                      <img class="mb-4 img-fluid" id="logo" alt='login'
+                      <img class="mb-4 img-fluid" style="max-width: 150px;max-height: 150px;" id="logo" alt='login'
 						src="<?php echo base_url(); ?>upload/<?php echo $logo; ?>">
               <?}?>
               <div class="clear"></div>
