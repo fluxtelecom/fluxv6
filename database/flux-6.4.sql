@@ -1412,15 +1412,6 @@ CREATE TABLE `outbound_routes` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `outbound_routes`
---
-
-LOCK TABLES `outbound_routes` WRITE;
-/*!40000 ALTER TABLE `outbound_routes` DISABLE KEYS */;
-INSERT INTO `outbound_routes` VALUES (1,'^1.*','USA',0.00000,0,0.10000,1,60,'','',0,0,0,30,'2016-07-26 20:12:02','2016-07-26 20:12:49');
-/*!40000 ALTER TABLE `outbound_routes` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `package_patterns`
