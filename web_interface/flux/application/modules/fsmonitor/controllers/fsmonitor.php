@@ -1,7 +1,7 @@
 <?php
 ###########################################################################
 # Flux SBC - Unindo pessoas e negócios
-# Copyright (C) 2022, Flux Telecom
+# Copyright (C) 2023, Flux Telecom
 #
 #
 # This program is free software; you can redistribute it and/or

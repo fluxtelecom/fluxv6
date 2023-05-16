@@ -164,7 +164,7 @@ class Signup_lib {
 				'accountid' => $accountinfo['id'],
 				'dir_params' => json_encode(array(
 					"password"=> $this->CI->common->decode ( $accountinfo ['password'] ),
-					'vm-enabled' => "true",
+					'vm-enabled' => "false",
 					"vm-password"=> $random_password,
 					"vm-mailto"=> (isset($accountinfo['email']))?$accountinfo['email']:'',
 					"vm-attach-file"=>"true",
@@ -176,6 +176,7 @@ class Signup_lib {
 					'effective_caller_id_number' => $accountinfo ['number'],
 					"user_context"=>"default"
 				)),
+				'codec' => 'PCMA,PCMU',
 				'status' => isset($accountinfo ['status']) ? $accountinfo ['status'] : '0',
 				'creation_date'=>$current_date,
 				'last_modified_date'=>$current_date

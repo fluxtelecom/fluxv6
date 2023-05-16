@@ -50,7 +50,7 @@ ALTER TABLE `trunks` ADD COLUMN `sip_cid_type` VARCHAR(50) NOT NULL COMMENT 'non
 -- END
 
 -- Flux UPDATE-945
-  ALTER TABLE `sip_devices` ADD COLUMN `codec` varchar(100) NOT NULL AFTER `dir_vars`;
+  ALTER TABLE `sip_devices` ADD COLUMN `codec` varchar(100) NOT NULL DEFAULT 'PCMA,PCMU' AFTER `dir_vars`;
 -- End
 
 -- Flux UPDATE-942
