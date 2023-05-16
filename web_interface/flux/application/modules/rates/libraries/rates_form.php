@@ -2,7 +2,7 @@
 // ##############################################################################
 // Flux Telecom - Unindo pessoas e negócios
 //
-// Copyright (C) 2021 Flux Telecom
+// Copyright (C) 2023 Flux Telecom
 // Daniel Paixao <daniel@flux.net.br>
 // FluxSBC Version 4.2 and above
 // License https://www.gnu.org/licenses/agpl-3.0.html
@@ -2046,7 +2046,7 @@ class rates_form extends common
                 "true",
                 "right"
             ),
-            array(
+          /*  array(
                 gettext("Prepend"),
                 "50",
                 "prepend",
@@ -2056,6 +2056,17 @@ class rates_form extends common
                 "",
                 "true",
                 "right"
+            ),*/
+            array(
+                gettext("Call Type"),
+                "90",
+                "call_type",
+                "call_type",
+                "calltype",
+                "get_field_name",
+                "",
+                "true",
+                "center"
             ),
             array(
                 gettext("Trunk"),
