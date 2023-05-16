@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------------
 -- Flux SBC - Unindo pessoas e negócios
 --
--- Copyright (C) 2022 Flux Telecom
+-- Copyright (C) 2023 Flux Telecom
 -- Daniel Paixao <daniel@flux.net.br>
 -- Flux SBC Version 4.0 and above
 -- License https://www.gnu.org/licenses/agpl-3.0.html
@@ -105,7 +105,7 @@ function check_did(destination_number,config,custom_callerid)
 		end
 	end
 	--TODO Change query for check DID avilable or not using left join.
-	local query = "SELECT A.id as id,A.number as number,B.id as accountid,B.number as account_code,B.pricelist_id as pricelist,A.number as did_number,A.connectcost,A.includedseconds,A.cost,A.inc,A.extensions,A.maxchannels,A.call_type,A.hg_type,A.city,A.province,A.init_inc,A.leg_timeout,A.status,A.country_id,A.call_type_vm_flag,A.reverse_rate,A.rate_group,C.`name` as price_name,A.area_code AS area_code FROM "..TBL_DIDS.." AS A,"..TBL_USERS.." AS B,"..TBL_RATE_GROUP.." AS C WHERE B.status=0 AND B.deleted=0 AND A.rate_group = C.id AND B.id=A.accountid AND A.number =\"" ..destination_number .."\" LIMIT 1";
+	local query = "SELECT A.id as id,A.number as number,B.id as accountid,B.number as account_code,B.pricelist_id as pricelist,A.number as did_number,A.connectcost,A.includedseconds,A.cost,A.inc,A.extensions,A.maxchannels,A.call_type,A.hg_type,A.city,A.province,A.init_inc,A.leg_timeout,A.status,A.country_id,A.call_type_vm_flag,A.reverse_rate,A.rate_group,C.`name` as price_name,A.area_code AS area_code FROM "..TBL_DIDS.." AS A,"..TBL_USERS.." AS B,"..TBL_RATE_GROUP.." AS C WHERE B.status=0 AND B.deleted=0 AND B.id=A.accountid AND A.number =\"" ..destination_number .."\" LIMIT 1";
 	Logger.debug("[CHECK_DID] Query :" .. query)
 	assert (dbh:query(query, function(u)
 		didinfo = u;	 
@@ -436,6 +436,7 @@ function get_call_maxlength(userinfo,destination_number,call_direction,number_lo
 		end
 		if( call_direction == "inbound" ) then
 		rates['calltype'] = rates['call_type']
+		rates['custom_call_type'] = rates['call_type']
 		rates['pattern'] = '^'..destination_number..".*"
 			if (rates['city'] ~= '' and rates['province'] ~= "" ) then 
 				rates['comment'] =  rates['city'] .. " " .. rates['province']
