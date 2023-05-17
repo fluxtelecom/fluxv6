@@ -914,7 +914,7 @@ function create_formatted_date($startdate,$enddate,$timezone,$timevisibly)
                      </div>
                  </div>
              </a>
-<a href="<?php echo base_url(); ?>reports/refillreport/" class="col-lg-3 col-md-6 col-sm-12 pt-2 pr-lg-2 pl-lg-2">
+<!--<a href="<?php echo base_url(); ?>reports/refillreport/" class="col-lg-3 col-md-6 col-sm-12 pt-2 pr-lg-2 pl-lg-2">
 <div class="card col-12 text-light bg-dark">
 <div class="alert-dark col-md-12 pt-2 px-0">
           <dl class="row m-0">
@@ -929,7 +929,7 @@ function create_formatted_date($startdate,$enddate,$timezone,$timevisibly)
 <div class="col-lg-4 col-5 float-left py-4">
   <i class="fa fa-credit-card fa-4x float-left"></i>
 </div>
-</div>
+</div>-->
 </a>
 <a href="<?php echo base_url(); ?>reports/customerReport/" class="col-lg-3 col-md-6 col-sm-12 pt-2 pl-lg-2">
 <div class="card col-12 text-light bg-danger">
