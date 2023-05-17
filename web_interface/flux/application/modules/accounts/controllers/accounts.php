@@ -1,7 +1,7 @@
 <?php
 
 // ##############################################################################
-// Flux Telecom - Unindo pessoas e neg—cios
+// Flux Telecom - Unindo pessoas e negâ€”cios
 //
 // Copyright (C) 2023 Flux Telecom
 // Daniel Paixao <daniel@flux.net.br>
@@ -1777,109 +1777,91 @@ class Accounts extends MX_Controller {
 		$this->load->view('view_accounts_create', $data);
 	}
 
-	function admin_edit($edit_id = '') {
-		if ((!empty($edit_id)) && (isset($edit_id))) {
-			$access_edit = (array) $this->db_model->getSelect("deleted", "accounts", array(
-					"id" => $edit_id,
-				))->first_row();
-		}
-		if ((isset($access_edit)) && ($access_edit['deleted'] == 0)) {
-			$data['back_flag'] = true;
-			$accountinfo       = (array) $this->db->get_where('accounts', array(
-					"id" => $edit_id,
-				))->first_row();
-			$type = $accountinfo['type'] == -1?2:$accountinfo['type'];
+	function admin_edit($edit_id = '')
+{
+    if ((! empty($edit_id)) && (isset($edit_id))) {
+        $access_edit = (array) $this->db_model->getSelect("deleted", "accounts", array(
+            "id" => $edit_id
+        ))->first_row();
+    }
+    if ((isset($access_edit)) && ($access_edit['deleted'] == 0)) {
+        $data['back_flag'] = true;
+        $accountinfo = (array) $this->db->get_where('accounts', array(
+            "id" => $edit_id
+        ))->first_row();
+        $type = $accountinfo['type'] == - 1 ? 2 : $accountinfo['type'];
+        $entity_type = strtolower($this->common->get_entity_type('', '', $type));
+        $entitytype = str_replace(' ', '', $entity_type);
+        $accountinfo['password'] = $this->common->decode($accountinfo['password']);
+        $admin_type = $this->common->get_field_name('type', 'accounts', array(
+            'id' => $edit_id
+        ));
+        $data['form'] = $this->form->build_form($this->accounts_form->get_form_admin_fields($entitytype, $edit_id, $admin_type), $accountinfo);
+        $data['page_title'] = gettext('Edit ' . ucfirst($entity_type));
+        $this->load->view('view_admin_details', $data);
+    } else {
+        $this->session->set_flashdata('flux_notification', gettext('Permission Denied'));
+        redirect(base_url() . 'accounts/admin_list/');
+        exit();
+    }
+}
 
-			$entity_type             = strtolower($this->common->default_signup_login_type('', '', $type));
-			$entitytype              = str_replace(' ', '', $entity_type);
-			$accountinfo['password'] = $this->common->decode($accountinfo['password']);
-			$admin_type              = $this->common->get_field_name('type', 'accounts', array(
-					'id' => $edit_id,
-				));
-			$domains_data = $this->db_model->getSelect("group_concat(domain_id) as domains_id", "domains_to_accounts", array(
-					"accountid" => $edit_id,
-				));
-			if (isset($domains_data) && $domains_data->num_rows() > 0) {
-				$domains_data             = $domains_data->result_array();
-				$accountinfo["domain_id"] = explode(",", $domains_data[0]['domains_id']);
-			}
-			$data['form']       = $this->form->build_form($this->accounts_form->get_form_admin_fields($entitytype, $edit_id, $admin_type), $accountinfo);
-			$data['page_title'] = gettext('Edit '.ucfirst($entity_type));
-			$this->load->view('view_admin_details', $data);
-		} else {
-			$this->session->set_flashdata('flux_notification', gettext('Permission Denied'));
-			redirect(base_url().'accounts/admin_list/');
-			exit();
-		}
-	}
+function admin_save($add_array = false)
+{
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $add_array = $this->input->post();
+        $accountinfo = $this->session->userdata('accountinfo');
+        $type = $add_array['type'] == - 1 ? 2 : $add_array['type'];
+        $entity_type = strtolower($this->common->get_entity_type('', '', $type));
+        $entitytype = str_replace(' ', '', $entity_type);
+        $data['entity_name'] = $entitytype;
+        $data['username'] = $this->session->userdata('user_name');
+        $data['flag'] = 'create';
+        $data['page_title'] = gettext('Create ' . $entity_type);
+        $data['form'] = $this->form->build_form($this->accounts_form->get_form_admin_fields($entitytype, $add_array['id']), $add_array);
+        if ($add_array['id'] != '') {
+            $data['page_title'] = gettext('Edit ' . $entity_type);
+            if ($this->form_validation->run() == FALSE) {
+                $data['validation_errors'] = validation_errors();
+            } else {
+                $add_array['password'] = $this->common->encode($add_array['password']);
+                if ($add_array['type'] == - 1) {
+                    unset($add_array['status']);
+                }
+                unset($add_array['number']);
 
-	function admin_save($add_array = false) {
-		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-			$add_array   = $this->input->post();
-			$accountinfo = $this->session->userdata('accountinfo');
-			$type        = $add_array['type'] == -1?2:$add_array['type'];
-			//						function get_entity_type($select = "", $table = "", $entity_type) {
-			$entity_type         = strtolower($this->common->default_signup_login_type('id,name', 'permissions', ''));
-			$entitytype          = str_replace(' ', '', $entity_type);
-			$data['entity_name'] = $entitytype;
-			$data['username']    = $this->session->userdata('user_name');
-			$data['flag']        = 'create';
-			$data['page_title']  = gettext('Create '.$entity_type);
-			$data['form']        = $this->form->build_form($this->accounts_form->get_form_admin_fields($entitytype, $add_array['id']), $add_array);
-			if ($add_array['id'] != '') {
-				$data['page_title'] = gettext('Edit '.$entity_type);
-				if ($this->form_validation->run() == FALSE) {
-					$data['validation_errors'] = validation_errors();
-				} else {
-					$add_array['password'] = $this->common->encode($add_array['password']);
-					if ($add_array['type'] == -1) {
-						unset($add_array['status']);
-					}
-					unset($add_array['number']);
-					$query = $this->accounts_model->remove_all_account_domain($add_array['id']);
-					if (isset($add_array['domain_id'])) {
-						foreach ($add_array['domain_id'] as $key => $val) {
-							$data1 = array(
-								'accountid' => $add_array['id'],
-								'domain_id' => $val,
-							);
-							$this->accounts_model->add_account_domain($data1);
-						}
-						unset($add_array['domain_id']);
-					}
-					$this->accounts_model->edit_account($add_array, $add_array['id']);
-					if ($add_array['id'] == $accountinfo['id']) {
-						$result = $this->db->get_where('accounts', array(
-								'id' => $add_array['id'],
-							));
-						$result = $result->result_array();
-						$this->session->set_userdata('accountinfo', $result[0]);
-					}
-					$this->session->set_flashdata('flux_errormsg', gettext(ucfirst($entity_type)).' '.gettext('updated successfully!'));
+                $this->accounts_model->edit_account($add_array, $add_array['id']);
+                if ($add_array['id'] == $accountinfo['id']) {
+                    $result = $this->db->get_where('accounts', array(
+                        'id' => $add_array['id']
+                    ));
+                    $result = $result->result_array();
+                    $this->session->set_userdata('accountinfo', $result[0]);
+                }
+                $this->session->set_flashdata('flux_errormsg', gettext(ucfirst($entity_type)).' '.gettext('updated successfully!'));
 
-					redirect(base_url().'accounts/admin_list/');
-					exit();
-				}
-				$this->load->view('view_admin_details', $data);
-			} else {
-				$data['page_title'] = gettext('Create '.ucfirst($entity_type));
-				if ($this->form_validation->run() == FALSE) {
-					$data['validation_errors'] = validation_errors();
-				} else {
-					$add_array['password']           = $this->common->encode($add_array['password']);
-					$add_array['notification_email'] = (!empty($add_array['notification_email']))?$add_array['notification_email']:$add_array['email'];
-					$last_id                         = $this->accounts_model->add_account($add_array);
-					$this->session->set_flashdata('flux_errormsg', gettext(ucfirst($entity_type)).' '.gettext('Added Successfully!'));
-					redirect(base_url().'accounts/admin_list/');
-					exit();
-				}
-				$this->load->view('view_accounts_create', $data);
-			}
-		} else {
-			redirect(base_url().'accounts/admin_list/');
-		}
-	}
-
+                redirect(base_url() . 'accounts/admin_list/');
+                exit();
+            }
+            $this->load->view('view_admin_details', $data);
+        } else {
+            $data['page_title'] = gettext('Create ' . ucfirst($entity_type));
+            if ($this->form_validation->run() == FALSE) {
+                $data['validation_errors'] = validation_errors();
+            } else {
+                $add_array['password'] = $this->common->encode($add_array['password']);
+                $add_array['notification_email'] = (! empty($add_array['notification_email'])) ? $add_array['notification_email'] : $add_array['email'];
+                $last_id = $this->accounts_model->add_account($add_array);
+                $this->session->set_flashdata('flux_errormsg', gettext(ucfirst($entity_type)) .' '.gettext('Added Successfully!'));
+                redirect(base_url() . 'accounts/admin_list/');
+                exit();
+            }
+            $this->load->view('view_accounts_create', $data);
+        }
+    } else {
+        redirect(base_url() . 'accounts/admin_list/');
+    }
+}
 	function subadmin_add($type = "") {
 		$this->admin_add(4);
 	}
