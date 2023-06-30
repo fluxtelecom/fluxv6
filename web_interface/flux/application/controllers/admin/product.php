@@ -965,5 +965,53 @@ buycost,reseller_products.price,reseller_products.billing_type,(CASE WHEN resell
             ), 200);
         }
     }
+     
+    function product_update() 
+	{
+			$postdata = $this->postdata;
+
+			if ($this->form_validation->required($postdata['product_id']) == '') {
+				$this->response(array(
+					'status' => false,
+					'error' => $this->lang->line('error_param_missing') . "integer:product_id"
+				), 400);
+			} 
+			else {
+				$productinfo = (array) $this->db->get_where("products", array("id" => $postdata['product_id']))->first_row();
+				if (empty($productinfo)) {
+					$this->response(array(
+						'status' => false,
+						'error' => $this->lang->line('product_not_found'),
+					), 400);
+				}
+	$update_array = array(
+	"name" => isset($postdata['product_name']) ? $postdata['product_name'] : $productinfo['product_name'],
+	"description" => isset($postdata['description']) ? $postdata['description'] : $productinfo['description'],
+	"buy_cost" => isset($postdata['buy_cost']) ? $postdata['buy_cost'] : $productinfo['buy_cost'],
+	"product_category" => isset($postdata['product_category']) ? $postdata['product_category'] : $productinfo['product_category'],
+	"price" => isset($postdata['price']) ? $postdata['price'] : $productinfo['price'],
+	"setup_fee" => isset($postdata['setup_fee']) ? $postdata['setup_fee'] : $productinfo['setup_fee'],
+	"can_resell" => isset($postdata['can_resell']) ? $postdata['can_resell'] : $productinfo['can_resell'],
+	"billing_type" => isset($postdata['billing_type']) ? $postdata['billing_type'] : $productinfo['billing_type'],
+	"billing_days" => isset($postdata['billing_days']) ? $postdata['billing_days'] : $productinfo['billing_days'],
+	"free_minutes" => isset($postdata['free_minutes']) ? $postdata['free_minutes'] : $productinfo['free_minutes'],
+	"applicable_for" => isset($postdata['applicable_for']) ? $postdata['applicable_for'] : $productinfo['applicable_for'],
+	"apply_on_existing_account" => isset($postdata['apply_on_existing_account']) ? $postdata['apply_on_existing_account'] : $productinfo['apply_on_existing_account'],
+	"apply_on_rategroups" => isset($postdata['apply_on_rategroups']) ? $postdata['apply_on_rategroups'] : $productinfo['apply_on_rategroups'],
+	"release_no_balance" => isset($postdata['release_no_balance']) ? $postdata['release_no_balance'] : $productinfo['release_no_balance'],
+	"can_purchase" => isset($postdata['can_purchase']) ? $postdata['can_purchase'] : $productinfo['can_purchase'],
+	"status" => isset($postdata['status']) ? $postdata['status'] : $productinfo['status'],
+
+				);
+	$this->db->where('id', $this->postdata['product_id']);
+	$this->db->update('products', $update_array);
+	$this->response(array(
+		'status' => true,
+		'data' => $update_array,
+		'success' => "Product updated sucessfully.",
+	), 200);
+	
+			}
+		} 
 }
 ?>
