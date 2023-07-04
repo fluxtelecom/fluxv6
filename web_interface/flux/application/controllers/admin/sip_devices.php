@@ -364,5 +364,79 @@ function _sip_devices_list(){
 			), 400 );
 		}
 	}
+
+	function _sip_devices_update(){
+		$postdata = $this->postdata;
+		if (isset($postdata['reseller_id'])) {
+			$this->response ( array (
+				'status' => false,
+				'error' => $this->lang->line ( 'reseller_update_not_allowed' ) 
+			), 400 );	
+		}
+		if (isset($postdata['number'])) {
+			$this->response ( array (
+				'status' => false,
+				'error' => $this->lang->line ( 'sipnumber_update_not_allowed' ) 
+			), 400 );	
+		}
+		if($this->form_validation->required($postdata['sipdevice_id'] == '')){
+			$this->response ( array (
+				'status' => false,
+				'error' => $this->lang->line ( 'require_sip_id' ) 
+			), 400 );
+		}else{
+			$sipdeviceinfo = (array)$this->db->get_where ("sip_devices",array("id"=>$postdata['sipdevice_id'],'accountid'=>$postdata['accountid']))->first_row();
+			if(empty($sipdeviceinfo)){
+				$this->response ( array (
+					'status'  => false,
+					'error'   => $this->lang->line ( 'sipdevice_not_found' )
+				), 400 );
+			}
+			$vars = json_decode($sipdeviceinfo['dir_vars'],true);
+			$vars_new = json_decode($sipdeviceinfo['dir_params'], true);
+			if(!($postdata['voice_mail'] =='false' || $postdata['voice_mail'] == 'true')){
+				$postdata['voice_mail'] = 'true';
+			}
+			if(!($postdata['attach_file'] =='false' || $postdata['attach_file'] == 'true')){
+				$postdata['attach_file'] = 'true';
+			}
+			if(!($postdata['local_after_email'] =='false' || $postdata['local_after_email'] == 'true')){
+				$postdata['local_after_email'] = 'true';
+			}
+			if(!($postdata['send_all_message'] =='false' || $postdata['send_all_message'] == 'true')){
+				$postdata['send_all_message'] = 'true';
+			}
+
+			$update_array = array(
+				"status" => isset($postdata['status'])?$postdata['status']:$sipdeviceinfo['status'],
+				'dir_params' => json_encode(array(
+					"password" => $vars_new['password'],
+					"vm-enabled" => isset($postdata['voice_mail']) && !empty($postdata['voice_mail']) ? $postdata['voice_mail']:$vars_new['vm-enabled'],
+					"vm-password" => isset($postdata['voicemail_password']) && !empty($postdata['voicemail_password']) ?$postdata['voicemail_password']:$vars_new['vm-password'],
+					"vm-mailto" => isset($postdata['mailto']) && !empty($postdata['mailto']) ? $postdata['mailto'] :$vars_new['vm-mailto'],
+					"vm-attach-file" => isset($postdata['attach_file']) && !empty($postdata['attach_file'])?$postdata['attach_file']:$vars_new['vm-attach-file'],
+					"vm-keep-local-after-email" => isset($postdata['local_after_email']) && !empty($postdata['local_after_email'])?$postdata['local_after_email']:$vars_new['vm-keep-local-after-email'],
+					"vm-email-all-messages" => isset($postdata['send_all_message']) && !empty($postdata['send_all_message'])?$postdata['send_all_message']:$vars_new['vm-email-all-messages']
+				)),
+				"dir_vars"=>json_encode(array(
+					'effective_caller_id_name' => isset($postdata['caller_name']) && !empty($postdata['caller_name'])?$postdata['caller_name']:$vars['effective_caller_id_name'],
+					'effective_caller_id_number' => isset($postdata['caller_number']) && !empty($postdata['caller_number'])?$postdata['caller_number']:$vars['effective_caller_id_number']
+				)),
+				'last_modified_date'=>gmdate('Y-m-d H:i:s')
+			);
+			$this->db->where ( 'id', $this->postdata ['sipdevice_id'] );
+			$this->db->update ( 'sip_devices', $update_array );
+			// Kinjal issue no 4071
+			$update_array['dir_params'] = json_decode($update_array['dir_params'],true);
+			$decoded_pass = $this->common->decode($update_array['dir_params']['password']);
+			$update_array['dir_params']['password'] = $this->common->encrypt($decoded_pass);
+			// END
+			$this->response ( array (
+				'status'=>true,
+				'data' => $update_array,
+				'success' => "SIP Device updated sucessfully." 
+			), 200 );
+		}
+	}
 }
 ?>
