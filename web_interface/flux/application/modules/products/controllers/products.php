@@ -374,7 +374,13 @@ class Products extends MX_Controller {
 				} 
 
 				$add_array['accountid'] = $account_data['id'];
-				$Method = strtolower($category)."_product";
+				//$Method = strtolower($category)."_product";
+				if (strtolower($category) == "package"){
+					$Method = "package_product";
+				}else{
+					$Method = "did_product";
+				}
+				
 				$this->$Method($add_array); 
 
 				if($add_array['product_category'] == 4){
