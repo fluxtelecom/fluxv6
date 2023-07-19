@@ -224,7 +224,8 @@ class Invoices extends MX_Controller
                         $this->common->currency_decimal($amount),
 //                        $this->common->currency_decimal($outstanding),
                         $this->common->reseller_select_value("first_name,last_name,number,company_name", "accounts", $value['reseller_id']),
-                        $download . ' ' . $payment . ' ' . $delete_button
+                        $download
+			//. ' ' . $payment . ' ' . $delete_button
                         //$download2 . ' ' .$payment_edit . '<br>' . $payment . ' ' . $delete_button
                     )
                 );
