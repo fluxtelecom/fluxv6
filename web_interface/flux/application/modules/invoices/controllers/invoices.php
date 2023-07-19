@@ -122,7 +122,7 @@ class Invoices extends MX_Controller
                 
                 }
                 
-                $download2 = "<a  href=" . $url2 . $value['id'] . " class='btn btn-royelblue btn-sm'  title='Download Invoice' ><i class='fa fa-cloud-download fa-fw'></i></a>&nbsp";
+                //$download2 = "<a  href=" . $url2 . $value['id'] . " class='btn btn-royelblue btn-sm'  title='Download Invoice' ><i class='fa fa-cloud-download fa-fw'></i></a>&nbsp";
                 if ($value['type'] == 'I') {
                     if ($value['confirm'] == 0) {
                         if ($value['generate_type'] == 1) {
@@ -224,8 +224,8 @@ class Invoices extends MX_Controller
                         $this->common->currency_decimal($amount),
 //                        $this->common->currency_decimal($outstanding),
                         $this->common->reseller_select_value("first_name,last_name,number,company_name", "accounts", $value['reseller_id']),
-//                        $download . ' ' . $payment . ' ' . $delete_button
-                        $download2 . ' ' .$payment_edit . '<br>' . $payment . ' ' . $delete_button
+                        $download . ' ' . $payment . ' ' . $delete_button
+                        //$download2 . ' ' .$payment_edit . '<br>' . $payment . ' ' . $delete_button
                     )
                 );
                 $total_value = $total_value + $value['debit'];
