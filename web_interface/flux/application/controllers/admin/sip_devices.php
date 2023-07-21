@@ -246,8 +246,12 @@ function _sip_devices_list(){
 					'error' => $this->lang->line('invalid_email_format')
 				), 400 );
 			}
-
-			$password = $this->common->generate_password();
+			
+			if($postdata['password'] == ''){
+				$password = $this->common->generate_password();
+			}else{
+				$password = $postdata['password'];
+			}
 			if($this->form_validation->required($postdata['sip_profile_id'] == '')){
 				$this->response ( array (
 					'status'  => false,
@@ -318,11 +322,24 @@ function _sip_devices_list(){
 			unset($sipdevice_array['id']);
 			$sipdevice_array['dir_params'] = json_decode($sipdevice_array['dir_params'],true);
 			$decoded_pass =  $this->common->decode($sipdevice_array['dir_params']['password']);
-			$sipdevice_array['dir_params']['password'] = $this->common->encrypt($decoded_pass);
+			//$sipdevice_array['dir_params']['password'] = $this->common->encrypt($decoded_pass);
 			$sipdevice_array['dir_params'] = json_encode($sipdevice_array['dir_params']);
 			$sipdevice_array['creation_date'] = $this->common->convert_GMT_to('','',$sipdevice_array['creation_date'],$this->accountinfo['timezone_id']);
 			$sipdevice_array['last_modified_date'] = $this->common->convert_GMT_to('','',$sipdevice_array['last_modified_date'],$this->accountinfo['timezone_id']);
 			// END
+
+			$queryDids = $this->db->get_where('dids', array('number' => $sipdevice_array['username']));
+
+			if($queryDids->num_rows() == 0){
+			$did_add_array = array (
+				'number' => $sipdevice_array['username'],
+				'accountid' => $postdata['accountid'],
+				'status' => '0',
+				'extensions' => $sipdevice_array['username'],
+			);
+			$this->db->insert("dids",$did_add_array);
+			}
+			
 			$this->response ( array (
 				'status'=>true,
 				'data' => $sipdevice_array,
