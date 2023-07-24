@@ -501,6 +501,11 @@ class Customer extends Account {
 		if(!($postdata['posttoexternal'] == 0 || $postdata['posttoexternal'] == 1) ) {
 			$postdata['posttoexternal'] = '0';
 		}
+
+		if((!isset($postdata['credit_limit']) || $postdata['credit_limit'] == '') && $postdata['posttoexternal'] == 1){
+			$postdata['credit_limit'] = 10000.00;
+		}
+		
 		if(!is_numeric($postdata['credit_limit']) && $postdata['credit_limit'] != ''){
 			$this->response ( array (
 				'status'  => false,
