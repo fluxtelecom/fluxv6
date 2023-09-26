@@ -40,6 +40,7 @@ class Sip_devices extends Account {
 		$this->load->model ( 'common_model' );
 		$this->load->library ( 'common' );
 		$this->load->model ( 'db_model' );
+		$this->load->library ( 'flux/order' );
 		$this->load->library('Form_validation');
 		$this->accountinfo = $this->get_account_info(); 
 		if($this->accountinfo['type'] != -1 && $this->accountinfo ['type'] != 1 && $this->accountinfo ['type'] != 2 ){
@@ -331,13 +332,62 @@ function _sip_devices_list(){
 			$queryDids = $this->db->get_where('dids', array('number' => $sipdevice_array['username']));
 
 			if($queryDids->num_rows() == 0){
+			$insert_product_did_array = array(
+				'name' => $sipdevice_array['username'],
+				'country_id' => 28,
+				'product_category' => 4,
+				'buy_cost' => 0,
+				'price' => 0,
+				'setup_fee' => 0,
+				'can_resell' => 0,
+				'commission' => 0,
+				'billing_type' => 1,
+				'billing_days' => 28,
+				'free_minutes' => 0,
+				'applicable_for' => 0,
+				'apply_on_existing_account' => 0,
+				'apply_on_rategroups' => '',
+				'destination_rategroups' => '',
+				'destination_countries' => '',
+				'destination_calltypes' => '',
+				'release_no_balance' => 0,
+				'can_purchase' => 0,
+				'status' => 0,
+				'is_deleted' => 0,
+				'created_by' => 1,
+				'reseller_id' => 0,
+				'creation_date' => gmdate("Y-m-d H:i:s"),
+				'last_modified_date' => gmdate("Y-m-d H:i:s")
+			);
+
+			$this->db->insert("products", $insert_product_did_array);
+			$product_did_id = $this->common->get_field_name('id','products',array('name' => $sipdevice_array['username']));
+
 			$did_add_array = array (
 				'number' => $sipdevice_array['username'],
 				'accountid' => $postdata['accountid'],
 				'status' => '0',
 				'extensions' => $sipdevice_array['username'],
+				'product_id' => $product_did_id,
 			);
+
 			$this->db->insert("dids",$did_add_array);
+			$account_id =  $postdata['accountid'];
+			$created_by_accountinfo = '1';
+			$productdata['product_id'] = $product_did_id;
+			$confirm_oder = $this->order->confirm_order($productdata, $account_id, $created_by_accountinfo);
+			if ($confirm_oder == ''){
+				$this->response ( array (
+					'status' => false,
+					'error' => "Assignment DID failure." 
+				), 400 );
+			}else{
+				$this->response ( array (
+					'status'=> true,
+					'data' => $accountinfo,
+					'success' => "Assignment DID sucessfully."
+				), 200 );
+			}
 			}
 			
 			$this->response ( array (
