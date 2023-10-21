@@ -338,7 +338,7 @@ install_mysql ()
 normalize_mysql ()
 {
         if [ ${DIST} = "DEBIAN" ]; then
-                cp ${FLUX_SOURCE_DIR}/misc/odbc/deb_odbc.ini /etc/odbc.ini
+                cp ${FLUX_SOURCE_DIR}/misc/odbc_conf/deb_odbc.ini /etc/odbc.ini
                 sed -i '33i wait_timeout=600' /etc/mysql/mysql.conf.d/mysqld.cnf
                 sed -i '33i interactive_timeout = 600' /etc/mysql/mysql.conf.d/mysqld.cnf
                 sed -i '33i sql_mode=""' /etc/mysql/mysql.conf.d/mysqld.cnf
@@ -347,14 +347,14 @@ normalize_mysql ()
         elif  [ ${DIST} = "CENTOS" ]; then
                 systemctl start mysqld
                 systemctl enable mysqld
-                cp ${FLUX_SOURCE_DIR}/misc/odbc/cent_odbc.ini /etc/odbc.ini
+                cp ${FLUX_SOURCE_DIR}/misc/odbc_conf/cent_odbc.ini /etc/odbc.ini
                 sed -i '26i wait_timeout=600' /etc/my.cnf
                 sed -i '26i interactive_timeout = 600' /etc/my.cnf
                 sed -i '26i sql-mode=""' /etc/my.cnf
                 systemctl restart mysqld
                 systemctl enable mysqld
         elif  [ ${DIST} = "DEBIAN10" ]; then
-                cp ${FLUX_SOURCE_DIR}/misc/odbc/deb_odbc.ini /etc/odbc.ini
+                cp ${FLUX_SOURCE_DIR}/misc/odbc_conf/deb_odbc.ini /etc/odbc.ini
                 sed -i '28i wait_timeout=600' /etc/mysql/conf.d/mysql.cnf
                 sed -i '28i interactive_timeout = 600' /etc/mysql/conf.d/mysql.cnf
                 sed -i '28i sql_mode=""' /etc/mysql/conf.d/mysql.cnf
