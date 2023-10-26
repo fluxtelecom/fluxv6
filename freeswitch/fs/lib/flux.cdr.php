@@ -530,10 +530,16 @@ function package_calculation($destination_number, $package_id, $duration, $call_
 					$logger->log ( "free_minutes  : " . $package_info ['free_minutes']."\n" );
 					$logger->log ( "used_seconds  : " . $counter_info ['used_seconds']."\n" );
 					$logger->log ( "duration  : " . $duration."\n" );
+					//Convertendo a duração REAL para bloco 0/30/6
+					if ($duration > 30){
+						$duration = (ceil($duration/6)*6);
+					}else{
+						$duration = 30;
+					}
 					$free_seconds = ($available_seconds >= $duration) ? $duration : $available_seconds;
 	//				$duration = ($available_seconds >= $duration) ? $duration : $available_seconds;
 					$final_min = $counter_info ['used_seconds'] + $free_seconds;
-					$final_min =  ceil($final_min/60)*60;
+					//$final_min =  ceil($final_min/60)*60;
 					//$freeminutes ['free_minutes'] = ceil($freeminutes ['free_minutes']/60)*60;
 					$update_query = "UPDATE counters SET used_seconds = " . ($final_min) . " WHERE id = " . $counter_info ['id'];
 					$logger->log ( "Update Counters  : " . $update_query );
