@@ -18,6 +18,11 @@ SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
+-- View structure for view_devices
+-- ----------------------------
+DROP VIEW IF EXISTS `view_devices`;
+CREATE ALGORITHM = UNDEFINED DEFINER = `fluxuser`@`127.0.0.1` SQL SECURITY INVOKER VIEW `view_devices` AS SELECT `dids`.`id` AS `id`, `dids`.`number` AS `number`, `sip_devices`.`id` AS `sip_device_id`, `dids`.`accountid` AS `account_id`, `dids`.`id` AS `did_id`, `sip_devices`.`reseller_id` AS `sip_devices_resseler` FROM `sip_devices` JOIN `dids` ON `dids`.`number` = `sip_devices`.`username` WHERE `dids`.`status` = 0 AND `sip_devices`.`status` = 0 ORDER BY `dids`.`id`;
+-- ----------------------------
 -- View structure for basic_calls
 -- ----------------------------
 DROP VIEW IF EXISTS `basic_calls`;
