@@ -339,7 +339,7 @@ class Customer extends Account {
 					), 400 );
 				}
 			}
-			if($postdata['pricelist_id'] == '' || !isset($postdata['pricelist_id'])){
+		if($postdata['pricelist_id'] == '' || !isset($postdata['pricelist_id'])){
 				if($this->form_validation->required($postdata['pricelist_id'])== ''){
 					$postdata['pricelist_id'] = 1;
 					/*if(empty($postdata['pricelist_id'])){
@@ -352,12 +352,12 @@ class Customer extends Account {
 			}else{
 				$postdata['pricelist_id'] = $this->common->get_field_name('id','pricelists',array('id'=>$postdata['pricelist_id'], 'reseller_id' => $postdata['id']));
 			}
-			if(empty($postdata['pricelist_id'] ) ){
+		if(empty($postdata['pricelist_id'] ) ){
 				$this->response ( array (
 					'status' => false,
 					'error' => $this->lang->line('valid_pricelist_id')
 				), 400 );
-			}
+		}
         	if($this->accountinfo['type'] == 1){
 				if($this->form_validation->required($postdata['telephone_1'] ) == ''){
 					$this->response ( array (
@@ -507,7 +507,7 @@ class Customer extends Account {
 		if((!isset($postdata['credit_limit']) || $postdata['credit_limit'] == '') && $postdata['posttoexternal'] == 1){
 			$postdata['credit_limit'] = 10000.00;
 		}
-
+		
 		if(!is_numeric($postdata['credit_limit']) && $postdata['credit_limit'] != ''){
 			$this->response ( array (
 				'status'  => false,

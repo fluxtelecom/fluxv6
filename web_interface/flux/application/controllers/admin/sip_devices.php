@@ -41,6 +41,7 @@ class Sip_devices extends Account {
 		$this->load->library ( 'common' );
 		$this->load->library ( 'flux/order' );
 		$this->load->model ( 'db_model' );
+		$this->load->library ( 'flux/order' );
 		$this->load->library('Form_validation');
 		$this->accountinfo = $this->get_account_info(); 
 		if($this->accountinfo['type'] != -1 && $this->accountinfo ['type'] != 1 && $this->accountinfo ['type'] != 2 ){
@@ -251,7 +252,7 @@ function _sip_devices_list(){
 				}
 			}
 
-			if($postdata['password'] == ''){
+			if($postdata['password'] === ''){
 				$password = $this->common->generate_password();
 			}else{
 				$password = $postdata['password'];
@@ -263,7 +264,7 @@ function _sip_devices_list(){
 					'error' => $this->lang->line('invalid_email_format')
 				), 400 );
 			}
-
+			
 			if($this->form_validation->required($postdata['sip_profile_id'] == '')){
 				$this->response ( array (
 					'status'  => false,
@@ -388,8 +389,7 @@ function _sip_devices_list(){
 			$created_by_accountinfo = '1';
 			$productdata['product_id'] = $product_did_id;
 			$confirm_oder = $this->order->confirm_order($productdata, $account_id, $created_by_accountinfo);
-		}
-
+			
 			$this->response ( array (
 				'status'=>true,
 				'data' => $sipdevice_array,
@@ -397,6 +397,7 @@ function _sip_devices_list(){
 			), 200 );
 		}
 	}
+}
 
 	function _sip_devices_delete(){
 		$postdata = $this->postdata;
@@ -525,4 +526,5 @@ function _sip_devices_list(){
 		}
 	}
 }
+
 ?>

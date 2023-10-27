@@ -91,7 +91,7 @@ class Login extends MX_Controller
                     $addon_status = $this->db_model->countQuery("*", "addons", array(
                         'package_name' => 'pbx'
                     ));
-                    if ($addon_status != '99' && $result['type'] != '0' && $result['id'] != '1') {
+                    /*if ($addon_status != '99' && $result['type'] != '0' && $result['id'] != '1') {
                         $multidomain = $this->db_model->getSelect("*", "domain,domains_to_accounts", array(
                             'domain' => $_SERVER["HTTP_HOST"],
                             'domains_to_accounts.accountid' => $result['id'],
@@ -104,7 +104,7 @@ class Login extends MX_Controller
                         else {
                             $user_multi_level = 1;
                         }
-                    }
+                    }*/
                     if ($user_multi_level == 0) {
 
                         $logintype = $result['type'] == - 1 ? 2 : $result['type'];

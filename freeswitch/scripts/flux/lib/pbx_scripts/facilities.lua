@@ -30,10 +30,13 @@ session:setVariable("process_cdr","false")
 
 if string.find(destination_number,"^%*72") then
 session:answer()
+session:execute("sleep","1000")
+session:execute("Playback","howtoSigame.wav")
 digits = session:playAndGetDigits(8, 15, 3, 12000, "#", "tone_stream://%(1000,5000,400);loops=-1", "ivr/8000/ivr-phone_not_configured.wav", "\\d+")
 session:consoleLog("info", "Got DTMF digits: ".. digits .."\n")
 
-	local my_query = string.format("update sip_devices set call_fwd='%s',call_fwd_status='0' where username='%s'",digits,req_user)
+	--local my_query = string.format("update sip_devices set call_fwd='%s',call_fwd_status='0' where username='%s'",digits,req_user)
+	local my_query = string.format("update dids set extensions='%s',call_type='4' where number='%s'",digits,req_user)
 	freeswitch.consoleLog("notice", "query="..my_query.."\n")
 	dbh:query(my_query)
 	if(dbh:affected_rows()>0) then
@@ -50,14 +53,15 @@ session:consoleLog("info", "Got DTMF digits: ".. digits .."\n")
 end
 
 if string.find(destination_number,"^%*73") then
-	local my_query = string.format("update sip_devices set call_fwd='',call_fwd_status='1' where username='%s'",req_user)
+	--local my_query = string.format("update sip_devices set call_fwd='',call_fwd_status='1' where username='%s'",req_user)
+	local my_query = string.format("update dids set extensions='%s',call_type='0' where number='%s'",req_user,req_user)
 	freeswitch.consoleLog("notice", "query="..my_query.."\n")
 	dbh:query(my_query)
 	if(dbh:affected_rows()>0) then
 		freeswitch.consoleLog("notice", "Callforward desprogramado\n")
 		session:answer()
 		session:execute("sleep","1000")
-		session:execute("Playback","facilidade-desprogramada.wav")
+		session:execute("Playback","sigameDesativado.wav")
 	else
 		freeswitch.consoleLog("notice", "Sem alteração\n")
 		session:answer()

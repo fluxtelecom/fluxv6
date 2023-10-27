@@ -1389,7 +1389,7 @@ class Accounts_form extends common {
 					'size'  => '20',
 					'class' => "text col-md-5 field medium",
 				),
-				'trim|required|greater_than[0]',
+				'trim|required',
 				'tOOL TIP',
 				'',
 			),
