@@ -43,6 +43,7 @@ END IF;
 END */;;
 DELIMITER ;
 
+alter table flux.sip_devices add column `id_sip_external` INT NOT NULL DEFAULT '0';
 
 update `system` set comment='Set Mail Log Path Here' where display_name='Mail Log';
 -- Flux UPDATE-944
