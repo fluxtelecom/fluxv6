@@ -109,7 +109,8 @@ class Call_detail_report extends Account
 				if(isset($object_where_key) && $object_where_key == 'destination'){
 					$this->db->where('notes', $object_where_params['destination'] );
 				}
-				if(isset($object_where_key) && $object_where_key == 'duration'){
+
+				/*if(isset($object_where_key) && $object_where_key == 'duration'){
 					$duration = explode(':', $object_where_params['duration']);
                     if (isset($duration[0]) && isset($duration[1])) {
                         if (is_numeric($duration[0]) && is_numeric($duration[1])) {
@@ -117,7 +118,8 @@ class Call_detail_report extends Account
                         }
                     }
 					$this->db->where('billseconds' , $object_where_params['duration']);
-				}
+				}*/
+				
 				if(isset($object_where_key) && $object_where_key == 'code'){
 					$this->db->like('pattern', '^'.$object_where_params['code'] );
 				}
@@ -130,7 +132,10 @@ class Call_detail_report extends Account
 		}
 	 	if ($this->accountinfo['type'] == '1') {
 			$this->db->where('reseller_id', $this->postdata['id']);
-	 	} 
+	 	}
+		
+		
+
 		$this->db->where_in('type',array(0,3));
 		$this->db->order_by("callstart", "desc");
 		$this->db->limit($no_of_records, $start);
@@ -138,9 +143,11 @@ class Call_detail_report extends Account
         $result = $this->db->get('cdrs');
         $count = $result -> num_rows();
         $cdrs_info = $result->result_array();
-		foreach ($cdrs_info as $key => $cdrs_value) {  
+		foreach ($cdrs_info as $key => $cdrs_value) {
+			$sip_id_external =  $this->common->get_field_name('id_sip_external', 'sip_devices', array('username' => $cdrs_value['sip_user']));
             $show_seconds = $this->postdata['object_where_params']['display_records'] == 'minutes' || $this->postdata['object_where_params']['display_records'] == 'seconds' ? $this->postdata['object_where_params']['display_records'] : 'minutes';
-            $cdrs_value['duration'] = ($show_seconds == 'minutes') ? ($cdrs_value['billseconds'] > 0) ? sprintf('%02d', $cdrs_value['billseconds'] / 60) . ":" . sprintf('%02d', $cdrs_value['billseconds'] % 60) : "00:00" : $cdrs_value['billseconds'];
+			$cdrs_value['duration'] = $cdrs_value['billseconds'];
+			//$cdrs_value['duration'] = ($show_seconds == 'minutes') ? ($cdrs_value['billseconds'] > 0) ? sprintf('%02d', $cdrs_value['billseconds'] / 60) . ":" . sprintf('%02d', $cdrs_value['billseconds'] % 60) : "00:00" : $cdrs_value['billseconds'];
             $cdrs_value['callstart'] = $this->common->convert_GMT_to('','',$cdrs_value['callstart'],$this->accountinfo['timezone_id']);
             $cdrs_value['debit'] = $this->common_model->calculate_currency_customer($cdrs_value['debit'],$from_currency,$to_currency,true,true)." ".$to_currency; 
             $cdrs_value['cost'] = $this->common_model->calculate_currency_customer($cdrs_value['cost'],$from_currency,$to_currency,true,true)." ".$to_currency; 
@@ -150,6 +157,7 @@ class Call_detail_report extends Account
             $cdrs_value['trunk_id'] = $this->common->get_field_name('name','trunks',array('id' => $cdrs_value['trunk_id'])) ;
             $cdrs_value['destination'] = $cdrs_value['notes'] ;
             $cdrs_value['code'] =  preg_replace('/[^\d+0-9]/', '',  $cdrs_value['pattern']);
+			$cdrs_value['id_sip_external'] = $sip_id_external;
             if($this->accountinfo['type'] == '1'){
             	unset($cdrs_value['calltype']);
             }
@@ -220,6 +228,7 @@ class Call_detail_report extends Account
 				if(isset($object_where_key) && $object_where_key == 'destination'){
 					$this->db->where('notes', $object_where_params['destination'] );
 				}
+				/*
 				if(isset($object_where_key) && $object_where_key == 'duration'){
 					$duration = explode(':', $object_where_params['duration']);
                     if (isset($duration[0]) && isset($duration[1])) {
@@ -228,7 +237,8 @@ class Call_detail_report extends Account
                         }
                     }
 					$this->db->where('billseconds' , $object_where_params['duration']);
-				}
+				}*/
+				
 				if(isset($object_where_key) && $object_where_key == 'code'){
 					$this->db->like('pattern', '^'.$object_where_params['code'] );
 				}

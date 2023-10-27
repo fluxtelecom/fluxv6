@@ -38,6 +38,7 @@ defined ( 'BASEPATH' ) or exit ( 'No direct script access allowed' );
  */
 
 require APPPATH . '/controllers/common/account.php';
+
 class Customer extends Account {
 	
 	protected $postdata = "";
@@ -47,6 +48,7 @@ class Customer extends Account {
 		$this->load->model ( 'common_model' );
 		$this->load->library ( 'common' );
 		$this->load->model ( 'db_model' );
+		$this->load->library ( 'flux/order' );
 		$this->load->library('Form_validation');
 		$this->accountinfo = $this->get_account_info(); 
 		if($this->accountinfo['type'] > 10){
@@ -80,7 +82,7 @@ class Customer extends Account {
 			$this->response ( array (
 				'status'  => false,
 				'error'   => $this->lang->line ( 'account_not_found' )
-			), 400 );
+			), 500 );
 		}
 		$accountinfo = $this->_authorize_account ( $this->accountinfo,true,true);
 		if ($function != '') {
@@ -337,6 +339,25 @@ class Customer extends Account {
 					), 400 );
 				}
 			}
+			if($postdata['pricelist_id'] == '' || !isset($postdata['pricelist_id'])){
+				if($this->form_validation->required($postdata['pricelist_id'])== ''){
+					$postdata['pricelist_id'] = 1;
+					/*if(empty($postdata['pricelist_id'])){
+						$this->response ( array (
+							'status' => false,
+							'error' => $this->lang->line('require_pricelist_id')
+						), 400 );
+					}*/
+				}
+			}else{
+				$postdata['pricelist_id'] = $this->common->get_field_name('id','pricelists',array('id'=>$postdata['pricelist_id'], 'reseller_id' => $postdata['id']));
+			}
+			if(empty($postdata['pricelist_id'] ) ){
+				$this->response ( array (
+					'status' => false,
+					'error' => $this->lang->line('valid_pricelist_id')
+				), 400 );
+			}
         	if($this->accountinfo['type'] == 1){
 				if($this->form_validation->required($postdata['telephone_1'] ) == ''){
 					$this->response ( array (
@@ -482,6 +503,11 @@ class Customer extends Account {
 		if(!($postdata['posttoexternal'] == 0 || $postdata['posttoexternal'] == 1) ) {
 			$postdata['posttoexternal'] = '0';
 		}
+
+		if((!isset($postdata['credit_limit']) || $postdata['credit_limit'] == '') && $postdata['posttoexternal'] == 1){
+			$postdata['credit_limit'] = 10000.00;
+		}
+
 		if(!is_numeric($postdata['credit_limit']) && $postdata['credit_limit'] != ''){
 			$this->response ( array (
 				'status'  => false,
@@ -691,10 +717,30 @@ class Customer extends Account {
 				), 400 );
 			}
 			
-//			$currency_id = common_model::$global_config ['system_config'] ['base_currency']; 
-//			$currency_info = (array)$this->db->get_where("currency",array("currency"=>$currency_id))->first_row();
-			//$country_id = common_model::$global_config ['system_config'] ['country'];
-			//$timezone_id =  common_model::$global_config ['system_config'] ['default_timezone'];
+			//validação de pacotes vinculados ao account
+			$account_id = $postdata['accountid'];
+			$created_by_accountinfo = '1';
+			if(isset($postdata['product_id'])){
+				$package = $this->common->get_field_name('product_id', 'packages_view', array('accountid'=>$postdata['accountid']));
+				if(empty($package)){
+					$productdata['product_id'] = $postdata['product_id'];
+					$confirm_oder = $this->order->confirm_order($productdata, $account_id, $created_by_accountinfo);
+				}else if ($package !== $postdata['product_id']){
+
+					$update_counter = array("status" => "0");
+					$this->db->where ( 'product_id', $package);
+					$this->db->where ( 'accountid', $this->postdata ['accountid'] );
+					$this->db->update ( 'counters', $update_counter );
+
+					$update_order = array("is_terminated" => "1");
+					$this->db->where ( 'product_id', $package);
+					$this->db->where ( 'accountid', $this->postdata ['accountid'] );
+					$this->db->update ( 'order_items', $update_order);
+
+					$productdata['product_id'] = $postdata['product_id'];
+					$confirm_oder = $this->order->confirm_order($productdata, $account_id, $created_by_accountinfo);
+				}
+			}
 	
 			$update_array = array(
 				"status" => isset($postdata['status'])?$postdata['status']:$customerinfo['status'],
@@ -728,6 +774,34 @@ class Customer extends Account {
 				'data' => $update_array,
 				'success' => "Customer updated sucessfully." 
 			), 200 );
+		}
+	}
+
+	function product_add(){
+		$postdata = $this->postdata;
+		if($this->form_validation->required($postdata['accountid'] == '')){
+			$this->response ( array (
+				'status'  => false,
+				'error'   => $this->lang->line ( 'enter_account_id' )
+			), 400 );
+		}else{
+			$productdata['product_id'] = $postdata['product_id'];
+			$account_id = $postdata['accountid'];
+			$created_by_accountinfo = '1';
+			
+			$confirm_oder = $this->order->confirm_order($productdata, $account_id, $created_by_accountinfo);
+			if ($confirm_oder == ''){
+				$this->response ( array (
+					'status' => false,
+					'error' => "Assignment product failure." 
+				), 400 );
+			}else{
+				$this->response ( array (
+					'status'=> true,
+					'data' => $accountinfo,
+					'success' => "Assignment product sucessfully."
+				), 200 );
+			}
 		}
 	}
 
