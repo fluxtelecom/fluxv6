@@ -2368,7 +2368,7 @@ class Accounts_form extends common {
 					'size'     => '20',
 					'class'    => "text field medium",
 					'id'       => 'number',
-					'readonly' => true,
+					//'readonly' => true,
 				);
 			}
 		}
