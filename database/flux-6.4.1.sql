@@ -45,6 +45,8 @@ DELIMITER ;
 
 alter table flux.sip_devices add column `id_sip_external` INT NOT NULL DEFAULT '0';
 
+INSERT INTO `accounts` VALUES (16,'api',0,0,0,'',0,0,'2023-07-20 14:43:09',1000.00000,0,0.00000,'Rhbhzm8TI1YS22IskgMLLA','TESTE API','TESTE API','','','','','','',28,'','','teste12334@teste.flux.net.br','teste12334@teste.flux.net.br',0,16,1,0,'',2,78,0,0,5.00000,0,'',0,0,0,'','2023-07-20 14:43:09','','0000-00-00 00:00:00','2033-07-17 17:43:09',3650,0.00000,0,1,'0',1,1,3,'1000-01-01 00:00:00',0,0,1,0,'','',NULL, '');
+
 update `system` set comment='Set Mail Log Path Here' where display_name='Mail Log';
 -- Flux UPDATE-944
 ALTER TABLE `trunks` ADD COLUMN `sip_cid_type` VARCHAR(50) NOT NULL COMMENT 'none:- None, rpid :- Remote-Party-ID, pid :- P-Asserted-Identity';
