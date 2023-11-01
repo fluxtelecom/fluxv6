@@ -202,8 +202,8 @@ install_prerequisties ()
 get_flux_source ()
 {
         cd /opt
-        git clone -b V6.3 https://github.com/fluxtelecom/fluxsbc/ flux
-	
+        git clone https://github.com/fluxtelecom/fluxv6/ flux
+        
 }
 
 #License Acceptence
@@ -294,7 +294,7 @@ install_mysql ()
                 DEBIAN_FRONTEND=noninteractive apt install -y mysql-server
                 cd /opt/flux/misc/
                 tar -xzvf odbc.tar.gz
-                cp -rf odbc/libmyodbc8* /usr/lib/x86_64-linux-gnu/odbc/.
+                cp -rf odbc_conf/libmyodbc8* /usr/lib/x86_64-linux-gnu/odbc/.
 
         else if [ "$DIST" = "CENTOS" ]; then
                 wget https://repo.mysql.com/mysql80-community-release-el7-1.noarch.rpm
@@ -313,7 +313,7 @@ install_mysql ()
                 sudo dpkg -i mysql-apt-config_0.8.13-1_all.deb
                 apt update -y
                 #apt -y install unixodbc unixodbc-bin
-		        apt-get -y install unixodbc unixodbc-dev
+                        apt-get -y install unixodbc unixodbc-dev
                 debconf-set-selections <<< "mysql-community-server mysql-community-server/root-pass password ${MYSQL_ROOT_PASSWORD}"
                 debconf-set-selections <<< "mysql-community-server mysql-community-server/re-root-pass password ${MYSQL_ROOT_PASSWORD}"
                 debconf-set-selections <<< "mysql-community-server mysql-server/default-auth-override select Use Legacy Authentication Method (Retain MySQL 5.x Compatibility)"
@@ -321,17 +321,17 @@ install_mysql ()
                 cd ${FLUX_SOURCE_DIR}/misc
                 #cd /opt/flux/misc/
                 tar -xzvf odbc.tar.gz
-		mkdir -p /usr/lib/x86_64-linux-gnu/odbc/.
-                cp -rf odbc/libmyodbc8* /usr/lib/x86_64-linux-gnu/odbc/.
-	
+                mkdir -p /usr/lib/x86_64-linux-gnu/odbc/.
+                cp -rf libmyodbc8* /usr/lib/x86_64-linux-gnu/odbc/.
+        
         fi
         fi
-	fi
+        fi
         echo ""
         echo "MySQL password set to '${MYSQL_ROOT_PASSWORD}'. Remember to delete ~/.mysql_passwd" >> ~/.mysql_passwd
         echo "" >>  ~/.mysql_passwd
         echo "MySQL fluxuser password:  ${FLUXUSER_MYSQL_PASSWORD} " >>  ~/.mysql_passwd
-        chmod 400 ~/.mysql_passwd	
+        chmod 400 ~/.mysql_passwd       
 }
 
 #Normalize mysql installation
@@ -617,6 +617,7 @@ install_database ()
         mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/database/flux-6.4.1.sql
         mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/database/flux-tables.sql
         mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/database/flux-views.sql
+        mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/web_interface/flux/addons/plugins/ringgroup/database/ringgroup_1.0.0.sql
 }
 
 
