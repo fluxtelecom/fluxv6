@@ -1,0 +1,210 @@
+#!/bin/sh
+
+#######################
+#  Variaveis
+#######################
+EXT_ADDR=
+EXT_IFACE=eth0
+# LAN_IFACE=eth1
+VERSION="0.1"
+
+firewall_defaults () {
+
+        #  CONFIGURACOES PADRAO
+        # Obs.: Para esse firewall funcionar corretamente alguns modulos para
+        # o iptables deverao ser carregados no arquivo /etc/rc.d/rc.modules.
+
+        # Funcoes que facilitam a configuracao do /proc:
+        ativa () {
+                for entry in $@; do echo 1 > $entry; done
+        }
+        desativa () {
+                for entry in $@; do echo 0 > $entry; done
+        }
+
+        # Configuracao do /proc
+
+        # Desativa o Explicit Congestion Notification, pois pode estar ativado no kernel
+        # e nao funciona com alguns roteadores, nao permitindo a comunicacao com alguns
+        # destinos.
+        desativa /proc/sys/net/ipv4/tcp_ecn
+
+        # Ignora broadcasts de ICMP para evitar ataques de DoS
+        ativa /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts
+
+        # (FIXME: fazer descricao)
+        desativa /proc/sys/net/ipv4/conf/*/accept_source_route
+
+        # Descarta pacotes de resposta enviados por uma interface
+        # diferente daquela onde foi recebida a conexao original.
+        desativa /proc/sys/net/ipv4/conf/*/rp_filter
+
+        #Carrega modulo  do FTP
+        /sbin/modprobe ip_nat_ftp
+
+        # Desabilita solicitacoes de mudanca de rota recebidas de gateways
+        # remotos e tambem que nosso Linux envia para os outros hosts.
+        desativa /proc/sys/net/ipv4/conf/*/accept_redirects
+        desativa /proc/sys/net/ipv4/conf/*/secure_redirects
+        desativa /proc/sys/net/ipv4/conf/*/send_redirects
+
+        # Envia mensagens para o syslog quando pacotes sao recebidos com enderecos invalidos
+        desativa /proc/sys/net/ipv4/conf/*/log_martians
+
+        # Desativa temporariamente roteamento de pacotes
+        # Vamos reativa-lo na saida do script
+        desativa /proc/sys/net/ipv4/ip_forward
+
+        # Limpa regras de firewall
+        iptables -F
+        iptables -X
+        iptables -t nat -F
+
+        # Adiciona redes necessárias
+        #route add -net 172.17.4.0/24 gw 172.17.4.254 dev eth0
+        #route add -net 172.20.55.0/24 gw 172.17.4.254 dev eth0
+
+
+}
+
+firewall_stop() {
+
+        firewall_defaults
+
+        echo "Finalizando regras de firewall .... "
+
+        iptables -P INPUT ACCEPT
+        iptables -P OUTPUT ACCEPT
+        iptables -P FORWARD ACCEPT
+
+        # Ativa roteamento de pacotes
+        ativa /proc/sys/net/ipv4/ip_forward
+
+
+        echo "As regras de firewall foram removidas e as politicas definidas como ACCEPT"
+}
+
+firewall_start () {
+
+        firewall_defaults
+
+        echo "Iniciando regras de firewall..."
+
+        ##########Regras Padrao#############
+
+        # Cria chain para pacotes TCP invalidos
+        iptables -N pact_tcp_inval
+        iptables -A pact_tcp_inval -p tcp --tcp-flags SYN,ACK SYN,ACK -m state --state NEW -j REJECT --reject-with tcp-reset
+        iptables -A pact_tcp_inval -p tcp ! --syn -m state --state NEW -j DROP
+
+        # Cria chain para os enderecos da Defferrari
+        iptables -N defferrari
+        iptables -A defferrari -s 201.20.144.0/23 -j ACCEPT
+      	iptables -A defferrari -s 172.17.1.0/24 -j ACCEPT
+      	iptables -A defferrari -s 172.16.0.0/24 -j ACCEPT
+      	iptables -A defferrari -s 191.6.139.90 -j ACCEPT
+      	iptables -A defferrari -s 201.37.66.119 -j ACCEPT
+      	iptables -A defferrari -s 201.20.152.10 -j ACCEPT
+      	iptables -A defferrari -s 187.115.119.51 -j ACCEPT
+      	iptables -A defferrari -s 128.201.167.42 -j ACCEPT
+      	iptables -A defferrari -s 200.159.0.0/16 -j ACCEPT
+      	iptables -A defferrari -s 177.51.137.5 -j ACCEPT
+      	iptables -A defferrari -s 177.10.7.116 -j ACCEPT
+      	iptables -A defferrari -s 200.163.139.204 -j ACCEPT
+      	iptables -A defferrari -s 177.10.4.42 -j ACCEPT
+
+         # Libera a porta http e https
+      	iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+      	iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+	
+        # Define as politicas para cada chain padrao
+        iptables -P INPUT   DROP
+        iptables -P OUTPUT  ACCEPT
+        iptables -P FORWARD DROP
+
+        # Bloqueia pacotes TCP invalidos
+        iptables -A INPUT   -p tcp -j pact_tcp_inval
+        iptables -A FORWARD -p tcp -j pact_tcp_inval
+        iptables -A OUTPUT  -p tcp -j pact_tcp_inval
+
+        # Bloqueia varreduras de portas
+        iptables -A INPUT   -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/s -j ACCEPT
+        iptables -A FORWARD -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/s -j ACCEPT
+
+        # Libera ping, mas limita-o para nao ocorrer o famoso ping da morte
+        iptables -A INPUT   -p icmp --icmp-type echo-request -j defferrari
+        iptables -A FORWARD -p icmp --icmp-type echo-request -j defferrari
+
+        # Libera trá estabelecido
+        iptables -A INPUT   -m state --state ESTABLISHED,RELATED -j ACCEPT
+        iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+        # Bloqueia pacotes invalidos
+        iptables -A INPUT   -m state --state INVALID -j DROP
+        iptables -A FORWARD -m state --state INVALID -j DROP
+
+        # Libera o trafego do localhost para ele mesmo
+        iptables -A INPUT -i lo -j ACCEPT
+
+        ##########Regras Customizadas###############
+
+        ##########INPUT#########
+	
+	# Rede FAST
+	iptables -A INPUT -s 45.162.136.0/22 -j ACCEPT
+	iptables -A INPUT -s 45.170.160.0/22 -j ACCEPT
+
+        # Libera Deff
+        iptables -A INPUT -j defferrari
+
+	#Matrix
+	iptables -A INPUT -s 200.201.218.140 -j ACCEPT
+
+        # Libera rede VPN
+        iptables -A INPUT -s 172.17.4.0/24 -j ACCEPT
+        iptables -A INPUT -s 172.20.55.0/24 -j ACCEPT
+        iptables -A INPUT -s 177.155.104.78 -j ACCEPT
+ 	iptables -A INPUT -s 200.159.177.0/24 -j ACCEPT
+	iptables -A INPUT -s 177.203.92.192 -j ACCEPT
+
+##########OUTPUT#########
+
+        # Permite apenas saida de pacotes com endereco de origem  de alguma interface do Linux
+        iptables -A OUTPUT -s 127.0.0.1 -j ACCEPT
+        iptables -A OUTPUT -s $EXT_ADDR -j ACCEPT
+        # iptables -A OUTPUT -s $LAN_ADDR -j ACCEPT
+
+        #POSTROUTING
+
+         ###### Fim das regras Customizadas ########
+
+        # Ativa roteamento de pacotes
+        ativa /proc/sys/net/ipv4/ip_forward
+}
+
+
+firewall_restart() {
+  firewall_stop
+  sleep 1
+  firewall_start
+}
+case "$1" in
+'start')
+  firewall_start
+  ;;
+'stop')
+  firewall_stop
+  ;;
+'restart')
+  firewall_restart
+ ;;
+'version')
+  echo " "
+  echo " Defferrari Firewall - Versao $VERSION "
+  echo " "
+  ;;
+*)
+  echo "usage $0 start|stop|restart|version"
+esac
+
+# Fim do firewall
