@@ -45,7 +45,7 @@ DELIMITER ;
 
 alter table flux.sip_devices add column `id_sip_external` INT NOT NULL DEFAULT '0';
 
-INSERT INTO `accounts` VALUES (16,'api',0,0,0,'',0,0,'2023-07-20 14:43:09',1000.00000,0,0.00000,'Rhbhzm8TI1YS22IskgMLLA','TESTE API','TESTE API','','','','','','',28,'','','teste12334@teste.flux.net.br','teste12334@teste.flux.net.br',0,16,1,0,'',2,78,0,0,5.00000,0,'',0,0,0,'','2023-07-20 14:43:09','','0000-00-00 00:00:00','2033-07-17 17:43:09',3650,0.00000,0,1,'0',1,1,3,'1000-01-01 00:00:00',0,0,1,0,'','',NULL, '');
+INSERT INTO `accounts` (`id`, `type`, `number`, `password`, `email`, `permission_id`, `first_name`, `last_name`, `telephone_1`, `telephone_2`, `notification_email`, `reseller_id`, `is_distributor`, `posttoexternal`, `local_call_cost`, `is_recording`, `notify_credit_limit`, `allow_ip_management`, `notify_flag`, `validfordays`, `expiry`, `generate_invoice`, `paypal_permission`, `notifications`, `charge_per_min`, `timezone_id`, `currency_id`, `country_id`, `deleted`, `status`, `creation`, `last_bill_date`, `credit_limit`, `balance`) VALUES ('16', '2', 'api', 'Rhbhzm8TI1YS22IskgMLLA', 'flux@flux.net.br', '3', 'API - IXC', '', '', '', 'flux@flux.net.br', '0', '1', '0', '100', '0', '5.00', '0', '0', '3650', '2033-10-29 20:11:26', '0', '1', '0', '100', '78', '16', '28', '0', '0', '2023-11-01 17:11:26', '2023-11-01 17:11:26', '0', '0');
 
 update `system` set comment='Set Mail Log Path Here' where display_name='Mail Log';
 -- Flux UPDATE-944
