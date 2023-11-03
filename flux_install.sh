@@ -188,7 +188,7 @@ install_prerequisties ()
                 apt install -y sudo wget curl git dnsutils ntpdate systemd net-tools whois sendmail-bin sensible-mda mlocate vim
         else if [ $DIST = "DEBIAN10" ]; then
                 apt-get update -y
-                apt-get install -y sudo wget curl git dnsutils ntpdate systemd net-tools whois sendmail-bin sensible-mda mlocate vim imagemagick
+                apt-get install -y sudo wget curl git dnsutils python3-pip ntpdate systemd net-tools whois sendmail-bin sensible-mda mlocate vim imagemagick
         fi
         fi
         fi
