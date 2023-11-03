@@ -137,6 +137,7 @@ class Call_detail_report extends Account
 		
 
 		$this->db->where_in('type',array(0,3));
+		$this->db->where("disposition","NORMAL_CLEARING [16]");
 		$this->db->order_by("callstart", "desc");
 		$this->db->limit($no_of_records, $start);
         $this->db->select('callstart,sip_user,callerid,call_direction,callednum,notes,billseconds,disposition,debit,is_recording,country_id,pattern,cost,accountid,pricelist_id,calltype,trunk_id');
