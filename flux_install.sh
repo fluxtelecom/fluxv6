@@ -610,9 +610,9 @@ normalize_freeswitch ()
 install_database ()
 {
         mysqladmin -u root -p${MYSQL_ROOT_PASSWORD} create ${FLUX_DATABASE_NAME}
-        mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e "CREATE USER 'fluxuser'@'127.0.0.1' IDENTIFIED BY '${FLUXUSER_MYSQL_PASSWORD}';"
-        mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e "ALTER USER 'fluxuser'@'127.0.0.1' IDENTIFIED WITH mysql_native_password BY '${FLUXUSER_MYSQL_PASSWORD}';"
-        mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e "GRANT ALL PRIVILEGES ON \`${FLUX_DATABASE_NAME}\` . * TO 'fluxuser'@'127.0.0.1' WITH GRANT OPTION;FLUSH PRIVILEGES;"
+        mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e "CREATE USER 'fluxuser'@'localhost' IDENTIFIED BY '${FLUXUSER_MYSQL_PASSWORD}';"
+        mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e "ALTER USER 'fluxuser'@'localhost' IDENTIFIED WITH mysql_native_password BY '${FLUXUSER_MYSQL_PASSWORD}';"
+        mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e "GRANT ALL PRIVILEGES ON \`${FLUX_DATABASE_NAME}\` . * TO 'fluxuser'@'localhost' WITH GRANT OPTION;FLUSH PRIVILEGES;"
         mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/database/flux-6.4.sql
         mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/database/flux-6.4.1.sql
         mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/database/flux-tables.sql
