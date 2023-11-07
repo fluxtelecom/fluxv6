@@ -556,7 +556,7 @@ function button_action(t) {
     if (t.name == 'Refresh') {
         $('.flex_grid').flexReload();
     }
-    else if (t.name == "DELETE" || t.name == "Delete" || t.name == "Effacer" || t.name == "Borrar") {
+    else if (t.name == "DELETE" || t.name == "Delete" || t.name == "Effacer" || t.name == "Borrar" || t.name == "Excluir") {
         if (flag == '1') {
             delete_multiple_selected(newURL);
         }
