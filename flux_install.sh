@@ -613,11 +613,11 @@ install_database ()
         mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e "CREATE USER 'fluxuser'@'%' IDENTIFIED BY '${FLUXUSER_MYSQL_PASSWORD}';"
         mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e "ALTER USER 'fluxuser'@'%' IDENTIFIED WITH mysql_native_password BY '${FLUXUSER_MYSQL_PASSWORD}';"
         mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e "GRANT ALL PRIVILEGES ON \`${FLUX_DATABASE_NAME}\` . * TO 'fluxuser'@'%' WITH GRANT OPTION;FLUSH PRIVILEGES;"
-        mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/database/flux-6.4.sql
-        mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/database/flux-6.4.1.sql
-        mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/database/flux-tables.sql
-        mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/database/flux-views.sql
-        mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} < ${FLUX_SOURCE_DIR}/web_interface/flux/addons/plugins/ringgroup/database/ringgroup_1.0.0.sql
+        mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} -f < ${FLUX_SOURCE_DIR}/database/flux-6.4.sql
+        mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} -f < ${FLUX_SOURCE_DIR}/database/flux-6.4.1.sql
+        mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} -f < ${FLUX_SOURCE_DIR}/database/flux-tables.sql
+        mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} -f < ${FLUX_SOURCE_DIR}/database/flux-views.sql
+        mysql -uroot -p${MYSQL_ROOT_PASSWORD} ${FLUX_DATABASE_NAME} -f < ${FLUX_SOURCE_DIR}/web_interface/flux/addons/plugins/ringgroup/database/ringgroup_1.0.0.sql
 }
 
 
