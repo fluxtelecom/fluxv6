@@ -229,15 +229,7 @@ function _sip_devices_list(){
 					$where_array = array('username' => $postdata['username'],'reseller_id' => $postdata['reseller_id']);
 				}
 				$sip_device_id = $this->common->get_field_name('id','sip_devices',$where_array);
-				$sip_device_id_external = $this->common->get_field_name('id_sip_external','sip_devices',$where_array);
 				if(!empty($sip_device_id)){
-					$this->response ( array (
-						'status'  => false,
-						'error'   => $this->lang->line ( 'duplicate_sip_device' )
-					), 400 );
-				}
-
-				if(!empty($sip_device_id_external)){
 					$this->response ( array (
 						'status'  => false,
 						'error'   => $this->lang->line ( 'duplicate_sip_device' )
@@ -251,6 +243,14 @@ function _sip_devices_list(){
 					), 400);
 				}
 			}
+
+			$sip_device_id_external = $this->common->get_field_name('id_sip_external','sip_devices',array('id_sip_external' => $postdata['id_sip_external']));
+			if(!empty($sip_device_id_external)){
+					$this->response ( array (
+						'status'  => false,
+						'error'   => $this->lang->line ( 'duplicate_sip_device' )
+					), 400 );
+				}
 
 			if($postdata['password'] === ''){
 				$password = $this->common->generate_password();
