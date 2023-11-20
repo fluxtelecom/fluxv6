@@ -525,8 +525,9 @@ function get_rates(userinfo,destination_number,number_loop,call_direction,config
 		rates_info = check_did(destination_number,config)
 	else 
 
-    	local query  = "SELECT "..TBL_CALL_TYPE..".call_type as calltype, "..TBL_ORIGINATION_RATES..".call_type as custom_call_type, "..TBL_ORIGINATION_RATES..".* FROM "..TBL_ORIGINATION_RATES..","..TBL_CALL_TYPE.." WHERE "..TBL_ORIGINATION_RATES..".call_type = "..TBL_CALL_TYPE..".id  AND "..number_loop.." AND "..TBL_ORIGINATION_RATES..".status = 0 AND (pricelist_id = "..userinfo['pricelist_id'].." OR accountid="..userinfo['id']..")  ORDER BY accountid DESC,LENGTH(pattern) DESC,cost DESC LIMIT 1";
-
+    	--local query  = "SELECT "..TBL_CALL_TYPE..".call_type as calltype, "..TBL_ORIGINATION_RATES..".call_type as custom_call_type, "..TBL_ORIGINATION_RATES..".* FROM "..TBL_ORIGINATION_RATES..","..TBL_CALL_TYPE.." WHERE "..TBL_ORIGINATION_RATES..".call_type = "..TBL_CALL_TYPE..".id  AND "..number_loop.." AND "..TBL_ORIGINATION_RATES..".status = 0 AND (pricelist_id = "..userinfo['pricelist_id'].." OR accountid="..userinfo['id']..")  ORDER BY accountid DESC,LENGTH(pattern) DESC,cost DESC LIMIT 1";
+	local query  = "SELECT "..TBL_CALL_TYPE..".call_type as calltype, "..TBL_ORIGINATION_RATES..".call_type as custom_call_type, "..TBL_ORIGINATION_RATES..".* FROM "..TBL_ORIGINATION_RATES..","..TBL_CALL_TYPE.." WHERE ("..TBL_ORIGINATION_RATES..".call_type = "..TBL_CALL_TYPE..".id  OR routes.comment = calltype.call_type) AND "..number_loop.." AND "..TBL_ORIGINATION_RATES..".status = 0 AND (pricelist_id = "..userinfo['pricelist_id'].." OR accountid="..userinfo['id']..")  ORDER BY accountid DESC,LENGTH(pattern) DESC,cost DESC LIMIT 1";
+	
     	Logger.debug("[GET_RATES] Query :" .. query)
 		assert (dbh:query(query, function(u)
     		rates_info = u
