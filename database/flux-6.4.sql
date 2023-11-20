@@ -932,7 +932,7 @@ CREATE TABLE `freeswich_servers` (
 
 LOCK TABLES `freeswich_servers` WRITE;
 /*!40000 ALTER TABLE `freeswich_servers` DISABLE KEYS */;
-INSERT INTO `freeswich_servers` VALUES (1,'127.0.0.1','Flux223304442Dev2516','8021',0,'2016-07-26 15:25:07','2016-07-26 15:25:07');
+INSERT INTO `freeswich_servers` VALUES (1,'127.0.0.1','ClueCon','8021',0,'2016-07-26 15:25:07','2016-07-26 15:25:07');
 /*!40000 ALTER TABLE `freeswich_servers` ENABLE KEYS */;
 UNLOCK TABLES;
 
