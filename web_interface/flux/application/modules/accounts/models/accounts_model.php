@@ -249,8 +249,14 @@ class Accounts_model extends CI_Model {
 	}
 
 	function get_admin_Account_list($flag, $start = 0, $limit = 0, $reseller_id = 0) {
+		$accountinfo = $this->session->userdata('accountinfo');
 		$this->db_model->build_search('admin_list_search');
-		$where = "reseller_id =".$reseller_id." AND deleted =0 AND type in (2,4,-1,6)";
+		if ($accountinfo['type'] == -1)
+			{
+				$where = "reseller_id =".$reseller_id." AND deleted =0 AND type in (2,4,-1,6)";
+			}else{
+				$where = "reseller_id =".$reseller_id." AND deleted =0 AND type in (2,4,6)";
+			}
 		if ($this->session->userdata('advance_search') == 1) {
 			$search = $this->session->userdata('admin_list_search');
 			if ($search['type'] == '') {
