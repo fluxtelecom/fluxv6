@@ -1572,7 +1572,7 @@ class Reports_form extends common
                     "center"
                 ),
 
-                $recording
+                //$recording
             ));
         } else {
             $account_info = $accountinfo = $this->CI->session->userdata('accountinfo');
@@ -1723,7 +1723,7 @@ class Reports_form extends common
                     "center"
                 ),
 
-                $recording
+                //$recording
             ));
         }
 
