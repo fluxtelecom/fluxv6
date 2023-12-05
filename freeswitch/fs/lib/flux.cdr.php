@@ -186,8 +186,10 @@ $logger->log("*********************** Harsh_trunk in package_id: **".$dataVariab
 	$logger->log ( "*********************** OUTBOUND CALL ENTRY START *************" );
 	$logger->log ( "*********calltype::::::**************".$dataVariable ['calltype']."*************" );	
 	$cdr_string = get_cdr_string ( $dataVariable, $accountid, $account_type, $actual_duration, $termination_rate, $origination_rate, $provider_cost, $parentid, $debit, $cost, $logger, $db );
-	
+
+	if ($dataVariable['calltype'] != 'DID-LOCAL'){
 	$query = "INSERT INTO cdrs (uniqueid,accountid,type,callerid,callednum,billseconds,trunk_id,trunkip,callerip,disposition,callstart,debit,cost,provider_id,pricelist_id,package_id,pattern,notes,rate_cost,reseller_id,reseller_code,reseller_code_destination,reseller_cost,provider_code,provider_code_destination,provider_cost,provider_call_cost,call_direction,calltype,call_request,country_id,sip_user,ct,end_stamp)  values ($cdr_string)";
+	}
 	$logger->log ( $query );
 	$db->run ( $query );
 	
