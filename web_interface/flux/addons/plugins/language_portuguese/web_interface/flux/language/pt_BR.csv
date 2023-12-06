@@ -19,7 +19,7 @@ Add Ratedeck,Adicionar verificação de Tarifas
 Address1,Endereço 1
 Administrator,Administrador
 Administrator Admin,Administrador Admin
-Admins,Admins
+Admins,Usuários
 After Balance,Após o Cobrança
 Alarm,Alarme
 Alert Status,Status de alerta
@@ -174,7 +174,7 @@ Doesnt Contain,Não Contém
 Domain,Domínio
 Draft,Rascunho
 Due Date,Data de vencimento
-Duplicate,Duplicado
+Duplicate,Duplicar
 Duration,Duração
 Email,E-mail
 Email Alerts ?,Alertas de E-mail ?
@@ -288,16 +288,16 @@ Local Call Timeout,Tempo limite de chamada local
 Local Number,Número local
 Local Numbers,Números Locais
 Locale code,Código local
-Localization,Localização
-Localization Type,Tipo de localização
-Localizations,Localizações
+Localization,Prefixo de roteamento
+Localization Type,Tipo de Prefixo
+Localizations,Prefixos de roteamento
 Log out,Sair
 Log Path,Diretório de Logs
 Logo,Logo
 Low balance Alert?,Alerta de saldo baixo?
 Mail Log,Log de e-mail
 Manually,Manualmente
-Markup,Markup
+Markup,Taxa adicional
 Mass Create,Criação em lote
 Mass Email,Email em lote
 Max Free Length,Tempo Máximo para chamadas sem valor
@@ -373,11 +373,11 @@ Products,Produtos
 Profile Action,Ação do Perfil
 Profit,Lucro
 Provider,Fornecedor
-Provider CDRs Report,Relatório de CDRs do provedor
-Provider Outbound,Provider Outbound
-Provider Outbound Report,Relatório de saída do provedor
-Provider Summary Report,Relatório de resumo do provedor
-Province,Província
+Provider CDRs Report,Relatório de CDRs do Fornecedor
+Provider Outbound,Fornecedor
+Provider Outbound Report,Relatório de saída do Fornecedor
+Provider Summary Report,Relatório de resumo do Fornecedor
+Province,Estado
 Province/State,Província / Estado
 Proxy,Proxy
 Purge,Purga
@@ -403,7 +403,7 @@ Refill Coupons,Cupons de recarga
 Refill Report,Relatório de recarga
 Refills,Recargas
 Register,Registro
-Release if no balance,Solte se não houver saldo
+Release if no balance,Desabilitar se não houver saldo?
 Report a Bug,Reportar um erro
 Reports,Relatórios
 Request URI,Solicitar URI
@@ -560,16 +560,15 @@ Force Trunk,Forçar Provedor
 Please select atleast one record to dele,Selecione pelo menos um registro para deletar
 Import Ratedeck,Importar verificação nominal
 Optional Information,informação opcional
-From- Domain,De- Domínio
-From User,Do usuário
+From- Domain,Domínio de origem
+From User,Usuário de origem
 Extension,Extensão
 Extension-In-Contact,Extensão em contato
 Ping,Ping
 Contact Params,Contact Params
 Retry-Seconds,Tentar novamente em segundos
-Register-Proxy,Register-Proxy
+Register-Proxy,Proxy de registro
 Channel,Canal
-Failover GW Name,Nome de GW de failover
 Create Trunk,Criar Gateway
 Import Termination Rates,Importar Tarifas de Terminação
 Call Timeout (Sec.),Tempo limite da chamada (seg.)
@@ -1050,7 +1049,7 @@ OTP Expire Time(min),Tempo de expiração de OTP (min)
 Edit Provider,Editar Provedor
 Product Summary Reports,Relatórios de resumo do produto
 Edit Origination Rate,Editar Tarifa de Originação
-Dialplan Variable,Variável Dialplan
+Dialplan Variable,Variável de discagem
 Uninstall,Desinstalar
 Call Stat,Estatísticas de chamada
 Failed Calls,Chamadas falhadas
