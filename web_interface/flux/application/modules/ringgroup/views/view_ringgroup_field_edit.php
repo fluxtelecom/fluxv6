@@ -56,7 +56,7 @@
  				<select class="col-md-6 mr-3 float-left form-control form-control-lg selectpicker extensions_type_<?= $count ?>" data-live-search="true" name="extensions_type_<?= $count ?>" onchange="change_extensions_type(this.value,<?= $count ?>)">
 
  					<option value="0"><?php echo gettext("Extension"); ?></option>
- 					<option value="1"><?php echo gettext("PSTN"); ?></option>
+ 					<!--<option value="1"><?php echo gettext("PSTN"); ?></option>-->
  				</select>
 
  				<select class="col-md-6 form-control form-control-lg selectpicker extensions_set_<?= $count ?>" data-live-search="true" name="extensions_set_<?= $count ?>">
