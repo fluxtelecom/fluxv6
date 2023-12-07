@@ -149,7 +149,7 @@
         <div class="col-md-12 p-0">
           <div class="card">
             <div class="pb-4" id="floating-label">
-              <h3 class="bg-secondary text-light p-3 rounded-top"><?php echo gettext("Basic Settings"); ?></h3>
+              <h3 class="bg-secondary text-light p-3 rounded-top"><?php echo gettext("Configurações básicas"); ?></h3>
               <input type="hidden" name="id" class="col-md-5 form-control" value="<?php echo $edit_array['id']; ?>" >    
               <input type="hidden" name="accountid" class="col-md-5 form-control" value="" >    
               <div class="col-md-12">
@@ -206,10 +206,10 @@
                   <?php } ?>
 
                   <div class="col-md-6 form-group">
-                    <label class="p-0 control-label"><?php echo gettext("Ring Strategy"); ?></label>
+                    <label class="p-0 control-label"><?php echo gettext("Estratégia de toque); ?></label>
                     <select name="strategy" class='col-md-12 form-control selectpicker form-control-lg' data-live-search="true" onChange="changeTest(this.value)">
-                     <option value="sequence" <?php if($edit_array['strategy'] == 'sequence'){ echo  'selected="selected"'; }?>><?php echo gettext("Sequence"); ?></option>
-                     <option value="simultaneous" <?php if($edit_array['strategy'] == 'simultaneous'){ echo  'selected="selected"'; }?>><?php echo gettext("Simultaneous"); ?></option>
+                     <option value="sequence" <?php if($edit_array['strategy'] == 'sequence'){ echo  'selected="selected"'; }?>><?php echo gettext("Sequencial"); ?></option>
+                     <option value="simultaneous" <?php if($edit_array['strategy'] == 'simultaneous'){ echo  'selected="selected"'; }?>><?php echo gettext("Simultâneo"); ?></option>
                    </select>
                    <div class="col-md-12 p-0 error_div"></div>
                    <div class="col-md-3">&nbsp;</div>
@@ -259,7 +259,7 @@
                   <div class="row">
                    <div class="col-9 p-0"><label class="control-label" data-toggle="tooltip" data-html="true" data-original-title= "Extension : If destination number is Extension then system will call local extension. PSTN : If destination number is PSTN then system will call PSTN number using gateway and call charges will be applicable on customer." data-placement="top"><?php echo gettext("Destination"); ?></label></div>
                    <div class="col-md-2"><label class="control-label" data-toggle="tooltip" data-html="true" data-original-title= "Set call ring timeout for extension calls (Only work for Sequence ring strategy)" data-placement="top"><?php echo gettext("Timeout (Seconds)");?></label></div>
-                   <span class="btn btn-success" onclick="addMoreRows(this.form,this.value);"><?php echo gettext("Add More"); ?></span>
+                   <span class="btn btn-success" onclick="addMoreRows(this.form,this.value);"><?php echo gettext("Adicionar"); ?></span>
                  </div>
                </div>
                <div class="col-md-12 p-0 error_div"></div>
