@@ -1,6 +1,6 @@
 -- RingGroup Query
 INSERT INTO `menu_modules` (`menu_label`, `module_name`, `module_url`, `menu_title`,`menu_image`, `menu_subtitle`, `priority`) VALUES
-('RingGroup', 'ringgroup', 'ringgroup/ringgroup_list/', 'Inbound','RingGroup.png', '0', 40.4);
+('Grupo de busca', 'ringgroup', 'ringgroup/ringgroup_list/', 'Inbound','RingGroup.png', '0', 40.4);
 
 INSERT INTO `roles_and_permission` (`id`, `login_type`, `permission_type`, `menu_name`, `module_name`, `sub_module_name`, `module_url`, `display_name`, `permissions`, `status`, `creation_date`, `priority`) VALUES
 (NULL, 1, 0, 'inbound','ringgroup',' ','ringgroup_list', 'RingGroup', '["main","list","create","edit","delete","search"]', 0, '2019-01-25 09:01:03', '6.60000') ; 
