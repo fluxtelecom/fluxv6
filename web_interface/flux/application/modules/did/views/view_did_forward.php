@@ -70,7 +70,7 @@
      var call_type = $("#call_type_code").val();
      var extensions = "<?php echo $extensions; ?>";
      var did_id = "<?php echo $id; ?>";     
-     if(call_type == 0 || call_type == 5){ 
+     if(call_type == 0 || call_type == 5 || call_type == 7){ 
       $.ajax({
          type: "POST",
          url: "<?= base_url()?>did/did_local_change/"+call_type+"/"+did_id+"/"+extensions,

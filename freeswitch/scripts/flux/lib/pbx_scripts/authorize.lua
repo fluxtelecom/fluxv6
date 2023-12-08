@@ -101,9 +101,9 @@ if ( session:ready() ) then
    end
 
    -- Tempo maximo de chamada sem atendimento
-   if tonumber(rings) >0 then
-   	session:setVariable("call_timeout",rings)
-   end
+--   if tonumber(rings) >0 then
+--   	session:setVariable("call_timeout",rings)
+--   end
 
    -- Definindo callerid da chamada
    if callerid ~= "" then
@@ -219,7 +219,7 @@ if ( session:ready() ) then
    end
 
    -- Chamadas 0800 (8)
-   if(string.find(destination_number,"^00800")) then
+   if(string.find(destination_number,"^8081")) then
    	freeswitch.consoleLog("notice", "Padrão de chamada 0800 \n")
       session:setVariable("service","0800")
 	if(locker=="0") then
@@ -335,7 +335,7 @@ if ( session:ready() ) then
 
    -- Rejeita a chamada se nao for autorizada
    if acl==0 then
-   	session:execute("playback","flux/chamada-nao-autorizada.wav")
+   	session:execute("playback","chamada-nao-autorizada.wav")
    	session:hangup("CALL_REJECTED")
    end
 

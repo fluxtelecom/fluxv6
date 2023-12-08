@@ -28,7 +28,7 @@ end
 
 function fail_cdrs_pbx(xml,callerid_array,userinfo,destination_number)
 	hangup_cause = "NO_ROUTE_DESTINATION";
-	local sound_path = "/usr/share/freeswitch/sounds/pt/BR/karina/"
+	local sound_path = "/usr/share/freeswitch/sounds/en/us/callie/"
 	audio_file = sound_path ..  "flux-badphone.wav";
 	local callstart = os.date("!%Y-%m-%d %H:%M:%S")
 	if (callerid_array['original_cid_name'] ~= '' and callerid_array['original_cid_name'] ~= '<null>')  then
@@ -95,8 +95,7 @@ function did_pbx_info(xml,didinfo,userinfo,config,xml_did_rates,callerid_array)
                 if (config['playback_audio_notification'] == "0") then
                     table.insert(xml, [[<action application="playback" data="]]..audio_file..[["/>]]);
                 end
-                table.insert(xml, [[<action application="set" data="sip_ignore_remote_cause=true"/>]]);
-                table.insert(xml, [[<action application="info" data=""/>]]);
+                table.insert(xml, [[<action application="set" data="sip_ignore_remote_cause=true"/>]]);        
                 table.insert(xml, [[<action application="set" data="call_processed=internal"/>]]);
                 table.insert(xml, [[<action application="set" data="effective_destination_number=]]..destination_number..[["/>]]); 
                 table.insert(xml, [[<action application="set" data="last_bridge_hangup_cause=UNALLOCATED_NUMBER"/>]]);        
@@ -143,7 +142,7 @@ function did_pbx_info(xml,didinfo,userinfo,config,xml_did_rates,callerid_array)
                         params_ring[delay] =0
                     end
                     if(tonumber(final_count) == 0)then
-                        ringgroup_dlr_str = ringgroup_dlr_str .."[sip_invite_params=user=local,sip_h_p-call_type='custom_forward',call_timeout="..params_ring[timeout]..","..group_confirm.."leg_timeout="..params_ring[timeout]..",leg_delay_start="..params_ring[delay].."]".."user/"..params_ring[destination].."@"..params:getHeader("variable_sip_to_host")..":"..params:getHeader("variable_sip_contact_port")..separated
+                        ringgroup_dlr_str = ringgroup_dlr_str .."[sip_invite_params=user=local,sip_h_p-call_type='custom_forward',call_timeout="..params_ring[timeout]..","..group_confirm.."leg_timeout="..params_ring[timeout]..",leg_delay_start="..params_ring[delay].."]".."user/"..params_ring[destination].."@"..params:getHeader("variable_sip_to_host")..":"..params:getHeader("variable_sip_to_port")..separated
                     end
                 end
             end

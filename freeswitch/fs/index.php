@@ -53,7 +53,7 @@ $db = new db ();
 $lib = new lib ();
 
 $config = $lib->get_configurations ( $db );
-// echo "<pre>";print_r($config);exit;
+//echo "<pre>";print_r($config);exit;
 // Define logger object
 $logger = new logger ( $lib );
 // Define file name

@@ -61,7 +61,9 @@ else
     callerid_name = params:getHeader('Caller-Caller-ID-Name') or ""
 end       
 
-if(config['opensips'] == '0') then
+if(config['opensips'] == '8') then
+    Logger.info("[Dialplan] config opensips")
+    from_ip = "200.159.177.13"
 	callerid_name = params:getHeader('variable_sip_h_P-effective_caller_id_name') or ""
 	callerid_number = params:getHeader('variable_sip_h_P-effective_caller_id_number') or ""
 end
@@ -81,20 +83,32 @@ callerid_array['original_cid_number'] = callerid_number
 -- Define default variables 
 call_direction = 'outbound'
 local calltype = 'Padrao'
+local custom_calltype = 'Padrao'
+local call_type = 'Padrao'
 local accountcode = ''
 local sipcall = ''
-local auth_type = 'default'
+local auth_type = 'acl'
 local authinfo = {}
 local accountname = 'default'
 local original_destination_number=''
 package_id = 0
-
+if (params:getHeader('variable_accountcode') ~= nil) then
 accountcode = params:getHeader("variable_accountcode")
--- Logger.info("[Dialplan] Accountcode DEBUG : ".. accountcode)
+end
+
+
+--accountcode = params:getHeader("variable_accountcode")
+account_user = params:getHeader("variable_sip_h_P-Accountcode")
+if(account_user ~= '' and account_user ~= nil) then
+Logger.info("[Dialplan] Accountcode DEBUG : ".. accountcode)
+end
+if(account_user ~= '' and account_user ~= nil) then
+Logger.info("[Dialplan] Accountcode DEBUG : ".. account_user)
+end
 
 --To override custom calltype
 if custom_calltype then
-	calltype_custom = custom_calltype() 
+	calltype_custom = custom_calltype
 	if(calltype_custom ~= '' and calltype_custom ~= nil) then
 		calltype = calltype_custom 
 	end
@@ -124,8 +138,9 @@ end
 if (accountcode == nil or accountcode == '') then
 
     from_ip = ""	
-    if(config['opensips']=='0') then
-    	from_ip = params:getHeader("variable_sip_h_X-AUTH-IP")
+    if(config['opensips']=='8') then
+--        from_ip = "200.159.177.13"
+--    	from_ip = params:getHeader("variable_sip_h_X-AUTH-IP")
     else
     	from_ip = params:getHeader('Hunt-Network-Addr')
     	Logger.info("[Dialplan] Call direction DEBUG : IP AUTH")
@@ -162,21 +177,23 @@ Logger.info("[Accountcode : ".. accountcode .."]" );
 
 --Destination number string 
 number_loop_str = number_loop(destination_number,'blocked_patterns') 
+number_loop_str_orig = number_loop(callerid_number,'blocked_patterns')
+
 
 -- Do authorization
 userinfo = doauthorization("number",accountcode,call_direction,destination_number,number_loop_str,config)
 
 --------------------------------------- SPEED DIAL --------------------------------------
---if(string.len(destination_number) == 1 ) then
+if(string.len(destination_number) == 1 ) then
 	destination_number = get_speeddial_number(destination_number,userinfo['id'])
-	--infouser = userinfo['id']
-	--Logger.info("[Dialplan] INFO USER : "..infouser)
+	infouser = userinfo['id']
+	Logger.info("[Dialplan] INFO USER : "..infouser)
 	Logger.info("[Dialplan] SPEED DIAL NUMBER : "..destination_number)
     
     -- Overriding call direction if speed dial destination is for DID or local extension 
     call_direction = define_call_direction(destination_number,accountcode,config)
     Logger.info("[Dialplan] New Call direction : ".. call_direction)
---end
+end
 -----------------------------------------------------------------------------------------
 
 -- @TODO : Need to confirm with Rushika for fraud feature
@@ -293,11 +310,12 @@ if (userinfo ~= nil) then
 	end     
 
   	number_loop_str = number_loop(destination_number)
+  	number_loop_str_orig = number_loop(callerid_number)
 
 	-- Fine max length of call based on origination rates.
 	origination_array = get_call_maxlength(userinfo,destination_number,call_direction,number_loop_str,config,didinfo)
 	    
-	if( origination_array == 'NO_SUFFICIENT_FUND' or origination_array == 'ORIGNATION_RATE_NOT_FOUND') then
+	if( origination_array == 'NO_SUFFICIENT_FUND' or origination_array == 'ORIGNATION_RATE_NOT_FOUND' or origination_array == 'NO_ROUTE_DESTINATION') then
 	    error_xml_without_cdr(destination_number,origination_array,calltype,config['playback_audio_notification'],userinfo['id']) 
 	    return
 	end
@@ -329,22 +347,19 @@ if (userinfo ~= nil) then
 	end	
 
 
-	if (config['realtime_billing'] == "0" and call_direction == 'inbound' and didinfo['reverse_rate'] == '1') then	
-			did_reverse = didinfo['reverse_rate']
+	if (config['realtime_billing'] == "0" and call_direction == 'inbound' and didinfo['reverse_rate'] == '0') then	
+		did_reverse = didinfo['reverse_rate']
 		Logger.notice("Customer Reverse Rate : "..did_reverse)	
-		nibble_id = userinfo['id']
-		nibble_rate = didinfo['cost']
-		nibble_connect_cost = didinfo['connectcost']
-	    nibble_init_inc = didinfo['init_inc']
-	    nibble_inc = didinfo['inc']
+--		nibble_id = userinfo['id']
+--		nibble_rate = user_rates['cost']
+--		nibble_connect_cost = user_rates['connectcost']
+--	    nibble_init_inc = user_rates['init_inc']
+--	    nibble_inc = user_rates['inc']
 	end	
 	
 -- FIM
 	
 	
-	
-	
-
 	-- If customer has free seconds then override max length variable with it. 
 	if(package_maxlength ~= "") then	
 		maxlength=package_maxlength
@@ -404,6 +419,7 @@ if (userinfo ~= nil) then
     
     	-- @TODO: Remove number translation / localization for reseller as we will apply localization to customer directly
 		number_loop_str = number_loop(destination_number)
+		number_loop_str_orig = number_loop(callerid_number)
 		reseller_ids[i] = reseller_userinfo
 	    
 	    --For live call report display
@@ -495,18 +511,18 @@ if (userinfo ~= nil) then
 	
 --EDICAO
 	
-	if (config['realtime_billing'] == "0" and call_direction == 'inbound' and didinfo['reverse_rate'] == '1') then
-		Logger.info("NIBBLE ID "..nibble_id)
-		Logger.info("NIBBLE RATE "..nibble_rate)
-		Logger.info("NIBBLE CONNECT COST "..nibble_connect_cost)
-		Logger.info("NIBBLE INITIAL INC "..nibble_init_inc)
-		Logger.info("NIBBLE INC "..nibble_inc)
+	if (config['realtime_billing'] == "0" and call_direction == 'inbound' and didinfo['reverse_rate'] == '0') then
+--		Logger.info("NIBBLE ID "..nibble_id)
+--		Logger.info("NIBBLE RATE "..nibble_rate)
+--		Logger.info("NIBBLE CONNECT COST "..nibble_connect_cost)
+--		Logger.info("NIBBLE INITIAL INC "..nibble_init_inc)
+--		Logger.info("NIBBLE INC "..nibble_inc)
     
-		customer_userinfo["nibble_accounts"] = nibble_id
-    	customer_userinfo["nibble_rates"] = nibble_rate
-    	customer_userinfo["nibble_connect_cost"] = nibble_connect_cost
-    	customer_userinfo["nibble_init_inc"] = nibble_init_inc
-    	customer_userinfo["nibble_inc"] = nibble_inc
+--		customer_userinfo["nibble_accounts"] = nibble_id
+--    	customer_userinfo["nibble_rates"] = nibble_rate
+--    	customer_userinfo["nibble_connect_cost"] = nibble_connect_cost
+--    	customer_userinfo["nibble_init_inc"] = nibble_init_inc
+--    	customer_userinfo["nibble_inc"] = nibble_inc
 	end
 	
 		if (config['realtime_billing'] == "0" and call_direction == 'outbound') then
@@ -516,11 +532,11 @@ if (userinfo ~= nil) then
 		Logger.info("NIBBLE INITIAL INC "..nibble_init_inc)
 		Logger.info("NIBBLE INC "..nibble_inc)
     
-		customer_userinfo["nibble_accounts"] = nibble_id
-    	customer_userinfo["nibble_rates"] = nibble_rate
-    	customer_userinfo["nibble_connect_cost"] = nibble_connect_cost
-    	customer_userinfo["nibble_init_inc"] = nibble_init_inc
-    	customer_userinfo["nibble_inc"] = nibble_inc
+--		customer_userinfo["nibble_accounts"] = nibble_id
+--    	customer_userinfo["nibble_rates"] = nibble_rate
+--    	customer_userinfo["nibble_connect_cost"] = nibble_connect_cost
+--    	customer_userinfo["nibble_init_inc"] = nibble_init_inc
+--    	customer_userinfo["nibble_inc"] = nibble_inc
 	end
 	
 --FIM
@@ -542,9 +558,14 @@ if (userinfo ~= nil) then
 	if (call_direction == 'inbound') then
 		-- ********* Check RECEIVER Balance and status of the Account *************
 		local dialuserinfo
+		if(didinfo['reverse_rate'] ~= nil and didinfo['reverse_rate'] == "0")then
+		config['free_inbound'] = 1
+		else
+		config['free_inbound'] = 0
+		end
 		Logger.info("[userinfo] INB_FREE:" .. INB_FREE)
 		Logger.info("[userinfo] free_inbound:" .. config['free_inbound'])
-		--TODO INB FREE
+
 		callerid = get_override_callerid(customer_userinfo,callerid_name,callerid_number)
 		if (callerid['cid_name'] ~= nil) then
 			callerid_array['cid_name'] = callerid['cid_name']
@@ -554,18 +575,37 @@ if (userinfo ~= nil) then
 		end 
 
 		dialuserinfo = doauthorization('id',didinfo['accountid'],call_direction,destination_number,number_loop,config)	
+
+
 		-- ********* Check & get Dialer Rate card information *********
 		origination_array_DID = ''
-		if(tonumber(config['free_inbound']) == 0)then
-			origination_array_DID = get_call_maxlength(customer_userinfo,destination_number,"outbound",number_loop_str,config)
+--		if(tonumber(config['free_inbound']) == 1)then
+		if(tonumber(config['free_inbound']) == 1 and didinfo['reverse_rate'] ~= nil and didinfo['reverse_rate'] == "0")then
+		Logger.info("[userinfo] Actual origination_array_DID XML DEBUG:")
+			origination_array_DID = get_call_maxlength(customer_userinfo,callerid_number,"outbound",number_loop_str_orig,config,didinfo)
+		else
+		Logger.info("[userinfo] Actual destination_array_DID XML DEBUG:")
+		origination_array_DID = get_call_maxlength(customer_userinfo,destination_number,"inbound",number_loop,config,didinfo)		
 		end
 		local actual_userinfo = customer_userinfo
 		Logger.info("[userinfo] Actual CustomerInfo XML DEBUG:" .. actual_userinfo['id'])
-		--customer_userinfo['id'] = didinfo['accountid'];
-		if((origination_array_DID ~= 'ORIGNATION_RATE_NOT_FOUND' and origination_array_DID ~= 'NO_SUFFICIENT_FUND' and origination_array_DID[3] ~= nil) or tonumber(config['free_inbound']) == 1) then 
+		customer_userinfo['id'] = didinfo['accountid'];
+		Logger.info("[userinfo] Actual CustomerInfo XML DEBUG:" .. customer_userinfo['id'])
+		
+		if((origination_array_DID ~= 'ORIGNATION_RATE_NOT_FOUND' and origination_array_DID ~= 'NO_SUFFICIENT_FUND' and origination_array_DID[3] ~= nil and didinfo['reverse_rate'] ~= nil and didinfo['reverse_rate'] == "0")) then 
 			Logger.info("[userinfo] Userinfo XML:" .. customer_userinfo['id']) 
 			xml_did_rates = origination_array_DID[3]
-			if(xml_did_rates == '' or xml_did_rates == nil)then xml_did_rates = 0 end
+			if(xml_did_rates == '' or xml_did_rates == nil)
+			then 
+			xml_did_rates = 0			
+			end
+		elseif ((origination_array_DID ~= 'ORIGNATION_RATE_NOT_FOUND' and origination_array_DID ~= 'NO_SUFFICIENT_FUND' and origination_array_DID[3] ~= nil )) then
+		Logger.info("[userinfo] Userinfo XML:" .. customer_userinfo['id']) 
+		xml_did_rates = origination_array_DID[3]
+		if(xml_did_rates == '' or xml_did_rates == nil)
+		then 
+		xml_did_rates = 0			
+		end		
 		else
 			error_xml_without_cdr(destination_number,"ORIGNATION_RATE_NOT_FOUND",calltype,config['playback_audio_notification'],customer_userinfo['id'])
 			return
@@ -574,7 +614,7 @@ if (userinfo ~= nil) then
 		while (tonumber(customer_userinfo['reseller_id']) > 0  ) do 
 			Logger.info("[WHILE DID CONDITION] FOR CHECKING RESELLER :" .. customer_userinfo['reseller_id']) 
 			customer_userinfo = doauthorization('id',customer_userinfo['reseller_id'],call_direction,destination_number,number_loop,config)	
-			origination_array_DID = get_call_maxlength(customer_userinfo,destination_number,"outbound",number_loop_str,config)
+			origination_array_DID = get_call_maxlength(customer_userinfo,destination_number,"inbound",number_loop_str,config,didinfo)
 
 			if(origination_array_DID ~= 'ORIGNATION_RATE_NOT_FOUND' and origination_array_DID ~= 'NO_SUFFICIENT_FUND' and origination_array_DID[3] ~= nil) then 
 				Logger.info("[userinfo] Userinfo XML:" .. customer_userinfo['id']) 

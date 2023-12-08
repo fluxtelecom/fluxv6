@@ -434,8 +434,6 @@ class Product_form {
 		
 		return $form;
 	}
-	
-
 	function get_product_listing_search_form() {
 		$form ['forms'] = array (
 				"",
@@ -808,7 +806,6 @@ class Product_form {
 		
 		return $form;
 	}
-	
 	function build_product_list_for_admin($opting_id = "") {
 		$account_info = $accountinfo = $this->CI->session->userdata ( 'accountinfo' );
 		$currency_id = $account_info ['currency_id'];

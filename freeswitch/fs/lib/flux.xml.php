@@ -144,24 +144,24 @@ function load_sofia($logger, $db, $config) {
 	foreach ( $res_sp as $sp_key => $sp_value ) {
 		
 		$settings = json_decode ( $sp_value ['profile_data'], true );
-		// $logger->log(print_r($settings,true));
+		$logger->log(print_r($settings,true));
 		$xml .= "   <profile name=\"" . $sp_value ['name'] . "\">\n";
 		
 		$xml .= "   <domains>\n";
 		$xml .= "       <domain name=\"" . $sp_value ['sip_ip'] . "\" alias=\"true\" parse=\"true\"/>\n";
 		$xml .= "   </domains>\n";
-		
-	/*	 $xml .= " <aliases>\n";
-		 $xml .= " <alias name=\"" . $sp_value['sip_ip'] . "\"/>\n";
-		 $xml .= " </aliases>\n";
-	*/	 
+		/*
+		 * $xml .= " <aliases>\n";
+		 * $xml .= " <alias name=\"" . $sp_value['sip_ip'] . "\"/>\n";
+		 * $xml .= " </aliases>\n";
+		 */
 		$xml .= "   <settings>\n";
 		$xml .= "       <param name=\"sip-ip\" value=\"" . $sp_value ['sip_ip'] . "\"/>\n";
 		$xml .= "       <param name=\"sip-port\" value=\"" . $sp_value ['sip_port'] . "\"/>\n";
 		foreach ( $settings as $set_key => $set_val ) {
 			$xml .= "       <param name=\"" . $set_key . "\" value=\"" . $set_val . "\"/>\n";
 		}
-		$xml .= "       <param name=\"user-agent-string\" value=\"FluxSBC 6.0\"/>\n";
+		$xml .= "       <param name=\"user-agent-string\" value=\"FluxSBC\"/>\n";
 
 		$xml .= "   </settings>\n";
 		
@@ -194,6 +194,7 @@ function load_sofia($logger, $db, $config) {
 	$logger->log ( $xml );
 	return $xml;
 }
+
 function update_vm_data($logger, $db, $password, $user) {
 	$query = "SELECT * FROM sip_devices where username='" . $_REQUEST ['user'] . "' limit 1";
 	$logger->log ( "Directory Query : " . $query );

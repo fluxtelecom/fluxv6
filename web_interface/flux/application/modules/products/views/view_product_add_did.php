@@ -73,7 +73,7 @@
 			 <option value="0"><?php echo gettext('Active')?></option>
                          <option value="1"><?php echo gettext('Inactive')?></option>
 		 	 <?php } ?>
-                      </select>
+                      </select>                                                                                  
                   </div>
               </div>
              </div>
@@ -155,37 +155,80 @@
                       <label class="p-0 control-label"><?php echo gettext('Concurrent Calls')?></label>
                      <input class="col-md-12 form-control form-control-lg m-0" name="maxchannels" value="<?php echo (isset($add_array['maxchannels']))?$add_array['maxchannels']:'' ?>"  size="16" type="text"/>
                   </div>
+        <div class='col-md-6 form-group'>
+    <label class="col-md-12 p-0 control-label"><?php echo gettext('Area Code')?> *</label>
+    			 <input name="area_code" id="area_code" class="col-md-12 form-control form-control-lg m-0" value= "<?php echo (isset($add_array['area_code']))?$add_array['area_code']:'51' ?>" size="2" type="text"/>
+    			 <div class="tooltips error_div pull-left no-padding" id="area_code_error_div" style="display: none;"><i class="fa fa-exclamation-triangle error_triangle"></i><span class="popup_error error  no-padding" id="area_code_error">  </span></div>
+    			 </div>                  
+        <div class='col-md-6 form-group'>
+                          <label class="col-md-12 p-0 control-label"><?php echo gettext('Reverse Rate'); ?></label>
+                          
+                          <select  name="reverse_rate" class="col-md-12 form-control selectpicker form-control-lg" data-live-search='true' datadata-live-search-style='begins'>
+                        <?php if(isset($add_array['reverse_rate'])){ ?>
+                         <option value="0" <?php if($add_array['reverse_rate'] == '0'){ ?> selected="selected" <?php } ?>><?php echo gettext('Enable'); ?></option>
+			<option value="1" <?php if($add_array['reverse_rate'] == '1'){ ?> selected="selected" <?php } ?>><?php echo gettext('Disabled'); ?></option>
+			<?php } else { ?>
+			 <option value="0"><?php echo gettext('Enable')?></option>
+            <option value="1"><?php echo gettext('Disabled')?></option>
+		 	 <?php } ?>
+                      </select>
+
+                      </div>
+        <div class="col-md-6 form-group">
+                      <label class="p-0 control-label"><?php echo gettext('Rate Group'); ?></label>
+			<div class="dropdown bootstrap-select show-tick select field multiselectable col-md-12 form-control dropup">
+                      <select  name="product_rate_group[]"  multiple="multiple"  class=" selectpicker select field multiselectable col-md-12 form-control form-control-lg" data-hide-disabled='true' data-actions-box='true' data-live-search='true' datadata-live-search-style='begins'>
+                         <?php
+			$product_rategrp =$add_array['product_rate_group'];
+			foreach($product_rate_group as $key => $rate_group) { 
+				$selected ='';		
+				if ( in_array($key, $product_rategrp)) {
+					$selected = 'selected = selected';
+				}
+			?>
+				<option value= "<?php echo $key; ?>" <?php echo $selected; ?>> <?php echo  $rate_group ?> </option>
+			<?php } ?>
+                      </select>
+		    </div>
+                  </div>
  </form>
-				<?php
-						if (isset($validation_errors) && $validation_errors != '') { ?>
+<?php
+		if (isset($validation_errors) && $validation_errors != '') { 						
+						?>
 						<script>
 							var ERR_STR = '<?php echo $validation_errors; ?>';
 							print_error(ERR_STR);
 						</script>
 					<? } ?>
-                   <div class="col-md-12">
-                    <div class="col-md-6 float-left ">
-                        <button class="btn btn-success btn-block btn-block" name="action" id ="action" value="Save" type="submit"><?php echo gettext('Save') ?> </button>
+                  <div class="col-md-12 my-4">
+                    <div class="col-md-4 float-left">
+                      <button class="btn btn-info btn-block" name="add_destination" disabled value="Add Destination" onclick="add_did_destination();" type="button"> <i class="fa fa-plus-square-o"></i> <?php echo gettext('Add Destination'); ?> </button>
                     </div>
-		   <div class="col-md-6 float-left">
-                      <?if(isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == "".base_url()."did/did_list/") { ?>
-                      		<button class="btn btn-secondary mx-2 btn-block" name="cancel" onclick="return redirect_page('/did/did_list/')" value="Cancel" type="button"><?php echo gettext('Cancel') ?> </button>
-			<?} else{ ?>
-				<button class="btn btn-secondary mx-2 btn-block" name="cancel" onclick="return redirect_page('/products/products_list/')" value="Cancel" type="button"> <?php echo gettext('Cancel') ?> </button>
-
-			<?php } ?>
-                    </div>    
-                  </div>
+                    <div class="col-md-4 float-left">
+                      <button class="btn btn-success btn-block" name="add_did" id="add_product" value="Add DID" type="button" onclick="add_did_data();"> <?php echo gettext('Save'); ?></button>
+                    </div>
+                    <div class="col-md-4 float-left">
+                      <button class="btn btn-secondary mx-2 btn-block" name="cancel" onclick="return redirect_page('/did/did_list/')" value="Cancel" type="button"> <?php echo gettext('Cancel'); ?> </button>
+                    </div>                        
+                  </div>					   					   
     </div>
+		
   </div>
 </section>
 <script>
-jQuery(document).ready(function() { 
+
+jQuery(document).ready(function() {  
+	
+        $('.checkall').click(function () {
+            $('.chkRefNos').attr('checked', this.checked); 
+        });
+	
+	
 	$("#product_category").change(function(){ 
 		$('#product_add_form').attr('action', "<?php echo base_url();?>products/products_add/");
 		$('#product_add_form').submit();
 	});
-	$("#action").click(function(){ 
+	$("#add_product").click(function(){  
 		var $myForm = $("#product_add_form");
 		$myForm.submit(function(){
 	   		 $myForm.submit(function(){
@@ -193,7 +236,29 @@ jQuery(document).ready(function() {
    		 	});
 		})
 	});
-})
+
+});
+function add_did_destination(){ 
+$("#package_did_pattern").slideToggle(800);
+}
+
+function add_did_data(){ 
+	$('#product_did_add_form').submit();
+	
+}
+function load_did_prefixes(){ 
+var url =  "<?= base_url().'products/products_did_pattern_search/'?>";
+  $.ajax({
+        type:'POST',
+        url: url,
+        data:$('#product_did_pattern_grid').serialize(), 
+        success: function(response) { 
+            $('.flex_grid').flexOptions({
+                 newp:1
+            }).flexReload();
+        }
+    });
+}
 </script>
 <? endblock() ?>  
 <? end_extend() ?> 

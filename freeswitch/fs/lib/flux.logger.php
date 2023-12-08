@@ -25,16 +25,15 @@ class logger {
 	var $config;
 	function __construct($lib) {
 		$this->config = $lib->config;
-//HP: Remove static set value		$this->config ['debug'] = 0;
-		 //~ $this->config['log_path'] = "/backup/html/flux/";
-		if ($this->config ['debug'] == '1') {
-			// $this->fp = fopen($this->config['log_path'] . 'flux_' . date('Y-m-d') . '.txt', 'a+');
+
+		if ($this->config ['debug'] == '0') {
+			//$this->fp = fopen($this->config['log_path'] . 'flux_' . date('Y-m-d') . '.log', 'a+');
 			$this->fp = fopen ( $this->config ['log_path'] . 'flux.log', 'a+' );
 			//$this->fp = fopen ( $this->config ['log_path'], 'a+' );
 		}
 	}
 	function log($log) {
-		if ($this->config ['debug'] == '1') {
+		if ($this->config ['debug'] == '0') {
 			if (is_array ( $log ))
 				fwrite ( $this->fp, "[" . date ( 'Y-m-d H:i:s' ) . "] " . print_r ( $log, TRUE ) );
 			else
@@ -42,7 +41,7 @@ class logger {
 		}
 	}
 	function close() {
-		if ($this->config ['debug'] == '1')
+		if ($this->config ['debug'] == '0')
 			fclose ( $this->fp );
 	}
 }

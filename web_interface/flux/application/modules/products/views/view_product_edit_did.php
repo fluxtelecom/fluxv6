@@ -6,9 +6,6 @@
 <? endblock() ?>
 <? startblock('content') ?>        
 
-
-
-
 <section class="slice color-three">
   <div class="w-section inverse p-0">
       <div class="container">
@@ -21,8 +18,6 @@
         </div>
     </div>
 </section>
-
-
 <section class="slice color-three pb-4">
   <div id="floating-label" class="w-section inverse p-0">
 	<form method="post" name="product_edit_form" id="product_edit_form" action="<?= base_url()."products/products_save/";?>">
@@ -97,8 +92,7 @@
 		<div id="did_view" class="card float-right col-md-8 py-4 mb-4">      
 		  <div class="card pb-4 px-0">
 		     <h3 class="bg-secondary text-light p-2 rounded-top"><?php echo gettext('Product Details'); ?></h3>
-		<div class="row px-4">
-                 
+		          <div class="row px-4">                 
                   <div class='col-md-6 form-group'>
                       <label class="p-0 control-label"><?php echo gettext('Connection Cost').' ('.$currency.')'; ?></label>
                       <input class="col-md-12 form-control form-control-lg m-0" value="<?php echo $this->common->convert_to_currency ( '', '', $product_info['connectcost'] )  ?>" name="connectcost" size="16" type="text"/>
@@ -111,13 +105,12 @@
 		      <div class="tooltips error_div pull-left no-padding" id="includedseconds_error_div" style="display: none;"><i class="fa fa-exclamation-triangle error_triangle"></i><span class="popup_error error  no-padding" id="includedseconds_error">  
  </span></div>	
                   </div>
-		<div class='col-md-6 form-group'>
+		          <div class='col-md-6 form-group'>
                       <label class="p-0 control-label"><?php echo gettext('Cost/Min ('.$currency.') ')?></label>
 			<input class="col-md-12 form-control form-control-lg m-0" value = "<?php echo $this->common->convert_to_currency ( '', '', $product_info['cost'] );?>" name="cost" size="16" type="text"/>
 			  <div class="tooltips error_div pull-left no-padding" id="cost_error_div" style="display: none;"><i class="fa fa-exclamation-triangle error_triangle"></i><span class="popup_error error  no-padding" id="cost_error">  
  </span></div>	
-                  </div>
-                 
+                  </div>                 
                   <div class='col-md-6 form-group'> 
                       <label class="p-0 control-label"><?php echo gettext('Initial Increment')?></label>
                       <input name="init_inc" id="init_inc" class="col-md-12 form-control form-control-lg m-0" value= "<?php echo  $product_info['init_inc']?>" size="16" type="text"/>
@@ -131,53 +124,68 @@
 			
 				
                   </div>
-
-		<div class='col-md-6 form-group'> 
+		          <div class='col-md-6 form-group'> 
                       <label class="p-0 control-label"><?php echo gettext('Setup Fee').' ('.$currency.')'; ?></label>
                       <input class="col-md-12 form-control form-control-lg m-0" value= "<?php echo  $this->common->convert_to_currency ( '', '', $product_info['setup_fee'] )?>" name="setup_fee" size="16" type="text"/>
 			<div class="tooltips error_div pull-left no-padding" id="setup_fee_error_div" style="display: none;"><i class="fa fa-exclamation-triangle error_triangle"></i><span class="popup_error error  no-padding" id="setup_fee_error">   </span></div>	
                   </div>
-		 <div class='col-md-6 form-group'>
+		          <div class='col-md-6 form-group'>
                       <label class="p-0 control-label"><?php echo gettext('MonthlyFee').' ('.$currency.')'?> *</label>
                      <input class="col-md-12 form-control form-control-lg m-0" value= "<?php echo  ( $product_info['price'] !='')?$this->common->convert_to_currency ( '', '', $product_info['price'] ):''?>" name="price" size="16" type="text"/>
 		     <div class="tooltips error_div pull-left no-padding" id="price_error_div" style="display: none;"><i class="fa fa-exclamation-triangle error_triangle"></i><span class="popup_error error  no-padding" id="price_error">   </span></div>	
                   </div>
-		 <div class='col-md-6 form-group'>
+		          <div class='col-md-6 form-group'>
                       <label class="p-0 control-label"><?php echo gettext('Call Timeout')?> (Sec.)</label>
                      <input class="col-md-12 form-control form-control-lg m-0" value= "<?php echo  $product_info['leg_timeout']?>" name="leg_timeout" size="16" type="text"/>
 			<div class="tooltips error_div pull-left no-padding" id="leg_timeout_error_div" style="display: none;"><i class="fa fa-exclamation-triangle error_triangle"></i><span class="popup_error error  no-padding" id="leg_timeout_error">   </span></div>
-                  </div>
-		
-		 <div class='col-md-6 form-group'>
+                  </div>		
+		          <div class='col-md-6 form-group'>
                       <label class="no-padding control-label"><?php echo gettext('Billing Type'); ?></label>
                       <select  name="billing_type" class="col-md-12 form-control selectpicker form-control-lg" data-live-search='true' datadata-live-search-style='begins'>
                        <option value="0" <?php if($product_info['billing_type'] == '0'){ ?> selected="selected" <?php } ?>><?php echo gettext("One Time")?></option>
 			<option value="1" <?php if($product_info['billing_type'] == '1'){ ?> selected="selected" <?php } ?>><?php echo gettext("Recurring")?></option>
                       </select>
                   </div>
-		<div class='col-md-6 form-group'>
+		          <div class='col-md-6 form-group'>
                       <label class="p-0 control-label"><?php echo gettext('Billing Days')?> *</label>
                      <input class="col-md-12 form-control form-control-lg m-0" value= "<?php echo  $product_info['billing_days']?>" name="billing_days" size="16" type="text"/>
 			<div class="tooltips error_div pull-left no-padding" id="billing_days_error_div" style="display: none;"><i class="fa fa-exclamation-triangle error_triangle"></i><span class="popup_error error  no-padding" id="billing_days_error"></span></div>	
                   </div>
-		<div class='col-md-6 form-group'>
+		          <div class='col-md-6 form-group'>
                       <label class="p-0 control-label"><?php echo gettext('Concurrent Calls')?></label>
                      <input class="col-md-12 form-control form-control-lg m-0" value= "<?php echo  $product_info['maxchannels']?>" name="maxchannels" size="16" type="text"/>
 			<div class="tooltips error_div pull-left no-padding" id="maxchannels_error_div" style="display: none;"><i class="fa fa-exclamation-triangle error_triangle"></i><span class="popup_error error  no-padding" id="maxchannels_error">   </span></div>	
                   </div>
-    <div class='col-md-6 form-group'>
+		          <div class='col-md-6 form-group'>
                           <label class="col-md-12 p-0 control-label"><?php echo gettext('Area Code')?> *</label>
     			 <input name="area_code" id="area_code" class="col-md-12 form-control form-control-lg m-0" value= "<?php echo  $product_info['area_code']?>" size="2" type="text"/>
     			 <div class="tooltips error_div pull-left no-padding" id="area_code_error_div" style="display: none;"><i class="fa fa-exclamation-triangle error_triangle"></i><span class="popup_error error  no-padding" id="area_code_error">  </span></div>
     			 </div>                  
-                      <div class='col-md-6 form-group'>
+                  <div class='col-md-6 form-group'>
                           <label class="col-md-12 p-0 control-label"><?php echo gettext('Reverse Rate'); ?></label>
                           <select  name="reverse_rate" class="col-md-12 form-control selectpicker form-control-lg" data-live-search='true' datadata-live-search-style='begins'>
                              <option value="0" <?php if($product_info['reverse_rate'] == '0'){ ?> selected="selected" <?php } ?>><?php echo gettext('Enable'); ?></option>
     			<option value="1" <?php if($product_info['reverse_rate'] == '1'){ ?> selected="selected" <?php } ?>><?php echo gettext('Disabled'); ?></option>
                           </select>
                       </div>
- </form>
+                  <div class='col-md-6 form-group'>
+                      <label class="p-0 control-label"><?php echo gettext('Rate Group'); ?></label>
+			<div class="dropdown bootstrap-select show-tick select field multiselectable  col-md-12 form-control form-control-lg dropup">
+                      <select  name="rate_group" class="col-md-12 form-control selectpicker form-control-lg" data-live-search='true' datadata-live-search-style='begins'>
+                        <?php $product_rategrp =explode(',',$product_info['rate_group']);
+				foreach($product_rate_group as $key => $rate_group) { 
+					$selected ='';		
+				if ( in_array($key, $product_rategrp)) {
+					$selected = 'selected = selected';
+				}
+
+				?>
+				<option value= "<?php echo $key; ?>" <?php echo $selected; ?>> <?php echo  $rate_group ?> </option>
+			<?php }  ?>
+                      </select>
+		    </div>
+                  </div>
+              </form>
 				<?php
 						if (isset($validation_errors) && $validation_errors != '') { ?>
 						<script>
@@ -203,10 +211,7 @@
                     </div>                        
                   </div>
               
-    </div>
-	
-
-	
+    </div>		
   </div>
 </section>
 <script>

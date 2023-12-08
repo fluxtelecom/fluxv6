@@ -14,5 +14,5 @@ $config ['module_download_url'] = "http://localhost/ADDONS/";
 //~ $config['flux_path'] = "/opt/ITPLATP/web_interface/";
 $config['addons_path'] = FCPATH."addons/";
 
-$config['fs_path'] = "/var/www/html/fs6/";
+$config['fs_path'] = "/var/www/html/fs/";
 $config['fs_usr_path'] = "/usr/share/freeswitch/";

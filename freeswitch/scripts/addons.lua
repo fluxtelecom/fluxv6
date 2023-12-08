@@ -1,4 +1,3 @@
--- FLUXUPDATE-1170  start
 local ringgroup = "/usr/local/freeswitch/scripts/flux/lib/addons/flux.ringgroup.lua"
 local f=io.open(ringgroup,"r")
 if f~=nil then
@@ -16,4 +15,3 @@ if f~=nil then
 else
     return false
 end
--- FLUXUPDATE-1170  End

@@ -31,6 +31,7 @@ session:setVariable("process_cdr","false")
 if string.find(destination_number,"^%*72") then
 session:answer()
 session:execute("sleep","1000")
+session:execute("info","")
 session:execute("Playback","howtoSigame.wav")
 digits = session:playAndGetDigits(8, 15, 3, 12000, "#", "tone_stream://%(1000,5000,400);loops=-1", "ivr/8000/ivr-phone_not_configured.wav", "\\d+")
 session:consoleLog("info", "Got DTMF digits: ".. digits .."\n")

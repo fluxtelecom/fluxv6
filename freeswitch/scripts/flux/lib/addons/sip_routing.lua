@@ -21,7 +21,7 @@ function get_record_info(customer_userinfo)
 end
 
 
-function check_local_call(destination_number)
+function check_local_call_routing(destination_number)
     -- local query = "SELECT sip_devices.id as sip_id,sip_devices.username as username,accounts.number as accountcode,sip_devices.accountid as accountid,accounts.did_cid_translation as did_cid_translation,sip_devices.codec as sip_codec FROM "..TBL_SIP_DEVICES.." as sip_devices,"..TBL_USERS.." as  accounts ,domains WHERE accounts.id=domains.accountid AND accounts.status=0 AND accounts.deleted=0 AND accounts.id=sip_devices.accountid AND sip_devices.username=\"" ..destination_number .."\"  AND domains.domain=\"" ..user_domain .."\" limit 1";
 	local query = "SELECT sip_devices.id as sip_id,sip_devices.username as username,accounts.number as accountcode,sip_devices.accountid as accountid,accounts.did_cid_translation as did_cid_translation,sip_devices.codec as sip_codec FROM "..TBL_SIP_DEVICES.." as sip_devices,"..TBL_USERS.." as  accounts WHERE accounts.status=0 AND accounts.deleted=0 AND accounts.id=sip_devices.accountid AND sip_devices.username=\"" ..destination_number .."\" limit 1";
    
@@ -55,8 +55,6 @@ function sip_device_fail_over(didinfo,xml,destination_number)
 		end 
 	end
 end
-
-
 
 function sip_device_routing(xml,destination_number,destinationinfo,callerid_array) 
 	Logger.info("[PBX_SIP_ROUTING] SIP ID : "..destinationinfo['sip_id'])
@@ -100,7 +98,7 @@ function sip_device_routing(xml,destination_number,destinationinfo,callerid_arra
 		table.insert(xml, [[<action application="lua" data="flux/lib/sip_routing/flux-sipdevice-routing.lua"/>]]);
 end
 
-function freeswitch_xml_local(xml,destination_number,destinationinfo,callerid_array)
+function freeswitch_xml_local_routing(xml,destination_number,destinationinfo,callerid_array)
     local sip_routing_info = sip_routing_info(destinationinfo['sip_id'])
 
     Logger.info("DESTINATION : "..destination_number)
@@ -168,7 +166,7 @@ function custom_inbound_10(xml,didinfo,userinfo,config,xml_did_rates,callerid_ar
 	leave_voicemail(xml,destination_number,destination_str[1])
 end
 
-function custom_inbound_11(xml,didinfo,userinfo,config,xml_did_rates,callerid_array,livecall_data)
+function custom_inbound_5(xml,didinfo,userinfo,config,xml_did_rates,callerid_array,livecall_data)
 	config['leg_timeout'] = didinfo['leg_timeout'];
 	is_local_extension = "1"
     local bridge_str = ""

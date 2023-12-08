@@ -180,6 +180,7 @@ buycost,reseller_products.price,reseller_products.billing_type,reseller_products
 					"setup"=>isset($add_array['setup_fee'])?$this->common_model->add_calculate_currency ($add_array['setup_fee'], "", '', false, false ):"0",
 					"maxchannels"=>isset($add_array['maxchannels'])?$add_array['maxchannels']:"0",
 					"reverse_rate"=>isset($add_array['reverse_rate'])?$add_array['reverse_rate']:"0",
+					"rate_group"=>isset($add_array['product_rate_group'])?implode(",",$add_array['product_rate_group']):"0",
 					"call_type"=>isset($add_array['call_type'])?$add_array['call_type']:"",
 					"leg_timeout"=>isset($add_array['leg_timeout'])?$add_array['leg_timeout']:"30",
 					"last_modified_date"=>gmdate("Y-m-d H:i:s"),
@@ -247,9 +248,9 @@ buycost,reseller_products.price,reseller_products.billing_type,reseller_products
 	}
 	function edit_product($add_array, $id,$editpatternSearchArr='') {
 		$accountinfo = $this->session->userdata ( "accountinfo" );
-//		unset($add_array['apply_on_existing_account']);
-//		unset($add_array['product_rate_group']);
-//		unset ( $add_array ["email_notify"] );
+		unset($add_array['apply_on_existing_account']);
+		unset($add_array['product_rate_group']);
+		unset ( $add_array ["email_notify"] );
 		$add_array['product_category'] = isset($add_array['product_category'])?$add_array['product_category']:'';
 		if($add_array['product_category']=='DID' || $add_array['product_category']== 4){
 				$destination_info = $this->db_model->getSelect("call_type,extensions","dids",array("number"=>$add_array['number']));
@@ -298,7 +299,6 @@ buycost,reseller_products.price,reseller_products.billing_type,reseller_products
 				"billing_days"=>isset($add_array['billing_days'])?$add_array['billing_days']:"",
 				"free_minutes"=>isset($add_array['free_minutes'])?$add_array['free_minutes']:"",
 				"applicable_for"=>isset($add_array['applicable_for'])?$add_array['applicable_for']:0,
-				"apply_on_rategroups"=>isset($add_array['rate_group'])?$add_array['rate_group']:0,
 				"destination_rategroups"=>isset($editpatternSearchArr['destination_rategroups'])?implode(",",$editpatternSearchArr['destination_rategroups']):"",
 				"destination_countries"=>isset($editpatternSearchArr['destination_countries'])?implode(",",$editpatternSearchArr['destination_countries']):"",
 				"destination_calltypes"=>isset($editpatternSearchArr['destination_calltypes'])?implode(",",$editpatternSearchArr['destination_calltypes']):"",

@@ -132,7 +132,7 @@
 		<div class='col-md-6 form-group'>
                       <label class="p-0 control-label"><?php echo gettext('Rate Group'); ?></label>
 			<div class="dropdown bootstrap-select show-tick select field multiselectable  col-md-12 form-control form-control-lg dropup">
-                      <select  name="product_rate_group[]"  multiple="multiple" class=" selectpicker select field multiselectable col-md-12 form-control form-control-lg" data-live-search='true' datadata-live-search-style='begins'>
+                      <select  name="product_rate_group[]"  multiple="multiple" class=" selectpicker select field multiselectable col-md-12 form-control form-control-lg" data-live-search='true' datadata-live-search-style='begins' disabled>
                         <?php $product_rategrp =explode(',',$product_info['apply_on_rategroups']);
 				foreach($product_rate_group as $key => $rate_group) { 
 					$selected ='';		
@@ -148,7 +148,7 @@
                   </div>
                  <div class='col-md-6 form-group'>
                       <label class="p-0 control-label"><?php echo gettext('Apply on existing accounts'); ?> </label>
-                      <select  name="apply_on_existing_account" class="col-md-12 form-control selectpicker form-control-lg" data-live-search='true' datadata-live-search-style='begins'>
+                      <select  name="apply_on_existing_account" class="col-md-12 form-control selectpicker form-control-lg" data-live-search='true' datadata-live-search-style='begins' disabled>
                         <option value="1" <?php if($product_info['apply_on_existing_account'] == '1'){ ?> selected="selected" <?php } ?>><?php echo gettext('No');?></option>
 			<option value="0" <?php if($product_info['apply_on_existing_account'] == '0'){ ?> selected="selected" <?php } ?>><?php echo gettext('Yes');?></option>
                       </select>
@@ -179,6 +179,7 @@
 		<div class="col-md-12 my-4">
                     <div class="col-md-4 float-left">
                       <button class="btn btn-outline-info btn-block" name="action" data-toggle="modal" data-target="#addDestination"  value="Add Destination" onclick="edit_package_destination();" type="button"> <i class="fa fa-plus-square-o"></i> <?php echo gettext('Add Destination'); ?> </button>
+			
                     </div>
                     <div class="col-md-4 float-left">
                        <button class="btn btn-success btn-block" name="action" value="Save" type="submit"><?php echo gettext('Save'); ?> </button>

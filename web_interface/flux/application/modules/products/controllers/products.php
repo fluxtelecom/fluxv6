@@ -142,6 +142,8 @@ class Products extends MX_Controller {
 		$data ['page_title'] = gettext ( 'Edit Product' );
 		$accountinfo = $this->session->userdata ( "accountinfo" );
 		$reseller_id = $accountinfo ['type'] == 1 ? $accountinfo ['id'] : 0;
+        $log_session = $this->session->userdata;
+		$this->invoice_log->write_log ( 'report_info', json_encode($log_session) );
 		$data['product_category'] = $this->ProductCategory;
 		$data ['grid_fields'] = $this->product_form->build_block_pattern_list_for_customer($edit_id);
 		$where_arr = array("reseller_id"=>$reseller_id,"status"=>0);
@@ -309,10 +311,8 @@ class Products extends MX_Controller {
 				$data ['page_title'] = gettext ( 'Edit Product' );
 				$data['product_info'] = $add_array ;
 				$data['product_info']['description'] =  isset($add_array['product_description'])?$add_array['product_description']:['description'];
-				$data['product_info']['buy_cost'] = isset($add_array['product_buy_cost'])?$add_array['product_buy_cost']:$product_info['buy_cost'];
-				
+				$data['product_info']['buy_cost'] = isset($add_array['product_buy_cost'])?$add_array['product_buy_cost']:$product_info['buy_cost'];				
 				$data['product_rate_group'] = $this->db_model->build_dropdown("id,name", "pricelists", "", $where_arr);	
-
 				$data['product_info']['apply_on_rategroups'] = $product_info['apply_on_rategroups'];
 				$data['product_info']['name'] = (isset($add_array['product_name']) && $add_array['product_name'] !='' )?$add_array['product_name']: $product_info['name'];
 				$data['product_info']['description'] = (isset($add_array['product_description']) && $add_array['product_description'] !='' )?$add_array['product_description']: $product_info['description'];
@@ -321,9 +321,7 @@ class Products extends MX_Controller {
 				$data['product_info']['id'] = $product_info['id'];
 				$data['product_info']['product_id'] = $product_info['id'];
 				$data['accountinfo'] = $accountinfo ;
-
 				$data ['validation_errors'] = validation_errors ();
-
 				$this->load->view ( 'view_product_edit_'.strtolower($category), $data);	
 	       	         }
 	       	         else{  
@@ -519,6 +517,11 @@ class Products extends MX_Controller {
 	function products_package_pattern_search() {
 		$package_search_data = $this->input->post ();
 		$this->session->set_userdata ( 'product_package_pattern_search', $package_search_data );
+		exit;
+	}
+	function products_did_pattern_search() {
+		$package_did_search_data = $this->input->post ();
+		$this->session->set_userdata ( 'products_did_pattern_search', $package_did_search_data );
 		exit;
 	}
 	function products_quick_search(){

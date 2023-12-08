@@ -20,7 +20,7 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
 // ##############################################################################
-ini_set ( "date.timezone", "America/Sao_Paulo" );
+#ini_set ( "date.timezone", "America/Sao_Paulo" );
 define ( 'ENVIRONMENT', 'production' );
 if (defined ( 'ENVIRONMENT' )) {
 	switch (ENVIRONMENT) {
@@ -63,12 +63,12 @@ $logger = new logger ( $lib );
 if (isset ( $_SERVER ["CONTENT_TYPE"] ) && $_SERVER ["CONTENT_TYPE"] == "application/json") {
 	
 	$db->run ( "SET NAMES utf8" );
-	//$data = json_decode ( file_get_contents ( "php://input" ), true );
+	#$data = json_decode ( file_get_contents ( "php://input" ), true );
 	$data = file_get_contents("php://input");
     $data = utf8_encode($data);
 	$data = json_decode($data,true);
 
-	// error_log(print_r($data,true));
+//	 error_log(print_r($data,true));
 	$logger->log ( print_r ( $data, true ) );
 
 	if (isset($data ['variables']['module_name'])){

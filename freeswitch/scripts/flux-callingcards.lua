@@ -84,7 +84,7 @@ end
 session:setAutoHangup(false);
 
 if(config['calling_cards_welcome_file'] ~= "") then
-        session:streamFile("/var/www/html/flux6/upload/"..config['calling_cards_welcome_file']);
+        session:streamFile("/var/www/html/flux/upload/"..config['calling_cards_welcome_file']);
 else
         session:streamFile(sound_path.."flux-welcome.wav");          
 end

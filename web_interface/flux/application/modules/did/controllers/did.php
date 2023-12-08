@@ -34,6 +34,7 @@ class DID extends MX_Controller
         $this->load->library('flux/form', 'did_form');
         $this->load->library('flux/permission');
         $this->load->model('did_model');
+        $this->load->library ('Invoice_log');
         $this->load->library('csvreader');
         $this->load->library('did_lib');
         $this->load->library('flux/order');

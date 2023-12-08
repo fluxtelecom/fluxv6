@@ -187,14 +187,14 @@ class Addons extends MX_Controller
 
                 // ============================ FREESWITCH COPY START ======================
 
-                if (is_dir($addons_path . $type . "/" . $module . "/freeswitch/fs6/lib/addons")) {
+                if (is_dir($addons_path . $type . "/" . $module . "/freeswitch/fs/lib/addons")) {
                     // Copy files to web folder but in fs folder
                     echo "Copying file for freeswitch CDR...<br/>";
 
                     // Copy freeswitch cdr process files
-                    $remove_path = $addons_path . $type . "/" . $module . "/freeswitch/fs6/";
+                    $remove_path = $addons_path . $type . "/" . $module . "/freeswitch/fs/";
                     $add_path = $fs_path;
-                    $path = $addons_path . $type . "/" . $module . "/freeswitch/fs6/lib/addons/";
+                    $path = $addons_path . $type . "/" . $module . "/freeswitch/fs/lib/addons/";
                     $scans = scandir($path);
                     $result_array = $this->recursiveFiles($path);
                     $files_array = $this->flatten_array($result_array, $remove_path, $add_path);
@@ -203,10 +203,10 @@ class Addons extends MX_Controller
                     $paths_of_decoded_files['freeswitch'] = $merge_array;
                     $paths_of_file['freeswitch'] = $merge_array;
                     system("/bin/mkdir -p " . $fs_path . "lib/addons/");
-                    $last_line = system("/bin/cp -rf " . $addons_path . $type . "/" . $module . "/freeswitch/fs6/lib/addons/. " . $fs_path . "/lib/addons/.", $retval);
+                    $last_line = system("/bin/cp -rf " . $addons_path . $type . "/" . $module . "/freeswitch/fs/lib/addons/. " . $fs_path . "/lib/addons/.", $retval);
 
                     if ($retval == '1') {
-                        echo "<span style='color:red;'>Failed!! Unable to copy files to /var/www/html/fs6/lib/addons/ folder!!!</span><br/><br/>";
+                        echo "<span style='color:red;'>Failed!! Unable to copy files to /var/www/html/fs/lib/addons/ folder!!!</span><br/><br/>";
                         echo "<a href='" . base_url() . "addons/addons_list/" . $type . "'>Back</a>";
                         if ($action != "update") {
                             foreach ($paths_of_decoded_files as $key => $val) {
@@ -381,14 +381,12 @@ class Addons extends MX_Controller
                         "package_name" => $module
                     ));
                 }
-                // FLUXUPDATE-982 Ashish Start
                 if($module=='voice_broadcast'){
-                    $dir_path = "/opt/flux6/web_interface/flux/upload/voice_broadcast";
+                    $dir_path = "/opt/flux/web_interface/flux/upload/voice_broadcast";
                     mkdir($dir_path, 0777, true);
                     chmod($dir_path, 0777);
                 }
-                // FLUXUPDATE-982 Ashish End
-		//AD: Language
+
                 if (strpos($module, 'language') !== false) {
                     $command = "wget --no-check-certificate -q -O- ".base_url() ."Translation_script/insert_translation/".$module;
                     system($command);
@@ -466,11 +464,9 @@ class Addons extends MX_Controller
                 $this->db_model->delete("addons", array(
                     "package_name" => $module
                 ));
-                // FLUXUPDATE-982 Ashish Start
                 if($module == 'voice_broadcast' ){
-                    exec("/bin/rm -rf /opt/flux6/web_interface/flux/upload/voice_broadcast");
+                    exec("/bin/rm -rf /opt/flux/web_interface/flux/upload/voice_broadcast");
                 }
-                // FLUXUPDATE-982 Ashish End
                 echo "Module uninstall process completed!!<br/><br/>";
                 echo "Please re-login to get impact of addon!! <a href='/logout'>Re-login</a> | <a href='" . base_url() . "addons/addons_list/" . $type . "'>Back</a><br/><br/>";
                 exit();

@@ -431,9 +431,8 @@ function dialout( original_destination_number, destination_number, maxlength, us
 				session:execute("export","calltype=CALLINGCARD");    
 				session:execute("export","origination_rates="..origination_dp_string);
 				session:execute("set", "execute_on_answer=sched_hangup +" .. (maxlength * 60 ) );
-                		session:execute("set", "process_cdr=true" );
-				session:execute("sched_hangup","+"..(maxlength * 60 ).. "" );
-	    		   		    		    		
+                session:execute("set", "process_cdr=true" );
+				session:execute("sched_hangup","+"..(maxlength * 60 ).. "" );	    		   		    		    		
 		    	calleridinfo = get_override_callerid(userinfo)
                 callerid_array = {}			   
 		    	if (calleridinfo['cid_number'] ~= nil) then

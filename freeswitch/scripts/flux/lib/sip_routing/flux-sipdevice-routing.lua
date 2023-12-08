@@ -56,10 +56,9 @@ if session:ready() then
 	last_disposition = session:getVariable("originate_disposition");
 	last_sip_rates = session:getVariable("origination_rates");
 	variable_sip_to_host = session:getVariable("variable_sip_to_host");
-	variable_sip_contact_port = session:getVariable("internal_sip_port");
+	variable_sip_to_port = session:getVariable("variable_sip_to_port");
 	userinfo_id = session:getVariable("userinfo_id");
 	did_number = session:getVariable("did_number");
-
 	user_domain = session:getVariable("user_domain");
 	logger("This Is Last Dispositions "..last_disposition.." This Is SIP Number : "..sip_destination_number)	
 	local routing_destination = ''
@@ -76,14 +75,12 @@ if session:ready() then
 		routing_destination = no_answer_destination
 		permission_flag = no_answer_flag
 	end
-
 	if (permission_flag=='' and sip_destination_number ~= '') then
 		routing_destination = sip_destination_number
 		permission_flag = 1
 	end
-
 	if(routing_destination ~= '' and permission_flag ~= '' and tonumber(permission_flag) == 0) then
-		bridge = "{ignore_early_media=true,sip_h_P-did_number="..did_number..",sip_h_P-call_type='custom_forward',sip_h_P-Accountcode="..userinfo_id.."}user/"..routing_destination.."@"..variable_sip_to_host..":"..variable_sip_contact_port
+		bridge = "{ignore_early_media=true,sip_h_P-did_number="..did_number..",sip_h_P-call_type='custom_forward',sip_h_P-Accountcode="..userinfo_id.."}user/"..routing_destination.."@"..variable_sip_to_host..":"..variable_sip_to_port
 		session:execute("bridge", bridge)
 	end
 	if last_disposition ~= "SUCCESS" then

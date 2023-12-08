@@ -106,7 +106,7 @@
 					<div class="col-md-1 pr-0">
 						<?php if($call_type_vm_flag == 0){ ?>
 							<input type="hidden" name="call_type_vm_flag" value="1" />
-							<input type="checkbox" name="call_type_vm_flag" value="0" />
+							<input type="checkbox" name="call_type_vm_flag" value="0" checked />
 						<?php } else{ ?>
 							<input type="hidden" name="call_type_vm_flag" value="1" />
 							<input type="checkbox" name="call_type_vm_flag" value="0"  /> <?php }?>

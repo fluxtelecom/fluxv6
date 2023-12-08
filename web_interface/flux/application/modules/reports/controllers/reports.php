@@ -35,6 +35,7 @@ class Reports extends MX_Controller
         $this->load->library('flux/form', 'reports_form');
         $this->load->model('reports_model');
         $this->load->library('FLUX_Sms');
+        $this->load->library ( 'Invoice_log' );
 
         if ($this->session->userdata('user_login') == FALSE)
             redirect(base_url() . '/flux/login');
@@ -63,12 +64,13 @@ class Reports extends MX_Controller
         $query = $this->reports_model->getcustomer_cdrs(true, $paging_data["paging"]["start"], $paging_data["paging"]["page_no"]);
 
         if ($query->num_rows() > 0) {
+            
             $pricelist_arr = array();
             $trunk_arr = array();
             $search_arr = $this->session->userdata('customer_cdr_list_search');
             $show_seconds = (! empty($search_arr['search_in'])) ? $search_arr['search_in'] : 'minutes';
             $query = $query->result_array();
-
+            $this->invoice_log->write_log ( 'report_info', json_encode($query) );
             $where = "id IN (" . $count_all['pricelist_ids'] . ")";
             $this->db->where($where);
             $this->db->select('id,name');
