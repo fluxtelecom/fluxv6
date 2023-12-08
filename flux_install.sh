@@ -202,7 +202,7 @@ install_prerequisties ()
 get_flux_source ()
 {
         cd /opt
-        git clone https://github.com/fluxtelecom/fluxv6/ flux
+        git clone https://github.com/fluxtelecom/fluxv6/ -b did-reverse flux
         
 }
 
