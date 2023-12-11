@@ -137,8 +137,10 @@ function process_cdr($data, $db, $logger, $decimal_points, $config) {
 		//$dataVariable ['calltype'] = "Padrao";
 	}
 	
-	if (isset ( $dataVariable ['call_type_custom'] )) {
+	if (isset ( $dataVariable ['call_type_custom'] ) && $dataVariable ['call_type_custom'] == "DID-REVERSE"){
 		$dataVariable ['type'] = $dataVariable ['call_type_custom'];
+		$termination_rate ['PROVIDER'] = $dataVariable ['provider_id'];
+		$logger->log("GET Provider");
 		//$dataVariable ['calltype'] = "Padrao";
 	}
 //check custom function	
@@ -187,7 +189,8 @@ $logger->log("*********************** Harsh_trunk in package_id: **".$dataVariab
 	$logger->log ( "*********calltype::::::**************".$dataVariable ['calltype']."*************" );	
 	$cdr_string = get_cdr_string ( $dataVariable, $accountid, $account_type, $actual_duration, $termination_rate, $origination_rate, $provider_cost, $parentid, $debit, $cost, $logger, $db );
 
-	if ($dataVariable['calltype'] != 'DID-LOCAL'){
+	if ($dataVariable['calltype'] != 'DID-LOCAL' || $dataVariable ['call_type_custom'] == "DID-REVERSE"){
+	$logger->log ( "TARIFAS:::". $cdr_string);
 	$query = "INSERT INTO cdrs (uniqueid,accountid,type,callerid,callednum,billseconds,trunk_id,trunkip,callerip,disposition,callstart,debit,cost,provider_id,pricelist_id,package_id,pattern,notes,rate_cost,reseller_id,reseller_code,reseller_code_destination,reseller_cost,provider_code,provider_code_destination,provider_cost,provider_call_cost,call_direction,calltype,call_request,country_id,sip_user,ct,end_stamp)  values ($cdr_string)";
 	}
 	$logger->log ( $query );
@@ -211,44 +214,47 @@ $logger->log("*********************** Harsh_trunk in package_id: **".$dataVariab
 	
 	// ************ ADDING EXTRA ENTRY For local/DID Inbound call ****************************
 	$receiver_parentid = 0;
-	if (isset ( $dataVariable ['receiver_accid'] ) && $dataVariable ['receiver_accid'] != "") {
-		$logger->log ( "*********************** EXTRA ENTRY SECTION FOR BILLING START *************" );
-		
-		// Explicitly set call direction and call type
-		$dataVariable ['call_direction'] = "inbound";
-		if($dataVariable ['calltype'] == 'DID')
-		//	$dataVariable ['sip_user'] = '';
-		$dataVariable ['calltype'] = "DID";
-		// For inbound package calculation
-		if ($actual_duration > 0 && isset($dataVariable ['package_id']) && $dataVariable ['package_id'] > 0) {
-			$package_array = package_calculation ( $dataVariable ['effective_destination_number'], $dataVariable ['package_id'], $actual_duration, $dataVariable ['call_direction'], $accountid,$dataVariable, $db, $logger );
-			if (! empty ( $package_array )) {
-				$dataVariable ['calltype'] = "Gratuita";
-				$dataVariable ['package_id'] = $package_array ['package_id'];
+	if (isset ( $dataVariable ['call_type_custom'] ) && $dataVariable ['call_type_custom'] != "DID-REVERSE"){
+		if (isset ( $dataVariable ['receiver_accid'] ) && $dataVariable ['receiver_accid'] != "") {
+			
+			$logger->log ( "*********************** EXTRA ENTRY SECTION FOR BILLING START *************" );
+			
+			// Explicitly set call direction and call type
+			$dataVariable ['call_direction'] = "inbound";
+			if($dataVariable ['calltype'] == 'DID')
+			//	$dataVariable ['sip_user'] = '';
+			$dataVariable ['calltype'] = "DID";
+			// For inbound package calculation
+			if ($actual_duration > 0 && isset($dataVariable ['package_id']) && $dataVariable ['package_id'] > 0) {
+				$package_array = package_calculation ( $dataVariable ['effective_destination_number'], $dataVariable ['package_id'], $actual_duration, $dataVariable ['call_direction'], $accountid,$dataVariable, $db, $logger );
+				if (! empty ( $package_array )) {
+					$dataVariable ['calltype'] = "Gratuita";
+					$dataVariable ['package_id'] = $package_array ['package_id'];
+				}
 			}
-		}
-		// Override variables if call for DID PSTN
-		if (isset ( $dataVariable ['caller_did_account_id'] )) {
-			$dataVariable ['receiver_accid'] = $dataVariable ['caller_did_account_id'];
-			$dataVariable ['call_direction'] = "outbound";
-			//$dataVariable ['calltype'] = "Padrao";
-			$dataVariable ['effective_destination_number'] = $dataVariable ['sip_to_user'];
-			unset ( $termination_rate );
-			unset ( $provider_cost );
-		}
-		
-		// Get call receiver account information
-		$receiver_carddata = get_accounts ( $dataVariable ['receiver_accid'], $logger, $db );
-		$receiver_parentid = $receiver_carddata ['reseller_id'];
-		
-		// For additional cdr entry of receiver
-		insert_extra_receiver_entry ( $dataVariable, $origination_rate, $termination_rate, $account_type, $actual_duration, $provider_cost, $receiver_parentid, $flag_parent, $dataVariable ['receiver_accid'], $logger, $db, $decimal_points, $config,$trunk_id );
-		$flag_parent = true;
-		$dataVariable ['uuid'] = $dataVariable ['uuid'] . $dataVariable ['calltype'] . "_" . $receiver_parentid;
-		
-		// Insert parent reseller cdr
-		insert_parent_data ( $dataVariable, $actual_calltype, $receiver_parentid, $origination_rate, $actual_duration, $provider_cost, $flag_parent, $logger, $db, $decimal_points, $config );
-		$logger->log ( "*********************** EXTRA ENTRY SECTION FOR BILLING END *************" );
+			// Override variables if call for DID PSTN
+			if (isset ( $dataVariable ['caller_did_account_id'] )) {
+				$dataVariable ['receiver_accid'] = $dataVariable ['caller_did_account_id'];
+				$dataVariable ['call_direction'] = "outbound";
+				//$dataVariable ['calltype'] = "Padrao";
+				$dataVariable ['effective_destination_number'] = $dataVariable ['sip_to_user'];
+				unset ( $termination_rate );
+				unset ( $provider_cost );
+			}
+			
+			// Get call receiver account information
+			$receiver_carddata = get_accounts ( $dataVariable ['receiver_accid'], $logger, $db );
+			$receiver_parentid = $receiver_carddata ['reseller_id'];
+			
+			// For additional cdr entry of receiver
+			insert_extra_receiver_entry ( $dataVariable, $origination_rate, $termination_rate, $account_type, $actual_duration, $provider_cost, $receiver_parentid, $flag_parent, $dataVariable ['receiver_accid'], $logger, $db, $decimal_points, $config,$trunk_id );
+			$flag_parent = true;
+			$dataVariable ['uuid'] = $dataVariable ['uuid'] . $dataVariable ['calltype'] . "_" . $receiver_parentid;
+			
+			// Insert parent reseller cdr
+			insert_parent_data ( $dataVariable, $actual_calltype, $receiver_parentid, $origination_rate, $actual_duration, $provider_cost, $flag_parent, $logger, $db, $decimal_points, $config );
+			$logger->log ( "*********************** EXTRA ENTRY SECTION FOR BILLING END *************" );
+		}	
 	}
 	// *****************************************************************************************
 	$logger->log ( "*************************** CDR ends ********************************" );
@@ -350,7 +356,6 @@ function insert_extra_receiver_entry($dataVariable, $origination_rate, $terminat
 	}
 //	$dataVariable ['sip_user'] = '';
 	if ($flag_parent == false) {
-//HP: Add sip_user in cdrs string for DID
 		$query = "INSERT INTO cdrs(uniqueid,accountid,type,callerid,callednum,billseconds,trunk_id,trunkip,callerip,disposition,callstart,debit,cost,provider_id,pricelist_id,package_id,pattern,notes,rate_cost,reseller_id,reseller_code,reseller_code_destination,reseller_cost,provider_code,provider_code_destination,provider_cost,provider_call_cost,call_direction,calltype,call_request,country_id,sip_user,ct,end_stamp) values ($cdr_string)";
 	} else {
 		$query = "INSERT INTO reseller_cdrs (uniqueid,accountid,callerid,callednum,billseconds,disposition,callstart,debit,cost,pricelist_id,package_id,pattern,notes,rate_cost,reseller_id,reseller_code,reseller_code_destination,reseller_cost,call_direction,calltype,call_request,country_id,end_stamp) values ($cdr_string)";
@@ -482,7 +487,7 @@ function calc_cost($dataVariable, $rates, $logger, $decimal_points) {
 	if ($duration > 0) {
 		
 		// Take off the 'Initial Increment', and bill for that.
-		$rates ['INITIALBLOCK'] = (empty($rates['INITIALBLOCK']) || $rates['INITIALBLOCK'] < 1) ? 0 : $rates ['INITIALBLOCK']; //HP: change default value 1 to 0 when 'INITIALBLOCK' emotry or lessthen 1.
+		$rates ['INITIALBLOCK'] = (empty($rates['INITIALBLOCK']) || $rates['INITIALBLOCK'] < 1) ? 30 : $rates ['INITIALBLOCK']; //HP: change default value 1 to 0 when 'INITIALBLOCK' emotry or lessthen 1.
 		$call_cost += ($rates['COST'] / 60) * $rates ['INITIALBLOCK'];
 		$duration -= $rates ['INITIALBLOCK'];
 		
@@ -494,6 +499,9 @@ function calc_cost($dataVariable, $rates, $logger, $decimal_points) {
 	}
 	$call_cost = number_format ( $call_cost, $decimal_points );
 	$logger->log ( "Return cost " . $call_cost );
+	$logger->log ( "INITIALBLOCK " . $rates ['INITIALBLOCK'] );
+	$logger->log ( "INC " . $rates ['INC'] );
+	$logger->log ( "COST " . $rates ['COST'] );
 	return $call_cost;
 }
 //HP: Changes code for check multiple package.
@@ -542,6 +550,8 @@ function package_calculation($destination_number, $package_id, $duration, $call_
 	//				$duration = ($available_seconds >= $duration) ? $duration : $available_seconds;
 					$final_min = $counter_info ['used_seconds'] + $free_seconds;
 					//$final_min =  ceil($final_min/60)*60;
+					//divide o valor em segundos por 60, arredonda para cima, e multiplica por 30 (Bloco).
+					$final_min =  ceil($final_min/60)*30;
 					//$freeminutes ['free_minutes'] = ceil($freeminutes ['free_minutes']/60)*60;
 					$update_query = "UPDATE counters SET used_seconds = " . ($final_min) . " WHERE id = " . $counter_info ['id'];
 					$logger->log ( "Update Counters  : " . $update_query );
