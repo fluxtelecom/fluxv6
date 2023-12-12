@@ -179,7 +179,7 @@ buycost,reseller_products.price,reseller_products.billing_type,reseller_products
 					"area_code"=>isset($add_array['area_code'])?$add_array['area_code']:"",
 					"setup"=>isset($add_array['setup_fee'])?$this->common_model->add_calculate_currency ($add_array['setup_fee'], "", '', false, false ):"0",
 					"maxchannels"=>isset($add_array['maxchannels'])?$add_array['maxchannels']:"0",
-					"reverse_rate"=>isset($add_array['reverse_rate'])?$add_array['reverse_rate']:"0",
+					"reverse_rate"=>isset($add_array['reverse_rate'])?$add_array['reverse_rate']:"1",
 					"call_type"=>isset($add_array['call_type'])?$add_array['call_type']:"",
 					"leg_timeout"=>isset($add_array['leg_timeout'])?$add_array['leg_timeout']:"30",
 					"last_modified_date"=>gmdate("Y-m-d H:i:s"),
@@ -273,7 +273,7 @@ buycost,reseller_products.price,reseller_products.billing_type,reseller_products
 					"city"=>isset($add_array['city'])?$add_array['city']:"",
 					"setup"=>isset($add_array['setup_fee'])?$this->common_model->add_calculate_currency ($add_array['setup_fee'], "", '', false, false ):"0",
 					"maxchannels"=>isset($add_array['maxchannels'])?$add_array['maxchannels']:"0",
-					"reverse_rate"=>isset($add_array['reverse_rate'])?$add_array['reverse_rate']:"0",
+					"reverse_rate"=>isset($add_array['reverse_rate'])?$add_array['reverse_rate']:"1",
 					"call_type"=>isset($destination_info['call_type'])?$destination_info['call_type']:"",
 					"rate_group"=>isset($add_array['rate_group'])?$add_array['rate_group']:"",
 					"leg_timeout"=>isset($add_array['leg_timeout'])?$add_array['leg_timeout']:"30"
