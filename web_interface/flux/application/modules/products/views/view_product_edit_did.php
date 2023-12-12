@@ -177,6 +177,23 @@
     			<option value="1" <?php if($product_info['reverse_rate'] == '1'){ ?> selected="selected" <?php } ?>><?php echo gettext('Disabled'); ?></option>
                           </select>
                       </div>
+		<div class='col-md-6 form-group'>
+                      <label class="p-0 control-label"><?php echo gettext('Rate Group'); ?></label>
+			<div class="dropdown bootstrap-select show-tick select field multiselectable  col-md-12 form-control form-control-lg dropup">
+                      <select  name="rate_group" class="col-md-12 form-control selectpicker form-control-lg" data-live-search='true' datadata-live-search-style='begins'>
+                        <?php $product_rategrp =explode(',',$product_info['rate_group']);
+				foreach($product_rate_group as $key => $rate_group) { 
+					$selected ='';		
+				if ( in_array($key, $product_rategrp)) {
+					$selected = 'selected = selected';
+				}
+
+				?>
+				<option value= "<?php echo $key; ?>" <?php echo $selected; ?>> <?php echo  $rate_group ?> </option>
+			<?php }  ?>
+                      </select>
+		    </div>
+                  </div>
  </form>
 				<?php
 						if (isset($validation_errors) && $validation_errors != '') { ?>
