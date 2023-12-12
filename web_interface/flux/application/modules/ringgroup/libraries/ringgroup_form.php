@@ -312,6 +312,8 @@ class ringgroup_form extends common {
                     "true",
                     "center"),
                 array("Action", "130", "", "", "", array("EDIT" => array("url" => "ringgroup/ringgroup_edit/", "mode" => "single"),
+                    "DELETE" => array("url" => "ringgroup/ringgroup_delete/", "mode" => "single")),"false"),
+                array("Açao", "130", "", "", "", array("EDIT" => array("url" => "ringgroup/ringgroup_edit/", "mode" => "single"),
                     "DELETE" => array("url" => "ringgroup/ringgroup_delete/", "mode" => "single")),"false")
             ));
         }elseif($account_data['type'] == 1){
@@ -338,6 +340,8 @@ class ringgroup_form extends common {
                     "true",
                     "center"),
                 array("Action", "130", "", "", "", array("EDIT" => array("url" => "ringgroup/ringgroup_edit/", "mode" => "single"),
+                    "DELETE" => array("url" => "ringgroup/ringgroup_delete/", "mode" => "single")),"false"),
+                array("Açao", "130", "", "", "", array("EDIT" => array("url" => "ringgroup/ringgroup_edit/", "mode" => "single"),
                     "DELETE" => array("url" => "ringgroup/ringgroup_delete/", "mode" => "single")),"false")
             ));
         }else{
