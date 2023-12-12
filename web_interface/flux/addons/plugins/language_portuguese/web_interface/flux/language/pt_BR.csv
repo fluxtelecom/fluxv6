@@ -22,6 +22,8 @@ Administrator Admin,Administrador Admin
 Admins,Usuários
 After Balance,Após o Cobrança
 Alarm,Alarme
+Area Code,DDD
+Reverse Rate,Tarifa reversa
 Alert Status,Status de alerta
 Allow integration with Fraud detection,Permitir integração com detecção de fraude
 Allow IP Management,Permitir gerenciamento de IP
@@ -166,7 +168,7 @@ Dial Input Timeout,Tempo limite de entrada de discagem
 DID,DID
 DIDs,DIDs
 Direction,Direção
-Disable,Desabilitar
+Disabled,Desabilitado
 Display records in,Exibir registros em
 Disposition,Desligamento
 Documentation,Documentação
@@ -186,7 +188,7 @@ Email Status,Status do email
 Email Template,Modelo de Email
 Emails Older Than Days,Emails anteriores a dias
 En,En
-Enable,Habilitar
+Enable,Habilitado
 Enable Signup,Habilitar inscrição
 Ends With,Termina com
 Enterprise,Empreendimento
