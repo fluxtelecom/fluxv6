@@ -544,7 +544,7 @@ function get_call_maxlength(userinfo,destination_number,call_direction,number_lo
 		call_type_rate = didinfo['call_type_rate'];
 		if (call_type_rate == nil) then
 		Logger.warning("[FIND_DID_RATE] DID Rate group not found or Inactive!!!")
-		return 'NO_ROUTE_DESTINATION'
+		return 'ORIGNATION_RATE_NOT_FOUND'
 	     end
 		rates['cost'] = didinfo['cost'];
 		rate_group['id'] = didinfo['rate_group'];
