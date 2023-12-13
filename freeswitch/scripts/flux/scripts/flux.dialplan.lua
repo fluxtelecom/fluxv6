@@ -582,7 +582,7 @@ if (userinfo ~= nil) then
 --		if(tonumber(config['free_inbound']) == 1)then
 		if(tonumber(config['free_inbound']) == 1 and didinfo['reverse_rate'] ~= nil and didinfo['reverse_rate'] == "0")then
 		Logger.info("[userinfo] Actual origination_array_DID XML DEBUG:")
-			origination_array_DID = get_call_maxlength(customer_userinfo,callerid_number,"inbound",number_loop_str_orig,config,didinfo)
+			origination_array_DID = get_call_maxlength(customer_userinfo,callerid_number,"outbound",number_loop_str_orig,config,didinfo)
 		else
 		Logger.info("[userinfo] Actual destination_array_DID XML DEBUG:")
 		origination_array_DID = get_call_maxlength(customer_userinfo,destination_number,"inbound",number_loop,config,didinfo)		
