@@ -108,7 +108,7 @@ function check_did(destination_number,config,custom_callerid)
 		end
 	end
 	--TODO Change query for check DID avilable or not using left join.
-	local query = "SELECT A.id as id,A.number as did_number,B.id as accountid,B.number as account_code,B.pricelist_id as pricelist,A.number as did_number,A.connectcost,A.includedseconds,A.cost,A.inc,A.extensions,A.maxchannels,A.call_type,A.hg_type,A.city,A.province,A.init_inc,A.leg_timeout,A.status,A.country_id,A.call_type_vm_flag,A.reverse_rate,A.rate_group,C.`name` as price_name,A.area_code AS area_code,A.provider_id FROM "..TBL_DIDS.." AS A,"..TBL_USERS.." AS B,"..TBL_RATE_GROUP.." AS C WHERE B.status=0 AND (C.id = A.rate_group) AND B.deleted=0 AND B.id=A.accountid AND A.number =\"" ..destination_number .."\" LIMIT 1";
+	local query = "SELECT A.id as id,A.number as did_number,B.id as accountid,B.number as account_code,B.pricelist_id as pricelist,A.number as did_number,A.connectcost,A.includedseconds,A.cost,A.inc,A.extensions,A.maxchannels,A.call_type,A.hg_type,A.city,A.province,A.init_inc,A.leg_timeout,A.status,A.country_id,A.call_type_vm_flag,A.reverse_rate,A.rate_group,C.`name` as price_name,A.area_code AS area_code,A.provider_id FROM "..TBL_DIDS.." AS A,"..TBL_USERS.." AS B,"..TBL_RATE_GROUP.." AS C WHERE B.status=0 AND B.deleted=0 AND B.id=A.accountid AND A.number =\"" ..destination_number .."\" LIMIT 1";
 	Logger.debug("[CHECK_DID] Query :" .. query)
 	assert (dbh:query(query, function(u)
 		didinfo = u;
@@ -610,10 +610,10 @@ function get_rates(userinfo,destination_number,number_loop,call_direction,config
 	if call_direction == "inbound" then
 		rates_info = check_did(destination_number,config)
 	else 
-
-    	local query  = "SELECT "..TBL_CALL_TYPE..".call_type as calltype, "..TBL_ORIGINATION_RATES..".call_type as custom_call_type, "..TBL_ORIGINATION_RATES..".* FROM "..TBL_ORIGINATION_RATES..","..TBL_CALL_TYPE.." WHERE "..TBL_ORIGINATION_RATES..".call_type = "..TBL_CALL_TYPE..".id  AND "..number_loop.." AND "..TBL_ORIGINATION_RATES..".status = 0 AND (pricelist_id = "..userinfo['pricelist_id'].." OR accountid="..userinfo['id']..")  ORDER BY accountid DESC,LENGTH(pattern) DESC,cost DESC LIMIT 1";
-
-    	Logger.debug("[GET_RATES] Query :" .. query)
+    	--local query  = "SELECT "..TBL_CALL_TYPE..".call_type as calltype, "..TBL_ORIGINATION_RATES..".call_type as custom_call_type, "..TBL_ORIGINATION_RATES..".* FROM "..TBL_ORIGINATION_RATES..","..TBL_CALL_TYPE.." WHERE "..TBL_ORIGINATION_RATES..".call_type = "..TBL_CALL_TYPE..".id  AND "..number_loop.." AND "..TBL_ORIGINATION_RATES..".status = 0 AND (pricelist_id = "..userinfo['pricelist_id'].." OR accountid="..userinfo['id']..")  ORDER BY accountid DESC,LENGTH(pattern) DESC,cost DESC LIMIT 1";
+		local query  = "SELECT "..TBL_CALL_TYPE..".call_type as calltype, "..TBL_ORIGINATION_RATES..".call_type as custom_call_type, "..TBL_ORIGINATION_RATES..".* FROM "..TBL_ORIGINATION_RATES..","..TBL_CALL_TYPE.." WHERE ("..TBL_ORIGINATION_RATES..".call_type = "..TBL_CALL_TYPE..".id  OR routes.comment = calltype.call_type) AND "..number_loop.." AND "..TBL_ORIGINATION_RATES..".status = 0 AND (pricelist_id = "..userinfo['pricelist_id'].." OR accountid="..userinfo['id']..")  ORDER BY accountid DESC,LENGTH(pattern) DESC,cost DESC LIMIT 1";
+    	
+		Logger.debug("[GET_RATES] Query :" .. query)
 		assert (dbh:query(query, function(u)
     		rates_info = u
     		calltype_custom = rates_info['custom_call_type']
@@ -734,7 +734,7 @@ function get_carrier_rates(destination_number,number_loop_str,ratecard_id,rate_c
 		query = "SELECT TK.id as trunk_id,TK.name as trunk_name,TK.sip_cid_type,TK.codec,GW.name as path,GW.dialplan_variable,TK.provider_id,TR.init_inc,TK.status,TK.maxchannels,TK.cps,TK.leg_timeout,TR.pattern,TR.id as outbound_route_id,TR.connectcost,TR.comment,TR.call_type,TR.includedseconds,TR.cost,TR.inc,TR.prepend,TR.strip,(select name from "..TBL_GATEWAYS.." where status=0 AND id = TK.failover_gateway_id) as path1,(select name from "..TBL_GATEWAYS.." where status=0 AND id = TK.failover_gateway_id1) as path2 FROM "..TBL_TERMINATION_RATES.." as TR,"..TBL_TRUNKS.." as TK,"..TBL_GATEWAYS.." as GW WHERE GW.status=0 AND GW.id= TK.gateway_id AND TK.status=0 AND TK.id= TR.trunk_id AND "..number_loop_str.." AND TR.status = 0 "
 	end
 	if(rate_carrier_id and rate_carrier_id ~= nil and rate_carrier_id ~= '0' and string.len(rate_carrier_id) >= 1 ) then
-	 if(trunk_id == 0) then
+	 if(rate_carrier_id == 0) then
 		query = query.." AND TR.trunk_id is not null "
 		else
 		query = query.." AND TR.trunk_id IN ("..rate_carrier_id..") "
