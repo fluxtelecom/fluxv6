@@ -87,7 +87,7 @@ local custom_calltype = 'Padrao'
 local call_type = 'Padrao'
 local accountcode = ''
 local sipcall = ''
-local auth_type = 'acl'
+local auth_type = 'default'
 local authinfo = {}
 local accountname = 'default'
 local original_destination_number=''
@@ -307,10 +307,10 @@ if (userinfo ~= nil) then
 		-- @TODO: Implement localization for DID global translation
 		--destination_number = do_number_translation(config['did_global_translation'],destination_number)
 		destination_number = didinfo['did_number']
+		number_loop_str_orig = number_loop(callerid_number)
 	end     
 
   	number_loop_str = number_loop(destination_number)
-  	number_loop_str_orig = number_loop(callerid_number)
 
 	-- Fine max length of call based on origination rates.
 	origination_array = get_call_maxlength(userinfo,destination_number,call_direction,number_loop_str,config,didinfo)
@@ -582,7 +582,7 @@ if (userinfo ~= nil) then
 --		if(tonumber(config['free_inbound']) == 1)then
 		if(tonumber(config['free_inbound']) == 1 and didinfo['reverse_rate'] ~= nil and didinfo['reverse_rate'] == "0")then
 		Logger.info("[userinfo] Actual origination_array_DID XML DEBUG:")
-			origination_array_DID = get_call_maxlength(customer_userinfo,callerid_number,"outbound",number_loop_str_orig,config,didinfo)
+			origination_array_DID = get_call_maxlength(customer_userinfo,callerid_number,"inbound",number_loop_str_orig,config,didinfo)
 		else
 		Logger.info("[userinfo] Actual destination_array_DID XML DEBUG:")
 		origination_array_DID = get_call_maxlength(customer_userinfo,destination_number,"inbound",number_loop,config,didinfo)		
