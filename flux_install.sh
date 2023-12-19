@@ -283,7 +283,7 @@ install_mysql ()
         cd /usr/src
         if [ "$DIST" = "DEBIAN" ]; then
                 sudo apt install -y dirmngr --install-recommends
-                sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
+                sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
                 wget https://repo.mysql.com/mysql-apt-config_0.8.13-1_all.deb
                 dpkg -i mysql-apt-config_0.8.13-1_all.deb
                 apt update
