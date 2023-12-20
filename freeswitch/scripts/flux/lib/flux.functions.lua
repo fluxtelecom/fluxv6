@@ -279,7 +279,7 @@ function ipauthentication(destination_number,from_ip)
 	local ipinfo;
 	assert (dbh:query(query, function(u)
 		ipinfo = u;
---		ipinfo ['type'] = 'acl';
+		ipinfo ['type'] = 'acl';
 	end))
 	return ipinfo;
 end
