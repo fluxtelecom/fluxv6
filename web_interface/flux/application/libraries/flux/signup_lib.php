@@ -53,6 +53,10 @@ class Signup_lib {
 		if ($accountinfo ['posttoexternal'] == 0) {
 			$accountinfo['credit_limit'] = 0;
 		}
+		
+		if ($accountinfo['credit_limit'] == 0 && $accountinfo ['posttoexternal'] == 1){
+			$accountinfo['credit_limit'] = 10000;
+		}
 		$accountinfo['balance'] = 0;
 		$accountinfo=array_map('trim',$accountinfo);
 		$result = $this->CI->db->insert ( 'accounts', $accountinfo );
