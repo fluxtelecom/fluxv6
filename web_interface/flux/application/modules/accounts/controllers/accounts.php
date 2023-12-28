@@ -2843,8 +2843,6 @@ function admin_save($add_array = false)
 			$data['validation_errors'] = validation_errors();
 			$this->load->view("view_customer_orders_assign", $data);
 		} else {
-
-			if ($account_balance > $total_amt) {
 				$last_id = $this->order->confirm_order($ProductData, $account_id, $accountinfo);
 				if ($last_id != "") {
 					$ProductData['name'] = $this->common->get_field_name("name", "products", array(
@@ -2863,11 +2861,7 @@ function admin_save($add_array = false)
 				}
 				$this->session->set_flashdata('flux_errormsg', gettext('Product assigned successfully!'));
 				redirect(base_url().'accounts/customer_product/'.$account_id.'/');
-			} else {
-				$this->session->set_flashdata('flux_notification', gettext('Insufficient balance to assign product!'));
-				redirect(base_url().'accounts/customer_product/'.$account_id.'/');
 			}
-		}
 	}
 
 	function customer_pricelist() {
