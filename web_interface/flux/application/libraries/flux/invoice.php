@@ -176,8 +176,8 @@ class invoice {
 		      );
 
 		$this->CI->db->insert("invoice_details",$insert_arr);
-		if($product_info['is_update_balance'] == "true"){
-
+		if($product_info['is_update_balance'] == "true" && $product_info['product_category'] != '1' && $product_info['product_category'] != '4'){
+			
 			$balance = $this->update_balance ($total_amt, $account_info ['id'],$account_info ['posttoexternal'],$product_info['invoice_type']);
 
 		}
